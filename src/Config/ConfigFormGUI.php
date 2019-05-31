@@ -3,6 +3,7 @@
 namespace srag\Plugins\SrGoogleAccountAuth\Config;
 
 use ilSrGoogleAccountAuthPlugin;
+use ilTextInputGUI;
 use srag\ActiveRecordConfig\SrGoogleAccountAuth\ActiveRecordConfigFormGUI;
 use srag\Plugins\SrGoogleAccountAuth\Utils\SrGoogleAccountAuthTrait;
 
@@ -24,6 +25,15 @@ class ConfigFormGUI extends ActiveRecordConfigFormGUI {
 	 * @inheritdoc
 	 */
 	protected function initFields()/*: void*/ {
-		$this->fields = [];
+		$this->fields = [
+			Config::KEY_CLIENT_ID => [
+				self::PROPERTY_CLASS => ilTextInputGUI::class,
+				self::PROPERTY_REQUIRED => true
+			],
+			Config::KEY_CLIENT_SECRET => [
+				self::PROPERTY_CLASS => ilTextInputGUI::class,
+				self::PROPERTY_REQUIRED => true
+			]
+		];
 	}
 }

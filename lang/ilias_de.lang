@@ -1,4 +1,7 @@
 auth_name#:#Google-Konto
+config_client_id#:#Client-ID
+config_client_secret#:#Client-Secret
 config_configuration#:#Konfiguration
 config_configuration_saved#:#Konfiguration gespeichert
 config_save#:#Speichern
+login#:#Mittels Google-Konto anmelden
