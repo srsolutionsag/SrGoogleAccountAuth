@@ -2,18 +2,19 @@
 
 namespace srag\Plugins\SrGoogleAccountAuth\Access;
 
+use ilObjUser;
 use ilSrGoogleAccountAuthPlugin;
 use srag\DIC\SrGoogleAccountAuth\DICTrait;
 use srag\Plugins\SrGoogleAccountAuth\Utils\SrGoogleAccountAuthTrait;
 
 /**
- * Class Ilias
+ * Class Users
  *
  * @package srag\Plugins\SrGoogleAccountAuth\Access
  *
  * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
-final class Ilias {
+final class Users {
 
 	use DICTrait;
 	use SrGoogleAccountAuthTrait;
@@ -37,7 +38,7 @@ final class Ilias {
 
 
 	/**
-	 * Ilias constructor
+	 * Users constructor
 	 */
 	private function __construct() {
 
@@ -45,9 +46,11 @@ final class Ilias {
 
 
 	/**
-	 * @return Users
+	 * @param string $email
+	 *
+	 * @return int|null
 	 */
-	public function users(): Users {
-		return Users::getInstance();
+	public function getUserIdByEmail(string $email)/*:int*/ {
+		return ilObjUser::_lookupId(current(ilObjUser::getUserLoginsByEmail($email)));
 	}
 }

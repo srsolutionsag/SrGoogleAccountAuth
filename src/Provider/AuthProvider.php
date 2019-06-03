@@ -7,7 +7,6 @@ use Google_Service_PeopleService;
 use ilAuthCredentials;
 use ilAuthProviderInterface;
 use ilAuthStatus;
-use ilObjUser;
 use ilSession;
 use ilSrGoogleAccountAuthPlugin;
 use ilSrIliasComponentPlugin;
@@ -52,7 +51,11 @@ class AuthProvider implements ilAuthProviderInterface {
 			$client->setAccessToken($access_token);
 		}
 
-		$client->setScopes(Google_Service_PeopleService::USER_EMAILS_READ);
+		$client->setScopes([
+			Google_Service_PeopleService::USERINFO_PROFILE,
+			Google_Service_PeopleService::USERINFO_EMAIL,
+			Google_Service_PeopleService::USER_EMAILS_READ
+		]);
 
 		return $client;
 	}
@@ -104,12 +107,14 @@ class AuthProvider implements ilAuthProviderInterface {
 
 			$service = new Google_Service_PeopleService($client);
 
-			$email = current($service->people->get("me")->getEmailAddresses());
+			$email = current($service->people->get("people/me", [
+				"personFields" => "emailAddresses"
+			])->getEmailAddresses())->getValue();
 			if (empty($email)) {
 				throw new SrGoogleAccountAuthException("Email address not found!");
 			}
 
-			$user_id = ilObjUser::_lookupId(current(ilObjUser::getUserLoginsByEmail($email)));
+			$user_id = self::ilias()->users()->getUserIdByEmail($email);
 			if (empty($user_id)) {
 				throw new SrGoogleAccountAuthException("No ILIAS user found!");
 			}

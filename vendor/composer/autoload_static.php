@@ -9872,6 +9872,7 @@ class ComposerStaticInitd53c970190912f139138ca836f56a678
         'srag\\LibrariesNamespaceChanger\\PHP7Backport' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/PHP7Backport.php',
         'srag\\Plugins\\SrGoogleAccountAuth\\Access\\Access' => __DIR__ . '/../..' . '/src/Access/Access.php',
         'srag\\Plugins\\SrGoogleAccountAuth\\Access\\Ilias' => __DIR__ . '/../..' . '/src/Access/Ilias.php',
+        'srag\\Plugins\\SrGoogleAccountAuth\\Access\\Users' => __DIR__ . '/../..' . '/src/Access/Users.php',
         'srag\\Plugins\\SrGoogleAccountAuth\\Config\\Config' => __DIR__ . '/../..' . '/src/Config/Config.php',
         'srag\\Plugins\\SrGoogleAccountAuth\\Config\\ConfigFormGUI' => __DIR__ . '/../..' . '/src/Config/ConfigFormGUI.php',
         'srag\\Plugins\\SrGoogleAccountAuth\\Exception\\SrGoogleAccountAuthException' => __DIR__ . '/../..' . '/src/Exception/SrGoogleAccountAuthException.php',

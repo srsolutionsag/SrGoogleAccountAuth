@@ -9745,6 +9745,7 @@ return array(
     'srag\\LibrariesNamespaceChanger\\PHP7Backport' => $vendorDir . '/srag/librariesnamespacechanger/src/PHP7Backport.php',
     'srag\\Plugins\\SrGoogleAccountAuth\\Access\\Access' => $baseDir . '/src/Access/Access.php',
     'srag\\Plugins\\SrGoogleAccountAuth\\Access\\Ilias' => $baseDir . '/src/Access/Ilias.php',
+    'srag\\Plugins\\SrGoogleAccountAuth\\Access\\Users' => $baseDir . '/src/Access/Users.php',
     'srag\\Plugins\\SrGoogleAccountAuth\\Config\\Config' => $baseDir . '/src/Config/Config.php',
     'srag\\Plugins\\SrGoogleAccountAuth\\Config\\ConfigFormGUI' => $baseDir . '/src/Config/ConfigFormGUI.php',
     'srag\\Plugins\\SrGoogleAccountAuth\\Exception\\SrGoogleAccountAuthException' => $baseDir . '/src/Exception/SrGoogleAccountAuthException.php',

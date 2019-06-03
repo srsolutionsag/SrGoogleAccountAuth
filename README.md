@@ -9,6 +9,14 @@ git clone https://github.com/studer-raimann/SrGoogleAccountAuth.git SrGoogleAcco
 ```
 Update and activate the plugin in the ILIAS Plugin Administration
 
+### Rewrite Rule
+Config rewrite rule in .htaccess or apache config like:
+
+```apacheconfig
+TODO
+RewriteRule ^/?google_login /Customizing/global/plugins/Services/Authentication/AuthenticationHook/SrGoogleAccountAuth/google_login.php [QSA]
+```
+
 ### Some screenshots
 TODO
 
