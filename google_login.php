@@ -1,6 +1,5 @@
 <?php
 
-$a=getcwd();
 chdir(__DIR__ . "/../../../../../../..");
 
 require_once __DIR__ . "/../../../../../../../libs/composer/vendor/autoload.php";
