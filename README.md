@@ -21,7 +21,7 @@ RewriteRule ^/?google_login /Customizing/global/plugins/Services/Authentication/
 TODO
 
 ### Requirements
-* ILIAS 5.4.3
+* ILIAS 5.4.4
 * PHP >=7.0
 
 ### Adjustment suggestions
