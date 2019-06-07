@@ -9,7 +9,6 @@ use ilAuthProviderInterface;
 use ilAuthStatus;
 use ilSession;
 use ilSrGoogleAccountAuthPlugin;
-use ilSrIliasComponentPlugin;
 use srag\DIC\SrGoogleAccountAuth\DICTrait;
 use srag\Plugins\SrGoogleAccountAuth\Config\Config;
 use srag\Plugins\SrGoogleAccountAuth\Exception\SrGoogleAccountAuthException;
@@ -40,7 +39,7 @@ class AuthProvider implements ilAuthProviderInterface {
 	public static function getClient(): Google_Client {
 		$client = new Google_Client();
 
-		$client->setApplicationName("Login to " . ilSrIliasComponentPlugin::PLUGIN_NAME);
+		$client->setApplicationName("Login to " . ilSrGoogleAccountAuthPlugin::PLUGIN_NAME);
 
 		$client->setClientId(Config::getField(Config::KEY_CLIENT_ID));
 		$client->setClientSecret(Config::getField(Config::KEY_CLIENT_SECRET));
