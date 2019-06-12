@@ -29,7 +29,7 @@ class AuthProvider implements ilAuthProviderInterface {
 	const PLUGIN_CLASS_NAME = ilSrGoogleAccountAuthPlugin::class;
 	const AUTH_NAME = "authhk_" . ilSrGoogleAccountAuthPlugin::PLUGIN_ID . "_auth_name";
 	const AUTH_ID = 1234;
-	const REDIRECT_URL = "google_login";
+	const REDIRECT_URL =  "Customizing/global/plugins/Services/Authentication/AuthenticationHook/SrGoogleAccountAuth/google_login.php";
 	const SESSION_KEY = "google_access_token";
 
 
@@ -43,7 +43,7 @@ class AuthProvider implements ilAuthProviderInterface {
 
 		$client->setClientId(Config::getField(Config::KEY_CLIENT_ID));
 		$client->setClientSecret(Config::getField(Config::KEY_CLIENT_SECRET));
-		$client->setRedirectUri(ILIAS_HTTP_PATH . "/" . self::REDIRECT_URL . "/");
+		$client->setRedirectUri(ILIAS_HTTP_PATH . "/" . self::REDIRECT_URL);
 
 		$access_token = ilSession::get(self::SESSION_KEY);
 		if (!empty($access_token)) {
