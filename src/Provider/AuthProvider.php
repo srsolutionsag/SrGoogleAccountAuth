@@ -6,7 +6,6 @@ use Google_Client;
 use Google_Service_PeopleService;
 use ilAuthCredentials;
 use ilAuthProvider;
-use ilAuthProviderInterface;
 use ilAuthStatus;
 use ilSession;
 use ilSrGoogleAccountAuthPlugin;
@@ -23,7 +22,7 @@ use Throwable;
  *
  * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
-class AuthProvider extends ilAuthProvider implements ilAuthProviderInterface {
+class AuthProvider extends ilAuthProvider {
 
 	use DICTrait;
 	use SrGoogleAccountAuthTrait;
