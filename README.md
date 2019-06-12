@@ -13,8 +13,7 @@ Update and activate the plugin in the ILIAS Plugin Administration
 Config rewrite rule in .htaccess or apache config like:
 
 ```apacheconfig
-TODO
-RewriteRule ^/?google_login /Customizing/global/plugins/Services/Authentication/AuthenticationHook/SrGoogleAccountAuth/google_login.php [QSA]
+RewriteRule ^/?google_login /Customizing/global/plugins/Services/Authentication/AuthenticationHook/SrGoogleAccountAuth/google_login.php [QSA,L]
 ```
 
 ### Some screenshots
