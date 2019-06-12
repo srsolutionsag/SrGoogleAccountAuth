@@ -5,6 +5,7 @@ namespace srag\Plugins\SrGoogleAccountAuth\Provider;
 use Google_Client;
 use Google_Service_PeopleService;
 use ilAuthCredentials;
+use ilAuthProvider;
 use ilAuthProviderInterface;
 use ilAuthStatus;
 use ilSession;
@@ -22,14 +23,14 @@ use Throwable;
  *
  * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
-class AuthProvider implements ilAuthProviderInterface {
+class AuthProvider extends ilAuthProvider implements ilAuthProviderInterface {
 
 	use DICTrait;
 	use SrGoogleAccountAuthTrait;
 	const PLUGIN_CLASS_NAME = ilSrGoogleAccountAuthPlugin::class;
 	const AUTH_NAME = "authhk_" . ilSrGoogleAccountAuthPlugin::PLUGIN_ID . "_auth_name";
 	const AUTH_ID = 1234;
-	const REDIRECT_URL =  "Customizing/global/plugins/Services/Authentication/AuthenticationHook/SrGoogleAccountAuth/google_login.php";
+	const REDIRECT_URL = "Customizing/global/plugins/Services/Authentication/AuthenticationHook/SrGoogleAccountAuth/google_login.php";
 	const SESSION_KEY = "google_access_token";
 
 
@@ -61,18 +62,12 @@ class AuthProvider implements ilAuthProviderInterface {
 
 
 	/**
-	 * @var ilAuthCredentials
-	 */
-	protected $credentials;
-
-
-	/**
 	 * AuthProvider constructor
 	 *
 	 * @param ilAuthCredentials $credentials
 	 */
 	public function __construct(ilAuthCredentials $credentials) {
-		$this->credentials = $credentials;
+		parent::__construct($credentials);
 	}
 
 
@@ -124,11 +119,7 @@ class AuthProvider implements ilAuthProviderInterface {
 
 			return true;
 		} catch (Throwable $ex) {
-			$status->setStatus(ilAuthStatus::STATUS_AUTHENTICATION_FAILED);
-
-			$status->setReason($ex->getMessage());
-
-			return false;
+			return $this->handleAuthenticationFail($status, $ex->getMessage());
 		}
 	}
 }
