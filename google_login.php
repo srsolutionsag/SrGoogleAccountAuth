@@ -21,4 +21,4 @@ $_POST["password"] = "no";
 $_POST["auth_mode"] = AuthProvider::AUTH_NAME;
 
 // Call AuthProvider
-DICStatic::dic()->ctrl()->forwardCommand(new ilStartUpGUI());
+DICStatic::dic()->ctrl()->callBaseClass();
