@@ -21,7 +21,7 @@ Update and activate the plugin in the ILIAS Plugin Administration
 TODO
 
 ### Requirements
-* ILIAS 5.4.4
+* ILIAS 5.4
 * PHP >=7.0
 
 ### Adjustment suggestions
