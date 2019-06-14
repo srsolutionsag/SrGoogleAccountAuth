@@ -1,6 +1,7 @@
 <?php
 
 use srag\DIC\SrGoogleAccountAuth\DICTrait;
+use srag\Plugins\SrGoogleAccountAuth\Client\Client;
 use srag\Plugins\SrGoogleAccountAuth\Utils\SrGoogleAccountAuthTrait;
 
 /**
