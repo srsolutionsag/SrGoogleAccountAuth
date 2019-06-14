@@ -25,6 +25,9 @@ class Google_Service_Compute_AttachedDiskInitializeParams extends Google_Model
   public $sourceImage;
   protected $sourceImageEncryptionKeyType = 'Google_Service_Compute_CustomerEncryptionKey';
   protected $sourceImageEncryptionKeyDataType = '';
+  public $sourceSnapshot;
+  protected $sourceSnapshotEncryptionKeyType = 'Google_Service_Compute_CustomerEncryptionKey';
+  protected $sourceSnapshotEncryptionKeyDataType = '';
 
   public function setDescription($description)
   {
@@ -87,5 +90,27 @@ class Google_Service_Compute_AttachedDiskInitializeParams extends Google_Model
   public function getSourceImageEncryptionKey()
   {
     return $this->sourceImageEncryptionKey;
+  }
+  public function setSourceSnapshot($sourceSnapshot)
+  {
+    $this->sourceSnapshot = $sourceSnapshot;
+  }
+  public function getSourceSnapshot()
+  {
+    return $this->sourceSnapshot;
+  }
+  /**
+   * @param Google_Service_Compute_CustomerEncryptionKey
+   */
+  public function setSourceSnapshotEncryptionKey(Google_Service_Compute_CustomerEncryptionKey $sourceSnapshotEncryptionKey)
+  {
+    $this->sourceSnapshotEncryptionKey = $sourceSnapshotEncryptionKey;
+  }
+  /**
+   * @return Google_Service_Compute_CustomerEncryptionKey
+   */
+  public function getSourceSnapshotEncryptionKey()
+  {
+    return $this->sourceSnapshotEncryptionKey;
   }
 }

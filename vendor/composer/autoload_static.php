@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitd53c970190912f139138ca836f56a678
+class ComposerStaticInitcad4c6204bf143a143bbee0ca440b4fa
 {
     public static $files = array (
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
@@ -234,6 +234,7 @@ class ComposerStaticInitd53c970190912f139138ca836f56a678
         'Google_Service_AdExchangeBuyerII_AbsoluteDateRange' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/AdExchangeBuyerII/AbsoluteDateRange.php',
         'Google_Service_AdExchangeBuyerII_AcceptProposalRequest' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/AdExchangeBuyerII/AcceptProposalRequest.php',
         'Google_Service_AdExchangeBuyerII_AdSize' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/AdExchangeBuyerII/AdSize.php',
+        'Google_Service_AdExchangeBuyerII_AdTechnologyProviders' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/AdExchangeBuyerII/AdTechnologyProviders.php',
         'Google_Service_AdExchangeBuyerII_AddDealAssociationRequest' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/AdExchangeBuyerII/AddDealAssociationRequest.php',
         'Google_Service_AdExchangeBuyerII_AddNoteRequest' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/AdExchangeBuyerII/AddNoteRequest.php',
         'Google_Service_AdExchangeBuyerII_Adexchangebuyer2Empty' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/AdExchangeBuyerII/Adexchangebuyer2Empty.php',
@@ -821,6 +822,7 @@ class ComposerStaticInitd53c970190912f139138ca836f56a678
         'Google_Service_AndroidEnterprise_AppRestrictionsSchemaChangeEvent' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/AndroidEnterprise/AppRestrictionsSchemaChangeEvent.php',
         'Google_Service_AndroidEnterprise_AppRestrictionsSchemaRestriction' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/AndroidEnterprise/AppRestrictionsSchemaRestriction.php',
         'Google_Service_AndroidEnterprise_AppRestrictionsSchemaRestrictionRestrictionValue' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/AndroidEnterprise/AppRestrictionsSchemaRestrictionRestrictionValue.php',
+        'Google_Service_AndroidEnterprise_AppState' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/AndroidEnterprise/AppState.php',
         'Google_Service_AndroidEnterprise_AppUpdateEvent' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/AndroidEnterprise/AppUpdateEvent.php',
         'Google_Service_AndroidEnterprise_AppVersion' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/AndroidEnterprise/AppVersion.php',
         'Google_Service_AndroidEnterprise_ApprovalUrlInfo' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/AndroidEnterprise/ApprovalUrlInfo.php',
@@ -829,6 +831,8 @@ class ComposerStaticInitd53c970190912f139138ca836f56a678
         'Google_Service_AndroidEnterprise_AutoInstallPolicy' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/AndroidEnterprise/AutoInstallPolicy.php',
         'Google_Service_AndroidEnterprise_ConfigurationVariables' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/AndroidEnterprise/ConfigurationVariables.php',
         'Google_Service_AndroidEnterprise_Device' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/AndroidEnterprise/Device.php',
+        'Google_Service_AndroidEnterprise_DeviceReport' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/AndroidEnterprise/DeviceReport.php',
+        'Google_Service_AndroidEnterprise_DeviceReportUpdateEvent' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/AndroidEnterprise/DeviceReportUpdateEvent.php',
         'Google_Service_AndroidEnterprise_DeviceState' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/AndroidEnterprise/DeviceState.php',
         'Google_Service_AndroidEnterprise_DevicesListResponse' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/AndroidEnterprise/DevicesListResponse.php',
         'Google_Service_AndroidEnterprise_Enterprise' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/AndroidEnterprise/Enterprise.php',
@@ -843,6 +847,7 @@ class ComposerStaticInitd53c970190912f139138ca836f56a678
         'Google_Service_AndroidEnterprise_Install' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/AndroidEnterprise/Install.php',
         'Google_Service_AndroidEnterprise_InstallFailureEvent' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/AndroidEnterprise/InstallFailureEvent.php',
         'Google_Service_AndroidEnterprise_InstallsListResponse' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/AndroidEnterprise/InstallsListResponse.php',
+        'Google_Service_AndroidEnterprise_KeyedAppState' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/AndroidEnterprise/KeyedAppState.php',
         'Google_Service_AndroidEnterprise_LocalizedText' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/AndroidEnterprise/LocalizedText.php',
         'Google_Service_AndroidEnterprise_MaintenanceWindow' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/AndroidEnterprise/MaintenanceWindow.php',
         'Google_Service_AndroidEnterprise_ManagedConfiguration' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/AndroidEnterprise/ManagedConfiguration.php',
@@ -2084,6 +2089,7 @@ class ComposerStaticInitd53c970190912f139138ca836f56a678
         'Google_Service_CloudHealthcare_SensitiveTextAnnotation' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudHealthcare/SensitiveTextAnnotation.php',
         'Google_Service_CloudHealthcare_SetIamPolicyRequest' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudHealthcare/SetIamPolicyRequest.php',
         'Google_Service_CloudHealthcare_Status' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudHealthcare/Status.php',
+        'Google_Service_CloudHealthcare_StreamConfig' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudHealthcare/StreamConfig.php',
         'Google_Service_CloudHealthcare_TagFilterList' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudHealthcare/TagFilterList.php',
         'Google_Service_CloudHealthcare_TestIamPermissionsRequest' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudHealthcare/TestIamPermissionsRequest.php',
         'Google_Service_CloudHealthcare_TestIamPermissionsResponse' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudHealthcare/TestIamPermissionsResponse.php',
@@ -2410,16 +2416,22 @@ class ComposerStaticInitd53c970190912f139138ca836f56a678
         'Google_Service_CloudProfiler_Resource_Projects' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudProfiler/Resource/Projects.php',
         'Google_Service_CloudProfiler_Resource_ProjectsProfiles' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudProfiler/Resource/ProjectsProfiles.php',
         'Google_Service_CloudRedis' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudRedis.php',
+        'Google_Service_CloudRedis_ExportInstanceRequest' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudRedis/ExportInstanceRequest.php',
         'Google_Service_CloudRedis_FailoverInstanceRequest' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudRedis/FailoverInstanceRequest.php',
+        'Google_Service_CloudRedis_GcsDestination' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudRedis/GcsDestination.php',
+        'Google_Service_CloudRedis_GcsSource' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudRedis/GcsSource.php',
         'Google_Service_CloudRedis_GoogleCloudRedisV1LocationMetadata' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudRedis/GoogleCloudRedisV1LocationMetadata.php',
         'Google_Service_CloudRedis_GoogleCloudRedisV1OperationMetadata' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudRedis/GoogleCloudRedisV1OperationMetadata.php',
         'Google_Service_CloudRedis_GoogleCloudRedisV1ZoneMetadata' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudRedis/GoogleCloudRedisV1ZoneMetadata.php',
+        'Google_Service_CloudRedis_ImportInstanceRequest' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudRedis/ImportInstanceRequest.php',
+        'Google_Service_CloudRedis_InputConfig' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudRedis/InputConfig.php',
         'Google_Service_CloudRedis_Instance' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudRedis/Instance.php',
         'Google_Service_CloudRedis_ListInstancesResponse' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudRedis/ListInstancesResponse.php',
         'Google_Service_CloudRedis_ListLocationsResponse' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudRedis/ListLocationsResponse.php',
         'Google_Service_CloudRedis_ListOperationsResponse' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudRedis/ListOperationsResponse.php',
         'Google_Service_CloudRedis_Location' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudRedis/Location.php',
         'Google_Service_CloudRedis_Operation' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudRedis/Operation.php',
+        'Google_Service_CloudRedis_OutputConfig' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudRedis/OutputConfig.php',
         'Google_Service_CloudRedis_RedisEmpty' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudRedis/RedisEmpty.php',
         'Google_Service_CloudRedis_Resource_Projects' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudRedis/Resource/Projects.php',
         'Google_Service_CloudRedis_Resource_ProjectsLocations' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudRedis/Resource/ProjectsLocations.php',
@@ -3508,6 +3520,7 @@ class ComposerStaticInitd53c970190912f139138ca836f56a678
         'Google_Service_Compute_RouterListWarning' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Compute/RouterListWarning.php',
         'Google_Service_Compute_RouterListWarningData' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Compute/RouterListWarningData.php',
         'Google_Service_Compute_RouterNat' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Compute/RouterNat.php',
+        'Google_Service_Compute_RouterNatLogConfig' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Compute/RouterNatLogConfig.php',
         'Google_Service_Compute_RouterNatSubnetworkToNat' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Compute/RouterNatSubnetworkToNat.php',
         'Google_Service_Compute_RouterStatus' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Compute/RouterStatus.php',
         'Google_Service_Compute_RouterStatusBgpPeerStatus' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Compute/RouterStatusBgpPeerStatus.php',
@@ -3985,6 +3998,7 @@ class ComposerStaticInitd53c970190912f139138ca836f56a678
         'Google_Service_DLP_GooglePrivacyDlpV2LDiversityHistogramBucket' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/DLP/GooglePrivacyDlpV2LDiversityHistogramBucket.php',
         'Google_Service_DLP_GooglePrivacyDlpV2LDiversityResult' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/DLP/GooglePrivacyDlpV2LDiversityResult.php',
         'Google_Service_DLP_GooglePrivacyDlpV2LargeCustomDictionaryConfig' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/DLP/GooglePrivacyDlpV2LargeCustomDictionaryConfig.php',
+        'Google_Service_DLP_GooglePrivacyDlpV2LargeCustomDictionaryStats' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/DLP/GooglePrivacyDlpV2LargeCustomDictionaryStats.php',
         'Google_Service_DLP_GooglePrivacyDlpV2LikelihoodAdjustment' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/DLP/GooglePrivacyDlpV2LikelihoodAdjustment.php',
         'Google_Service_DLP_GooglePrivacyDlpV2ListDeidentifyTemplatesResponse' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/DLP/GooglePrivacyDlpV2ListDeidentifyTemplatesResponse.php',
         'Google_Service_DLP_GooglePrivacyDlpV2ListDlpJobsResponse' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/DLP/GooglePrivacyDlpV2ListDlpJobsResponse.php',
@@ -4031,6 +4045,7 @@ class ComposerStaticInitd53c970190912f139138ca836f56a678
         'Google_Service_DLP_GooglePrivacyDlpV2StorageConfig' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/DLP/GooglePrivacyDlpV2StorageConfig.php',
         'Google_Service_DLP_GooglePrivacyDlpV2StoredInfoType' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/DLP/GooglePrivacyDlpV2StoredInfoType.php',
         'Google_Service_DLP_GooglePrivacyDlpV2StoredInfoTypeConfig' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/DLP/GooglePrivacyDlpV2StoredInfoTypeConfig.php',
+        'Google_Service_DLP_GooglePrivacyDlpV2StoredInfoTypeStats' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/DLP/GooglePrivacyDlpV2StoredInfoTypeStats.php',
         'Google_Service_DLP_GooglePrivacyDlpV2StoredInfoTypeVersion' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/DLP/GooglePrivacyDlpV2StoredInfoTypeVersion.php',
         'Google_Service_DLP_GooglePrivacyDlpV2StoredType' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/DLP/GooglePrivacyDlpV2StoredType.php',
         'Google_Service_DLP_GooglePrivacyDlpV2SummaryResult' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/DLP/GooglePrivacyDlpV2SummaryResult.php',
@@ -5431,9 +5446,11 @@ class ComposerStaticInitd53c970190912f139138ca836f56a678
         'Google_Service_FactCheckTools_Resource_Pages' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/FactCheckTools/Resource/Pages.php',
         'Google_Service_FirebaseCloudMessaging' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/FirebaseCloudMessaging.php',
         'Google_Service_FirebaseCloudMessaging_AndroidConfig' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/FirebaseCloudMessaging/AndroidConfig.php',
+        'Google_Service_FirebaseCloudMessaging_AndroidFcmOptions' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/FirebaseCloudMessaging/AndroidFcmOptions.php',
         'Google_Service_FirebaseCloudMessaging_AndroidNotification' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/FirebaseCloudMessaging/AndroidNotification.php',
         'Google_Service_FirebaseCloudMessaging_ApnsConfig' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/FirebaseCloudMessaging/ApnsConfig.php',
         'Google_Service_FirebaseCloudMessaging_ApnsFcmOptions' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/FirebaseCloudMessaging/ApnsFcmOptions.php',
+        'Google_Service_FirebaseCloudMessaging_FcmOptions' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/FirebaseCloudMessaging/FcmOptions.php',
         'Google_Service_FirebaseCloudMessaging_Message' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/FirebaseCloudMessaging/Message.php',
         'Google_Service_FirebaseCloudMessaging_Notification' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/FirebaseCloudMessaging/Notification.php',
         'Google_Service_FirebaseCloudMessaging_Resource_Projects' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/FirebaseCloudMessaging/Resource/Projects.php',
@@ -9773,6 +9790,7 @@ class ComposerStaticInitd53c970190912f139138ca836f56a678
         'SrGoogleAccountAuthRemoveDataConfirm' => __DIR__ . '/../..' . '/classes/uninstall/class.SrGoogleAccountAuthRemoveDataConfirm.php',
         'ilSrGoogleAccountAuthConfigGUI' => __DIR__ . '/../..' . '/classes/class.ilSrGoogleAccountAuthConfigGUI.php',
         'ilSrGoogleAccountAuthPlugin' => __DIR__ . '/../..' . '/classes/class.ilSrGoogleAccountAuthPlugin.php',
+        'ilSrGoogleAccountAuthUIHookGUI' => __DIR__ . '/../..' . '/classes/class.ilSrGoogleAccountAuthUIHookGUI.php',
         'phpseclib\\Crypt\\AES' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Crypt/AES.php',
         'phpseclib\\Crypt\\Base' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Crypt/Base.php',
         'phpseclib\\Crypt\\Blowfish' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/Crypt/Blowfish.php',
@@ -9818,6 +9836,17 @@ class ComposerStaticInitd53c970190912f139138ca836f56a678
         'srag\\CustomInputGUIs\\SrGoogleAccountAuth\\MultiSelectSearchInputGUI\\MultiSelectSearchInput2GUI' => __DIR__ . '/..' . '/srag/custominputguis/src/MultiSelectSearchInputGUI/MultiSelectSearchInput2GUI.php',
         'srag\\CustomInputGUIs\\SrGoogleAccountAuth\\MultiSelectSearchInputGUI\\MultiSelectSearchInputGUI' => __DIR__ . '/..' . '/srag/custominputguis/src/MultiSelectSearchInputGUI/MultiSelectSearchInputGUI.php',
         'srag\\CustomInputGUIs\\SrGoogleAccountAuth\\NumberInputGUI\\NumberInputGUI' => __DIR__ . '/..' . '/srag/custominputguis/src/NumberInputGUI/NumberInputGUI.php',
+        'srag\\CustomInputGUIs\\SrGoogleAccountAuth\\PieChart\\Component\\LegendEntry' => __DIR__ . '/..' . '/srag/custominputguis/src/PieChart/Component/LegendEntry.php',
+        'srag\\CustomInputGUIs\\SrGoogleAccountAuth\\PieChart\\Component\\PieChart' => __DIR__ . '/..' . '/srag/custominputguis/src/PieChart/Component/PieChart.php',
+        'srag\\CustomInputGUIs\\SrGoogleAccountAuth\\PieChart\\Component\\PieChartItem' => __DIR__ . '/..' . '/srag/custominputguis/src/PieChart/Component/PieChartItem.php',
+        'srag\\CustomInputGUIs\\SrGoogleAccountAuth\\PieChart\\Component\\Section' => __DIR__ . '/..' . '/srag/custominputguis/src/PieChart/Component/Section.php',
+        'srag\\CustomInputGUIs\\SrGoogleAccountAuth\\PieChart\\Component\\SectionValue' => __DIR__ . '/..' . '/srag/custominputguis/src/PieChart/Component/SectionValue.php',
+        'srag\\CustomInputGUIs\\SrGoogleAccountAuth\\PieChart\\Implementation\\LegendEntry' => __DIR__ . '/..' . '/srag/custominputguis/src/PieChart/Implementation/LegendEntry.php',
+        'srag\\CustomInputGUIs\\SrGoogleAccountAuth\\PieChart\\Implementation\\PieChart' => __DIR__ . '/..' . '/srag/custominputguis/src/PieChart/Implementation/PieChart.php',
+        'srag\\CustomInputGUIs\\SrGoogleAccountAuth\\PieChart\\Implementation\\PieChartItem' => __DIR__ . '/..' . '/srag/custominputguis/src/PieChart/Implementation/PieChartItem.php',
+        'srag\\CustomInputGUIs\\SrGoogleAccountAuth\\PieChart\\Implementation\\Renderer' => __DIR__ . '/..' . '/srag/custominputguis/src/PieChart/Implementation/Renderer.php',
+        'srag\\CustomInputGUIs\\SrGoogleAccountAuth\\PieChart\\Implementation\\Section' => __DIR__ . '/..' . '/srag/custominputguis/src/PieChart/Implementation/Section.php',
+        'srag\\CustomInputGUIs\\SrGoogleAccountAuth\\PieChart\\Implementation\\SectionValue' => __DIR__ . '/..' . '/srag/custominputguis/src/PieChart/Implementation/SectionValue.php',
         'srag\\CustomInputGUIs\\SrGoogleAccountAuth\\ProgressMeter\\Component\\Factory' => __DIR__ . '/..' . '/srag/custominputguis/src/ProgressMeter/Component/Factory.php',
         'srag\\CustomInputGUIs\\SrGoogleAccountAuth\\ProgressMeter\\Component\\FixedSize' => __DIR__ . '/..' . '/srag/custominputguis/src/ProgressMeter/Component/FixedSize.php',
         'srag\\CustomInputGUIs\\SrGoogleAccountAuth\\ProgressMeter\\Component\\Mini' => __DIR__ . '/..' . '/srag/custominputguis/src/ProgressMeter/Component/Mini.php',
@@ -9873,11 +9902,11 @@ class ComposerStaticInitd53c970190912f139138ca836f56a678
         'srag\\Plugins\\SrGoogleAccountAuth\\Access\\Access' => __DIR__ . '/../..' . '/src/Access/Access.php',
         'srag\\Plugins\\SrGoogleAccountAuth\\Access\\Ilias' => __DIR__ . '/../..' . '/src/Access/Ilias.php',
         'srag\\Plugins\\SrGoogleAccountAuth\\Access\\Users' => __DIR__ . '/../..' . '/src/Access/Users.php',
+        'srag\\Plugins\\SrGoogleAccountAuth\\Authentication\\Authentication' => __DIR__ . '/../..' . '/src/Authentication/Authentication.php',
+        'srag\\Plugins\\SrGoogleAccountAuth\\Client\\Client' => __DIR__ . '/../..' . '/src/Client/Client.php',
         'srag\\Plugins\\SrGoogleAccountAuth\\Config\\Config' => __DIR__ . '/../..' . '/src/Config/Config.php',
         'srag\\Plugins\\SrGoogleAccountAuth\\Config\\ConfigFormGUI' => __DIR__ . '/../..' . '/src/Config/ConfigFormGUI.php',
         'srag\\Plugins\\SrGoogleAccountAuth\\Exception\\SrGoogleAccountAuthException' => __DIR__ . '/../..' . '/src/Exception/SrGoogleAccountAuthException.php',
-        'srag\\Plugins\\SrGoogleAccountAuth\\Provider\\AuthDefinitionTrait' => __DIR__ . '/../..' . '/src/Provider/AuthDefinitionTrait.php',
-        'srag\\Plugins\\SrGoogleAccountAuth\\Provider\\AuthProvider' => __DIR__ . '/../..' . '/src/Provider/AuthProvider.php',
         'srag\\Plugins\\SrGoogleAccountAuth\\Utils\\SrGoogleAccountAuthTrait' => __DIR__ . '/../..' . '/src/Utils/SrGoogleAccountAuthTrait.php',
         'srag\\RemovePluginDataConfirm\\SrGoogleAccountAuth\\AbstractPluginUninstallTrait' => __DIR__ . '/..' . '/srag/removeplugindataconfirm/src/AbstractPluginUninstallTrait.php',
         'srag\\RemovePluginDataConfirm\\SrGoogleAccountAuth\\AbstractRemovePluginDataConfirm' => __DIR__ . '/..' . '/srag/removeplugindataconfirm/src/AbstractRemovePluginDataConfirm.php',
@@ -9889,10 +9918,10 @@ class ComposerStaticInitd53c970190912f139138ca836f56a678
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitd53c970190912f139138ca836f56a678::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitd53c970190912f139138ca836f56a678::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitd53c970190912f139138ca836f56a678::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitd53c970190912f139138ca836f56a678::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitcad4c6204bf143a143bbee0ca440b4fa::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitcad4c6204bf143a143bbee0ca440b4fa::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitcad4c6204bf143a143bbee0ca440b4fa::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitcad4c6204bf143a143bbee0ca440b4fa::$classMap;
 
         }, null, ClassLoader::class);
     }

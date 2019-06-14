@@ -75,11 +75,11 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsFhirStore
    * is required.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string end The response includes records prior to the end date. If
-   * no end date is provided, all records subsequent to the start date are in
-   * scope.
    * @opt_param string start The response includes records subsequent to the start
    * date. If no start date is provided, all records prior to the end date are in
+   * scope.
+   * @opt_param string end The response includes records prior to the end date. If
+   * no end date is provided, all records subsequent to the start date are in
    * scope.
    * @return Google_Service_CloudHealthcare_HttpBody
    */

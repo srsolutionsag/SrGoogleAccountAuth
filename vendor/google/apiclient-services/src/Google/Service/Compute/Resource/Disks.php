@@ -86,7 +86,10 @@ class Google_Service_Compute_Resource_Disks extends Google_Service_Resource
    * @param Google_Service_Compute_Snapshot $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param bool guestFlush Application consistent snapshot (ie. VSS).
+   * @opt_param bool guestFlush [Input Only] Specifies to create an application
+   * consistent snapshot by informing the OS to prepare for the snapshot process.
+   * Currently only supported on Windows instances using the Volume Shadow Copy
+   * Service (VSS).
    * @opt_param string requestId An optional request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
    * server will know to ignore the request if it has already been completed.

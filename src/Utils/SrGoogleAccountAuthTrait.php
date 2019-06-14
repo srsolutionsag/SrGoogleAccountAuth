@@ -4,6 +4,8 @@ namespace srag\Plugins\SrGoogleAccountAuth\Utils;
 
 use srag\Plugins\SrGoogleAccountAuth\Access\Access;
 use srag\Plugins\SrGoogleAccountAuth\Access\Ilias;
+use srag\Plugins\SrGoogleAccountAuth\Authentication\Authentication;
+use srag\Plugins\SrGoogleAccountAuth\Client\Client;
 
 /**
  * Trait SrGoogleAccountAuthTrait
@@ -19,6 +21,22 @@ trait SrGoogleAccountAuthTrait {
 	 */
 	protected static function access(): Access {
 		return Access::getInstance();
+	}
+
+
+	/**
+	 * @return Authentication
+	 */
+	protected static function authentication(): Authentication {
+		return Authentication::getInstance();
+	}
+
+
+	/**
+	 * @return Client
+	 */
+	protected static function client(): Client {
+		return Client::getInstance();
 	}
 
 

@@ -4,7 +4,6 @@ require_once __DIR__ . "/../vendor/autoload.php";
 
 use srag\DIC\SrGoogleAccountAuth\Util\LibraryLanguageInstaller;
 use srag\Plugins\SrGoogleAccountAuth\Config\Config;
-use srag\Plugins\SrGoogleAccountAuth\Provider\AuthDefinitionTrait;
 use srag\Plugins\SrGoogleAccountAuth\Utils\SrGoogleAccountAuthTrait;
 use srag\RemovePluginDataConfirm\SrGoogleAccountAuth\PluginUninstallTrait;
 
@@ -13,11 +12,10 @@ use srag\RemovePluginDataConfirm\SrGoogleAccountAuth\PluginUninstallTrait;
  *
  * @author studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
-class ilSrGoogleAccountAuthPlugin extends ilAuthPlugin {
+class ilSrGoogleAccountAuthPlugin extends ilUserInterfaceHookPlugin {
 
 	use PluginUninstallTrait;
 	use SrGoogleAccountAuthTrait;
-	use AuthDefinitionTrait;
 	const PLUGIN_ID = "srgoogacauth";
 	const PLUGIN_NAME = "SrGoogleAccountAuth";
 	const PLUGIN_CLASS_NAME = self::class;

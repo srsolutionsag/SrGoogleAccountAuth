@@ -37,6 +37,7 @@ class Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Version extends G
   public $predictionClass;
   public $pythonVersion;
   public $runtimeVersion;
+  public $serviceAccount;
   public $state;
 
   /**
@@ -186,6 +187,14 @@ class Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1Version extends G
   public function getRuntimeVersion()
   {
     return $this->runtimeVersion;
+  }
+  public function setServiceAccount($serviceAccount)
+  {
+    $this->serviceAccount = $serviceAccount;
+  }
+  public function getServiceAccount()
+  {
+    return $this->serviceAccount;
   }
   public function setState($state)
   {

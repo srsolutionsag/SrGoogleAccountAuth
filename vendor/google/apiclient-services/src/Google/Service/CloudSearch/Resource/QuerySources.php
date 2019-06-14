@@ -31,14 +31,6 @@ class Google_Service_CloudSearch_Resource_QuerySources extends Google_Service_Re
    *
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string requestOptions.searchApplicationId Id of the application
-   * created using SearchApplicationsService.
-   * @opt_param string requestOptions.timeZone Current user's time zone id, such
-   * as "America/Los_Angeles" or "Australia/Sydney". These IDs are defined by
-   * [Unicode Common Locale Data Repository (CLDR)](http://cldr.unicode.org/)
-   * project, and currently available in the file
-   * [timezone.xml](http://unicode.org/repos/cldr/trunk/common/bcp47/timezone.xml)
-   * @opt_param string pageToken Number of sources to return in the response.
    * @opt_param bool requestOptions.debugOptions.enableDebugging If you are asked
    * by Google to help with debugging, set this field. Otherwise, ignore this
    * field.
@@ -50,6 +42,14 @@ class Google_Service_CloudSearch_Resource_QuerySources extends Google_Service_Re
    * When specified, the documents in search results are biased towards the
    * specified language. Suggest API does not use this parameter. It autocompletes
    * only based on characters in the query.
+   * @opt_param string requestOptions.searchApplicationId Id of the application
+   * created using SearchApplicationsService.
+   * @opt_param string requestOptions.timeZone Current user's time zone id, such
+   * as "America/Los_Angeles" or "Australia/Sydney". These IDs are defined by
+   * [Unicode Common Locale Data Repository (CLDR)](http://cldr.unicode.org/)
+   * project, and currently available in the file
+   * [timezone.xml](http://unicode.org/repos/cldr/trunk/common/bcp47/timezone.xml)
+   * @opt_param string pageToken Number of sources to return in the response.
    * @return Google_Service_CloudSearch_ListQuerySourcesResponse
    */
   public function listQuerySources($optParams = array())

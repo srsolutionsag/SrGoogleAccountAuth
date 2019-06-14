@@ -19,6 +19,8 @@ class Google_Service_Compute_RouterNat extends Google_Collection
 {
   protected $collection_key = 'subnetworks';
   public $icmpIdleTimeoutSec;
+  protected $logConfigType = 'Google_Service_Compute_RouterNatLogConfig';
+  protected $logConfigDataType = '';
   public $minPortsPerVm;
   public $name;
   public $natIpAllocateOption;
@@ -37,6 +39,20 @@ class Google_Service_Compute_RouterNat extends Google_Collection
   public function getIcmpIdleTimeoutSec()
   {
     return $this->icmpIdleTimeoutSec;
+  }
+  /**
+   * @param Google_Service_Compute_RouterNatLogConfig
+   */
+  public function setLogConfig(Google_Service_Compute_RouterNatLogConfig $logConfig)
+  {
+    $this->logConfig = $logConfig;
+  }
+  /**
+   * @return Google_Service_Compute_RouterNatLogConfig
+   */
+  public function getLogConfig()
+  {
+    return $this->logConfig;
   }
   public function setMinPortsPerVm($minPortsPerVm)
   {

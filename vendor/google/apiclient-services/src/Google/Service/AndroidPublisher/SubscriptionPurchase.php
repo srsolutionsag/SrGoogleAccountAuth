@@ -17,6 +17,7 @@
 
 class Google_Service_AndroidPublisher_SubscriptionPurchase extends Google_Model
 {
+  public $acknowledgementState;
   public $autoRenewing;
   public $autoResumeTimeMillis;
   public $cancelReason;
@@ -42,6 +43,14 @@ class Google_Service_AndroidPublisher_SubscriptionPurchase extends Google_Model
   public $startTimeMillis;
   public $userCancellationTimeMillis;
 
+  public function setAcknowledgementState($acknowledgementState)
+  {
+    $this->acknowledgementState = $acknowledgementState;
+  }
+  public function getAcknowledgementState()
+  {
+    return $this->acknowledgementState;
+  }
   public function setAutoRenewing($autoRenewing)
   {
     $this->autoRenewing = $autoRenewing;

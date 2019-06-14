@@ -30,7 +30,7 @@ class Google_Service_CloudTasks_Resource_ProjectsLocationsQueuesTasks extends Go
    *
    * Tasks cannot be updated after creation; there is no UpdateTask command.
    *
-   * * For App Engine queues, the maximum task size is   100KB. (tasks.create)
+   * * The maximum task size is 100KB. (tasks.create)
    *
    * @param string $parent Required.
    *

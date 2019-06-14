@@ -1,5 +1,24 @@
 # Changelog
 
+## [0.22.5]
+- Fix render multiple legend entries
+
+## [0.22.4]
+- Remove `checkBoolArg` because not exists in older ILIAS versions
+
+## [0.22.3]
+- Remove PHP 7.1 return `void` syntax
+
+## [0.22.2]
+- Remove PHP 7.1 `null` syntax (`?`)
+
+## [0.22.1]
+- Remove d3 library (Not needed anymore)
+
+## [0.22.0]
+- PieChart
+- Use PieChart in LearningProgressPieUI
+
 ## [0.21.0]
 - WeekdayInputGUI
 

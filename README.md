@@ -1,20 +1,21 @@
+## Google web client config
+TODO
+
+You need to authenticate the follow redirect url
+```
+https://your-domain/goto.php?target=uihk_srgoogacauth
+```
+
 ## Installation
 
 ### Install SrGoogleAccountAuth-Plugin
 Start at your ILIAS root directory
 ```bash
-mkdir -p Customizing/global/plugins/Services/Authentication/AuthenticationHook
-cd Customizing/global/plugins/Services/Authentication/AuthenticationHook
+mkdir -p Customizing/global/plugins/Services/UIComponent/UserInterfaceHook
+cd Customizing/global/plugins/Services/UIComponent/UserInterfaceHook
 git clone https://github.com/studer-raimann/SrGoogleAccountAuth.git SrGoogleAccountAuth
 ```
 Update and activate the plugin in the ILIAS Plugin Administration
-
-### Rewrite Rule
-Config rewrite rule in .htaccess or apache config like:
-
-```apacheconfig
-RewriteRule ^/?google_login /Customizing/global/plugins/Services/Authentication/AuthenticationHook/SrGoogleAccountAuth/google_login.php [QSA,L]
-```
 
 ### Some screenshots
 TODO

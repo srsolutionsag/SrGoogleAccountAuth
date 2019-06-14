@@ -93,13 +93,21 @@ final class Output implements OutputInterface {
 			exit;
 		} else {
 			if ($main_template) {
-				self::dic()->mainTemplate()->getStandardTemplate();
+				if (self::version()->is60()) {
+					self::dic()->mainTemplate()->loadStandardTemplate();
+				} else {
+					self::dic()->mainTemplate()->getStandardTemplate();
+				}
 			}
 
 			self::dic()->mainTemplate()->setContent($html);
 
 			if ($show) {
-				self::dic()->mainTemplate()->show();
+				if (self::version()->is60()) {
+					self::dic()->mainTemplate()->printToStdout();
+				} else {
+					self::dic()->mainTemplate()->show();
+				}
 			}
 		}
 	}

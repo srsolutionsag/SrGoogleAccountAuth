@@ -28,8 +28,9 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasets extends 
   /**
    * Creates a new health dataset. Results are returned through the Operation
    * interface which returns either an `Operation.response` which contains a
-   * Dataset or `Operation.error`. The metadata field type is OperationMetadata.
-   * (datasets.create)
+   * Dataset or `Operation.error`. The metadata field type is OperationMetadata. A
+   * Google Cloud Platform project can contain up to 500 datasets across all
+   * regions. (datasets.create)
    *
    * @param string $parent The name of the project in which the dataset should be
    * created (e.g., `projects/{project_id}/locations/{location_id}`).

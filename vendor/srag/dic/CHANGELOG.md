@@ -1,5 +1,8 @@
 # Changelog
 
+## [0.18.1]
+- Fix ILIAS 6.0 global template
+
 ## [0.18.0]
 - Fix ILIAS 6.0 global template
 
