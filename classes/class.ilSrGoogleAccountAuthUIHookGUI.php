@@ -35,6 +35,8 @@ class ilSrGoogleAccountAuthUIHookGUI extends ilUIHookPluginGUI {
 
 			$html = $a_par["html"];
 
+			self::dic()->mainTemplate()->addCss(self::plugin()->directory() . "/css/srgoogacauth.css");
+
 			$login_tpl = self::plugin()->template("login.html");
 			$login_tpl->setVariable("LINK", self::output()->getHTML(self::dic()->ui()->factory()->link()->standard(self::output()->getHTML([
 				self::dic()->ui()->factory()->icon()->custom(Client::ICON_URL, self::plugin()->translate("login")),

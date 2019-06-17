@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.1.5]
+- Fix google icon may to big, dependent which skin is used
+
 ## [1.1.4]
 - Fix ILIAS 5.3
 
