@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.1.1]
+- Set external account id also for exist accounts
+
 ## [1.1.0]
 - Improvment ILIAS authentication
 - Set external account id
