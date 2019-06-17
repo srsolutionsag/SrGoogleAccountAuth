@@ -61,7 +61,7 @@ class Client extends Google_Client {
 
 		$this->setClientId(Config::getField(Config::KEY_CLIENT_ID));
 		$this->setClientSecret(Config::getField(Config::KEY_CLIENT_SECRET));
-		$this->setRedirectUri(ILIAS_HTTP_PATH . "/" . strtolower(self::REDIRECT_URL));
+		$this->setRedirectUri(ILIAS_HTTP_PATH . "/" . self::REDIRECT_URL);
 
 		$access_token = ilSession::get(self::SESSION_KEY);
 		if (!empty($access_token)) {
