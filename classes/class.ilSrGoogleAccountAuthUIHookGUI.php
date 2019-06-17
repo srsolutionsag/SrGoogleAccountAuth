@@ -1,6 +1,7 @@
 <?php
 
 use srag\DIC\SrGoogleAccountAuth\DICTrait;
+use srag\Plugins\SrGoogleAccountAuth\Authentication\AuthenticationProvider;
 use srag\Plugins\SrGoogleAccountAuth\Client\Client;
 use srag\Plugins\SrGoogleAccountAuth\Utils\SrGoogleAccountAuthTrait;
 
@@ -59,12 +60,27 @@ class ilSrGoogleAccountAuthUIHookGUI extends ilUIHookPluginGUI {
 
 		if (is_array($matches) && count($matches) >= 1) {
 
-			try {
-				self::authentication()->doAuthentication();
-			} catch (Throwable $ex) {
-				self::dic()->logger()->root()->log($ex->__toString(), ilLogLevel::ERROR);
+			$credentials = new ilAuthFrontendCredentials();
 
-				die();
+			$status = ilAuthStatus::getInstance();
+
+			$provider = new AuthenticationProvider($credentials);
+
+			$frontent = new ilAuthFrontend(self::dic()->authSession(), $status, $credentials, [
+				$provider
+			]);
+
+			$frontent->authenticate();
+
+			switch ($status->getStatus()) {
+				case ilAuthStatus::STATUS_AUTHENTICATED:
+					ilInitialisation::redirectToStartingPage();
+
+					return;
+
+				default:
+					ilUtil::sendFailure($status->getReason());
+					break;
 			}
 		}
 	}

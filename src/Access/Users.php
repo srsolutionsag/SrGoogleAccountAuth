@@ -46,23 +46,34 @@ final class Users {
 
 
 	/**
+	 * @param string $login
 	 * @param string $email
+	 * @param string $gender
+	 * @param string $first_name
+	 * @param string $last_name
+	 * @param string $ext_id
 	 * @param int[]  $roles
 	 *
 	 * @return int
 	 */
-	public function createNewAccount(string $email, array $roles): int {
+	public function createNewAccount(string $login, string $email,string $gender, string $first_name, string $last_name, string $ext_id, array $roles): int {
 		$user = new ilObjUser();
 
-		$user->setLogin($email);
+		$user->setLogin($login);
 
 		$user->setEmail($email);
+
+		$user->setGender($gender);
+
+		$user->setFirstname($first_name);
+
+		$user->setLastname($last_name);
+
+		$user->setExternalAccount($ext_id);
 
 		$user->setActive(true);
 
 		$user->setTimeLimitUnlimited(true);
-
-		$user->setIsSelfRegistered(true);
 
 		$user->create();
 
