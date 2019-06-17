@@ -1,3 +1,5 @@
+We have created an UI hook plugin because auth plugins can currently not working properly
+
 ## Google web client config
 TODO
 
@@ -5,6 +7,9 @@ You need to authenticate the follow redirect url
 ```
 https://your-domain/goto.php?target=uihk_srgoogacauth
 ```
+
+## Public area
+Currently this plugin only works with enabled public area, so you need to enable this in Administration > General Settings > Anonymous Access
 
 ## Installation
 
