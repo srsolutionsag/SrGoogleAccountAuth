@@ -46,7 +46,7 @@ class Client extends Google_Client {
 	/**
 	 * Client constructor
 	 */
-	private function __construct() {
+	public function __construct() {
 		parent::__construct();
 
 		$this->init();
