@@ -20,7 +20,8 @@ git clone https://github.com/studer-raimann/SrGoogleAccountAuth.git SrGoogleAcco
 Update and activate the plugin in the ILIAS Plugin Administration
 
 ### Some screenshots
-TODO
+Login screen:
+![Login screen](./doc/screenshots/login_screen.png)
 
 ### Requirements
 * ILIAS 5.4
