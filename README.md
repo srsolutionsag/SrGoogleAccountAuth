@@ -1,4 +1,4 @@
-We have created an UI hook plugin because auth plugins can currently not working properly
+We have created an UI hook plugin because auth plugins can currently not working properly because of the bad implementation!
 
 ## Google web client config
 TODO
