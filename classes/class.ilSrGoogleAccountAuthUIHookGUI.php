@@ -60,9 +60,9 @@ class ilSrGoogleAccountAuthUIHookGUI extends ilUIHookPluginGUI {
 
 		if (is_array($matches) && count($matches) >= 1) {
 
-			$credentials = new ilAuthFrontendCredentials();
-
 			$status = ilAuthStatus::getInstance();
+
+			$credentials = new ilAuthFrontendCredentials();
 
 			$provider = new AuthenticationProvider($credentials);
 

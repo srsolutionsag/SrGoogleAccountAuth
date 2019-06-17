@@ -56,7 +56,7 @@ final class Users {
 	 *
 	 * @return int
 	 */
-	public function createNewAccount(string $login, string $email,string $gender, string $first_name, string $last_name, string $ext_id, array $roles): int {
+	public function createNewAccount(string $login, string $email, string $gender, string $first_name, string $last_name, string $ext_id, array $roles): int {
 		$user = new ilObjUser();
 
 		$user->setLogin($login);
@@ -94,5 +94,20 @@ final class Users {
 	 */
 	public function getUserIdByEmail(string $email)/*:int*/ {
 		return ilObjUser::_lookupId(current(ilObjUser::getUserLoginsByEmail($email)));
+	}
+
+
+	/**
+	 * @param int    $user_id
+	 * @param string $ext_id
+	 */
+	public function updateExtId(int $user_id, string $ext_id)/*:void*/ {
+		$user = new ilObjUser($user_id);
+
+		if (empty($user->getExternalAccount()) && !empty($ext_id)) {
+			$user->setExternalAccount($ext_id);
+
+			$user->update();
+		}
 	}
 }
