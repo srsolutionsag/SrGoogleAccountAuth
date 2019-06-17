@@ -5,11 +5,8 @@ TODO
 
 You need to authenticate the follow redirect url
 ```
-https://your-domain/goto.php?target=uihk_srgoogacauth
+https://your-domain/login.php?target=uihk_srgoogacauth
 ```
-
-## Public area
-Currently this plugin only works with enabled public area, so you need to enable this in Administration > General Settings > Anonymous Access
 
 ## Installation
 
