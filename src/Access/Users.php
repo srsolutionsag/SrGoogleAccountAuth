@@ -111,7 +111,7 @@ final class Users {
 	 * @return int|null
 	 */
 	public function getUserIdByEmail(string $email)/*:?int*/ {
-		return ilObjUser::_lookupId(current(ilObjUser::getUserLoginsByEmail($email)));
+		return ilObjUser::_lookupId(current(self::version()->is54() ? ilObjUser::getUserLoginsByEmail($email) : ilObjUser::_getUserIdsByEmail($email)));
 	}
 
 

@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.1.4]
+- Fix ILIAS 5.3
+
 ## [1.1.3]
 - Supports ILIAS 5.3 also
 
