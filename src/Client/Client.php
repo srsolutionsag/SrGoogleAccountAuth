@@ -22,7 +22,7 @@ class Client extends Google_Client {
 	use DICTrait;
 	use SrGoogleAccountAuthTrait;
 	const PLUGIN_CLASS_NAME = ilSrGoogleAccountAuthPlugin::class;
-	const REDIRECT_URL = "goto.php?target=uihk_" . ilSrGoogleAccountAuthPlugin::PLUGIN_ID;
+	const REDIRECT_URL = "login.php?target=uihk_" . ilSrGoogleAccountAuthPlugin::PLUGIN_ID;
 	const SESSION_KEY = "google_access_token";
 	const ICON_URL = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png";
 	/**
