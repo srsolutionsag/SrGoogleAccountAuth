@@ -7,13 +7,13 @@ use srag\DIC\SrGoogleAccountAuth\DICTrait;
 use srag\Plugins\SrGoogleAccountAuth\Utils\SrGoogleAccountAuthTrait;
 
 /**
- * Class Ilias
+ * Class Roles
  *
  * @package srag\Plugins\SrGoogleAccountAuth\Access
  *
  * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
-final class Ilias {
+final class Roles {
 
 	use DICTrait;
 	use SrGoogleAccountAuthTrait;
@@ -21,14 +21,14 @@ final class Ilias {
 	/**
 	 * @var self
 	 */
-	protected static $instance = null;
+	protected static $instance = NULL;
 
 
 	/**
 	 * @return self
 	 */
 	public static function getInstance(): self {
-		if (self::$instance === null) {
+		if (self::$instance === NULL) {
 			self::$instance = new self();
 		}
 
@@ -37,7 +37,7 @@ final class Ilias {
 
 
 	/**
-	 * Ilias constructor
+	 * Roles constructor
 	 */
 	private function __construct() {
 
@@ -45,17 +45,21 @@ final class Ilias {
 
 
 	/**
-	 * @return Roles
+	 * @return array
 	 */
-	public function roles(): Roles {
-		return Roles::getInstance();
-	}
+	public function getAllRoles(): array {
+		/**
+		 * @var array $global_roles
+		 * @var array $roles
+		 */
 
+		$global_roles = self::dic()->rbacreview()->getRolesForIDs(self::dic()->rbacreview()->getGlobalRoles(), false);
 
-	/**
-	 * @return Users
-	 */
-	public function users(): Users {
-		return Users::getInstance();
+		$roles = [];
+		foreach ($global_roles as $global_role) {
+			$roles[$global_role["rol_id"]] = $global_role["title"];
+		}
+
+		return $roles;
 	}
 }

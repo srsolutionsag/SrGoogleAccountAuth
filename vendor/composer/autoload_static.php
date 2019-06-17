@@ -9901,6 +9901,7 @@ class ComposerStaticInitcad4c6204bf143a143bbee0ca440b4fa
         'srag\\LibrariesNamespaceChanger\\PHP7Backport' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/PHP7Backport.php',
         'srag\\Plugins\\SrGoogleAccountAuth\\Access\\Access' => __DIR__ . '/../..' . '/src/Access/Access.php',
         'srag\\Plugins\\SrGoogleAccountAuth\\Access\\Ilias' => __DIR__ . '/../..' . '/src/Access/Ilias.php',
+        'srag\\Plugins\\SrGoogleAccountAuth\\Access\\Roles' => __DIR__ . '/../..' . '/src/Access/Roles.php',
         'srag\\Plugins\\SrGoogleAccountAuth\\Access\\Users' => __DIR__ . '/../..' . '/src/Access/Users.php',
         'srag\\Plugins\\SrGoogleAccountAuth\\Authentication\\Authentication' => __DIR__ . '/../..' . '/src/Authentication/Authentication.php',
         'srag\\Plugins\\SrGoogleAccountAuth\\Client\\Client' => __DIR__ . '/../..' . '/src/Client/Client.php',

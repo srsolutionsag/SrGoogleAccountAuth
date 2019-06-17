@@ -47,6 +47,37 @@ final class Users {
 
 	/**
 	 * @param string $email
+	 * @param int[]  $roles
+	 *
+	 * @return int
+	 */
+	public function createNewAccount(string $email, array $roles): int {
+		$user = new ilObjUser();
+
+		$user->setLogin($email);
+
+		$user->setEmail($email);
+
+		$user->setActive(true);
+
+		$user->setTimeLimitUnlimited(true);
+
+		$user->setIsSelfRegistered(true);
+
+		$user->create();
+
+		$user->saveAsNew();
+
+		foreach ($roles as $role_id) {
+			self::dic()->rbacadmin()->assignUser($role_id, $user->getId());
+		}
+
+		return $user->getId();
+	}
+
+
+	/**
+	 * @param string $email
 	 *
 	 * @return int|null
 	 */

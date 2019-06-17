@@ -8,6 +8,7 @@ use ilSession;
 use ilSrGoogleAccountAuthPlugin;
 use srag\DIC\SrGoogleAccountAuth\DICTrait;
 use srag\Plugins\SrGoogleAccountAuth\Client\Client;
+use srag\Plugins\SrGoogleAccountAuth\Config\Config;
 use srag\Plugins\SrGoogleAccountAuth\Exception\SrGoogleAccountAuthException;
 use srag\Plugins\SrGoogleAccountAuth\Utils\SrGoogleAccountAuthTrait;
 
@@ -85,7 +86,11 @@ class Authentication {
 
 		$user_id = self::ilias()->users()->getUserIdByEmail($email);
 		if (empty($user_id)) {
-			throw new SrGoogleAccountAuthException("No ILIAS user found!");
+			if (!Config::getField(Config::KEY_CREATE_NEW_ACCOUNTS)) {
+				throw new SrGoogleAccountAuthException("No ILIAS user found!");
+			}
+
+			$user_id = self::ilias()->users()->createNewAccount($email, Config::getField(Config::KEY_NEW_ACCOUNT_ROLES));
 		}
 
 		self::dic()->authSession()->setAuthenticated(true, $user_id);

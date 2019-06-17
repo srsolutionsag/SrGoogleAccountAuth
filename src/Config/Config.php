@@ -20,11 +20,15 @@ class Config extends ActiveRecordConfig {
 	const PLUGIN_CLASS_NAME = ilSrGoogleAccountAuthPlugin::class;
 	const KEY_CLIENT_ID = "client_id";
 	const KEY_CLIENT_SECRET = "client_secret";
+	const KEY_CREATE_NEW_ACCOUNTS="create_new_accounts";
+	const KEY_NEW_ACCOUNT_ROLES = "new_account_roles";
 	/**
 	 * @var array
 	 */
 	protected static $fields = [
 		self::KEY_CLIENT_ID => self::TYPE_STRING,
-		self::KEY_CLIENT_SECRET => self::TYPE_STRING
+		self::KEY_CLIENT_SECRET => self::TYPE_STRING,
+		self::KEY_CREATE_NEW_ACCOUNTS => self::TYPE_BOOLEAN,
+		self::KEY_NEW_ACCOUNT_ROLES => [ self::TYPE_JSON, [] ]
 	];
 }
