@@ -1,0 +1,9 @@
+config_client_id#:#Client-ID
+config_client_secret#:#Client-Secret
+config_configuration#:#Konfiguration
+config_configuration_saved#:#Konfiguration gespeichert
+config_create_new_accounts#:#ILIAS-Benutzer automatisch anlegen
+config_new_account_roles#:#Rollen
+config_new_account_roles_info#:#Automatisch der ausgewählten Rollen zuweisen
+config_save#:#Speichern
+login#:#Mittels Google-Konto anmelden
