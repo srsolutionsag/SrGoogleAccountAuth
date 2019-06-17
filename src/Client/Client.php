@@ -22,7 +22,7 @@ class Client extends Google_Client {
 	use DICTrait;
 	use SrGoogleAccountAuthTrait;
 	const PLUGIN_CLASS_NAME = ilSrGoogleAccountAuthPlugin::class;
-	const REDIRECT_URL = "goto.php?target=uihk_srgoogacauth";
+	const REDIRECT_URL = "goto.php?target=uihk_" . ilSrGoogleAccountAuthPlugin::PLUGIN_ID;
 	const SESSION_KEY = "google_access_token";
 	const ICON_URL = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png";
 	/**
@@ -61,8 +61,7 @@ class Client extends Google_Client {
 
 		$this->setClientId(Config::getField(Config::KEY_CLIENT_ID));
 		$this->setClientSecret(Config::getField(Config::KEY_CLIENT_SECRET));
-		$this->setRedirectUri(ILIAS_HTTP_PATH . "/" . self::REDIRECT_URL);
-		$this->setRedirectUri("https://plugins.studer-raimann.ch". "/" . self::REDIRECT_URL);
+		$this->setRedirectUri(ILIAS_HTTP_PATH . "/" . strtolower(self::REDIRECT_URL));
 
 		$access_token = ilSession::get(self::SESSION_KEY);
 		if (!empty($access_token)) {
