@@ -2,6 +2,7 @@
 
 namespace srag\Plugins\SrGoogleAccountAuth\Access;
 
+use ilDBConstants;
 use ilObjUser;
 use ilSrGoogleAccountAuthPlugin;
 use srag\DIC\SrGoogleAccountAuth\DICTrait;
@@ -51,12 +52,12 @@ final class Users {
 	 * @param string $gender
 	 * @param string $first_name
 	 * @param string $last_name
-	 * @param string $ext_id
+	 * @param string $external_account
 	 * @param int[]  $roles
 	 *
 	 * @return int
 	 */
-	public function createNewAccount(string $login, string $email, string $gender, string $first_name, string $last_name, string $ext_id, array $roles): int {
+	public function createNewAccount(string $login, string $email, string $gender, string $first_name, string $last_name, string $external_account, array $roles): int {
 		$user = new ilObjUser();
 
 		$user->setLogin($login);
@@ -69,7 +70,7 @@ final class Users {
 
 		$user->setLastname($last_name);
 
-		$user->setExternalAccount($ext_id);
+		$user->setExternalAccount($external_account);
 
 		$user->setActive(true);
 
@@ -88,11 +89,28 @@ final class Users {
 
 
 	/**
+	 * @param string $external_account
+	 *
+	 * @return int|null
+	 */
+	public function getUserIdByExternalAccount(string $external_account)/*:?int*/ {
+		$result = self::dic()->database()
+			->queryF('SELECT usr_id FROM usr_data WHERE ext_account=%s', [ ilDBConstants::T_TEXT ], [ $external_account ]);
+
+		if (($row = $result->fetchAssoc()) !== false) {
+			return intval($row["usr_id"]);
+		} else {
+			return null;
+		}
+	}
+
+
+	/**
 	 * @param string $email
 	 *
 	 * @return int|null
 	 */
-	public function getUserIdByEmail(string $email)/*:int*/ {
+	public function getUserIdByEmail(string $email)/*:?int*/ {
 		return ilObjUser::_lookupId(current(ilObjUser::getUserLoginsByEmail($email)));
 	}
 

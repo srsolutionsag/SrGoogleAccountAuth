@@ -72,13 +72,18 @@ class AuthenticationProvider extends ilAuthProvider implements ilAuthProviderInt
 				"personFields" => [ "names", "genders", "emailAddresses" ]
 			]);
 
-			$email = current($result->getEmailAddresses())->getValue();
-
-			$user_id = self::ilias()->users()->getUserIdByEmail($email);
-
 			$ext_id = $result->getResourceName();
 
+			$email = current($result->getEmailAddresses())->getValue();
+
+			$user_id = self::ilias()->users()->getUserIdByExternalAccount($ext_id);
+
 			if (empty($user_id)) {
+				$user_id = self::ilias()->users()->getUserIdByEmail($email);
+			}
+
+			if (empty($user_id)) {
+
 				if (!Config::getField(Config::KEY_CREATE_NEW_ACCOUNTS)) {
 					throw new SrGoogleAccountAuthException("No ILIAS user found!");
 				}
