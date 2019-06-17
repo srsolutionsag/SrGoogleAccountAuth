@@ -24,7 +24,7 @@ Login screen:
 ![Login screen](./doc/screenshots/login_screen.png)
 
 ### Requirements
-* ILIAS 5.4
+* ILIAS 5.3 or ILIAS 5.4
 * PHP >=7.0
 
 ### Adjustment suggestions
