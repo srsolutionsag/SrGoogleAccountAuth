@@ -76,6 +76,7 @@ class ilSrGoogleAccountAuthUIHookGUI extends ilUIHookPluginGUI {
 
 			switch ($status->getStatus()) {
 				case ilAuthStatus::STATUS_AUTHENTICATED:
+					unset($_GET["target"]); // Fix redirecting not user defaults start page
 					ilInitialisation::redirectToStartingPage();
 
 					return;
