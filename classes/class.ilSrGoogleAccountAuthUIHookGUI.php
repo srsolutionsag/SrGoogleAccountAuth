@@ -68,11 +68,11 @@ class ilSrGoogleAccountAuthUIHookGUI extends ilUIHookPluginGUI {
 
 			$provider = new AuthenticationProvider($credentials);
 
-			$frontent = new ilAuthFrontend(self::dic()->authSession(), $status, $credentials, [
+			$frontend = new ilAuthFrontend(self::dic()->authSession(), $status, $credentials, [
 				$provider
 			]);
 
-			$frontent->authenticate();
+			$frontend->authenticate();
 
 			switch ($status->getStatus()) {
 				case ilAuthStatus::STATUS_AUTHENTICATED:
