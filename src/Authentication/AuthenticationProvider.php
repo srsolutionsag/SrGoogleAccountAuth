@@ -43,7 +43,7 @@ class AuthenticationProvider extends ilAuthProvider implements ilAuthProviderInt
 	/**
 	 * @inheritdoc
 	 */
-	public function doAuthentication(ilAuthStatus $status)/*: bool*/ {
+	public function doAuthentication(ilAuthStatus $status): bool {
 		try {
 			if (empty(self::client()->getAccessToken())) {
 
