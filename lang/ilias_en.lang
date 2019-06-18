@@ -7,3 +7,4 @@ config_new_account_roles#:#Rolles
 config_new_account_roles_info#:#Automatically assign to the selected roles
 config_save#:#Save
 login#:#Login with Google account
+login_failed#:#The login with the Google account wasn't possible

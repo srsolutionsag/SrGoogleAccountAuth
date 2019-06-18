@@ -7,3 +7,4 @@ config_new_account_roles#:#Rollen
 config_new_account_roles_info#:#Automatisch der ausgewählten Rollen zuweisen
 config_save#:#Speichern
 login#:#Mittels Google-Konto anmelden
+login_failed#:#Die Anmeldung mit dem Google-Konto war nicht möglich

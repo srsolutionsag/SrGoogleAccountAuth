@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.1.6]
+- Not display detailed error message
+
 ## [1.1.5]
 - Fix google icon may to big, dependent which skin is used
 
