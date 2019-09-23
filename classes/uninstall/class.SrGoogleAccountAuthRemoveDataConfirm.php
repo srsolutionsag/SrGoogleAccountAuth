@@ -12,8 +12,9 @@ use srag\RemovePluginDataConfirm\SrGoogleAccountAuth\AbstractRemovePluginDataCon
  *
  * @ilCtrl_isCalledBy SrGoogleAccountAuthRemoveDataConfirm: ilUIPluginRouterGUI
  */
-class SrGoogleAccountAuthRemoveDataConfirm extends AbstractRemovePluginDataConfirm {
+class SrGoogleAccountAuthRemoveDataConfirm extends AbstractRemovePluginDataConfirm
+{
 
-	use SrGoogleAccountAuthTrait;
-	const PLUGIN_CLASS_NAME = ilSrGoogleAccountAuthPlugin::class;
+    use SrGoogleAccountAuthTrait;
+    const PLUGIN_CLASS_NAME = ilSrGoogleAccountAuthPlugin::class;
 }

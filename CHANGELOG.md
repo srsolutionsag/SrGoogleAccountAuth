@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.1.7]
+- Fix login again if access token is experied
+
 ## [1.1.6]
 - Not display detailed error message
 - Fix redirecting not user defaults start page
