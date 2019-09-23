@@ -88,7 +88,7 @@ class AuthenticationProvider extends ilAuthProvider implements ilAuthProviderInt
             if (empty($user_id)) {
 
                 if (!Config::getField(Config::KEY_CREATE_NEW_ACCOUNTS)) {
-                    throw new SrGoogleAccountAuthException("No ILIAS user found!");
+                    throw new SrGoogleAccountAuthException("No ILIAS user found for " . $email . "!");
                 }
 
                 $login = $email;
