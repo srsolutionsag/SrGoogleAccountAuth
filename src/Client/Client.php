@@ -2,6 +2,7 @@
 
 namespace srag\Plugins\SrGoogleAccountAuth\Client;
 
+use Closure;
 use Google_Client;
 use Google_Service_PeopleService;
 use ilSession;
@@ -70,6 +71,11 @@ class Client extends Google_Client
         $access_token = ilSession::get(self::SESSION_KEY);
         if (!empty($access_token)) {
             $this->setAccessToken($access_token);
+        }
+        if ($this->isAccessTokenExpired()) {
+            Closure::bind(function () {
+                $this->token = null; // `setAccessToken(null)` can not be reset
+            }, $this, Google_Client::class)();
         }
 
         $this->setScopes([
