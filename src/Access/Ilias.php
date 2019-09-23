@@ -13,49 +13,54 @@ use srag\Plugins\SrGoogleAccountAuth\Utils\SrGoogleAccountAuthTrait;
  *
  * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
-final class Ilias {
+final class Ilias
+{
 
-	use DICTrait;
-	use SrGoogleAccountAuthTrait;
-	const PLUGIN_CLASS_NAME = ilSrGoogleAccountAuthPlugin::class;
-	/**
-	 * @var self
-	 */
-	protected static $instance = null;
-
-
-	/**
-	 * @return self
-	 */
-	public static function getInstance(): self {
-		if (self::$instance === null) {
-			self::$instance = new self();
-		}
-
-		return self::$instance;
-	}
+    use DICTrait;
+    use SrGoogleAccountAuthTrait;
+    const PLUGIN_CLASS_NAME = ilSrGoogleAccountAuthPlugin::class;
+    /**
+     * @var self
+     */
+    protected static $instance = null;
 
 
-	/**
-	 * Ilias constructor
-	 */
-	private function __construct() {
+    /**
+     * @return self
+     */
+    public static function getInstance() : self
+    {
+        if (self::$instance === null) {
+            self::$instance = new self();
+        }
 
-	}
-
-
-	/**
-	 * @return Roles
-	 */
-	public function roles(): Roles {
-		return Roles::getInstance();
-	}
+        return self::$instance;
+    }
 
 
-	/**
-	 * @return Users
-	 */
-	public function users(): Users {
-		return Users::getInstance();
-	}
+    /**
+     * Ilias constructor
+     */
+    private function __construct()
+    {
+
+    }
+
+
+    /**
+     * @return Roles
+     */
+    public function roles() : Roles
+    {
+        return Roles::getInstance();
+    }
+
+
+    /**
+     * @return Users
+     */
+    public function users() : Users
+    {
+        return Users::getInstance();
+    }
 }

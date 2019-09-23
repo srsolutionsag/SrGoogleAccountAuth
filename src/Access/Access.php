@@ -13,33 +13,36 @@ use srag\Plugins\SrGoogleAccountAuth\Utils\SrGoogleAccountAuthTrait;
  *
  * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
-final class Access {
+final class Access
+{
 
-	use DICTrait;
-	use SrGoogleAccountAuthTrait;
-	const PLUGIN_CLASS_NAME = ilSrGoogleAccountAuthPlugin::class;
-	/**
-	 * @var self
-	 */
-	protected static $instance = null;
-
-
-	/**
-	 * @return self
-	 */
-	public static function getInstance(): self {
-		if (self::$instance === null) {
-			self::$instance = new self();
-		}
-
-		return self::$instance;
-	}
+    use DICTrait;
+    use SrGoogleAccountAuthTrait;
+    const PLUGIN_CLASS_NAME = ilSrGoogleAccountAuthPlugin::class;
+    /**
+     * @var self
+     */
+    protected static $instance = null;
 
 
-	/**
-	 * Access constructor
-	 */
-	private function __construct() {
+    /**
+     * @return self
+     */
+    public static function getInstance() : self
+    {
+        if (self::$instance === null) {
+            self::$instance = new self();
+        }
 
-	}
+        return self::$instance;
+    }
+
+
+    /**
+     * Access constructor
+     */
+    private function __construct()
+    {
+
+    }
 }

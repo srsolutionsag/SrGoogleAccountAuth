@@ -25,108 +25,111 @@ use Throwable;
  *
  * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
-class AuthenticationProvider extends ilAuthProvider implements ilAuthProviderInterface {
+class AuthenticationProvider extends ilAuthProvider implements ilAuthProviderInterface
+{
 
-	use DICTrait;
-	use SrGoogleAccountAuthTrait;
-	const PLUGIN_CLASS_NAME = ilSrGoogleAccountAuthPlugin::class;
-
-
-	/**
-	 * AuthenticationProvider constructor
-	 */
-	public function __construct(ilAuthCredentials $credentials) {
-		parent::__construct($credentials);
-	}
+    use DICTrait;
+    use SrGoogleAccountAuthTrait;
+    const PLUGIN_CLASS_NAME = ilSrGoogleAccountAuthPlugin::class;
 
 
-	/**
-	 * @inheritdoc
-	 */
-	public function doAuthentication(ilAuthStatus $status): bool {
-		try {
-			if (empty(self::client()->getAccessToken())) {
+    /**
+     * AuthenticationProvider constructor
+     */
+    public function __construct(ilAuthCredentials $credentials)
+    {
+        parent::__construct($credentials);
+    }
 
-				$code = filter_input(INPUT_GET, "code");
-				if (empty($code)) {
-					throw new SrGoogleAccountAuthException("No code set!");
-				}
 
-				self::client()->fetchAccessTokenWithAuthCode($code);
+    /**
+     * @inheritdoc
+     */
+    public function doAuthentication(ilAuthStatus $status) : bool
+    {
+        try {
+            if (empty(self::client()->getAccessToken())) {
 
-				$access_token = self::client()->getAccessToken();
-				if (empty($access_token)) {
-					throw new SrGoogleAccountAuthException("No access token set!");
-				}
+                $code = filter_input(INPUT_GET, "code");
+                if (empty($code)) {
+                    throw new SrGoogleAccountAuthException("No code set!");
+                }
 
-				ilSession::set(Client::SESSION_KEY, $access_token);
-			}
+                self::client()->fetchAccessTokenWithAuthCode($code);
 
-			if (self::client()->isAccessTokenExpired()) {
-				throw new SrGoogleAccountAuthException("Access token expired!");
-			}
+                $access_token = self::client()->getAccessToken();
+                if (empty($access_token)) {
+                    throw new SrGoogleAccountAuthException("No access token set!");
+                }
 
-			$service = new Google_Service_PeopleService(self::client());
+                ilSession::set(Client::SESSION_KEY, $access_token);
+            }
 
-			$result = $service->people->get("people/me", [
-				"personFields" => [ "names", "genders", "emailAddresses" ]
-			]);
+            if (self::client()->isAccessTokenExpired()) {
+                throw new SrGoogleAccountAuthException("Access token expired!");
+            }
 
-			$ext_id = $result->getResourceName();
+            $service = new Google_Service_PeopleService(self::client());
 
-			$email = current($result->getEmailAddresses())->getValue();
+            $result = $service->people->get("people/me", [
+                "personFields" => ["names", "genders", "emailAddresses"]
+            ]);
 
-			$user_id = self::ilias()->users()->getUserIdByExternalAccount($ext_id);
+            $ext_id = $result->getResourceName();
 
-			if (empty($user_id)) {
-				$user_id = self::ilias()->users()->getUserIdByEmail($email);
-			}
+            $email = current($result->getEmailAddresses())->getValue();
 
-			if (empty($user_id)) {
+            $user_id = self::ilias()->users()->getUserIdByExternalAccount($ext_id);
 
-				if (!Config::getField(Config::KEY_CREATE_NEW_ACCOUNTS)) {
-					throw new SrGoogleAccountAuthException("No ILIAS user found!");
-				}
+            if (empty($user_id)) {
+                $user_id = self::ilias()->users()->getUserIdByEmail($email);
+            }
 
-				$login = $email;
+            if (empty($user_id)) {
 
-				/**
-				 * @var Google_Service_PeopleService_Gender $genders
-				 */
-				$genders = current($result->getGenders());
-				if (!empty($gender)) {
-					$gender = $genders->getValue();
-				} else {
-					$gender = "";
-				}
+                if (!Config::getField(Config::KEY_CREATE_NEW_ACCOUNTS)) {
+                    throw new SrGoogleAccountAuthException("No ILIAS user found!");
+                }
 
-				/**
-				 * @var Google_Service_PeopleService_Name $names
-				 */
-				$names = current($result->getNames());
-				if (!empty($names)) {
-					$first_name = $names->getGivenName();
-					$last_name = $names->getFamilyName();
-				} else {
-					$first_name = "";
-					$last_name = "";
-				}
+                $login = $email;
 
-				$user_id = self::ilias()->users()
-					->createNewAccount($login, $email, $gender, $first_name, $last_name, $ext_id, Config::getField(Config::KEY_NEW_ACCOUNT_ROLES));
-			} else {
-				self::ilias()->users()->updateExtId($user_id, $ext_id);
-			}
+                /**
+                 * @var Google_Service_PeopleService_Gender $genders
+                 */
+                $genders = current($result->getGenders());
+                if (!empty($gender)) {
+                    $gender = $genders->getValue();
+                } else {
+                    $gender = "";
+                }
 
-			$status->setAuthenticatedUserId($user_id);
+                /**
+                 * @var Google_Service_PeopleService_Name $names
+                 */
+                $names = current($result->getNames());
+                if (!empty($names)) {
+                    $first_name = $names->getGivenName();
+                    $last_name = $names->getFamilyName();
+                } else {
+                    $first_name = "";
+                    $last_name = "";
+                }
 
-			$status->setStatus(ilAuthStatus::STATUS_AUTHENTICATED);
+                $user_id = self::ilias()->users()
+                    ->createNewAccount($login, $email, $gender, $first_name, $last_name, $ext_id, Config::getField(Config::KEY_NEW_ACCOUNT_ROLES));
+            } else {
+                self::ilias()->users()->updateExtId($user_id, $ext_id);
+            }
 
-			return true;
-		} catch (Throwable $ex) {
-			$this->getLogger()->log($ex->__toString());
+            $status->setAuthenticatedUserId($user_id);
 
-			return $this->handleAuthenticationFail($status, self::plugin()->translate("login_failed"));
-		}
-	}
+            $status->setStatus(ilAuthStatus::STATUS_AUTHENTICATED);
+
+            return true;
+        } catch (Throwable $ex) {
+            $this->getLogger()->log($ex->__toString());
+
+            return $this->handleAuthenticationFail($status, self::plugin()->translate("login_failed"));
+        }
+    }
 }

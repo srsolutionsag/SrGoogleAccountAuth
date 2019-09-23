@@ -11,12 +11,13 @@ use srag\Plugins\SrGoogleAccountAuth\Utils\SrGoogleAccountAuthTrait;
  *
  * @author studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
-class ilSrGoogleAccountAuthConfigGUI extends ActiveRecordConfigGUI {
+class ilSrGoogleAccountAuthConfigGUI extends ActiveRecordConfigGUI
+{
 
-	use SrGoogleAccountAuthTrait;
-	const PLUGIN_CLASS_NAME = ilSrGoogleAccountAuthPlugin::class;
-	/**
-	 * @var array
-	 */
-	protected static $tabs = [ self::TAB_CONFIGURATION => ConfigFormGUI::class ];
+    use SrGoogleAccountAuthTrait;
+    const PLUGIN_CLASS_NAME = ilSrGoogleAccountAuthPlugin::class;
+    /**
+     * @var array
+     */
+    protected static $tabs = [self::TAB_CONFIGURATION => ConfigFormGUI::class];
 }
