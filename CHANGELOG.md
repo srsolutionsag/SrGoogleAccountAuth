@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.1.8]
+- Log email if no ILIAS user was found and not should created
+
 ## [1.1.7]
 - Fix login again if access token is experied
 

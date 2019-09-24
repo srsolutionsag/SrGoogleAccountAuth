@@ -73,7 +73,7 @@ class Client extends Google_Client
             $this->setAccessToken($access_token);
         }
         if ($this->isAccessTokenExpired()) {
-            Closure::bind(function () {
+            Closure::bind(function ()/*:void*/ {
                 $this->token = null; // `setAccessToken(null)` can not be reset
             }, $this, Google_Client::class)();
         }
