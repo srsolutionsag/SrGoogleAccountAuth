@@ -1,6 +1,6 @@
 # Changelog
 
-## [x]
+## [1.1.8]
 - Log email if no ILIAS user was found and not should created
 
 ## [1.1.7]
