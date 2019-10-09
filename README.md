@@ -1,3 +1,5 @@
+This is an OpenSource project by studer + raimann ag, CH-Burgdorf (https://studer-raimann.ch)
+
 We have created an UI hook plugin because auth plugins currently not working properly
 
 ## Google web client config
