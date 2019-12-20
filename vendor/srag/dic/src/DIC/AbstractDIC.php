@@ -2,6 +2,7 @@
 
 namespace srag\DIC\SrGoogleAccountAuth\DIC;
 
+use ILIAS\DI\Container;
 use srag\DIC\SrGoogleAccountAuth\Database\DatabaseDetector;
 use srag\DIC\SrGoogleAccountAuth\Database\DatabaseInterface;
 
@@ -12,20 +13,29 @@ use srag\DIC\SrGoogleAccountAuth\Database\DatabaseInterface;
  *
  * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
-abstract class AbstractDIC implements DICInterface {
+abstract class AbstractDIC implements DICInterface
+{
 
-	/**
-	 * AbstractDIC constructor
-	 */
-	protected function __construct() {
-
-	}
+    /**
+     * @var Container
+     */
+    protected $dic;
 
 
-	/**
-	 * @inheritdoc
-	 */
-	public function database(): DatabaseInterface {
-		return DatabaseDetector::getInstance($this->databaseCore());
-	}
+    /**
+     * @inheritDoc
+     */
+    public function __construct(Container &$dic)
+    {
+        $this->dic = &$dic;
+    }
+
+
+    /**
+     * @inheritdoc
+     */
+    public function database() : DatabaseInterface
+    {
+        return DatabaseDetector::getInstance($this->databaseCore());
+    }
 }
