@@ -1,5 +1,29 @@
 # Changelog
 
+## [0.19.3]
+- Remove ILIAS 5.2 hints
+
+## [0.19.2]
+- `setLocator` on output
+
+## [0.19.1]
+- Fix
+
+## [0.19.0]
+- Add some new ILIAS 6 methods
+
+## [0.18.5]
+- Fix ILIAS 6 version
+
+## [0.18.4]
+- Add exists `self::dic()->dic()` to interface
+
+## [0.18.3]
+- ILIAS 6.0 `uiServices`
+
+## [0.18.2]
+- Supports output `ilTemplateWrapper`
+
 ## [0.18.1]
 - Fix ILIAS 6.0 global template
 
