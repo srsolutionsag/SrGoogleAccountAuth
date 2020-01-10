@@ -70,7 +70,7 @@ class ilSrGoogleAccountAuthPlugin extends ilUserInterfaceHookPlugin
 
 
     /**
-     * @inheritdoc
+     * @inheritDoc
      */
     protected function deleteData()/*: void*/
     {

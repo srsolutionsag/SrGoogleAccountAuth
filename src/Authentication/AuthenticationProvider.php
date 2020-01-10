@@ -43,7 +43,7 @@ class AuthenticationProvider extends ilAuthProvider implements ilAuthProviderInt
 
 
     /**
-     * @inheritdoc
+     * @inheritDoc
      */
     public function doAuthentication(ilAuthStatus $status) : bool
     {

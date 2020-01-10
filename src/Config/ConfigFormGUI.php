@@ -4,9 +4,10 @@ namespace srag\Plugins\SrGoogleAccountAuth\Config;
 
 use ilCheckboxInputGUI;
 use ilMultiSelectInputGUI;
+use ilSrGoogleAccountAuthConfigGUI;
 use ilSrGoogleAccountAuthPlugin;
 use ilTextInputGUI;
-use srag\ActiveRecordConfig\SrGoogleAccountAuth\ActiveRecordConfigFormGUI;
+use srag\CustomInputGUIs\SrGoogleAccountAuth\PropertyFormGUI\ConfigPropertyFormGUI;
 use srag\Plugins\SrGoogleAccountAuth\Utils\SrGoogleAccountAuthTrait;
 
 /**
@@ -16,16 +17,37 @@ use srag\Plugins\SrGoogleAccountAuth\Utils\SrGoogleAccountAuthTrait;
  *
  * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
-class ConfigFormGUI extends ActiveRecordConfigFormGUI
+class ConfigFormGUI extends ConfigPropertyFormGUI
 {
 
     use SrGoogleAccountAuthTrait;
     const PLUGIN_CLASS_NAME = ilSrGoogleAccountAuthPlugin::class;
     const CONFIG_CLASS_NAME = Config::class;
+    const LANG_MODULE = ilSrGoogleAccountAuthConfigGUI::LANG_MODULE;
 
 
     /**
-     * @inheritdoc
+     * ConfigFormGUI constructor
+     *
+     * @param ilSrGoogleAccountAuthConfigGUI $parent
+     */
+    public function __construct(ilSrGoogleAccountAuthConfigGUI $parent)
+    {
+        parent::__construct($parent);
+    }
+
+
+    /**
+     * @inheritDoc
+     */
+    protected function initCommands()/*: void*/
+    {
+        $this->addCommandButton(ilSrGoogleAccountAuthConfigGUI::CMD_UPDATE_CONFIGURE, $this->txt("save"));
+    }
+
+
+    /**
+     * @inheritDoc
      */
     protected function getValue(/*string*/ $key)
     {
@@ -37,7 +59,7 @@ class ConfigFormGUI extends ActiveRecordConfigFormGUI
 
 
     /**
-     * @inheritdoc
+     * @inheritDoc
      */
     protected function initFields()/*: void*/
     {
@@ -66,7 +88,25 @@ class ConfigFormGUI extends ActiveRecordConfigFormGUI
 
 
     /**
-     * @inheritdoc
+     * @inheritDoc
+     */
+    protected function initId()/*: void*/
+    {
+
+    }
+
+
+    /**
+     * @inheritDoc
+     */
+    protected function initTitle()/*: void*/
+    {
+        $this->setTitle($this->txt("configuration"));
+    }
+
+
+    /**
+     * @inheritDoc
      */
     protected function storeValue(/*string*/ $key, $value)/*: void*/
     {
