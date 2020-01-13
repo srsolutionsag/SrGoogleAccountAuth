@@ -78,7 +78,7 @@ class ConfigFormGUI extends ConfigPropertyFormGUI
                     Config::KEY_NEW_ACCOUNT_ROLES => [
                         self::PROPERTY_CLASS    => ilMultiSelectInputGUI::class,
                         self::PROPERTY_REQUIRED => true,
-                        self::PROPERTY_OPTIONS  => self::ilias()->roles()->getAllRoles(),
+                        self::PROPERTY_OPTIONS  => self::srGoogleAccountAuth()->ilias()->roles()->getAllRoles(),
                         "enableSelectAll"       => true
                     ],
                 ]

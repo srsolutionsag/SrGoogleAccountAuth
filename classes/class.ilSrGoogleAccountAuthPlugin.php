@@ -3,7 +3,6 @@
 require_once __DIR__ . "/../vendor/autoload.php";
 
 use srag\DIC\SrGoogleAccountAuth\Util\LibraryLanguageInstaller;
-use srag\Plugins\SrGoogleAccountAuth\Config\Config;
 use srag\Plugins\SrGoogleAccountAuth\Utils\SrGoogleAccountAuthTrait;
 use srag\RemovePluginDataConfirm\SrGoogleAccountAuth\PluginUninstallTrait;
 
@@ -74,6 +73,6 @@ class ilSrGoogleAccountAuthPlugin extends ilUserInterfaceHookPlugin
      */
     protected function deleteData()/*: void*/
     {
-        self::dic()->database()->dropTable(Config::TABLE_NAME, false);
+        self::srGoogleAccountAuth()->dropTables();
     }
 }

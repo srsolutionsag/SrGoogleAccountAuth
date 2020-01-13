@@ -50,16 +50,16 @@ class AuthenticationProvider extends ilAuthProvider implements ilAuthProviderInt
     public function doAuthentication(ilAuthStatus $status) : bool
     {
         try {
-            if (empty(self::client()->getAccessToken())) {
+            if (empty(self::srGoogleAccountAuth()->client()->getAccessToken())) {
 
                 $code = filter_input(INPUT_GET, "code");
                 if (empty($code)) {
                     throw new SrGoogleAccountAuthException("No code set!");
                 }
 
-                self::client()->fetchAccessTokenWithAuthCode($code);
+                self::srGoogleAccountAuth()->client()->fetchAccessTokenWithAuthCode($code);
 
-                $access_token = self::client()->getAccessToken();
+                $access_token = self::srGoogleAccountAuth()->client()->getAccessToken();
                 if (empty($access_token)) {
                     throw new SrGoogleAccountAuthException("No access token set!");
                 }
@@ -67,11 +67,11 @@ class AuthenticationProvider extends ilAuthProvider implements ilAuthProviderInt
                 ilSession::set(Client::SESSION_KEY, $access_token);
             }
 
-            if (self::client()->isAccessTokenExpired()) {
+            if (self::srGoogleAccountAuth()->client()->isAccessTokenExpired()) {
                 throw new SrGoogleAccountAuthException("Access token expired!");
             }
 
-            $service = new Google_Service_PeopleService(self::client());
+            $service = new Google_Service_PeopleService(self::srGoogleAccountAuth()->client());
 
             $result = $service->people->get("people/me", [
                 "personFields" => ["names", "genders", "emailAddresses"]
@@ -81,10 +81,10 @@ class AuthenticationProvider extends ilAuthProvider implements ilAuthProviderInt
 
             $email = current($result->getEmailAddresses())->getValue();
 
-            $user_id = self::ilias()->users()->getUserIdByExternalAccount($ext_id);
+            $user_id = self::srGoogleAccountAuth()->ilias()->users()->getUserIdByExternalAccount($ext_id);
 
             if (empty($user_id)) {
-                $user_id = self::ilias()->users()->getUserIdByEmail($email);
+                $user_id = self::srGoogleAccountAuth()->ilias()->users()->getUserIdByEmail($email);
             }
 
             if (empty($user_id)) {
@@ -117,10 +117,10 @@ class AuthenticationProvider extends ilAuthProvider implements ilAuthProviderInt
                     $last_name = "";
                 }
 
-                $user_id = self::ilias()->users()
+                $user_id = self::srGoogleAccountAuth()->ilias()->users()
                     ->createNewAccount($login, $email, $gender, $first_name, $last_name, $ext_id, Config::getField(Config::KEY_NEW_ACCOUNT_ROLES));
             } else {
-                self::ilias()->users()->updateExtId($user_id, $ext_id);
+                self::srGoogleAccountAuth()->ilias()->users()->updateExtId($user_id, $ext_id);
             }
 
             $status->setAuthenticatedUserId($user_id);

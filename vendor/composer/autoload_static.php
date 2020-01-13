@@ -17,12 +17,12 @@ class ComposerStaticInitcad4c6204bf143a143bbee0ca440b4fa
     public static $prefixLengthsPsr4 = array (
         's' => 
         array (
-            'srag\\RemovePluginDataConfirm\\' => 29,
+            'srag\\RemovePluginDataConfirm\\SrGoogleAccountAuth\\' => 49,
             'srag\\Plugins\\SrGoogleAccountAuth\\' => 33,
             'srag\\LibrariesNamespaceChanger\\' => 31,
-            'srag\\DIC\\' => 9,
-            'srag\\CustomInputGUIs\\' => 21,
-            'srag\\ActiveRecordConfig\\' => 24,
+            'srag\\DIC\\SrGoogleAccountAuth\\' => 29,
+            'srag\\CustomInputGUIs\\SrGoogleAccountAuth\\' => 41,
+            'srag\\ActiveRecordConfig\\SrGoogleAccountAuth\\' => 44,
         ),
         'p' => 
         array (
@@ -52,7 +52,7 @@ class ComposerStaticInitcad4c6204bf143a143bbee0ca440b4fa
     );
 
     public static $prefixDirsPsr4 = array (
-        'srag\\RemovePluginDataConfirm\\' => 
+        'srag\\RemovePluginDataConfirm\\SrGoogleAccountAuth\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/removeplugindataconfirm/src',
         ),
@@ -64,15 +64,15 @@ class ComposerStaticInitcad4c6204bf143a143bbee0ca440b4fa
         array (
             0 => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src',
         ),
-        'srag\\DIC\\' => 
+        'srag\\DIC\\SrGoogleAccountAuth\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/dic/src',
         ),
-        'srag\\CustomInputGUIs\\' => 
+        'srag\\CustomInputGUIs\\SrGoogleAccountAuth\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/custominputguis/src',
         ),
-        'srag\\ActiveRecordConfig\\' => 
+        'srag\\ActiveRecordConfig\\SrGoogleAccountAuth\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/activerecordconfig/src',
         ),
@@ -9931,7 +9931,6 @@ class ComposerStaticInitcad4c6204bf143a143bbee0ca440b4fa
         'srag\\DIC\\SrGoogleAccountAuth\\Version\\VersionInterface' => __DIR__ . '/..' . '/srag/dic/src/Version/VersionInterface.php',
         'srag\\LibrariesNamespaceChanger\\LibrariesNamespaceChanger' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/LibrariesNamespaceChanger.php',
         'srag\\LibrariesNamespaceChanger\\PHP7Backport' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/PHP7Backport.php',
-        'srag\\Plugins\\SrGoogleAccountAuth\\Access\\Access' => __DIR__ . '/../..' . '/src/Access/Access.php',
         'srag\\Plugins\\SrGoogleAccountAuth\\Access\\Ilias' => __DIR__ . '/../..' . '/src/Access/Ilias.php',
         'srag\\Plugins\\SrGoogleAccountAuth\\Access\\Roles' => __DIR__ . '/../..' . '/src/Access/Roles.php',
         'srag\\Plugins\\SrGoogleAccountAuth\\Access\\Users' => __DIR__ . '/../..' . '/src/Access/Users.php',
@@ -9940,6 +9939,7 @@ class ComposerStaticInitcad4c6204bf143a143bbee0ca440b4fa
         'srag\\Plugins\\SrGoogleAccountAuth\\Config\\Config' => __DIR__ . '/../..' . '/src/Config/Config.php',
         'srag\\Plugins\\SrGoogleAccountAuth\\Config\\ConfigFormGUI' => __DIR__ . '/../..' . '/src/Config/ConfigFormGUI.php',
         'srag\\Plugins\\SrGoogleAccountAuth\\Exception\\SrGoogleAccountAuthException' => __DIR__ . '/../..' . '/src/Exception/SrGoogleAccountAuthException.php',
+        'srag\\Plugins\\SrGoogleAccountAuth\\Repository' => __DIR__ . '/../..' . '/src/Repository.php',
         'srag\\Plugins\\SrGoogleAccountAuth\\Utils\\SrGoogleAccountAuthTrait' => __DIR__ . '/../..' . '/src/Utils/SrGoogleAccountAuthTrait.php',
         'srag\\RemovePluginDataConfirm\\SrGoogleAccountAuth\\BasePluginUninstallTrait' => __DIR__ . '/..' . '/srag/removeplugindataconfirm/src/BasePluginUninstallTrait.php',
         'srag\\RemovePluginDataConfirm\\SrGoogleAccountAuth\\PluginUninstallTrait' => __DIR__ . '/..' . '/srag/removeplugindataconfirm/src/PluginUninstallTrait.php',
