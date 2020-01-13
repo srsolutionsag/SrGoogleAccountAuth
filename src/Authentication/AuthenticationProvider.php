@@ -35,6 +35,8 @@ class AuthenticationProvider extends ilAuthProvider implements ilAuthProviderInt
 
     /**
      * AuthenticationProvider constructor
+     *
+     * @param ilAuthCredentials $credentials
      */
     public function __construct(ilAuthCredentials $credentials)
     {
