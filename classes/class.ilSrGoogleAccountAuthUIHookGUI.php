@@ -1,8 +1,8 @@
 <?php
 
 use srag\DIC\SrGoogleAccountAuth\DICTrait;
+use srag\Plugins\SrGoogleAccountAuth\Authentication\AuthenticationFormGUI;
 use srag\Plugins\SrGoogleAccountAuth\Authentication\AuthenticationProvider;
-use srag\Plugins\SrGoogleAccountAuth\Client\Client;
 use srag\Plugins\SrGoogleAccountAuth\Utils\SrGoogleAccountAuthTrait;
 
 /**
@@ -38,12 +38,7 @@ class ilSrGoogleAccountAuthUIHookGUI extends ilUIHookPluginGUI
 
             self::dic()->mainTemplate()->addCss(self::plugin()->directory() . "/css/srgoogacauth.css");
 
-            $login_tpl = self::plugin()->template("login.html");
-            $login_tpl->setVariable("LINK", self::output()->getHTML(self::dic()->ui()->factory()->link()->standard(self::output()->getHTML([
-                self::dic()->ui()->factory()->icon()->custom(Client::ICON_URL, self::plugin()->translate("login")),
-                self::plugin()->translate("login")
-            ]), self::srGoogleAccountAuth()->client()->createAuthUrl())));
-            $html = str_replace('<div class="ilStartupSection">', '<div class="ilStartupSection">' . self::output()->getHTML($login_tpl), $html);
+            $html = str_replace('<div class="ilStartupSection">', '<div class="ilStartupSection">' . self::output()->getHTML(new AuthenticationFormGUI($this)), $html);
 
             return ["mode" => self::REPLACE, "html" => $html];
         }

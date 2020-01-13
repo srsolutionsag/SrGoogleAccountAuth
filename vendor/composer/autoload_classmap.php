@@ -9807,6 +9807,7 @@ return array(
     'srag\\Plugins\\SrGoogleAccountAuth\\Access\\Ilias' => $baseDir . '/src/Access/Ilias.php',
     'srag\\Plugins\\SrGoogleAccountAuth\\Access\\Roles' => $baseDir . '/src/Access/Roles.php',
     'srag\\Plugins\\SrGoogleAccountAuth\\Access\\Users' => $baseDir . '/src/Access/Users.php',
+    'srag\\Plugins\\SrGoogleAccountAuth\\Authentication\\AuthenticationFormGUI' => $baseDir . '/src/Authentication/AuthenticationFormGUI.php',
     'srag\\Plugins\\SrGoogleAccountAuth\\Authentication\\AuthenticationProvider' => $baseDir . '/src/Authentication/AuthenticationProvider.php',
     'srag\\Plugins\\SrGoogleAccountAuth\\Client\\Client' => $baseDir . '/src/Client/Client.php',
     'srag\\Plugins\\SrGoogleAccountAuth\\Config\\Config' => $baseDir . '/src/Config/Config.php',

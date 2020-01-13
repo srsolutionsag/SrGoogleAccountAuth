@@ -131,7 +131,7 @@ class AuthenticationProvider extends ilAuthProvider implements ilAuthProviderInt
         } catch (Throwable $ex) {
             $this->getLogger()->log($ex->__toString());
 
-            return $this->handleAuthenticationFail($status, self::plugin()->translate("login_failed"));
+            return $this->handleAuthenticationFail($status, self::plugin()->translate("login_failed", "", [Client::GOOGLE]));
         }
     }
 }

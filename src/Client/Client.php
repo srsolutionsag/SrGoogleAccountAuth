@@ -26,7 +26,8 @@ class Client extends Google_Client
     const PLUGIN_CLASS_NAME = ilSrGoogleAccountAuthPlugin::class;
     const REDIRECT_URL = "login.php?target=uihk_" . ilSrGoogleAccountAuthPlugin::PLUGIN_ID;
     const SESSION_KEY = "google_access_token";
-    const ICON_URL = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png";
+    const ICON_URL = "https://developers.google.com/identity/images/g-logo.png";
+    const GOOGLE = "Google";
     /**
      * @var self
      */
