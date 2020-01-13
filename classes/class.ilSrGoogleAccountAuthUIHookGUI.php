@@ -1,8 +1,6 @@
 <?php
 
 use srag\DIC\SrGoogleAccountAuth\DICTrait;
-use srag\Plugins\SrGoogleAccountAuth\Authentication\AuthenticationFormGUI;
-use srag\Plugins\SrGoogleAccountAuth\Authentication\AuthenticationProvider;
 use srag\Plugins\SrGoogleAccountAuth\Utils\SrGoogleAccountAuthTrait;
 
 /**
@@ -38,7 +36,8 @@ class ilSrGoogleAccountAuthUIHookGUI extends ilUIHookPluginGUI
 
             self::dic()->mainTemplate()->addCss(self::plugin()->directory() . "/css/srgoogacauth.css");
 
-            $html = str_replace('<div class="ilStartupSection">', '<div class="ilStartupSection">' . self::output()->getHTML(new AuthenticationFormGUI($this)), $html);
+            $html = str_replace('<div class="ilStartupSection">',
+                '<div class="ilStartupSection">' . self::output()->getHTML(self::srGoogleAccountAuth()->authentication()->factory()->newFormInstance($this)), $html);
 
             return ["mode" => self::REPLACE, "html" => $html];
         }
@@ -63,7 +62,7 @@ class ilSrGoogleAccountAuthUIHookGUI extends ilUIHookPluginGUI
 
             $credentials = new ilAuthFrontendCredentials();
 
-            $provider = new AuthenticationProvider($credentials);
+            $provider = self::srGoogleAccountAuth()->authentication()->factory()->newProviderInstance($credentials);
 
             $frontend = new ilAuthFrontend(self::dic()->authSession(), $status, $credentials, [
                 $provider

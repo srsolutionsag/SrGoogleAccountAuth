@@ -5,6 +5,7 @@ namespace srag\Plugins\SrGoogleAccountAuth;
 use ilSrGoogleAccountAuthPlugin;
 use srag\DIC\SrGoogleAccountAuth\DICTrait;
 use srag\Plugins\SrGoogleAccountAuth\Access\Ilias;
+use srag\Plugins\SrGoogleAccountAuth\Authentication\Repository as AuthenticationRepository;
 use srag\Plugins\SrGoogleAccountAuth\Client\Client;
 use srag\Plugins\SrGoogleAccountAuth\Config\Config;
 use srag\Plugins\SrGoogleAccountAuth\Utils\SrGoogleAccountAuthTrait;
@@ -51,6 +52,15 @@ final class Repository
 
 
     /**
+     * @return AuthenticationRepository
+     */
+    public function authentication() : AuthenticationRepository
+    {
+        return AuthenticationRepository::getInstance();
+    }
+
+
+    /**
      * @return Client
      */
     public function client() : Client
@@ -65,6 +75,7 @@ final class Repository
     public function dropTables()/*: void*/
     {
         self::dic()->database()->dropTable(Config::TABLE_NAME, false);
+        $this->authentication()->dropTables();
     }
 
 
@@ -83,5 +94,6 @@ final class Repository
     public function installTables()/*: void*/
     {
         Config::updateDB();
+        $this->authentication()->installTables();
     }
 }
