@@ -7,7 +7,7 @@ use ilMultiSelectInputGUI;
 use ilSrGoogleAccountAuthConfigGUI;
 use ilSrGoogleAccountAuthPlugin;
 use ilTextInputGUI;
-use srag\CustomInputGUIs\SrGoogleAccountAuth\PropertyFormGUI\ConfigPropertyFormGUI;
+use srag\CustomInputGUIs\SrGoogleAccountAuth\PropertyFormGUI\PropertyFormGUI;
 use srag\Plugins\SrGoogleAccountAuth\Utils\SrGoogleAccountAuthTrait;
 
 /**
@@ -17,12 +17,11 @@ use srag\Plugins\SrGoogleAccountAuth\Utils\SrGoogleAccountAuthTrait;
  *
  * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
-class ConfigFormGUI extends ConfigPropertyFormGUI
+class ConfigFormGUI extends PropertyFormGUI
 {
 
     use SrGoogleAccountAuthTrait;
     const PLUGIN_CLASS_NAME = ilSrGoogleAccountAuthPlugin::class;
-    const CONFIG_CLASS_NAME = Config::class;
     const LANG_MODULE = ilSrGoogleAccountAuthConfigGUI::LANG_MODULE;
 
 
@@ -40,21 +39,21 @@ class ConfigFormGUI extends ConfigPropertyFormGUI
     /**
      * @inheritDoc
      */
-    protected function initCommands()/*: void*/
+    protected function getValue(/*string*/ $key)
     {
-        $this->addCommandButton(ilSrGoogleAccountAuthConfigGUI::CMD_UPDATE_CONFIGURE, $this->txt("save"));
+        switch ($key) {
+            default:
+                return Config::getField($key);
+        }
     }
 
 
     /**
      * @inheritDoc
      */
-    protected function getValue(/*string*/ $key)
+    protected function initCommands()/*: void*/
     {
-        switch (true) {
-            default:
-                return parent::getValue($key);
-        }
+        $this->addCommandButton(ilSrGoogleAccountAuthConfigGUI::CMD_UPDATE_CONFIGURE, $this->txt("save"));
     }
 
 
@@ -111,20 +110,9 @@ class ConfigFormGUI extends ConfigPropertyFormGUI
     protected function storeValue(/*string*/ $key, $value)/*: void*/
     {
         switch ($key) {
-            case Config::KEY_NEW_ACCOUNT_ROLES:
-                if ($value[0] === "") {
-                    array_shift($value);
-                }
-
-                $value = array_map(function (string $role_id) : int {
-                    return intval($role_id);
-                }, $value);
-                break;
-
             default:
+                Config::setField($key, $value);
                 break;
         }
-
-        parent::storeValue($key, $value);
     }
 }
