@@ -9816,7 +9816,6 @@ return array(
     'srag\\Plugins\\SrGoogleAccountAuth\\Authentication\\Factory' => $baseDir . '/src/Authentication/Factory.php',
     'srag\\Plugins\\SrGoogleAccountAuth\\Authentication\\Repository' => $baseDir . '/src/Authentication/Repository.php',
     'srag\\Plugins\\SrGoogleAccountAuth\\Client\\Client' => $baseDir . '/src/Client/Client.php',
-    'srag\\Plugins\\SrGoogleAccountAuth\\Config\\Config' => $baseDir . '/src/Config/Config.php',
     'srag\\Plugins\\SrGoogleAccountAuth\\Config\\ConfigFormGUI' => $baseDir . '/src/Config/ConfigFormGUI.php',
     'srag\\Plugins\\SrGoogleAccountAuth\\Exception\\SrGoogleAccountAuthException' => $baseDir . '/src/Exception/SrGoogleAccountAuthException.php',
     'srag\\Plugins\\SrGoogleAccountAuth\\Repository' => $baseDir . '/src/Repository.php',

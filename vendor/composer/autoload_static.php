@@ -9943,7 +9943,6 @@ class ComposerStaticInitcad4c6204bf143a143bbee0ca440b4fa
         'srag\\Plugins\\SrGoogleAccountAuth\\Authentication\\Factory' => __DIR__ . '/../..' . '/src/Authentication/Factory.php',
         'srag\\Plugins\\SrGoogleAccountAuth\\Authentication\\Repository' => __DIR__ . '/../..' . '/src/Authentication/Repository.php',
         'srag\\Plugins\\SrGoogleAccountAuth\\Client\\Client' => __DIR__ . '/../..' . '/src/Client/Client.php',
-        'srag\\Plugins\\SrGoogleAccountAuth\\Config\\Config' => __DIR__ . '/../..' . '/src/Config/Config.php',
         'srag\\Plugins\\SrGoogleAccountAuth\\Config\\ConfigFormGUI' => __DIR__ . '/../..' . '/src/Config/ConfigFormGUI.php',
         'srag\\Plugins\\SrGoogleAccountAuth\\Exception\\SrGoogleAccountAuthException' => __DIR__ . '/../..' . '/src/Exception/SrGoogleAccountAuthException.php',
         'srag\\Plugins\\SrGoogleAccountAuth\\Repository' => __DIR__ . '/../..' . '/src/Repository.php',

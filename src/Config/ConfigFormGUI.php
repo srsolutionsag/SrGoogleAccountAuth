@@ -22,6 +22,10 @@ class ConfigFormGUI extends PropertyFormGUI
 
     use SrGoogleAccountAuthTrait;
     const PLUGIN_CLASS_NAME = ilSrGoogleAccountAuthPlugin::class;
+    const KEY_CLIENT_ID = "client_id";
+    const KEY_CLIENT_SECRET = "client_secret";
+    const KEY_CREATE_NEW_ACCOUNTS = "create_new_accounts";
+    const KEY_NEW_ACCOUNT_ROLES = "new_account_roles";
     const LANG_MODULE = ilSrGoogleAccountAuthConfigGUI::LANG_MODULE;
 
 
@@ -43,7 +47,7 @@ class ConfigFormGUI extends PropertyFormGUI
     {
         switch ($key) {
             default:
-                return Config::getField($key);
+                return self::srGoogleAccountAuth()->config()->getField($key);
         }
     }
 
@@ -63,18 +67,18 @@ class ConfigFormGUI extends PropertyFormGUI
     protected function initFields()/*: void*/
     {
         $this->fields = [
-            Config::KEY_CLIENT_ID           => [
+            self::KEY_CLIENT_ID           => [
                 self::PROPERTY_CLASS    => ilTextInputGUI::class,
                 self::PROPERTY_REQUIRED => true
             ],
-            Config::KEY_CLIENT_SECRET       => [
+            self::KEY_CLIENT_SECRET       => [
                 self::PROPERTY_CLASS    => ilTextInputGUI::class,
                 self::PROPERTY_REQUIRED => true
             ],
-            Config::KEY_CREATE_NEW_ACCOUNTS => [
+            self::KEY_CREATE_NEW_ACCOUNTS => [
                 self::PROPERTY_CLASS    => ilCheckboxInputGUI::class,
                 self::PROPERTY_SUBITEMS => [
-                    Config::KEY_NEW_ACCOUNT_ROLES => [
+                    self::KEY_NEW_ACCOUNT_ROLES => [
                         self::PROPERTY_CLASS    => ilMultiSelectInputGUI::class,
                         self::PROPERTY_REQUIRED => true,
                         self::PROPERTY_OPTIONS  => self::srGoogleAccountAuth()->ilias()->roles()->getAllRoles(),
@@ -111,7 +115,7 @@ class ConfigFormGUI extends PropertyFormGUI
     {
         switch ($key) {
             default:
-                Config::setField($key, $value);
+                self::srGoogleAccountAuth()->config()->setField($key, $value);
                 break;
         }
     }
