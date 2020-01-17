@@ -47,7 +47,7 @@ class ConfigFormGUI extends PropertyFormGUI
     {
         switch ($key) {
             default:
-                return self::srGoogleAccountAuth()->config()->getField($key);
+                return self::srGoogleAccountAuth()->config()->getValue($key);
         }
     }
 
@@ -115,7 +115,7 @@ class ConfigFormGUI extends PropertyFormGUI
     {
         switch ($key) {
             default:
-                self::srGoogleAccountAuth()->config()->setField($key, $value);
+                self::srGoogleAccountAuth()->config()->setValue($key, $value);
                 break;
         }
     }

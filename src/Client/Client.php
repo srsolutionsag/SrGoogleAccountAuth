@@ -65,8 +65,8 @@ class Client extends Google_Client
     {
         $this->setApplicationName("Login to " . ilSrGoogleAccountAuthPlugin::PLUGIN_NAME);
 
-        $this->setClientId(self::srGoogleAccountAuth()->config()->getField(ConfigFormGUI::KEY_CLIENT_ID));
-        $this->setClientSecret(self::srGoogleAccountAuth()->config()->getField(ConfigFormGUI::KEY_CLIENT_SECRET));
+        $this->setClientId(self::srGoogleAccountAuth()->config()->getValue(ConfigFormGUI::KEY_CLIENT_ID));
+        $this->setClientSecret(self::srGoogleAccountAuth()->config()->getValue(ConfigFormGUI::KEY_CLIENT_SECRET));
         $this->setRedirectUri(ILIAS_HTTP_PATH . "/" . self::REDIRECT_URL);
 
         $access_token = ilSession::get(self::SESSION_KEY);

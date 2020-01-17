@@ -69,8 +69,6 @@ class AuthenticationFormGUI extends PropertyFormGUI
      */
     protected function initAction()/*: void*/
     {
-        $this->setPreventDoubleSubmission(false);
-
         $this->setFormAction("");
     }
 
@@ -80,6 +78,8 @@ class AuthenticationFormGUI extends PropertyFormGUI
      */
     protected function initCommands()/*: void*/
     {
+        $this->setPreventDoubleSubmission(false);
+
         $this->addCommandButton("", "");
     }
 
