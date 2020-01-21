@@ -17,13 +17,12 @@
 
 class Google_Service_Monitoring_NotificationChannelDescriptor extends Google_Collection
 {
-  protected $collection_key = 'supportedTiers';
+  protected $collection_key = 'labels';
   public $description;
   public $displayName;
   protected $labelsType = 'Google_Service_Monitoring_LabelDescriptor';
   protected $labelsDataType = 'array';
   public $name;
-  public $supportedTiers;
   public $type;
 
   public function setDescription($description)
@@ -63,14 +62,6 @@ class Google_Service_Monitoring_NotificationChannelDescriptor extends Google_Col
   public function getName()
   {
     return $this->name;
-  }
-  public function setSupportedTiers($supportedTiers)
-  {
-    $this->supportedTiers = $supportedTiers;
-  }
-  public function getSupportedTiers()
-  {
-    return $this->supportedTiers;
   }
   public function setType($type)
   {

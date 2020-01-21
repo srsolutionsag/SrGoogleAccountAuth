@@ -51,16 +51,18 @@ class Google_Service_AndroidPublisher extends Google_Service
   public $purchases_subscriptions;
   public $purchases_voidedpurchases;
   public $reviews;
+  public $systemapks_variants;
   
   /**
    * Constructs the internal representation of the AndroidPublisher service.
    *
-   * @param Google_Client $client
+   * @param Google_Client $client The client used to deliver requests.
+   * @param string $rootUrl The root URL used for requests to the service.
    */
-  public function __construct(Google_Client $client)
+  public function __construct(Google_Client $client, $rootUrl = null)
   {
     parent::__construct($client);
-    $this->rootUrl = 'https://www.googleapis.com/';
+    $this->rootUrl = $rootUrl ?: 'https://www.googleapis.com/';
     $this->servicePath = 'androidpublisher/v3/applications/';
     $this->batchPath = 'batch/androidpublisher/v3';
     $this->version = 'v3';
@@ -1223,6 +1225,10 @@ class Google_Service_AndroidPublisher extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'type' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
               ),
             ),
           )
@@ -1289,6 +1295,86 @@ class Google_Service_AndroidPublisher extends Google_Service
                   'required' => true,
                 ),
                 'reviewId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->systemapks_variants = new Google_Service_AndroidPublisher_Resource_SystemapksVariants(
+        $this,
+        $this->serviceName,
+        'variants',
+        array(
+          'methods' => array(
+            'create' => array(
+              'path' => '{packageName}/systemApks/{versionCode}/variants',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'packageName' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'versionCode' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'download' => array(
+              'path' => '{packageName}/systemApks/{versionCode}/variants/{variantId}:download',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'packageName' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'versionCode' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'variantId' => array(
+                  'location' => 'path',
+                  'type' => 'integer',
+                  'required' => true,
+                ),
+              ),
+            ),'get' => array(
+              'path' => '{packageName}/systemApks/{versionCode}/variants/{variantId}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'packageName' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'versionCode' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'variantId' => array(
+                  'location' => 'path',
+                  'type' => 'integer',
+                  'required' => true,
+                ),
+              ),
+            ),'list' => array(
+              'path' => '{packageName}/systemApks/{versionCode}/variants',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'packageName' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'versionCode' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,

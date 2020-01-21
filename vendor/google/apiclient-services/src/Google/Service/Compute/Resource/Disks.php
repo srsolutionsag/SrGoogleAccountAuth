@@ -26,6 +26,37 @@
 class Google_Service_Compute_Resource_Disks extends Google_Service_Resource
 {
   /**
+   * Adds existing resource policies to a disk. You can only add one policy which
+   * will be applied to this disk for scheduling snapshot creation.
+   * (disks.addResourcePolicies)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $zone The name of the zone for this request.
+   * @param string $disk The disk name for this request.
+   * @param Google_Service_Compute_DisksAddResourcePoliciesRequest $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string requestId An optional request ID to identify requests.
+   * Specify a unique request ID so that if you must retry your request, the
+   * server will know to ignore the request if it has already been completed.
+   *
+   * For example, consider a situation where you make an initial request and the
+   * request times out. If you make the request again with the same request ID,
+   * the server can check if original operation with the same request ID was
+   * received, and if so, will ignore the second request. This prevents clients
+   * from accidentally creating duplicate commitments.
+   *
+   * The request ID must be a valid UUID with the exception that zero UUID is not
+   * supported (00000000-0000-0000-0000-000000000000).
+   * @return Google_Service_Compute_Operation
+   */
+  public function addResourcePolicies($project, $zone, $disk, Google_Service_Compute_DisksAddResourcePoliciesRequest $postBody, $optParams = array())
+  {
+    $params = array('project' => $project, 'zone' => $zone, 'disk' => $disk, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('addResourcePolicies', array($params), "Google_Service_Compute_Operation");
+  }
+  /**
    * Retrieves an aggregated list of persistent disks. (disks.aggregatedList)
    *
    * @param string $project Project ID for this request.
@@ -259,6 +290,35 @@ class Google_Service_Compute_Resource_Disks extends Google_Service_Resource
     $params = array('project' => $project, 'zone' => $zone);
     $params = array_merge($params, $optParams);
     return $this->call('list', array($params), "Google_Service_Compute_DiskList");
+  }
+  /**
+   * Removes resource policies from a disk. (disks.removeResourcePolicies)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $zone The name of the zone for this request.
+   * @param string $disk The disk name for this request.
+   * @param Google_Service_Compute_DisksRemoveResourcePoliciesRequest $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string requestId An optional request ID to identify requests.
+   * Specify a unique request ID so that if you must retry your request, the
+   * server will know to ignore the request if it has already been completed.
+   *
+   * For example, consider a situation where you make an initial request and the
+   * request times out. If you make the request again with the same request ID,
+   * the server can check if original operation with the same request ID was
+   * received, and if so, will ignore the second request. This prevents clients
+   * from accidentally creating duplicate commitments.
+   *
+   * The request ID must be a valid UUID with the exception that zero UUID is not
+   * supported (00000000-0000-0000-0000-000000000000).
+   * @return Google_Service_Compute_Operation
+   */
+  public function removeResourcePolicies($project, $zone, $disk, Google_Service_Compute_DisksRemoveResourcePoliciesRequest $postBody, $optParams = array())
+  {
+    $params = array('project' => $project, 'zone' => $zone, 'disk' => $disk, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('removeResourcePolicies', array($params), "Google_Service_Compute_Operation");
   }
   /**
    * Resizes the specified persistent disk. You can only increase the size of the

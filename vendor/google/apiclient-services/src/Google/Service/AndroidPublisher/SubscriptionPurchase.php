@@ -29,6 +29,8 @@ class Google_Service_AndroidPublisher_SubscriptionPurchase extends Google_Model
   public $expiryTimeMillis;
   public $familyName;
   public $givenName;
+  protected $introductoryPriceInfoType = 'Google_Service_AndroidPublisher_IntroductoryPriceInfo';
+  protected $introductoryPriceInfoDataType = '';
   public $kind;
   public $linkedPurchaseToken;
   public $orderId;
@@ -136,6 +138,20 @@ class Google_Service_AndroidPublisher_SubscriptionPurchase extends Google_Model
   public function getGivenName()
   {
     return $this->givenName;
+  }
+  /**
+   * @param Google_Service_AndroidPublisher_IntroductoryPriceInfo
+   */
+  public function setIntroductoryPriceInfo(Google_Service_AndroidPublisher_IntroductoryPriceInfo $introductoryPriceInfo)
+  {
+    $this->introductoryPriceInfo = $introductoryPriceInfo;
+  }
+  /**
+   * @return Google_Service_AndroidPublisher_IntroductoryPriceInfo
+   */
+  public function getIntroductoryPriceInfo()
+  {
+    return $this->introductoryPriceInfo;
   }
   public function setKind($kind)
   {

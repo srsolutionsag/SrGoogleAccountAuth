@@ -326,7 +326,9 @@ class Google_Service_Compute_Resource_Routers extends Google_Service_Resource
   }
   /**
    * Updates the specified Router resource with the data included in the request.
-   * (routers.update)
+   * This method conforms to PUT semantics, which requests that the state of the
+   * target resource be created or replaced with the state defined by the
+   * representation enclosed in the request message payload. (routers.update)
    *
    * @param string $project Project ID for this request.
    * @param string $region Name of the region for this request.

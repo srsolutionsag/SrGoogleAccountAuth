@@ -110,4 +110,27 @@ class Google_Service_Compute_Resource_ZoneOperations extends Google_Service_Reso
     $params = array_merge($params, $optParams);
     return $this->call('list', array($params), "Google_Service_Compute_OperationList");
   }
+  /**
+   * Waits for the specified zone-specific Operations resource until it is done or
+   * timeout, and retrieves the specified Operations resource. 1. Immediately
+   * returns when the operation is already done. 2. Waits for no more than the
+   * default deadline (2 minutes, subject to change) and then returns the current
+   * state of the operation, which may be DONE or still in progress. 3. Is best-
+   * effort: a. The server can wait less than the default deadline or zero
+   * seconds, in overload situations. b. There is no guarantee that the operation
+   * is actually done when returns. 4. User should be prepared to retry if the
+   * operation is not DONE. (zoneOperations.wait)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $zone Name of the zone for this request.
+   * @param string $operation Name of the Operations resource to return.
+   * @param array $optParams Optional parameters.
+   * @return Google_Service_Compute_Operation
+   */
+  public function wait($project, $zone, $operation, $optParams = array())
+  {
+    $params = array('project' => $project, 'zone' => $zone, 'operation' => $operation);
+    $params = array_merge($params, $optParams);
+    return $this->call('wait', array($params), "Google_Service_Compute_Operation");
+  }
 }

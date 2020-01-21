@@ -25,7 +25,6 @@ class Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1TrainingInput ext
   protected $masterConfigType = 'Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1ReplicaConfig';
   protected $masterConfigDataType = '';
   public $masterType;
-  public $maxRunningTime;
   public $packageUris;
   protected $parameterServerConfigType = 'Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1ReplicaConfig';
   protected $parameterServerConfigDataType = '';
@@ -36,6 +35,7 @@ class Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1TrainingInput ext
   public $region;
   public $runtimeVersion;
   public $scaleTier;
+  public $useChiefInTfConfig;
   protected $workerConfigType = 'Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1ReplicaConfig';
   protected $workerConfigDataType = '';
   public $workerCount;
@@ -92,14 +92,6 @@ class Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1TrainingInput ext
   public function getMasterType()
   {
     return $this->masterType;
-  }
-  public function setMaxRunningTime($maxRunningTime)
-  {
-    $this->maxRunningTime = $maxRunningTime;
-  }
-  public function getMaxRunningTime()
-  {
-    return $this->maxRunningTime;
   }
   public function setPackageUris($packageUris)
   {
@@ -178,6 +170,14 @@ class Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1TrainingInput ext
   public function getScaleTier()
   {
     return $this->scaleTier;
+  }
+  public function setUseChiefInTfConfig($useChiefInTfConfig)
+  {
+    $this->useChiefInTfConfig = $useChiefInTfConfig;
+  }
+  public function getUseChiefInTfConfig()
+  {
+    return $this->useChiefInTfConfig;
   }
   /**
    * @param Google_Service_CloudMachineLearningEngine_GoogleCloudMlV1ReplicaConfig

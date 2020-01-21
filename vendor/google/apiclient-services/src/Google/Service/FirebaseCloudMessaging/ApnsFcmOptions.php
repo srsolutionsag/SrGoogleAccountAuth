@@ -18,6 +18,7 @@
 class Google_Service_FirebaseCloudMessaging_ApnsFcmOptions extends Google_Model
 {
   public $analyticsLabel;
+  public $image;
 
   public function setAnalyticsLabel($analyticsLabel)
   {
@@ -26,5 +27,13 @@ class Google_Service_FirebaseCloudMessaging_ApnsFcmOptions extends Google_Model
   public function getAnalyticsLabel()
   {
     return $this->analyticsLabel;
+  }
+  public function setImage($image)
+  {
+    $this->image = $image;
+  }
+  public function getImage()
+  {
+    return $this->image;
   }
 }

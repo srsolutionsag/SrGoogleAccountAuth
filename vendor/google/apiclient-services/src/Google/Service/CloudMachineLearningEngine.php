@@ -33,8 +33,10 @@ class Google_Service_CloudMachineLearningEngine extends Google_Service
   /** View and manage your data across Google Cloud Platform services. */
   const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
+  /** View your data across Google Cloud Platform services. */
+  const CLOUD_PLATFORM_READ_ONLY =
+      "https://www.googleapis.com/auth/cloud-platform.read-only";
 
-  public $operations;
   public $projects;
   public $projects_jobs;
   public $projects_locations;
@@ -46,26 +48,27 @@ class Google_Service_CloudMachineLearningEngine extends Google_Service
    * Constructs the internal representation of the CloudMachineLearningEngine
    * service.
    *
-   * @param Google_Client $client
+   * @param Google_Client $client The client used to deliver requests.
+   * @param string $rootUrl The root URL used for requests to the service.
    */
-  public function __construct(Google_Client $client)
+  public function __construct(Google_Client $client, $rootUrl = null)
   {
     parent::__construct($client);
-    $this->rootUrl = 'https://ml.googleapis.com/';
+    $this->rootUrl = $rootUrl ?: 'https://ml.googleapis.com/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
     $this->version = 'v1';
     $this->serviceName = 'ml';
 
-    $this->operations = new Google_Service_CloudMachineLearningEngine_Resource_Operations(
+    $this->projects = new Google_Service_CloudMachineLearningEngine_Resource_Projects(
         $this,
         $this->serviceName,
-        'operations',
+        'projects',
         array(
           'methods' => array(
-            'delete' => array(
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'DELETE',
+            'explain' => array(
+              'path' => 'v1/{+name}:explain',
+              'httpMethod' => 'POST',
               'parameters' => array(
                 'name' => array(
                   'location' => 'path',
@@ -73,17 +76,7 @@ class Google_Service_CloudMachineLearningEngine extends Google_Service
                   'required' => true,
                 ),
               ),
-            ),
-          )
-        )
-    );
-    $this->projects = new Google_Service_CloudMachineLearningEngine_Resource_Projects(
-        $this,
-        $this->serviceName,
-        'projects',
-        array(
-          'methods' => array(
-            'getConfig' => array(
+            ),'getConfig' => array(
               'path' => 'v1/{+name}:getConfig',
               'httpMethod' => 'GET',
               'parameters' => array(
@@ -151,6 +144,10 @@ class Google_Service_CloudMachineLearningEngine extends Google_Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ),
+                'options.requestedPolicyVersion' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),'list' => array(
@@ -296,6 +293,10 @@ class Google_Service_CloudMachineLearningEngine extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'options.requestedPolicyVersion' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
               ),
             ),'list' => array(
               'path' => 'v1/{+parent}/models',
@@ -306,10 +307,6 @@ class Google_Service_CloudMachineLearningEngine extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -317,6 +314,10 @@ class Google_Service_CloudMachineLearningEngine extends Google_Service
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),'patch' => array(

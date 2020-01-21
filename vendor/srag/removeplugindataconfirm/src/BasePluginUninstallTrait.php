@@ -4,6 +4,7 @@ namespace srag\RemovePluginDataConfirm\SrGoogleAccountAuth;
 
 use ilUIPluginRouterGUI;
 use srag\DIC\SrGoogleAccountAuth\DICTrait;
+use srag\DIC\SrGoogleAccountAuth\Util\LibraryLanguageInstaller;
 
 /**
  * Trait BasePluginUninstallTrait
@@ -53,6 +54,16 @@ trait BasePluginUninstallTrait
         }
 
         return true;
+    }
+
+
+    /**
+     *
+     */
+    protected function installRemovePluginDataConfirmLanguages()/*:void*/
+    {
+        LibraryLanguageInstaller::getInstance()->withPlugin(self::plugin())->withLibraryLanguageDirectory(__DIR__
+            . "/../lang")->updateLanguages();
     }
 
 

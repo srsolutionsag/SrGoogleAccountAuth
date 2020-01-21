@@ -22,6 +22,19 @@ class Google_Service_Docs_SectionStyle extends Google_Collection
   protected $columnPropertiesDataType = 'array';
   public $columnSeparatorStyle;
   public $contentDirection;
+  protected $marginBottomType = 'Google_Service_Docs_Dimension';
+  protected $marginBottomDataType = '';
+  protected $marginFooterType = 'Google_Service_Docs_Dimension';
+  protected $marginFooterDataType = '';
+  protected $marginHeaderType = 'Google_Service_Docs_Dimension';
+  protected $marginHeaderDataType = '';
+  protected $marginLeftType = 'Google_Service_Docs_Dimension';
+  protected $marginLeftDataType = '';
+  protected $marginRightType = 'Google_Service_Docs_Dimension';
+  protected $marginRightDataType = '';
+  protected $marginTopType = 'Google_Service_Docs_Dimension';
+  protected $marginTopDataType = '';
+  public $sectionType;
 
   /**
    * @param Google_Service_Docs_SectionColumnProperties
@@ -52,5 +65,97 @@ class Google_Service_Docs_SectionStyle extends Google_Collection
   public function getContentDirection()
   {
     return $this->contentDirection;
+  }
+  /**
+   * @param Google_Service_Docs_Dimension
+   */
+  public function setMarginBottom(Google_Service_Docs_Dimension $marginBottom)
+  {
+    $this->marginBottom = $marginBottom;
+  }
+  /**
+   * @return Google_Service_Docs_Dimension
+   */
+  public function getMarginBottom()
+  {
+    return $this->marginBottom;
+  }
+  /**
+   * @param Google_Service_Docs_Dimension
+   */
+  public function setMarginFooter(Google_Service_Docs_Dimension $marginFooter)
+  {
+    $this->marginFooter = $marginFooter;
+  }
+  /**
+   * @return Google_Service_Docs_Dimension
+   */
+  public function getMarginFooter()
+  {
+    return $this->marginFooter;
+  }
+  /**
+   * @param Google_Service_Docs_Dimension
+   */
+  public function setMarginHeader(Google_Service_Docs_Dimension $marginHeader)
+  {
+    $this->marginHeader = $marginHeader;
+  }
+  /**
+   * @return Google_Service_Docs_Dimension
+   */
+  public function getMarginHeader()
+  {
+    return $this->marginHeader;
+  }
+  /**
+   * @param Google_Service_Docs_Dimension
+   */
+  public function setMarginLeft(Google_Service_Docs_Dimension $marginLeft)
+  {
+    $this->marginLeft = $marginLeft;
+  }
+  /**
+   * @return Google_Service_Docs_Dimension
+   */
+  public function getMarginLeft()
+  {
+    return $this->marginLeft;
+  }
+  /**
+   * @param Google_Service_Docs_Dimension
+   */
+  public function setMarginRight(Google_Service_Docs_Dimension $marginRight)
+  {
+    $this->marginRight = $marginRight;
+  }
+  /**
+   * @return Google_Service_Docs_Dimension
+   */
+  public function getMarginRight()
+  {
+    return $this->marginRight;
+  }
+  /**
+   * @param Google_Service_Docs_Dimension
+   */
+  public function setMarginTop(Google_Service_Docs_Dimension $marginTop)
+  {
+    $this->marginTop = $marginTop;
+  }
+  /**
+   * @return Google_Service_Docs_Dimension
+   */
+  public function getMarginTop()
+  {
+    return $this->marginTop;
+  }
+  public function setSectionType($sectionType)
+  {
+    $this->sectionType = $sectionType;
+  }
+  public function getSectionType()
+  {
+    return $this->sectionType;
   }
 }

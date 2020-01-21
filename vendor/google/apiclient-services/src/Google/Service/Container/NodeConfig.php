@@ -30,7 +30,11 @@ class Google_Service_Container_NodeConfig extends Google_Collection
   public $minCpuPlatform;
   public $oauthScopes;
   public $preemptible;
+  protected $reservationAffinityType = 'Google_Service_Container_ReservationAffinity';
+  protected $reservationAffinityDataType = '';
   public $serviceAccount;
+  protected $shieldedInstanceConfigType = 'Google_Service_Container_ShieldedInstanceConfig';
+  protected $shieldedInstanceConfigDataType = '';
   public $tags;
   protected $taintsType = 'Google_Service_Container_NodeTaint';
   protected $taintsDataType = 'array';
@@ -129,6 +133,20 @@ class Google_Service_Container_NodeConfig extends Google_Collection
   {
     return $this->preemptible;
   }
+  /**
+   * @param Google_Service_Container_ReservationAffinity
+   */
+  public function setReservationAffinity(Google_Service_Container_ReservationAffinity $reservationAffinity)
+  {
+    $this->reservationAffinity = $reservationAffinity;
+  }
+  /**
+   * @return Google_Service_Container_ReservationAffinity
+   */
+  public function getReservationAffinity()
+  {
+    return $this->reservationAffinity;
+  }
   public function setServiceAccount($serviceAccount)
   {
     $this->serviceAccount = $serviceAccount;
@@ -136,6 +154,20 @@ class Google_Service_Container_NodeConfig extends Google_Collection
   public function getServiceAccount()
   {
     return $this->serviceAccount;
+  }
+  /**
+   * @param Google_Service_Container_ShieldedInstanceConfig
+   */
+  public function setShieldedInstanceConfig(Google_Service_Container_ShieldedInstanceConfig $shieldedInstanceConfig)
+  {
+    $this->shieldedInstanceConfig = $shieldedInstanceConfig;
+  }
+  /**
+   * @return Google_Service_Container_ShieldedInstanceConfig
+   */
+  public function getShieldedInstanceConfig()
+  {
+    return $this->shieldedInstanceConfig;
   }
   public function setTags($tags)
   {
