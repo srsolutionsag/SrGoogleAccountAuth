@@ -15,14 +15,25 @@
  * the License.
  */
 
-/**
- * The "oauth" collection of methods.
- * Typical usage is:
- *  <code>
- *   $iapService = new Google_Service_CloudIAP(...);
- *   $oauth = $iapService->oauth;
- *  </code>
- */
-class Google_Service_CloudIAP_Resource_Oauth extends Google_Service_Resource
+class Google_Service_Compute_PacketMirroringMirroredResourceInfoSubnetInfo extends Google_Model
 {
+  public $canonicalUrl;
+  public $url;
+
+  public function setCanonicalUrl($canonicalUrl)
+  {
+    $this->canonicalUrl = $canonicalUrl;
+  }
+  public function getCanonicalUrl()
+  {
+    return $this->canonicalUrl;
+  }
+  public function setUrl($url)
+  {
+    $this->url = $url;
+  }
+  public function getUrl()
+  {
+    return $this->url;
+  }
 }

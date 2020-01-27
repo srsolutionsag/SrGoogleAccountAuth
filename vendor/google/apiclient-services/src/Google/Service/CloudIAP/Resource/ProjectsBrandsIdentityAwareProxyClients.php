@@ -23,7 +23,7 @@
  *   $identityAwareProxyClients = $iapService->identityAwareProxyClients;
  *  </code>
  */
-class Google_Service_CloudIAP_Resource_OauthProjectsBrandsIdentityAwareProxyClients extends Google_Service_Resource
+class Google_Service_CloudIAP_Resource_ProjectsBrandsIdentityAwareProxyClients extends Google_Service_Resource
 {
   /**
    * Creates an Identity Aware Proxy (IAP) OAuth client. The client is owned by
@@ -79,7 +79,7 @@ class Google_Service_CloudIAP_Resource_OauthProjectsBrandsIdentityAwareProxyClie
   }
   /**
    * Lists the existing clients for the brand.
-   * (identityAwareProxyClients.listOauthProjectsBrandsIdentityAwareProxyClients)
+   * (identityAwareProxyClients.listProjectsBrandsIdentityAwareProxyClients)
    *
    * @param string $parent Required. Full brand path. In the following format:
    * projects/{project_number/id}/brands/{brand}.
@@ -98,7 +98,7 @@ class Google_Service_CloudIAP_Resource_OauthProjectsBrandsIdentityAwareProxyClie
    * 1000.
    * @return Google_Service_CloudIAP_ListIdentityAwareProxyClientsResponse
    */
-  public function listOauthProjectsBrandsIdentityAwareProxyClients($parent, $optParams = array())
+  public function listProjectsBrandsIdentityAwareProxyClients($parent, $optParams = array())
   {
     $params = array('parent' => $parent);
     $params = array_merge($params, $optParams);

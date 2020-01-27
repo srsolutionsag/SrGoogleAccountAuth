@@ -243,16 +243,6 @@ class Google_Service_DataCatalog extends Google_Service
                   'type' => 'string',
                 ),
               ),
-            ),'setIamPolicy' => array(
-              'path' => 'v1beta1/{+resource}:setIamPolicy',
-              'httpMethod' => 'POST',
-              'parameters' => array(
-                'resource' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-              ),
             ),'testIamPermissions' => array(
               'path' => 'v1beta1/{+resource}:testIamPermissions',
               'httpMethod' => 'POST',
@@ -518,14 +508,14 @@ class Google_Service_DataCatalog extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'serializedTaxonomies' => array(
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ),
                 'taxonomies' => array(
                   'location' => 'query',
                   'type' => 'string',
                   'repeated' => true,
-                ),
-                'serializedTaxonomies' => array(
-                  'location' => 'query',
-                  'type' => 'boolean',
                 ),
               ),
             ),'get' => array(
@@ -567,13 +557,13 @@ class Google_Service_DataCatalog extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),'patch' => array(
@@ -669,13 +659,13 @@ class Google_Service_DataCatalog extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),'patch' => array(

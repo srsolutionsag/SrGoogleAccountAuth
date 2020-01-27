@@ -112,17 +112,17 @@
     },
     {
         "name": "google/apiclient-services",
-        "version": "v0.123",
-        "version_normalized": "0.123.0.0",
+        "version": "v0.124",
+        "version_normalized": "0.124.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/googleapis/google-api-php-client-services.git",
-            "reference": "a8c3c7563729ecb98a9ed66f675366527bcbad4d"
+            "reference": "7bdd526abda4d802e973816cd7b4f3f3bc75fa03"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/a8c3c7563729ecb98a9ed66f675366527bcbad4d",
-            "reference": "a8c3c7563729ecb98a9ed66f675366527bcbad4d",
+            "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/7bdd526abda4d802e973816cd7b4f3f3bc75fa03",
+            "reference": "7bdd526abda4d802e973816cd7b4f3f3bc75fa03",
             "shasum": ""
         },
         "require": {
@@ -131,7 +131,7 @@
         "require-dev": {
             "phpunit/phpunit": "^4.8|^5"
         },
-        "time": "2020-01-19T00:24:13+00:00",
+        "time": "2020-01-25T00:24:16+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -815,24 +815,24 @@
     },
     {
         "name": "srag/custominputguis",
-        "version": "v0.28.5",
-        "version_normalized": "0.28.5.0",
+        "version": "v0.30.5",
+        "version_normalized": "0.30.5.0",
         "source": {
             "type": "git",
             "url": "https://github.com/studer-raimann/CustomInputGUIs.git",
-            "reference": "f814b96c22623b34a338ea163c48da7c1ad06158"
+            "reference": "7e907da1f63fc779041f8d1b1097e6ef5271994e"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/studer-raimann/CustomInputGUIs/zipball/f814b96c22623b34a338ea163c48da7c1ad06158",
-            "reference": "f814b96c22623b34a338ea163c48da7c1ad06158",
+            "url": "https://api.github.com/repos/studer-raimann/CustomInputGUIs/zipball/7e907da1f63fc779041f8d1b1097e6ef5271994e",
+            "reference": "7e907da1f63fc779041f8d1b1097e6ef5271994e",
             "shasum": ""
         },
         "require": {
             "php": ">=5.6",
             "srag/dic": ">=0.1.0"
         },
-        "time": "2020-01-16T07:59:55+00:00",
+        "time": "2020-01-27T10:24:04+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {

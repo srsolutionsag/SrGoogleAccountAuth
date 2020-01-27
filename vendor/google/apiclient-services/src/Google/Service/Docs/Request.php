@@ -29,6 +29,10 @@ class Google_Service_Docs_Request extends Google_Model
   protected $createParagraphBulletsDataType = '';
   protected $deleteContentRangeType = 'Google_Service_Docs_DeleteContentRangeRequest';
   protected $deleteContentRangeDataType = '';
+  protected $deleteFooterType = 'Google_Service_Docs_DeleteFooterRequest';
+  protected $deleteFooterDataType = '';
+  protected $deleteHeaderType = 'Google_Service_Docs_DeleteHeaderRequest';
+  protected $deleteHeaderDataType = '';
   protected $deleteNamedRangeType = 'Google_Service_Docs_DeleteNamedRangeRequest';
   protected $deleteNamedRangeDataType = '';
   protected $deleteParagraphBulletsType = 'Google_Service_Docs_DeleteParagraphBulletsRequest';
@@ -161,6 +165,34 @@ class Google_Service_Docs_Request extends Google_Model
   public function getDeleteContentRange()
   {
     return $this->deleteContentRange;
+  }
+  /**
+   * @param Google_Service_Docs_DeleteFooterRequest
+   */
+  public function setDeleteFooter(Google_Service_Docs_DeleteFooterRequest $deleteFooter)
+  {
+    $this->deleteFooter = $deleteFooter;
+  }
+  /**
+   * @return Google_Service_Docs_DeleteFooterRequest
+   */
+  public function getDeleteFooter()
+  {
+    return $this->deleteFooter;
+  }
+  /**
+   * @param Google_Service_Docs_DeleteHeaderRequest
+   */
+  public function setDeleteHeader(Google_Service_Docs_DeleteHeaderRequest $deleteHeader)
+  {
+    $this->deleteHeader = $deleteHeader;
+  }
+  /**
+   * @return Google_Service_Docs_DeleteHeaderRequest
+   */
+  public function getDeleteHeader()
+  {
+    return $this->deleteHeader;
   }
   /**
    * @param Google_Service_Docs_DeleteNamedRangeRequest

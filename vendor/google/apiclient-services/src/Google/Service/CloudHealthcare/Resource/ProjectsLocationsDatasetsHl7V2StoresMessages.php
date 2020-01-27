@@ -99,17 +99,6 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsHl7V2Stor
    * @param string $parent Name of the HL7v2 store to retrieve messages from.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken The next_page_token value returned from the
-   * previous List request, if any.
-   * @opt_param string orderBy Orders messages returned by the specified order_by
-   * clause. Syntax:
-   * https://cloud.google.com/apis/design/design_patterns#sorting_order
-   *
-   * Fields available for ordering are:
-   *
-   * *  `send_time`
-   * @opt_param int pageSize Limit on the number of messages to return in a single
-   * response. If zero the default page size of 100 is used.
    * @opt_param string filter Restricts messages returned to those matching a
    * filter. Syntax:
    * https://cloud.google.com/appengine/docs/standard/python/search/query_strings
@@ -143,6 +132,17 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsHl7V2Stor
    * patient ID function, one labels field and conditions on other fields is
    * supported. For example, this query is valid: `PatientId("123456", "MRN") AND
    * labels."tag1":* AND message_type = "ADT"`.
+   * @opt_param string pageToken The next_page_token value returned from the
+   * previous List request, if any.
+   * @opt_param string orderBy Orders messages returned by the specified order_by
+   * clause. Syntax:
+   * https://cloud.google.com/apis/design/design_patterns#sorting_order
+   *
+   * Fields available for ordering are:
+   *
+   * *  `send_time`
+   * @opt_param int pageSize Limit on the number of messages to return in a single
+   * response. If zero the default page size of 100 is used.
    * @return Google_Service_CloudHealthcare_ListMessagesResponse
    */
   public function listProjectsLocationsDatasetsHl7V2StoresMessages($parent, $optParams = array())
@@ -152,7 +152,13 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsHl7V2Stor
     return $this->call('list', array($params), "Google_Service_CloudHealthcare_ListMessagesResponse");
   }
   /**
-   * Update the message. (messages.patch)
+   * Update the message.
+   *
+   * The contents of the message in Message.data and data extracted from the
+   * contents such as Message.create_time cannot be altered. Only the
+   * Message.labels field is allowed to be updated. The labels in the request are
+   * merged with the existing set of labels. Existing labels with the same keys
+   * are updated. (messages.patch)
    *
    * @param string $name Resource name of the Message, of the form `projects/{proj
    * ect_id}/datasets/{dataset_id}/hl7V2Stores/{hl7_v2_store_id}/messages/{message
@@ -162,9 +168,7 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsHl7V2Stor
    *
    * @opt_param string updateMask The update mask applies to the resource. For the
    * `FieldMask` definition, see https://developers.google.com/protocol-
-   * buffers/docs/reference/google.protobuf#fieldmask Only the `labels` field is
-   * allowed to be updated. The labels in the request are merged with the existing
-   * set of labels. Existing labels with the same keys are updated.
+   * buffers/docs/reference/google.protobuf#fieldmask
    * @return Google_Service_CloudHealthcare_Message
    */
   public function patch($name, Google_Service_CloudHealthcare_Message $postBody, $optParams = array())

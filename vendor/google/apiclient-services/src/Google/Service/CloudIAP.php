@@ -34,8 +34,8 @@ class Google_Service_CloudIAP extends Google_Service
   const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
 
-  public $oauth_projects_brands;
-  public $oauth_projects_brands_identityAwareProxyClients;
+  public $projects_brands;
+  public $projects_brands_identityAwareProxyClients;
   public $v1;
   
   /**
@@ -53,14 +53,14 @@ class Google_Service_CloudIAP extends Google_Service
     $this->version = 'v1';
     $this->serviceName = 'iap';
 
-    $this->oauth_projects_brands = new Google_Service_CloudIAP_Resource_OauthProjectsBrands(
+    $this->projects_brands = new Google_Service_CloudIAP_Resource_ProjectsBrands(
         $this,
         $this->serviceName,
         'brands',
         array(
           'methods' => array(
             'create' => array(
-              'path' => 'v1/oauth/{+parent}/brands',
+              'path' => 'v1/{+parent}/brands',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'parent' => array(
@@ -70,7 +70,7 @@ class Google_Service_CloudIAP extends Google_Service
                 ),
               ),
             ),'get' => array(
-              'path' => 'v1/oauth/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -80,7 +80,7 @@ class Google_Service_CloudIAP extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v1/oauth/{+parent}/brands',
+              'path' => 'v1/{+parent}/brands',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -93,14 +93,14 @@ class Google_Service_CloudIAP extends Google_Service
           )
         )
     );
-    $this->oauth_projects_brands_identityAwareProxyClients = new Google_Service_CloudIAP_Resource_OauthProjectsBrandsIdentityAwareProxyClients(
+    $this->projects_brands_identityAwareProxyClients = new Google_Service_CloudIAP_Resource_ProjectsBrandsIdentityAwareProxyClients(
         $this,
         $this->serviceName,
         'identityAwareProxyClients',
         array(
           'methods' => array(
             'create' => array(
-              'path' => 'v1/oauth/{+parent}/identityAwareProxyClients',
+              'path' => 'v1/{+parent}/identityAwareProxyClients',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'parent' => array(
@@ -110,7 +110,7 @@ class Google_Service_CloudIAP extends Google_Service
                 ),
               ),
             ),'delete' => array(
-              'path' => 'v1/oauth/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => array(
                 'name' => array(
@@ -120,7 +120,7 @@ class Google_Service_CloudIAP extends Google_Service
                 ),
               ),
             ),'get' => array(
-              'path' => 'v1/oauth/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -130,7 +130,7 @@ class Google_Service_CloudIAP extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v1/oauth/{+parent}/identityAwareProxyClients',
+              'path' => 'v1/{+parent}/identityAwareProxyClients',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -148,7 +148,7 @@ class Google_Service_CloudIAP extends Google_Service
                 ),
               ),
             ),'resetSecret' => array(
-              'path' => 'v1/oauth/{+name}:resetSecret',
+              'path' => 'v1/{+name}:resetSecret',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'name' => array(

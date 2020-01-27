@@ -22,6 +22,12 @@ class Google_Service_Docs_SectionStyle extends Google_Collection
   protected $columnPropertiesDataType = 'array';
   public $columnSeparatorStyle;
   public $contentDirection;
+  public $defaultFooterId;
+  public $defaultHeaderId;
+  public $evenPageFooterId;
+  public $evenPageHeaderId;
+  public $firstPageFooterId;
+  public $firstPageHeaderId;
   protected $marginBottomType = 'Google_Service_Docs_Dimension';
   protected $marginBottomDataType = '';
   protected $marginFooterType = 'Google_Service_Docs_Dimension';
@@ -35,6 +41,7 @@ class Google_Service_Docs_SectionStyle extends Google_Collection
   protected $marginTopType = 'Google_Service_Docs_Dimension';
   protected $marginTopDataType = '';
   public $sectionType;
+  public $useFirstPageHeaderFooter;
 
   /**
    * @param Google_Service_Docs_SectionColumnProperties
@@ -65,6 +72,54 @@ class Google_Service_Docs_SectionStyle extends Google_Collection
   public function getContentDirection()
   {
     return $this->contentDirection;
+  }
+  public function setDefaultFooterId($defaultFooterId)
+  {
+    $this->defaultFooterId = $defaultFooterId;
+  }
+  public function getDefaultFooterId()
+  {
+    return $this->defaultFooterId;
+  }
+  public function setDefaultHeaderId($defaultHeaderId)
+  {
+    $this->defaultHeaderId = $defaultHeaderId;
+  }
+  public function getDefaultHeaderId()
+  {
+    return $this->defaultHeaderId;
+  }
+  public function setEvenPageFooterId($evenPageFooterId)
+  {
+    $this->evenPageFooterId = $evenPageFooterId;
+  }
+  public function getEvenPageFooterId()
+  {
+    return $this->evenPageFooterId;
+  }
+  public function setEvenPageHeaderId($evenPageHeaderId)
+  {
+    $this->evenPageHeaderId = $evenPageHeaderId;
+  }
+  public function getEvenPageHeaderId()
+  {
+    return $this->evenPageHeaderId;
+  }
+  public function setFirstPageFooterId($firstPageFooterId)
+  {
+    $this->firstPageFooterId = $firstPageFooterId;
+  }
+  public function getFirstPageFooterId()
+  {
+    return $this->firstPageFooterId;
+  }
+  public function setFirstPageHeaderId($firstPageHeaderId)
+  {
+    $this->firstPageHeaderId = $firstPageHeaderId;
+  }
+  public function getFirstPageHeaderId()
+  {
+    return $this->firstPageHeaderId;
   }
   /**
    * @param Google_Service_Docs_Dimension
@@ -157,5 +212,13 @@ class Google_Service_Docs_SectionStyle extends Google_Collection
   public function getSectionType()
   {
     return $this->sectionType;
+  }
+  public function setUseFirstPageHeaderFooter($useFirstPageHeaderFooter)
+  {
+    $this->useFirstPageHeaderFooter = $useFirstPageHeaderFooter;
+  }
+  public function getUseFirstPageHeaderFooter()
+  {
+    return $this->useFirstPageHeaderFooter;
   }
 }

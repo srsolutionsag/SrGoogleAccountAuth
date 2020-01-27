@@ -15,16 +15,16 @@
  * the License.
  */
 
-class Google_Service_BigQueryReservation_LocationMetadata extends Google_Model
+class Google_Service_Docs_DeleteHeaderRequest extends Google_Model
 {
-  public $legacyLocationId;
+  public $headerId;
 
-  public function setLegacyLocationId($legacyLocationId)
+  public function setHeaderId($headerId)
   {
-    $this->legacyLocationId = $legacyLocationId;
+    $this->headerId = $headerId;
   }
-  public function getLegacyLocationId()
+  public function getHeaderId()
   {
-    return $this->legacyLocationId;
+    return $this->headerId;
   }
 }

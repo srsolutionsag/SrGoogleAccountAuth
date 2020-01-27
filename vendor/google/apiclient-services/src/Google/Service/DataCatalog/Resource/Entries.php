@@ -50,7 +50,7 @@ class Google_Service_DataCatalog_Resource_Entries extends Google_Service_Resourc
    * ``pubsub.project_id.`topic.id.with.dots` ``   *
    * `bigquery.table.project_id.dataset_id.table_id`   *
    * `bigquery.dataset.project_id.dataset_id`   *
-   * `datacatalog.project_id.location_id.entry_group_id.entry_id`
+   * `datacatalog.entry.project_id.location_id.entry_group_id.entry_id`
    *
    * `*_id`s shoud satisfy the standard SQL rules for identifiers.
    * https://cloud.google.com/bigquery/docs/reference/standard-sql/lexical.

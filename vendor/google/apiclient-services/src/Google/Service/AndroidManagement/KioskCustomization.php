@@ -17,11 +17,20 @@
 
 class Google_Service_AndroidManagement_KioskCustomization extends Google_Model
 {
+  public $deviceSettings;
   public $powerButtonActions;
   public $statusBar;
   public $systemErrorWarnings;
   public $systemNavigation;
 
+  public function setDeviceSettings($deviceSettings)
+  {
+    $this->deviceSettings = $deviceSettings;
+  }
+  public function getDeviceSettings()
+  {
+    return $this->deviceSettings;
+  }
   public function setPowerButtonActions($powerButtonActions)
   {
     $this->powerButtonActions = $powerButtonActions;

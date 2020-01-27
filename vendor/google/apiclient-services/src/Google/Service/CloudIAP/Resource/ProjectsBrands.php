@@ -23,7 +23,7 @@
  *   $brands = $iapService->brands;
  *  </code>
  */
-class Google_Service_CloudIAP_Resource_OauthProjectsBrands extends Google_Service_Resource
+class Google_Service_CloudIAP_Resource_ProjectsBrands extends Google_Service_Resource
 {
   /**
    * Constructs a new OAuth brand for the project if one does not exist. The
@@ -61,14 +61,14 @@ class Google_Service_CloudIAP_Resource_OauthProjectsBrands extends Google_Servic
     return $this->call('get', array($params), "Google_Service_CloudIAP_Brand");
   }
   /**
-   * Lists the existing brands for the project. (brands.listOauthProjectsBrands)
+   * Lists the existing brands for the project. (brands.listProjectsBrands)
    *
    * @param string $parent Required. GCP Project number/id. In the following
    * format: projects/{project_number/id}.
    * @param array $optParams Optional parameters.
    * @return Google_Service_CloudIAP_ListBrandsResponse
    */
-  public function listOauthProjectsBrands($parent, $optParams = array())
+  public function listProjectsBrands($parent, $optParams = array())
   {
     $params = array('parent' => $parent);
     $params = array_merge($params, $optParams);

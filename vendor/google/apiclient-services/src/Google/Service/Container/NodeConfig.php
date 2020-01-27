@@ -32,6 +32,8 @@ class Google_Service_Container_NodeConfig extends Google_Collection
   public $preemptible;
   protected $reservationAffinityType = 'Google_Service_Container_ReservationAffinity';
   protected $reservationAffinityDataType = '';
+  protected $sandboxConfigType = 'Google_Service_Container_SandboxConfig';
+  protected $sandboxConfigDataType = '';
   public $serviceAccount;
   protected $shieldedInstanceConfigType = 'Google_Service_Container_ShieldedInstanceConfig';
   protected $shieldedInstanceConfigDataType = '';
@@ -146,6 +148,20 @@ class Google_Service_Container_NodeConfig extends Google_Collection
   public function getReservationAffinity()
   {
     return $this->reservationAffinity;
+  }
+  /**
+   * @param Google_Service_Container_SandboxConfig
+   */
+  public function setSandboxConfig(Google_Service_Container_SandboxConfig $sandboxConfig)
+  {
+    $this->sandboxConfig = $sandboxConfig;
+  }
+  /**
+   * @return Google_Service_Container_SandboxConfig
+   */
+  public function getSandboxConfig()
+  {
+    return $this->sandboxConfig;
   }
   public function setServiceAccount($serviceAccount)
   {

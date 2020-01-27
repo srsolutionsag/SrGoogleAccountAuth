@@ -23,6 +23,7 @@ class Google_Service_RemoteBuildExecution_GoogleDevtoolsRemotebuildexecutionAdmi
   public $diskType;
   public $labels;
   public $machineType;
+  public $maxConcurrentActions;
   public $minCpuPlatform;
   public $networkAccess;
   public $reserved;
@@ -72,6 +73,14 @@ class Google_Service_RemoteBuildExecution_GoogleDevtoolsRemotebuildexecutionAdmi
   public function getMachineType()
   {
     return $this->machineType;
+  }
+  public function setMaxConcurrentActions($maxConcurrentActions)
+  {
+    $this->maxConcurrentActions = $maxConcurrentActions;
+  }
+  public function getMaxConcurrentActions()
+  {
+    return $this->maxConcurrentActions;
   }
   public function setMinCpuPlatform($minCpuPlatform)
   {

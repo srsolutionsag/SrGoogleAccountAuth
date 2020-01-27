@@ -15,14 +15,25 @@
  * the License.
  */
 
-/**
- * The "projects" collection of methods.
- * Typical usage is:
- *  <code>
- *   $iapService = new Google_Service_CloudIAP(...);
- *   $projects = $iapService->projects;
- *  </code>
- */
-class Google_Service_CloudIAP_Resource_OauthProjects extends Google_Service_Resource
+class Google_Service_Compute_ManagedInstanceInstanceHealth extends Google_Model
 {
+  public $detailedHealthState;
+  public $healthCheck;
+
+  public function setDetailedHealthState($detailedHealthState)
+  {
+    $this->detailedHealthState = $detailedHealthState;
+  }
+  public function getDetailedHealthState()
+  {
+    return $this->detailedHealthState;
+  }
+  public function setHealthCheck($healthCheck)
+  {
+    $this->healthCheck = $healthCheck;
+  }
+  public function getHealthCheck()
+  {
+    return $this->healthCheck;
+  }
 }

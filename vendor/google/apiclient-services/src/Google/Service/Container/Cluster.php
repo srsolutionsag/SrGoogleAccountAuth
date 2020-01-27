@@ -78,6 +78,8 @@ class Google_Service_Container_Cluster extends Google_Collection
   protected $resourceUsageExportConfigDataType = '';
   public $selfLink;
   public $servicesIpv4Cidr;
+  protected $shieldedNodesType = 'Google_Service_Container_ShieldedNodes';
+  protected $shieldedNodesDataType = '';
   public $status;
   public $statusMessage;
   public $subnetwork;
@@ -529,6 +531,20 @@ class Google_Service_Container_Cluster extends Google_Collection
   public function getServicesIpv4Cidr()
   {
     return $this->servicesIpv4Cidr;
+  }
+  /**
+   * @param Google_Service_Container_ShieldedNodes
+   */
+  public function setShieldedNodes(Google_Service_Container_ShieldedNodes $shieldedNodes)
+  {
+    $this->shieldedNodes = $shieldedNodes;
+  }
+  /**
+   * @return Google_Service_Container_ShieldedNodes
+   */
+  public function getShieldedNodes()
+  {
+    return $this->shieldedNodes;
   }
   public function setStatus($status)
   {

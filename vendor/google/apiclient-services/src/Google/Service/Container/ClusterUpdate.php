@@ -41,6 +41,8 @@ class Google_Service_Container_ClusterUpdate extends Google_Collection
   public $desiredNodeVersion;
   protected $desiredResourceUsageExportConfigType = 'Google_Service_Container_ResourceUsageExportConfig';
   protected $desiredResourceUsageExportConfigDataType = '';
+  protected $desiredShieldedNodesType = 'Google_Service_Container_ShieldedNodes';
+  protected $desiredShieldedNodesDataType = '';
   protected $desiredVerticalPodAutoscalingType = 'Google_Service_Container_VerticalPodAutoscaling';
   protected $desiredVerticalPodAutoscalingDataType = '';
 
@@ -211,6 +213,20 @@ class Google_Service_Container_ClusterUpdate extends Google_Collection
   public function getDesiredResourceUsageExportConfig()
   {
     return $this->desiredResourceUsageExportConfig;
+  }
+  /**
+   * @param Google_Service_Container_ShieldedNodes
+   */
+  public function setDesiredShieldedNodes(Google_Service_Container_ShieldedNodes $desiredShieldedNodes)
+  {
+    $this->desiredShieldedNodes = $desiredShieldedNodes;
+  }
+  /**
+   * @return Google_Service_Container_ShieldedNodes
+   */
+  public function getDesiredShieldedNodes()
+  {
+    return $this->desiredShieldedNodes;
   }
   /**
    * @param Google_Service_Container_VerticalPodAutoscaling

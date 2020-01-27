@@ -3,10 +3,10 @@
 namespace srag\Plugins\SrGoogleAccountAuth\Config;
 
 use ilCheckboxInputGUI;
-use ilMultiSelectInputGUI;
 use ilSrGoogleAccountAuthConfigGUI;
 use ilSrGoogleAccountAuthPlugin;
 use ilTextInputGUI;
+use srag\CustomInputGUIs\SrGoogleAccountAuth\MultiSelectSearchNewInputGUI\MultiSelectSearchNewInputGUI;
 use srag\CustomInputGUIs\SrGoogleAccountAuth\PropertyFormGUI\PropertyFormGUI;
 use srag\Plugins\SrGoogleAccountAuth\Utils\SrGoogleAccountAuthTrait;
 
@@ -79,13 +79,12 @@ class ConfigFormGUI extends PropertyFormGUI
                 self::PROPERTY_CLASS    => ilCheckboxInputGUI::class,
                 self::PROPERTY_SUBITEMS => [
                     self::KEY_NEW_ACCOUNT_ROLES => [
-                        self::PROPERTY_CLASS    => ilMultiSelectInputGUI::class,
+                        self::PROPERTY_CLASS    => MultiSelectSearchNewInputGUI::class,
                         self::PROPERTY_REQUIRED => true,
-                        self::PROPERTY_OPTIONS  => self::srGoogleAccountAuth()->ilias()->roles()->getAllRoles(),
-                        "enableSelectAll"       => true
-                    ],
+                        self::PROPERTY_OPTIONS  => self::srGoogleAccountAuth()->ilias()->roles()->getAllRoles()
+                    ]
                 ]
-            ],
+            ]
         ];
     }
 

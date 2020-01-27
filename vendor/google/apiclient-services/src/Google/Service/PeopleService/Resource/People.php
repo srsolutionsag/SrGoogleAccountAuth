@@ -91,7 +91,7 @@ class Google_Service_PeopleService_Resource_People extends Google_Service_Resour
    * provide information about.
    *
    * - To get information about the authenticated user, specify `people/me`. - To
-   * get information about a google account, specify  `people/`account_id. - To
+   * get information about a google account, specify  `people/{account_id}`. - To
    * get information about a contact, specify the resource name that   identifies
    * the contact as returned by
    * [`people.connections.list`](/people/api/rest/v1/people.connections/list).
@@ -144,7 +144,7 @@ class Google_Service_PeopleService_Resource_People extends Google_Service_Resour
    * provide information about.
    *
    * - To get information about the authenticated user, specify `people/me`. - To
-   * get information about a google account, specify   `people/`account_id. - To
+   * get information about a google account, specify   `people/{account_id}`. - To
    * get information about a contact, specify the resource name that   identifies
    * the contact as returned by
    * [`people.connections.list`](/people/api/rest/v1/people.connections/list).
@@ -175,7 +175,7 @@ class Google_Service_PeopleService_Resource_People extends Google_Service_Resour
    *
    * @param string $resourceName The resource name for the person, assigned by the
    * server. An ASCII string with a max length of 27 characters, in the form of
-   * `people/`person_id.
+   * `people/{person_id}`.
    * @param Google_Service_PeopleService_Person $postBody
    * @param array $optParams Optional parameters.
    *

@@ -154,32 +154,6 @@ class Google_Service_DataCatalog_Resource_ProjectsLocationsEntryGroupsEntries ex
     return $this->call('patch', array($params), "Google_Service_DataCatalog_GoogleCloudDatacatalogV1beta1Entry");
   }
   /**
-   * Sets the access control policy for a resource. Replaces any existing policy.
-   * Supported resources are:   - Tag templates.   - Entries.   - Entry groups.
-   * Note, this method cannot be used to manage policies for BigQuery, Cloud
-   * Pub/Sub and any external Google Cloud Platform resources synced to Cloud Data
-   * Catalog.
-   *
-   * Callers must have following Google IAM permission   -
-   * `datacatalog.tagTemplates.setIamPolicy` to set policies on tag     templates.
-   * - `datacatalog.entries.setIamPolicy` to set policies on entries.   -
-   * `datacatalog.entryGroups.setIamPolicy` to set policies on entry groups.
-   * (entries.setIamPolicy)
-   *
-   * @param string $resource REQUIRED: The resource for which the policy is being
-   * specified. See the operation documentation for the appropriate value for this
-   * field.
-   * @param Google_Service_DataCatalog_SetIamPolicyRequest $postBody
-   * @param array $optParams Optional parameters.
-   * @return Google_Service_DataCatalog_Policy
-   */
-  public function setIamPolicy($resource, Google_Service_DataCatalog_SetIamPolicyRequest $postBody, $optParams = array())
-  {
-    $params = array('resource' => $resource, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('setIamPolicy', array($params), "Google_Service_DataCatalog_Policy");
-  }
-  /**
    * Returns the caller's permissions on a resource. If the resource does not
    * exist, an empty set of permissions is returned (We don't return a `NOT_FOUND`
    * error).

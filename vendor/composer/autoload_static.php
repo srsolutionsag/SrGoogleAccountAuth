@@ -17,12 +17,12 @@ class ComposerStaticInitcad4c6204bf143a143bbee0ca440b4fa
     public static $prefixLengthsPsr4 = array (
         's' => 
         array (
-            'srag\\RemovePluginDataConfirm\\' => 29,
+            'srag\\RemovePluginDataConfirm\\SrGoogleAccountAuth\\' => 49,
             'srag\\Plugins\\SrGoogleAccountAuth\\' => 33,
             'srag\\LibrariesNamespaceChanger\\' => 31,
             'srag\\DIC\\SrGoogleAccountAuth\\' => 29,
-            'srag\\CustomInputGUIs\\SrGoogleAccountAuth\\' => 41,
-            'srag\\ActiveRecordConfig\\' => 24,
+            'srag\\CustomInputGUIs\\' => 21,
+            'srag\\ActiveRecordConfig\\SrGoogleAccountAuth\\' => 44,
         ),
         'p' => 
         array (
@@ -52,7 +52,7 @@ class ComposerStaticInitcad4c6204bf143a143bbee0ca440b4fa
     );
 
     public static $prefixDirsPsr4 = array (
-        'srag\\RemovePluginDataConfirm\\' => 
+        'srag\\RemovePluginDataConfirm\\SrGoogleAccountAuth\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/removeplugindataconfirm/src',
         ),
@@ -68,11 +68,11 @@ class ComposerStaticInitcad4c6204bf143a143bbee0ca440b4fa
         array (
             0 => __DIR__ . '/..' . '/srag/dic/src',
         ),
-        'srag\\CustomInputGUIs\\SrGoogleAccountAuth\\' => 
+        'srag\\CustomInputGUIs\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/custominputguis/src',
         ),
-        'srag\\ActiveRecordConfig\\' => 
+        'srag\\ActiveRecordConfig\\SrGoogleAccountAuth\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/activerecordconfig/src',
         ),
@@ -1476,7 +1476,6 @@ class ComposerStaticInitcad4c6204bf143a143bbee0ca440b4fa
         'Google_Service_BigQueryReservation' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/BigQueryReservation.php',
         'Google_Service_BigQueryReservation_BigqueryreservationEmpty' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/BigQueryReservation/BigqueryreservationEmpty.php',
         'Google_Service_BigQueryReservation_ListOperationsResponse' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/BigQueryReservation/ListOperationsResponse.php',
-        'Google_Service_BigQueryReservation_LocationMetadata' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/BigQueryReservation/LocationMetadata.php',
         'Google_Service_BigQueryReservation_Operation' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/BigQueryReservation/Operation.php',
         'Google_Service_BigQueryReservation_Resource_Operations' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/BigQueryReservation/Resource/Operations.php',
         'Google_Service_BigQueryReservation_Status' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/BigQueryReservation/Status.php',
@@ -2381,10 +2380,9 @@ class ComposerStaticInitcad4c6204bf143a143bbee0ca440b4fa
         'Google_Service_CloudIAP_OAuthSettings' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudIAP/OAuthSettings.php',
         'Google_Service_CloudIAP_Policy' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudIAP/Policy.php',
         'Google_Service_CloudIAP_ResetIdentityAwareProxyClientSecretRequest' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudIAP/ResetIdentityAwareProxyClientSecretRequest.php',
-        'Google_Service_CloudIAP_Resource_Oauth' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudIAP/Resource/Oauth.php',
-        'Google_Service_CloudIAP_Resource_OauthProjects' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudIAP/Resource/OauthProjects.php',
-        'Google_Service_CloudIAP_Resource_OauthProjectsBrands' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudIAP/Resource/OauthProjectsBrands.php',
-        'Google_Service_CloudIAP_Resource_OauthProjectsBrandsIdentityAwareProxyClients' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudIAP/Resource/OauthProjectsBrandsIdentityAwareProxyClients.php',
+        'Google_Service_CloudIAP_Resource_Projects' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudIAP/Resource/Projects.php',
+        'Google_Service_CloudIAP_Resource_ProjectsBrands' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudIAP/Resource/ProjectsBrands.php',
+        'Google_Service_CloudIAP_Resource_ProjectsBrandsIdentityAwareProxyClients' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudIAP/Resource/ProjectsBrandsIdentityAwareProxyClients.php',
         'Google_Service_CloudIAP_Resource_V1' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudIAP/Resource/V1.php',
         'Google_Service_CloudIAP_SetIamPolicyRequest' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudIAP/SetIamPolicyRequest.php',
         'Google_Service_CloudIAP_TestIamPermissionsRequest' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudIAP/TestIamPermissionsRequest.php',
@@ -3386,6 +3384,7 @@ class ComposerStaticInitcad4c6204bf143a143bbee0ca440b4fa
         'Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p3beta1Entity' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudVideoIntelligence/GoogleCloudVideointelligenceV1p3beta1Entity.php',
         'Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p3beta1ExplicitContentAnnotation' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudVideoIntelligence/GoogleCloudVideointelligenceV1p3beta1ExplicitContentAnnotation.php',
         'Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p3beta1ExplicitContentFrame' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudVideoIntelligence/GoogleCloudVideointelligenceV1p3beta1ExplicitContentFrame.php',
+        'Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p3beta1FaceDetectionAnnotation' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudVideoIntelligence/GoogleCloudVideointelligenceV1p3beta1FaceDetectionAnnotation.php',
         'Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p3beta1LabelAnnotation' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudVideoIntelligence/GoogleCloudVideointelligenceV1p3beta1LabelAnnotation.php',
         'Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p3beta1LabelFrame' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudVideoIntelligence/GoogleCloudVideointelligenceV1p3beta1LabelFrame.php',
         'Google_Service_CloudVideoIntelligence_GoogleCloudVideointelligenceV1p3beta1LabelSegment' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/CloudVideoIntelligence/GoogleCloudVideointelligenceV1p3beta1LabelSegment.php',
@@ -3806,6 +3805,7 @@ class ComposerStaticInitcad4c6204bf143a143bbee0ca440b4fa
         'Google_Service_Compute_MachineTypesScopedListWarning' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Compute/MachineTypesScopedListWarning.php',
         'Google_Service_Compute_MachineTypesScopedListWarningData' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Compute/MachineTypesScopedListWarningData.php',
         'Google_Service_Compute_ManagedInstance' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Compute/ManagedInstance.php',
+        'Google_Service_Compute_ManagedInstanceInstanceHealth' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Compute/ManagedInstanceInstanceHealth.php',
         'Google_Service_Compute_ManagedInstanceLastAttempt' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Compute/ManagedInstanceLastAttempt.php',
         'Google_Service_Compute_ManagedInstanceLastAttemptErrors' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Compute/ManagedInstanceLastAttemptErrors.php',
         'Google_Service_Compute_ManagedInstanceLastAttemptErrorsErrors' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Compute/ManagedInstanceLastAttemptErrorsErrors.php',
@@ -3896,6 +3896,22 @@ class ComposerStaticInitcad4c6204bf143a143bbee0ca440b4fa
         'Google_Service_Compute_OperationsScopedListWarning' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Compute/OperationsScopedListWarning.php',
         'Google_Service_Compute_OperationsScopedListWarningData' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Compute/OperationsScopedListWarningData.php',
         'Google_Service_Compute_OutlierDetection' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Compute/OutlierDetection.php',
+        'Google_Service_Compute_PacketMirroring' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Compute/PacketMirroring.php',
+        'Google_Service_Compute_PacketMirroringAggregatedList' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Compute/PacketMirroringAggregatedList.php',
+        'Google_Service_Compute_PacketMirroringAggregatedListWarning' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Compute/PacketMirroringAggregatedListWarning.php',
+        'Google_Service_Compute_PacketMirroringAggregatedListWarningData' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Compute/PacketMirroringAggregatedListWarningData.php',
+        'Google_Service_Compute_PacketMirroringFilter' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Compute/PacketMirroringFilter.php',
+        'Google_Service_Compute_PacketMirroringForwardingRuleInfo' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Compute/PacketMirroringForwardingRuleInfo.php',
+        'Google_Service_Compute_PacketMirroringList' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Compute/PacketMirroringList.php',
+        'Google_Service_Compute_PacketMirroringListWarning' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Compute/PacketMirroringListWarning.php',
+        'Google_Service_Compute_PacketMirroringListWarningData' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Compute/PacketMirroringListWarningData.php',
+        'Google_Service_Compute_PacketMirroringMirroredResourceInfo' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Compute/PacketMirroringMirroredResourceInfo.php',
+        'Google_Service_Compute_PacketMirroringMirroredResourceInfoInstanceInfo' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Compute/PacketMirroringMirroredResourceInfoInstanceInfo.php',
+        'Google_Service_Compute_PacketMirroringMirroredResourceInfoSubnetInfo' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Compute/PacketMirroringMirroredResourceInfoSubnetInfo.php',
+        'Google_Service_Compute_PacketMirroringNetworkInfo' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Compute/PacketMirroringNetworkInfo.php',
+        'Google_Service_Compute_PacketMirroringsScopedList' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Compute/PacketMirroringsScopedList.php',
+        'Google_Service_Compute_PacketMirroringsScopedListWarning' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Compute/PacketMirroringsScopedListWarning.php',
+        'Google_Service_Compute_PacketMirroringsScopedListWarningData' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Compute/PacketMirroringsScopedListWarningData.php',
         'Google_Service_Compute_PathMatcher' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Compute/PathMatcher.php',
         'Google_Service_Compute_PathRule' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Compute/PathRule.php',
         'Google_Service_Compute_PerInstanceConfig' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Compute/PerInstanceConfig.php',
@@ -4008,6 +4024,7 @@ class ComposerStaticInitcad4c6204bf143a143bbee0ca440b4fa
         'Google_Service_Compute_Resource_NodeGroups' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Compute/Resource/NodeGroups.php',
         'Google_Service_Compute_Resource_NodeTemplates' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Compute/Resource/NodeTemplates.php',
         'Google_Service_Compute_Resource_NodeTypes' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Compute/Resource/NodeTypes.php',
+        'Google_Service_Compute_Resource_PacketMirrorings' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Compute/Resource/PacketMirrorings.php',
         'Google_Service_Compute_Resource_Projects' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Compute/Resource/Projects.php',
         'Google_Service_Compute_Resource_RegionAutoscalers' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Compute/Resource/RegionAutoscalers.php',
         'Google_Service_Compute_Resource_RegionBackendServices' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Compute/Resource/RegionBackendServices.php',
@@ -4436,6 +4453,7 @@ class ComposerStaticInitcad4c6204bf143a143bbee0ca440b4fa
         'Google_Service_Container_Resource_ProjectsZonesClustersNodePools' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Container/Resource/ProjectsZonesClustersNodePools.php',
         'Google_Service_Container_Resource_ProjectsZonesOperations' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Container/Resource/ProjectsZonesOperations.php',
         'Google_Service_Container_RollbackNodePoolUpgradeRequest' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Container/RollbackNodePoolUpgradeRequest.php',
+        'Google_Service_Container_SandboxConfig' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Container/SandboxConfig.php',
         'Google_Service_Container_ServerConfig' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Container/ServerConfig.php',
         'Google_Service_Container_SetAddonsConfigRequest' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Container/SetAddonsConfigRequest.php',
         'Google_Service_Container_SetLabelsRequest' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Container/SetLabelsRequest.php',
@@ -4450,6 +4468,7 @@ class ComposerStaticInitcad4c6204bf143a143bbee0ca440b4fa
         'Google_Service_Container_SetNodePoolManagementRequest' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Container/SetNodePoolManagementRequest.php',
         'Google_Service_Container_SetNodePoolSizeRequest' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Container/SetNodePoolSizeRequest.php',
         'Google_Service_Container_ShieldedInstanceConfig' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Container/ShieldedInstanceConfig.php',
+        'Google_Service_Container_ShieldedNodes' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Container/ShieldedNodes.php',
         'Google_Service_Container_StartIPRotationRequest' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Container/StartIPRotationRequest.php',
         'Google_Service_Container_StatusCondition' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Container/StatusCondition.php',
         'Google_Service_Container_TimeWindow' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Container/TimeWindow.php',
@@ -5916,6 +5935,8 @@ class ComposerStaticInitcad4c6204bf143a143bbee0ca440b4fa
         'Google_Service_Docs_CropProperties' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Docs/CropProperties.php',
         'Google_Service_Docs_CropPropertiesSuggestionState' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Docs/CropPropertiesSuggestionState.php',
         'Google_Service_Docs_DeleteContentRangeRequest' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Docs/DeleteContentRangeRequest.php',
+        'Google_Service_Docs_DeleteFooterRequest' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Docs/DeleteFooterRequest.php',
+        'Google_Service_Docs_DeleteHeaderRequest' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Docs/DeleteHeaderRequest.php',
         'Google_Service_Docs_DeleteNamedRangeRequest' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Docs/DeleteNamedRangeRequest.php',
         'Google_Service_Docs_DeleteParagraphBulletsRequest' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Docs/DeleteParagraphBulletsRequest.php',
         'Google_Service_Docs_DeletePositionedObjectRequest' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/Docs/DeletePositionedObjectRequest.php',
@@ -8583,6 +8604,7 @@ class ComposerStaticInitcad4c6204bf143a143bbee0ca440b4fa
         'Google_Service_ServiceManagement_Resource_ServicesRollouts' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/ServiceManagement/Resource/ServicesRollouts.php',
         'Google_Service_ServiceManagement_Rollout' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/ServiceManagement/Rollout.php',
         'Google_Service_ServiceManagement_Service' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/ServiceManagement/Service.php',
+        'Google_Service_ServiceManagement_ServiceIdentity' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/ServiceManagement/ServiceIdentity.php',
         'Google_Service_ServiceManagement_SetIamPolicyRequest' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/ServiceManagement/SetIamPolicyRequest.php',
         'Google_Service_ServiceManagement_SourceContext' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/ServiceManagement/SourceContext.php',
         'Google_Service_ServiceManagement_SourceInfo' => __DIR__ . '/..' . '/google/apiclient-services/src/Google/Service/ServiceManagement/SourceInfo.php',
@@ -10918,6 +10940,7 @@ class ComposerStaticInitcad4c6204bf143a143bbee0ca440b4fa
         'srag\\CustomInputGUIs\\SrGoogleAccountAuth\\MultiLineNewInputGUI\\MultiLineNewInputGUI' => __DIR__ . '/..' . '/srag/custominputguis/src/MultiLineNewInputGUI/MultiLineNewInputGUI.php',
         'srag\\CustomInputGUIs\\SrGoogleAccountAuth\\MultiSelectSearchInputGUI\\MultiSelectSearchInput2GUI' => __DIR__ . '/..' . '/srag/custominputguis/src/MultiSelectSearchInputGUI/MultiSelectSearchInput2GUI.php',
         'srag\\CustomInputGUIs\\SrGoogleAccountAuth\\MultiSelectSearchInputGUI\\MultiSelectSearchInputGUI' => __DIR__ . '/..' . '/srag/custominputguis/src/MultiSelectSearchInputGUI/MultiSelectSearchInputGUI.php',
+        'srag\\CustomInputGUIs\\SrGoogleAccountAuth\\MultiSelectSearchNewInputGUI\\MultiSelectSearchNewInputGUI' => __DIR__ . '/..' . '/srag/custominputguis/src/MultiSelectSearchNewInputGUI/MultiSelectSearchNewInputGUI.php',
         'srag\\CustomInputGUIs\\SrGoogleAccountAuth\\NumberInputGUI\\NumberInputGUI' => __DIR__ . '/..' . '/srag/custominputguis/src/NumberInputGUI/NumberInputGUI.php',
         'srag\\CustomInputGUIs\\SrGoogleAccountAuth\\PieChart\\Component\\LegendEntry' => __DIR__ . '/..' . '/srag/custominputguis/src/PieChart/Component/LegendEntry.php',
         'srag\\CustomInputGUIs\\SrGoogleAccountAuth\\PieChart\\Component\\PieChart' => __DIR__ . '/..' . '/srag/custominputguis/src/PieChart/Component/PieChart.php',
