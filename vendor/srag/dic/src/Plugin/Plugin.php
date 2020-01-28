@@ -5,7 +5,7 @@ namespace srag\DIC\SrGoogleAccountAuth\Plugin;
 use Exception;
 use ilLanguage;
 use ilPlugin;
-use ilTemplate;
+use srag\CustomInputGUIs\SrGoogleAccountAuth\Template\Template;
 use srag\DIC\SrGoogleAccountAuth\DICTrait;
 use srag\DIC\SrGoogleAccountAuth\Exception\DICException;
 
@@ -53,12 +53,12 @@ final class Plugin implements PluginInterface
     /**
      * @inheritDoc
      */
-    public function template(string $template, bool $remove_unknown_variables = true, bool $remove_empty_blocks = true, bool $plugin = true) : ilTemplate
+    public function template(string $template_file, bool $remove_unknown_variables = true, bool $remove_empty_blocks = true, bool $plugin = true) : Template
     {
         if ($plugin) {
-            return $this->plugin_object->getTemplate($template, $remove_unknown_variables, $remove_empty_blocks);
+            return new Template($this->directory() . "/templates/" . $template_file, $remove_unknown_variables, $remove_empty_blocks);
         } else {
-            return new ilTemplate($template, $remove_unknown_variables, $remove_empty_blocks);
+            return new Template($template_file, $remove_unknown_variables, $remove_empty_blocks);
         }
     }
 
