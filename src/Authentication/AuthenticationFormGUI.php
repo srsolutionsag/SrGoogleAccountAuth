@@ -56,7 +56,7 @@ class AuthenticationFormGUI extends PropertyFormGUI
         $authentication_button_tpl = self::plugin()->template("authentication_button.html");
         $authentication_button_tpl->setVariable("LINK", self::srGoogleAccountAuth()->client()->createAuthUrl());
         $authentication_button_tpl->setVariable("IMG", self::output()->getHTML(self::dic()->ui()->factory()->image()->standard(Client::ICON_URL, Client::GOOGLE)));
-        $authentication_button_tpl->setVariable("TXT", self::dic()->language()->txt("log_in"));
+        $authentication_button_tpl->setVariableEscaped("TXT", self::dic()->language()->txt("log_in"));
 
         $html = preg_replace('/<input\s+class="btn btn-default btn-sm"\s+type="submit"\s+name="cmd\[\]"\s+value=""\s*\/>/', self::output()->getHTML($authentication_button_tpl), $html);
 
