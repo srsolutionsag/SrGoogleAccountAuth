@@ -20,9 +20,9 @@ class ComposerStaticInitcad4c6204bf143a143bbee0ca440b4fa
             'srag\\RemovePluginDataConfirm\\SrGoogleAccountAuth\\' => 49,
             'srag\\Plugins\\SrGoogleAccountAuth\\' => 33,
             'srag\\LibrariesNamespaceChanger\\' => 31,
-            'srag\\DIC\\' => 9,
+            'srag\\DIC\\SrGoogleAccountAuth\\' => 29,
             'srag\\CustomInputGUIs\\' => 21,
-            'srag\\ActiveRecordConfig\\SrGoogleAccountAuth\\' => 44,
+            'srag\\ActiveRecordConfig\\' => 24,
         ),
         'p' => 
         array (
@@ -64,7 +64,7 @@ class ComposerStaticInitcad4c6204bf143a143bbee0ca440b4fa
         array (
             0 => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src',
         ),
-        'srag\\DIC\\' => 
+        'srag\\DIC\\SrGoogleAccountAuth\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/dic/src',
         ),
@@ -72,7 +72,7 @@ class ComposerStaticInitcad4c6204bf143a143bbee0ca440b4fa
         array (
             0 => __DIR__ . '/..' . '/srag/custominputguis/src',
         ),
-        'srag\\ActiveRecordConfig\\SrGoogleAccountAuth\\' => 
+        'srag\\ActiveRecordConfig\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/activerecordconfig/src',
         ),
