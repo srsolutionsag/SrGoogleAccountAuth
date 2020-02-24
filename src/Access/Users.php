@@ -22,7 +22,7 @@ final class Users
     use SrGoogleAccountAuthTrait;
     const PLUGIN_CLASS_NAME = ilSrGoogleAccountAuthPlugin::class;
     /**
-     * @var self
+     * @var self|null
      */
     protected static $instance = null;
 

@@ -21,7 +21,7 @@ final class Repository extends AbstractRepository
     use SrGoogleAccountAuthTrait;
     const PLUGIN_CLASS_NAME = ilSrGoogleAccountAuthPlugin::class;
     /**
-     * @var self
+     * @var self|null
      */
     protected static $instance = null;
 

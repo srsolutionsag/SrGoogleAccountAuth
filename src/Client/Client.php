@@ -29,7 +29,7 @@ class Client extends Google_Client
     const ICON_URL = "https://developers.google.com/identity/images/g-logo.png";
     const GOOGLE = "Google";
     /**
-     * @var self
+     * @var self|null
      */
     protected static $instance = null;
 
