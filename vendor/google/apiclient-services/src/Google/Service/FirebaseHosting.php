@@ -54,12 +54,13 @@ class Google_Service_FirebaseHosting extends Google_Service
   /**
    * Constructs the internal representation of the FirebaseHosting service.
    *
-   * @param Google_Client $client
+   * @param Google_Client $client The client used to deliver requests.
+   * @param string $rootUrl The root URL used for requests to the service.
    */
-  public function __construct(Google_Client $client)
+  public function __construct(Google_Client $client, $rootUrl = null)
   {
     parent::__construct($client);
-    $this->rootUrl = 'https://firebasehosting.googleapis.com/';
+    $this->rootUrl = $rootUrl ?: 'https://firebasehosting.googleapis.com/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
     $this->version = 'v1beta1';
@@ -224,11 +225,11 @@ class Google_Service_FirebaseHosting extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'versionId' => array(
+                'sizeBytes' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'sizeBytes' => array(
+                'versionId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -241,6 +242,28 @@ class Google_Service_FirebaseHosting extends Google_Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ),
+              ),
+            ),'list' => array(
+              'path' => 'v1beta1/{+parent}/versions',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),'patch' => array(
@@ -286,10 +309,6 @@ class Google_Service_FirebaseHosting extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'status' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -297,6 +316,10 @@ class Google_Service_FirebaseHosting extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),

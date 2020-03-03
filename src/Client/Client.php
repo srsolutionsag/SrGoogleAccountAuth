@@ -8,7 +8,7 @@ use Google_Service_PeopleService;
 use ilSession;
 use ilSrGoogleAccountAuthPlugin;
 use srag\DIC\SrGoogleAccountAuth\DICTrait;
-use srag\Plugins\SrGoogleAccountAuth\Config\Config;
+use srag\Plugins\SrGoogleAccountAuth\Config\ConfigFormGUI;
 use srag\Plugins\SrGoogleAccountAuth\Utils\SrGoogleAccountAuthTrait;
 
 /**
@@ -26,9 +26,10 @@ class Client extends Google_Client
     const PLUGIN_CLASS_NAME = ilSrGoogleAccountAuthPlugin::class;
     const REDIRECT_URL = "login.php?target=uihk_" . ilSrGoogleAccountAuthPlugin::PLUGIN_ID;
     const SESSION_KEY = "google_access_token";
-    const ICON_URL = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png";
+    const ICON_URL = "https://developers.google.com/identity/images/g-logo.png";
+    const GOOGLE = "Google";
     /**
-     * @var self
+     * @var self|null
      */
     protected static $instance = null;
 
@@ -64,8 +65,8 @@ class Client extends Google_Client
     {
         $this->setApplicationName("Login to " . ilSrGoogleAccountAuthPlugin::PLUGIN_NAME);
 
-        $this->setClientId(Config::getField(Config::KEY_CLIENT_ID));
-        $this->setClientSecret(Config::getField(Config::KEY_CLIENT_SECRET));
+        $this->setClientId(self::srGoogleAccountAuth()->config()->getValue(ConfigFormGUI::KEY_CLIENT_ID));
+        $this->setClientSecret(self::srGoogleAccountAuth()->config()->getValue(ConfigFormGUI::KEY_CLIENT_SECRET));
         $this->setRedirectUri(ILIAS_HTTP_PATH . "/" . self::REDIRECT_URL);
 
         $access_token = ilSession::get(self::SESSION_KEY);

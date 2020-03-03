@@ -2,8 +2,6 @@
 
 require_once __DIR__ . "/../vendor/autoload.php";
 
-use srag\DIC\SrGoogleAccountAuth\Util\LibraryLanguageInstaller;
-use srag\Plugins\SrGoogleAccountAuth\Config\Config;
 use srag\Plugins\SrGoogleAccountAuth\Utils\SrGoogleAccountAuthTrait;
 use srag\RemovePluginDataConfirm\SrGoogleAccountAuth\PluginUninstallTrait;
 
@@ -49,7 +47,7 @@ class ilSrGoogleAccountAuthPlugin extends ilUserInterfaceHookPlugin
 
 
     /**
-     * @return string
+     * @inheritDoc
      */
     public function getPluginName() : string
     {
@@ -58,22 +56,21 @@ class ilSrGoogleAccountAuthPlugin extends ilUserInterfaceHookPlugin
 
 
     /**
-     * @inheritdoc
+     * @inheritDoc
      */
-    public function updateLanguages($a_lang_keys = null)
+    public function updateLanguages(/*?array*/ $a_lang_keys = null)/*:void*/
     {
         parent::updateLanguages($a_lang_keys);
 
-        LibraryLanguageInstaller::getInstance()->withPlugin(self::plugin())->withLibraryLanguageDirectory(__DIR__
-            . "/../vendor/srag/removeplugindataconfirm/lang")->updateLanguages();
+        $this->installRemovePluginDataConfirmLanguages();
     }
 
 
     /**
-     * @inheritdoc
+     * @inheritDoc
      */
     protected function deleteData()/*: void*/
     {
-        self::dic()->database()->dropTable(Config::TABLE_NAME, false);
+        self::srGoogleAccountAuth()->dropTables();
     }
 }

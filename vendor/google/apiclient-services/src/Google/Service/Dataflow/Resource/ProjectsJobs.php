@@ -31,8 +31,6 @@ class Google_Service_Dataflow_Resource_ProjectsJobs extends Google_Service_Resou
    * @param string $projectId The project which owns the jobs.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string view Level of information requested in response. Default is
-   * `JOB_VIEW_SUMMARY`.
    * @opt_param string filter The kind of filter to use.
    * @opt_param string location The [regional endpoint]
    * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
@@ -42,6 +40,8 @@ class Google_Service_Dataflow_Resource_ProjectsJobs extends Google_Service_Resou
    * @opt_param int pageSize If there are many jobs, limit response to at most
    * this many. The actual number of jobs returned will be the lesser of
    * max_responses and an unspecified server-defined limit.
+   * @opt_param string view Level of information requested in response. Default is
+   * `JOB_VIEW_SUMMARY`.
    * @return Google_Service_Dataflow_ListJobsResponse
    */
   public function aggregated($projectId, $optParams = array())
@@ -63,12 +63,12 @@ class Google_Service_Dataflow_Resource_ProjectsJobs extends Google_Service_Resou
    * @param Google_Service_Dataflow_Job $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string replaceJobId Deprecated. This field is now in the Job
+   * message.
    * @opt_param string view The level of information requested in response.
    * @opt_param string location The [regional endpoint]
    * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
    * contains this job.
-   * @opt_param string replaceJobId Deprecated. This field is now in the Job
-   * message.
    * @return Google_Service_Dataflow_Job
    */
   public function create($projectId, Google_Service_Dataflow_Job $postBody, $optParams = array())
@@ -160,21 +160,6 @@ class Google_Service_Dataflow_Resource_ProjectsJobs extends Google_Service_Resou
     $params = array('projectId' => $projectId);
     $params = array_merge($params, $optParams);
     return $this->call('list', array($params), "Google_Service_Dataflow_ListJobsResponse");
-  }
-  /**
-   * Snapshot the state of a streaming job. (jobs.snapshot)
-   *
-   * @param string $projectId The project which owns the job to be snapshotted.
-   * @param string $jobId The job to be snapshotted.
-   * @param Google_Service_Dataflow_SnapshotJobRequest $postBody
-   * @param array $optParams Optional parameters.
-   * @return Google_Service_Dataflow_Snapshot
-   */
-  public function snapshot($projectId, $jobId, Google_Service_Dataflow_SnapshotJobRequest $postBody, $optParams = array())
-  {
-    $params = array('projectId' => $projectId, 'jobId' => $jobId, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('snapshot', array($params), "Google_Service_Dataflow_Snapshot");
   }
   /**
    * Updates the state of an existing Cloud Dataflow job.

@@ -18,6 +18,7 @@
 class Google_Service_CloudFilestore_GoogleCloudSaasacceleratorManagementProvidersV1Instance extends Google_Collection
 {
   protected $collection_key = 'provisionedResources';
+  public $consumerDefinedName;
   public $createTime;
   public $labels;
   public $maintenancePolicyNames;
@@ -29,6 +30,7 @@ class Google_Service_CloudFilestore_GoogleCloudSaasacceleratorManagementProvider
   protected $provisionedResourcesDataType = 'array';
   protected $rolloutMetadataType = 'Google_Service_CloudFilestore_GoogleCloudSaasacceleratorManagementProvidersV1RolloutMetadata';
   protected $rolloutMetadataDataType = 'map';
+  public $slmInstanceTemplate;
   protected $sloMetadataType = 'Google_Service_CloudFilestore_GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata';
   protected $sloMetadataDataType = '';
   public $softwareVersions;
@@ -36,6 +38,14 @@ class Google_Service_CloudFilestore_GoogleCloudSaasacceleratorManagementProvider
   public $tenantProjectId;
   public $updateTime;
 
+  public function setConsumerDefinedName($consumerDefinedName)
+  {
+    $this->consumerDefinedName = $consumerDefinedName;
+  }
+  public function getConsumerDefinedName()
+  {
+    return $this->consumerDefinedName;
+  }
   public function setCreateTime($createTime)
   {
     $this->createTime = $createTime;
@@ -117,6 +127,14 @@ class Google_Service_CloudFilestore_GoogleCloudSaasacceleratorManagementProvider
   public function getRolloutMetadata()
   {
     return $this->rolloutMetadata;
+  }
+  public function setSlmInstanceTemplate($slmInstanceTemplate)
+  {
+    $this->slmInstanceTemplate = $slmInstanceTemplate;
+  }
+  public function getSlmInstanceTemplate()
+  {
+    return $this->slmInstanceTemplate;
   }
   /**
    * @param Google_Service_CloudFilestore_GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata

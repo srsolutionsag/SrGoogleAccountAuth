@@ -52,7 +52,8 @@ class Google_Service_Monitoring_Resource_ProjectsTimeSeries extends Google_Servi
    * @param array $optParams Optional parameters.
    *
    * @opt_param string orderBy Unsupported: must be left blank. The points in each
-   * time series are returned in reverse time order.
+   * time series are currently returned in reverse time order (most recent to
+   * oldest).
    * @opt_param string aggregation.crossSeriesReducer The approach to be used to
    * combine time series. Not all reducer functions may be applied to all time
    * series, depending on the metric type and the value type of the original time
@@ -66,10 +67,6 @@ class Google_Service_Monitoring_Resource_ProjectsTimeSeries extends Google_Servi
    * additionally specify metric labels and other information. For example:
    * metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND
    * metric.labels.instance_name = "my-instance-name"
-   * @opt_param string pageToken If this field is not empty then it must contain
-   * the nextPageToken value returned by a previous call to this method. Using
-   * this field causes the method to return additional results from the previous
-   * method call.
    * @opt_param string aggregation.perSeriesAligner The approach to be used to
    * align individual time series. Not all alignment functions may be applied to
    * all time series, depending on the metric type and value type of the original
@@ -78,6 +75,10 @@ class Google_Service_Monitoring_Resource_ProjectsTimeSeries extends Google_Servi
    * series reduction. If crossSeriesReducer is specified, then perSeriesAligner
    * must be specified and not equal ALIGN_NONE and alignmentPeriod must be
    * specified; otherwise, an error is returned.
+   * @opt_param string pageToken If this field is not empty then it must contain
+   * the nextPageToken value returned by a previous call to this method. Using
+   * this field causes the method to return additional results from the previous
+   * method call.
    * @opt_param string interval.startTime Optional. The beginning of the time
    * interval. The default value for the start time is the end time. The start
    * time must not be later than the end time.

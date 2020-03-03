@@ -15,13 +15,15 @@
  * the License.
  */
 
-class Google_Service_Compute_AttachedDiskInitializeParams extends Google_Model
+class Google_Service_Compute_AttachedDiskInitializeParams extends Google_Collection
 {
+  protected $collection_key = 'resourcePolicies';
   public $description;
   public $diskName;
   public $diskSizeGb;
   public $diskType;
   public $labels;
+  public $resourcePolicies;
   public $sourceImage;
   protected $sourceImageEncryptionKeyType = 'Google_Service_Compute_CustomerEncryptionKey';
   protected $sourceImageEncryptionKeyDataType = '';
@@ -68,6 +70,14 @@ class Google_Service_Compute_AttachedDiskInitializeParams extends Google_Model
   public function getLabels()
   {
     return $this->labels;
+  }
+  public function setResourcePolicies($resourcePolicies)
+  {
+    $this->resourcePolicies = $resourcePolicies;
+  }
+  public function getResourcePolicies()
+  {
+    return $this->resourcePolicies;
   }
   public function setSourceImage($sourceImage)
   {

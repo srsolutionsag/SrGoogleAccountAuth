@@ -1,4 +1,4 @@
 <#1>
 <?php
-\srag\Plugins\SrGoogleAccountAuth\Config\Config::updateDB();
+\srag\Plugins\SrGoogleAccountAuth\Repository::getInstance()->installTables();
 ?>

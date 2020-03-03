@@ -107,7 +107,9 @@ class Google_Service_CloudFilestore_Resource_ProjectsLocationsInstances extends 
    *
    * @opt_param string updateMask Mask of fields to update.  At least one path
    * must be supplied in this field.  The elements of the repeated paths field may
-   * only include these fields: "description"
+   * only include these fields:
+   *
+   * * "description" * "file_shares" * "labels"
    * @return Google_Service_CloudFilestore_Operation
    */
   public function patch($name, Google_Service_CloudFilestore_Instance $postBody, $optParams = array())
