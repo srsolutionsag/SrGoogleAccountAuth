@@ -1,6 +1,6 @@
 # Changelog
 
-## [x]
+## [1.3.0]
 - Change login button
 
 ## [1.2.0]
