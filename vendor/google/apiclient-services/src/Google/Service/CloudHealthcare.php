@@ -88,6 +88,10 @@ class Google_Service_CloudHealthcare extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -95,10 +99,6 @@ class Google_Service_CloudHealthcare extends Google_Service
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
-                ),
-                'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
               ),
             ),
@@ -362,6 +362,10 @@ class Google_Service_CloudHealthcare extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
                 'filter' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -369,10 +373,6 @@ class Google_Service_CloudHealthcare extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
-                ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
                 ),
               ),
             ),'patch' => array(
@@ -846,6 +846,10 @@ class Google_Service_CloudHealthcare extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -853,10 +857,6 @@ class Google_Service_CloudHealthcare extends Google_Service
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
-                ),
-                'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
               ),
             ),'patch' => array(
@@ -869,6 +869,20 @@ class Google_Service_CloudHealthcare extends Google_Service
                   'required' => true,
                 ),
                 'updateMask' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'search' => array(
+              'path' => 'v1beta1/{+parent}/fhir',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'resourceType' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -922,10 +936,6 @@ class Google_Service_CloudHealthcare extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                '_count' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'start' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -937,6 +947,10 @@ class Google_Service_CloudHealthcare extends Google_Service
                 'end' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                '_count' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),'Resource-purge' => array(
@@ -1048,10 +1062,6 @@ class Google_Service_CloudHealthcare extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                '_count' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 '_since' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -1063,6 +1073,10 @@ class Google_Service_CloudHealthcare extends Google_Service
                 '_page_token' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                '_count' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),'patch' => array(
@@ -1292,6 +1306,10 @@ class Google_Service_CloudHealthcare extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'orderBy' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'filter' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -1300,13 +1318,13 @@ class Google_Service_CloudHealthcare extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'orderBy' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'view' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),'patch' => array(
@@ -1333,7 +1351,17 @@ class Google_Service_CloudHealthcare extends Google_Service
         'operations',
         array(
           'methods' => array(
-            'get' => array(
+            'cancel' => array(
+              'path' => 'v1beta1/{+name}:cancel',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'get' => array(
               'path' => 'v1beta1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(

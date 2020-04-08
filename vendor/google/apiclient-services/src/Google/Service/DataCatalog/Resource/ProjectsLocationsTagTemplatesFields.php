@@ -31,13 +31,13 @@ class Google_Service_DataCatalog_Resource_ProjectsLocationsTagTemplatesFields ex
    * Resource Project](/data-catalog/docs/concepts/resource-project) for more
    * information). (fields.create)
    *
-   * @param string $parent Required. The name of the project this template is in.
+   * @param string $parent Required. The name of the project and the template
+   * location [region](/compute/docs/regions-zones/#available). NOTE: Currently,
+   * only the `us-central1 region` is supported.
+   *
    * Example:
    *
-   * * projects/{project_id}/locations/{location}/tagTemplates/{tag_template_id}
-   *
-   * Note that this TagTemplateField may not actually be stored in the location in
-   * this name.
+   * * projects/{project_id}/locations/us-central1/tagTemplates/{tag_template_id}
    * @param Google_Service_DataCatalog_GoogleCloudDatacatalogV1beta1TagTemplateField $postBody
    * @param array $optParams Optional parameters.
    *
@@ -55,7 +55,7 @@ class Google_Service_DataCatalog_Resource_ProjectsLocationsTagTemplatesFields ex
     return $this->call('create', array($params), "Google_Service_DataCatalog_GoogleCloudDatacatalogV1beta1TagTemplateField");
   }
   /**
-   * Deletes a field in a tag template and all uses of that field. The user should
+   * Deletes a field in a tag template and all uses of that field. Users should
    * enable the Data Catalog API in the project identified by the `name` parameter
    * (see [Data Catalog Resource Project] (/data-catalog/docs/concepts/resource-
    * project) for more information). (fields.delete)
@@ -80,7 +80,7 @@ class Google_Service_DataCatalog_Resource_ProjectsLocationsTagTemplatesFields ex
   }
   /**
    * Updates a field in a tag template. This method cannot be used to update the
-   * field type. The user should enable the Data Catalog API in the project
+   * field type. Users should enable the Data Catalog API in the project
    * identified by the `name` parameter (see [Data Catalog Resource Project]
    * (/data-catalog/docs/concepts/resource-project) for more information).
    * (fields.patch)

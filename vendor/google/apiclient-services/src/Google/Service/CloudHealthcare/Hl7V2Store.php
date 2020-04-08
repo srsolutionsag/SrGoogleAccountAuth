@@ -15,14 +15,18 @@
  * the License.
  */
 
-class Google_Service_CloudHealthcare_Hl7V2Store extends Google_Model
+class Google_Service_CloudHealthcare_Hl7V2Store extends Google_Collection
 {
+  protected $collection_key = 'notificationConfigs';
   public $labels;
   public $name;
   protected $notificationConfigType = 'Google_Service_CloudHealthcare_NotificationConfig';
   protected $notificationConfigDataType = '';
+  protected $notificationConfigsType = 'Google_Service_CloudHealthcare_Hl7V2NotificationConfig';
+  protected $notificationConfigsDataType = 'array';
   protected $parserConfigType = 'Google_Service_CloudHealthcare_ParserConfig';
   protected $parserConfigDataType = '';
+  public $rejectDuplicateMessage;
 
   public function setLabels($labels)
   {
@@ -55,6 +59,20 @@ class Google_Service_CloudHealthcare_Hl7V2Store extends Google_Model
     return $this->notificationConfig;
   }
   /**
+   * @param Google_Service_CloudHealthcare_Hl7V2NotificationConfig
+   */
+  public function setNotificationConfigs($notificationConfigs)
+  {
+    $this->notificationConfigs = $notificationConfigs;
+  }
+  /**
+   * @return Google_Service_CloudHealthcare_Hl7V2NotificationConfig
+   */
+  public function getNotificationConfigs()
+  {
+    return $this->notificationConfigs;
+  }
+  /**
    * @param Google_Service_CloudHealthcare_ParserConfig
    */
   public function setParserConfig(Google_Service_CloudHealthcare_ParserConfig $parserConfig)
@@ -67,5 +85,13 @@ class Google_Service_CloudHealthcare_Hl7V2Store extends Google_Model
   public function getParserConfig()
   {
     return $this->parserConfig;
+  }
+  public function setRejectDuplicateMessage($rejectDuplicateMessage)
+  {
+    $this->rejectDuplicateMessage = $rejectDuplicateMessage;
+  }
+  public function getRejectDuplicateMessage()
+  {
+    return $this->rejectDuplicateMessage;
   }
 }

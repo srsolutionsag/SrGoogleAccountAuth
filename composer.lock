@@ -8,23 +8,23 @@
     "packages": [
         {
             "name": "firebase/php-jwt",
-            "version": "v5.0.0",
+            "version": "v5.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/firebase/php-jwt.git",
-                "reference": "9984a4d3a32ae7673d6971ea00bae9d0a1abba0e"
+                "reference": "feb0e820b8436873675fd3aca04f3728eb2185cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/firebase/php-jwt/zipball/9984a4d3a32ae7673d6971ea00bae9d0a1abba0e",
-                "reference": "9984a4d3a32ae7673d6971ea00bae9d0a1abba0e",
+                "url": "https://api.github.com/repos/firebase/php-jwt/zipball/feb0e820b8436873675fd3aca04f3728eb2185cb",
+                "reference": "feb0e820b8436873675fd3aca04f3728eb2185cb",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0"
             },
             "require-dev": {
-                "phpunit/phpunit": " 4.8.35"
+                "phpunit/phpunit": ">=4.8 <=9"
             },
             "type": "library",
             "autoload": {
@@ -50,20 +50,24 @@
             ],
             "description": "A simple library to encode and decode JSON Web Tokens (JWT) in PHP. Should conform to the current spec.",
             "homepage": "https://github.com/firebase/php-jwt",
-            "time": "2017-06-27T22:17:23+00:00"
+            "keywords": [
+                "jwt",
+                "php"
+            ],
+            "time": "2020-03-25T18:49:23+00:00"
         },
         {
             "name": "google/apiclient",
-            "version": "v2.4.0",
+            "version": "v2.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-api-php-client.git",
-                "reference": "cd3c37998020d91ae4eafca4f26a92da4dabba83"
+                "reference": "1fdfe942f9aaf3064e621834a5e3047fccb3a6da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-api-php-client/zipball/cd3c37998020d91ae4eafca4f26a92da4dabba83",
-                "reference": "cd3c37998020d91ae4eafca4f26a92da4dabba83",
+                "url": "https://api.github.com/repos/googleapis/google-api-php-client/zipball/1fdfe942f9aaf3064e621834a5e3047fccb3a6da",
+                "reference": "1fdfe942f9aaf3064e621834a5e3047fccb3a6da",
                 "shasum": ""
             },
             "require": {
@@ -80,7 +84,7 @@
                 "cache/filesystem-adapter": "^0.3.2",
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
                 "phpcompatibility/php-compatibility": "^9.2",
-                "phpunit/phpunit": "~4.8.36",
+                "phpunit/phpunit": "^4.8|^5.0",
                 "squizlabs/php_codesniffer": "~2.3",
                 "symfony/css-selector": "~2.1",
                 "symfony/dom-crawler": "~2.1"
@@ -111,20 +115,20 @@
             "keywords": [
                 "google"
             ],
-            "time": "2019-09-11T17:38:10+00:00"
+            "time": "2020-03-26T15:30:32+00:00"
         },
         {
             "name": "google/apiclient-services",
-            "version": "v0.124",
+            "version": "v0.129",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-api-php-client-services.git",
-                "reference": "7bdd526abda4d802e973816cd7b4f3f3bc75fa03"
+                "reference": "1b7d3bcd683603bcd42ea588923775a85a89222e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/7bdd526abda4d802e973816cd7b4f3f3bc75fa03",
-                "reference": "7bdd526abda4d802e973816cd7b4f3f3bc75fa03",
+                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/1b7d3bcd683603bcd42ea588923775a85a89222e",
+                "reference": "1b7d3bcd683603bcd42ea588923775a85a89222e",
                 "shasum": ""
             },
             "require": {
@@ -148,20 +152,20 @@
             "keywords": [
                 "google"
             ],
-            "time": "2020-01-25T00:24:16+00:00"
+            "time": "2020-04-04T00:24:12+00:00"
         },
         {
             "name": "google/auth",
-            "version": "v1.6.1",
+            "version": "v1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-auth-library-php.git",
-                "reference": "45635ac69d0b95f38885531d4ebcdfcb2ebb6f36"
+                "reference": "c7b295feb248f138f462a1e6b7d635e4244204c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-auth-library-php/zipball/45635ac69d0b95f38885531d4ebcdfcb2ebb6f36",
-                "reference": "45635ac69d0b95f38885531d4ebcdfcb2ebb6f36",
+                "url": "https://api.github.com/repos/googleapis/google-auth-library-php/zipball/c7b295feb248f138f462a1e6b7d635e4244204c5",
+                "reference": "c7b295feb248f138f462a1e6b7d635e4244204c5",
                 "shasum": ""
             },
             "require": {
@@ -175,6 +179,7 @@
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^1.11",
                 "guzzlehttp/promises": "0.1.1|^1.3",
+                "kelvinmo/simplejwt": "^0.2.5",
                 "phpseclib/phpseclib": "^2",
                 "phpunit/phpunit": "^4.8.36|^5.7",
                 "sebastian/comparator": ">=1.2.3"
@@ -199,7 +204,7 @@
                 "google",
                 "oauth2"
             ],
-            "time": "2019-10-29T20:13:04+00:00"
+            "time": "2020-03-26T19:47:36+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -473,16 +478,16 @@
         },
         {
             "name": "phpseclib/phpseclib",
-            "version": "2.0.23",
+            "version": "2.0.27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "c78eb5058d5bb1a183133c36d4ba5b6675dfa099"
+                "reference": "34620af4df7d1988d8f0d7e91f6c8a3bf931d8dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/c78eb5058d5bb1a183133c36d4ba5b6675dfa099",
-                "reference": "c78eb5058d5bb1a183133c36d4ba5b6675dfa099",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/34620af4df7d1988d8f0d7e91f6c8a3bf931d8dc",
+                "reference": "34620af4df7d1988d8f0d7e91f6c8a3bf931d8dc",
                 "shasum": ""
             },
             "require": {
@@ -561,7 +566,7 @@
                 "x.509",
                 "x509"
             ],
-            "time": "2019-09-17T03:41:22+00:00"
+            "time": "2020-04-04T23:17:33+00:00"
         },
         {
             "name": "psr/cache",
@@ -661,16 +666,16 @@
         },
         {
             "name": "psr/log",
-            "version": "1.1.2",
+            "version": "1.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "446d54b4cb6bf489fc9d75f55843658e6f25d801"
+                "reference": "0f73288fd15629204f9d42b7055f72dacbe811fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/446d54b4cb6bf489fc9d75f55843658e6f25d801",
-                "reference": "446d54b4cb6bf489fc9d75f55843658e6f25d801",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/0f73288fd15629204f9d42b7055f72dacbe811fc",
+                "reference": "0f73288fd15629204f9d42b7055f72dacbe811fc",
                 "shasum": ""
             },
             "require": {
@@ -704,7 +709,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2019-11-01T11:05:21+00:00"
+            "time": "2020-03-23T09:12:05+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -748,16 +753,16 @@
         },
         {
             "name": "srag/activerecordconfig",
-            "version": "v0.19.4",
+            "version": "v0.19.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/studer-raimann/ActiveRecordConfig.git",
-                "reference": "5098cd3c206287da0a479f9ff4534609e8d15039"
+                "reference": "37c29f8f8f7e8972d5f42aabea133bff18388a18"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/studer-raimann/ActiveRecordConfig/zipball/5098cd3c206287da0a479f9ff4534609e8d15039",
-                "reference": "5098cd3c206287da0a479f9ff4534609e8d15039",
+                "url": "https://api.github.com/repos/studer-raimann/ActiveRecordConfig/zipball/37c29f8f8f7e8972d5f42aabea133bff18388a18",
+                "reference": "37c29f8f8f7e8972d5f42aabea133bff18388a18",
                 "shasum": ""
             },
             "require": {
@@ -790,24 +795,24 @@
                 "activerecord",
                 "config"
             ],
-            "time": "2020-01-31T09:50:26+00:00"
+            "time": "2020-02-21T09:47:44+00:00"
         },
         {
             "name": "srag/custominputguis",
-            "version": "v0.31.6",
+            "version": "v0.34.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/studer-raimann/CustomInputGUIs.git",
-                "reference": "d07cce5eb25b5f8b92604f95c2f7ba7eac327389"
+                "reference": "f5f6bf37bcb8bd6b7ebf0d0cf91d5f730e447a9d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/studer-raimann/CustomInputGUIs/zipball/d07cce5eb25b5f8b92604f95c2f7ba7eac327389",
-                "reference": "d07cce5eb25b5f8b92604f95c2f7ba7eac327389",
+                "url": "https://api.github.com/repos/studer-raimann/CustomInputGUIs/zipball/f5f6bf37bcb8bd6b7ebf0d0cf91d5f730e447a9d",
+                "reference": "f5f6bf37bcb8bd6b7ebf0d0cf91d5f730e447a9d",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.6",
+                "php": ">=7.0",
                 "srag/dic": ">=0.1.0"
             },
             "type": "library",
@@ -837,20 +842,20 @@
                 "input",
                 "table"
             ],
-            "time": "2020-01-31T10:07:32+00:00"
+            "time": "2020-04-08T05:43:54+00:00"
         },
         {
             "name": "srag/dic",
-            "version": "v0.20.0",
+            "version": "v0.20.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/studer-raimann/DIC.git",
-                "reference": "94d039173ca2ec209dd88300cdcb415dbc8ba7a3"
+                "reference": "b5f107eddf513280f7c9ca7e05e7a42eb8d9fc95"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/studer-raimann/DIC/zipball/94d039173ca2ec209dd88300cdcb415dbc8ba7a3",
-                "reference": "94d039173ca2ec209dd88300cdcb415dbc8ba7a3",
+                "url": "https://api.github.com/repos/studer-raimann/DIC/zipball/b5f107eddf513280f7c9ca7e05e7a42eb8d9fc95",
+                "reference": "b5f107eddf513280f7c9ca7e05e7a42eb8d9fc95",
                 "shasum": ""
             },
             "require": {
@@ -859,7 +864,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "srag\\DIC\\SrGoogleAccountAuth\\": "src/"
+                    "srag\\DIC\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -882,24 +887,24 @@
                 "globals",
                 "trait"
             ],
-            "time": "2020-01-28T07:42:40+00:00"
+            "time": "2020-03-26T12:38:05+00:00"
         },
         {
             "name": "srag/librariesnamespacechanger",
-            "version": "v0.7.0",
+            "version": "v0.8.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/studer-raimann/LibrariesNamespaceChanger.git",
-                "reference": "80afdd6f1d0690004e87edadcf120fb6d0740ebb"
+                "reference": "3cded4dd32c9ee09eeb782d84266fcf8ad01b4b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/studer-raimann/LibrariesNamespaceChanger/zipball/80afdd6f1d0690004e87edadcf120fb6d0740ebb",
-                "reference": "80afdd6f1d0690004e87edadcf120fb6d0740ebb",
+                "url": "https://api.github.com/repos/studer-raimann/LibrariesNamespaceChanger/zipball/3cded4dd32c9ee09eeb782d84266fcf8ad01b4b1",
+                "reference": "3cded4dd32c9ee09eeb782d84266fcf8ad01b4b1",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.6"
+                "php": ">=7.0"
             },
             "type": "library",
             "autoload": {
@@ -925,7 +930,7 @@
                 "ILIAS",
                 "libraries"
             ],
-            "time": "2019-12-11T08:38:08+00:00"
+            "time": "2020-03-19T13:25:19+00:00"
         },
         {
             "name": "srag/removeplugindataconfirm",

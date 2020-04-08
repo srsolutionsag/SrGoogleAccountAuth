@@ -22,9 +22,13 @@ class Google_Service_AndroidPublisher_TrackRelease extends Google_Collection
   protected $controlsDataType = 'array';
   protected $countryTargetingType = 'Google_Service_AndroidPublisher_CountryTargeting';
   protected $countryTargetingDataType = '';
+  public $inAppUpdatePriority;
   public $name;
+  protected $pinnedVersionsType = 'Google_Service_AndroidPublisher_TrackReleasePin';
+  protected $pinnedVersionsDataType = 'array';
   protected $releaseNotesType = 'Google_Service_AndroidPublisher_LocalizedText';
   protected $releaseNotesDataType = 'array';
+  public $rollbackEnabled;
   protected $samplingType = 'Google_Service_AndroidPublisher_Sampling';
   protected $samplingDataType = '';
   public $status;
@@ -59,6 +63,14 @@ class Google_Service_AndroidPublisher_TrackRelease extends Google_Collection
   {
     return $this->countryTargeting;
   }
+  public function setInAppUpdatePriority($inAppUpdatePriority)
+  {
+    $this->inAppUpdatePriority = $inAppUpdatePriority;
+  }
+  public function getInAppUpdatePriority()
+  {
+    return $this->inAppUpdatePriority;
+  }
   public function setName($name)
   {
     $this->name = $name;
@@ -66,6 +78,20 @@ class Google_Service_AndroidPublisher_TrackRelease extends Google_Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param Google_Service_AndroidPublisher_TrackReleasePin
+   */
+  public function setPinnedVersions($pinnedVersions)
+  {
+    $this->pinnedVersions = $pinnedVersions;
+  }
+  /**
+   * @return Google_Service_AndroidPublisher_TrackReleasePin
+   */
+  public function getPinnedVersions()
+  {
+    return $this->pinnedVersions;
   }
   /**
    * @param Google_Service_AndroidPublisher_LocalizedText
@@ -80,6 +106,14 @@ class Google_Service_AndroidPublisher_TrackRelease extends Google_Collection
   public function getReleaseNotes()
   {
     return $this->releaseNotes;
+  }
+  public function setRollbackEnabled($rollbackEnabled)
+  {
+    $this->rollbackEnabled = $rollbackEnabled;
+  }
+  public function getRollbackEnabled()
+  {
+    return $this->rollbackEnabled;
   }
   /**
    * @param Google_Service_AndroidPublisher_Sampling

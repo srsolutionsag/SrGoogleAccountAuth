@@ -45,7 +45,11 @@ class Google_Service_FirebaseHosting extends Google_Service
   const FIREBASE_READONLY =
       "https://www.googleapis.com/auth/firebase.readonly";
 
+  public $projects_operations;
+  public $projects_sites_channels_releases;
+  public $projects_sites_releases;
   public $sites;
+  public $sites_channels_releases;
   public $sites_domains;
   public $sites_releases;
   public $sites_versions;
@@ -66,6 +70,110 @@ class Google_Service_FirebaseHosting extends Google_Service
     $this->version = 'v1beta1';
     $this->serviceName = 'firebasehosting';
 
+    $this->projects_operations = new Google_Service_FirebaseHosting_Resource_ProjectsOperations(
+        $this,
+        $this->serviceName,
+        'operations',
+        array(
+          'methods' => array(
+            'get' => array(
+              'path' => 'v1beta1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->projects_sites_channels_releases = new Google_Service_FirebaseHosting_Resource_ProjectsSitesChannelsReleases(
+        $this,
+        $this->serviceName,
+        'releases',
+        array(
+          'methods' => array(
+            'create' => array(
+              'path' => 'v1beta1/{+parent}/releases',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'versionName' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'list' => array(
+              'path' => 'v1beta1/{+parent}/releases',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->projects_sites_releases = new Google_Service_FirebaseHosting_Resource_ProjectsSitesReleases(
+        $this,
+        $this->serviceName,
+        'releases',
+        array(
+          'methods' => array(
+            'create' => array(
+              'path' => 'v1beta1/{+parent}/releases',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'versionName' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'list' => array(
+              'path' => 'v1beta1/{+parent}/releases',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+              ),
+            ),
+          )
+        )
+    );
     $this->sites = new Google_Service_FirebaseHosting_Resource_Sites(
         $this,
         $this->serviceName,
@@ -94,6 +202,48 @@ class Google_Service_FirebaseHosting extends Google_Service
                 'updateMask' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->sites_channels_releases = new Google_Service_FirebaseHosting_Resource_SitesChannelsReleases(
+        $this,
+        $this->serviceName,
+        'releases',
+        array(
+          'methods' => array(
+            'create' => array(
+              'path' => 'v1beta1/{+parent}/releases',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'versionName' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'list' => array(
+              'path' => 'v1beta1/{+parent}/releases',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),
@@ -216,7 +366,17 @@ class Google_Service_FirebaseHosting extends Google_Service
         'versions',
         array(
           'methods' => array(
-            'create' => array(
+            'clone' => array(
+              'path' => 'v1beta1/{+parent}/versions:clone',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'parent' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'create' => array(
               'path' => 'v1beta1/{+parent}/versions',
               'httpMethod' => 'POST',
               'parameters' => array(
@@ -309,10 +469,6 @@ class Google_Service_FirebaseHosting extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'status' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -320,6 +476,10 @@ class Google_Service_FirebaseHosting extends Google_Service
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'status' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),

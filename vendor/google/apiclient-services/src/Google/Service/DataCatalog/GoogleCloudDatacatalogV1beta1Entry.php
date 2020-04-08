@@ -25,6 +25,7 @@ class Google_Service_DataCatalog_GoogleCloudDatacatalogV1beta1Entry extends Goog
   public $displayName;
   protected $gcsFilesetSpecType = 'Google_Service_DataCatalog_GoogleCloudDatacatalogV1beta1GcsFilesetSpec';
   protected $gcsFilesetSpecDataType = '';
+  public $integratedSystem;
   public $linkedResource;
   public $name;
   protected $schemaType = 'Google_Service_DataCatalog_GoogleCloudDatacatalogV1beta1Schema';
@@ -32,6 +33,8 @@ class Google_Service_DataCatalog_GoogleCloudDatacatalogV1beta1Entry extends Goog
   protected $sourceSystemTimestampsType = 'Google_Service_DataCatalog_GoogleCloudDatacatalogV1beta1SystemTimestamps';
   protected $sourceSystemTimestampsDataType = '';
   public $type;
+  public $userSpecifiedSystem;
+  public $userSpecifiedType;
 
   /**
    * @param Google_Service_DataCatalog_GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpec
@@ -91,6 +94,14 @@ class Google_Service_DataCatalog_GoogleCloudDatacatalogV1beta1Entry extends Goog
   {
     return $this->gcsFilesetSpec;
   }
+  public function setIntegratedSystem($integratedSystem)
+  {
+    $this->integratedSystem = $integratedSystem;
+  }
+  public function getIntegratedSystem()
+  {
+    return $this->integratedSystem;
+  }
   public function setLinkedResource($linkedResource)
   {
     $this->linkedResource = $linkedResource;
@@ -142,5 +153,21 @@ class Google_Service_DataCatalog_GoogleCloudDatacatalogV1beta1Entry extends Goog
   public function getType()
   {
     return $this->type;
+  }
+  public function setUserSpecifiedSystem($userSpecifiedSystem)
+  {
+    $this->userSpecifiedSystem = $userSpecifiedSystem;
+  }
+  public function getUserSpecifiedSystem()
+  {
+    return $this->userSpecifiedSystem;
+  }
+  public function setUserSpecifiedType($userSpecifiedType)
+  {
+    $this->userSpecifiedType = $userSpecifiedType;
+  }
+  public function getUserSpecifiedType()
+  {
+    return $this->userSpecifiedType;
   }
 }

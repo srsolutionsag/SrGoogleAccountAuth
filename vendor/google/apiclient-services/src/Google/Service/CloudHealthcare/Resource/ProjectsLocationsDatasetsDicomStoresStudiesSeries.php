@@ -27,8 +27,8 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsDicomStor
 {
   /**
    * DeleteSeries deletes all instances within the given study and series. Delete
-   * requests are equivalent to the GET requests specified in the WADO-RS
-   * standard. (series.delete)
+   * requests are equivalent to the GET requests specified in the Retrieve
+   * transaction. (series.delete)
    *
    * @param string $parent The name of the DICOM store that is being accessed. For
    * example, `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}

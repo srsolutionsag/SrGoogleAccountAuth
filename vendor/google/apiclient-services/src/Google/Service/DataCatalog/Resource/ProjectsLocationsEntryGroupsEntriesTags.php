@@ -73,7 +73,13 @@ class Google_Service_DataCatalog_Resource_ProjectsLocationsEntryGroupsEntriesTag
    * (tags.listProjectsLocationsEntryGroupsEntriesTags)
    *
    * @param string $parent Required. The name of the Data Catalog resource to list
-   * the tags of. The resource could be an Entry.
+   * the tags of. The resource could be an Entry or an EntryGroup.
+   *
+   * Examples:
+   *
+   * * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id} * p
+   * rojects/{project_id}/locations/{location}/entryGroups/{entry_group_id}/entrie
+   * s/{entry_id}
    * @param array $optParams Optional parameters.
    *
    * @opt_param string pageToken Token that specifies which page is requested. If

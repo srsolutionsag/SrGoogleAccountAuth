@@ -66,10 +66,10 @@ class Google_Service_DataCatalog_Resource_ProjectsLocationsTaxonomies extends Go
    * to be exported will share.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param bool serializedTaxonomies Export taxonomies as serialized
-   * taxonomies.
    * @opt_param string taxonomies Required. Resource names of the taxonomies to be
    * exported.
+   * @opt_param bool serializedTaxonomies Export taxonomies as serialized
+   * taxonomies.
    * @return Google_Service_DataCatalog_GoogleCloudDatacatalogV1beta1ExportTaxonomiesResponse
    */
   public function export($parent, $optParams = array())

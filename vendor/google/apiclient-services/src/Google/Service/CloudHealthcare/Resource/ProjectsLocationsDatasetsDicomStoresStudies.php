@@ -27,7 +27,7 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsDicomStor
 {
   /**
    * DeleteStudy deletes all instances within the given study. Delete requests are
-   * equivalent to the GET requests specified in the WADO-RS standard.
+   * equivalent to the GET requests specified in the Retrieve transaction.
    * (studies.delete)
    *
    * @param string $parent

@@ -3,7 +3,6 @@
 namespace srag\Plugins\SrGoogleAccountAuth\Config;
 
 use ilCheckboxInputGUI;
-use ilSrGoogleAccountAuthConfigGUI;
 use ilSrGoogleAccountAuthPlugin;
 use ilTextInputGUI;
 use srag\CustomInputGUIs\SrGoogleAccountAuth\MultiSelectSearchNewInputGUI\MultiSelectSearchNewInputGUI;
@@ -26,15 +25,15 @@ class ConfigFormGUI extends PropertyFormGUI
     const KEY_CLIENT_SECRET = "client_secret";
     const KEY_CREATE_NEW_ACCOUNTS = "create_new_accounts";
     const KEY_NEW_ACCOUNT_ROLES = "new_account_roles";
-    const LANG_MODULE = ilSrGoogleAccountAuthConfigGUI::LANG_MODULE;
+    const LANG_MODULE = ConfigCtrl::LANG_MODULE;
 
 
     /**
      * ConfigFormGUI constructor
      *
-     * @param ilSrGoogleAccountAuthConfigGUI $parent
+     * @param ConfigCtrl $parent
      */
-    public function __construct(ilSrGoogleAccountAuthConfigGUI $parent)
+    public function __construct(ConfigCtrl $parent)
     {
         parent::__construct($parent);
     }
@@ -57,7 +56,7 @@ class ConfigFormGUI extends PropertyFormGUI
      */
     protected function initCommands()/*: void*/
     {
-        $this->addCommandButton(ilSrGoogleAccountAuthConfigGUI::CMD_UPDATE_CONFIGURE, $this->txt("save"));
+        $this->addCommandButton(ConfigCtrl::CMD_UPDATE_CONFIGURE, $this->txt("save"));
     }
 
 

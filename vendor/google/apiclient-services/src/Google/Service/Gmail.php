@@ -33,6 +33,18 @@ class Google_Service_Gmail extends Google_Service
   /** Read, compose, send, and permanently delete all your email from Gmail. */
   const MAIL_GOOGLE_COM =
       "https://mail.google.com/";
+  /** Manage drafts and send emails when you interact with the add-on. */
+  const GMAIL_ADDONS_CURRENT_ACTION_COMPOSE =
+      "https://www.googleapis.com/auth/gmail.addons.current.action.compose";
+  /** View your email messages when you interact with the add-on. */
+  const GMAIL_ADDONS_CURRENT_MESSAGE_ACTION =
+      "https://www.googleapis.com/auth/gmail.addons.current.message.action";
+  /** View your email message metadata when the add-on is running. */
+  const GMAIL_ADDONS_CURRENT_MESSAGE_METADATA =
+      "https://www.googleapis.com/auth/gmail.addons.current.message.metadata";
+  /** View your email messages when the add-on is running. */
+  const GMAIL_ADDONS_CURRENT_MESSAGE_READONLY =
+      "https://www.googleapis.com/auth/gmail.addons.current.message.readonly";
   /** Manage drafts and send emails. */
   const GMAIL_COMPOSE =
       "https://www.googleapis.com/auth/gmail.compose";

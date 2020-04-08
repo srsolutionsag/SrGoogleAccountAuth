@@ -79,12 +79,6 @@ class Google_Service_SecurityCommandCenter_Resource_OrganizationsSourcesFindings
    * organizations/{organization_id}/sources/-
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string fieldMask Optional. A field mask to specify the Finding
-   * fields to be listed in the response. An empty field mask will list all
-   * fields.
-   * @opt_param string pageToken The value returned by the last
-   * `ListFindingsResponse`; indicates that this is a continuation of a prior
-   * `ListFindings` call, and that the system should return the next page of data.
    * @opt_param int pageSize The maximum number of results to return in a single
    * response. Default is 10, minimum is 1, maximum is 1000.
    * @opt_param string orderBy Expression that defines what fields and order to
@@ -116,12 +110,16 @@ class Google_Service_SecurityCommandCenter_Resource_OrganizationsSourcesFindings
    *
    * Possible "state_change" values when compare_duration is specified:
    *
-   * * "CHANGED":   indicates that the finding was present at the start of
-   * compare_duration, but changed its state at read_time. * "UNCHANGED":
-   * indicates that the finding was present at the start of
-   * compare_duration and did not change state at read_time. * "ADDED":
-   * indicates that the finding was not present at the start                  of
-   * compare_duration, but was present at read_time.
+   * * "CHANGED":   indicates that the finding was present and matched the given
+   * filter at the start of compare_duration, but changed its
+   * state at read_time. * "UNCHANGED": indicates that the finding was present and
+   * matched the given                  filter at the start of compare_duration
+   * and did not change                  state at read_time. * "ADDED":
+   * indicates that the finding did not match the given filter or
+   * was not present at the start of compare_duration, but was
+   * present at read_time. * "REMOVED":   indicates that the finding was present
+   * and matched the                  filter at the start of compare_duration, but
+   * did not match                  the filter at read_time.
    *
    * If compare_duration is not specified, then the only possible state_change is
    * "UNUSED", which will be the state_change set for all findings present at
@@ -159,6 +157,18 @@ class Google_Service_SecurityCommandCenter_Resource_OrganizationsSourcesFindings
    * `<=`
    *
    * For example, `source_properties.size = 100` is a valid filter string.
+   *
+   * Use a partial match on the empty string to filter based on a property
+   * existing: "source_properties.my_property : \"\""
+   *
+   * Use a negated partial match on the empty string to filter based on a property
+   * not existing: "-source_properties.my_property : \"\""
+   * @opt_param string fieldMask Optional. A field mask to specify the Finding
+   * fields to be listed in the response. An empty field mask will list all
+   * fields.
+   * @opt_param string pageToken The value returned by the last
+   * `ListFindingsResponse`; indicates that this is a continuation of a prior
+   * `ListFindings` call, and that the system should return the next page of data.
    * @return Google_Service_SecurityCommandCenter_ListFindingsResponse
    */
   public function listOrganizationsSourcesFindings($parent, $optParams = array())

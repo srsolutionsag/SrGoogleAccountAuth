@@ -47,8 +47,6 @@ class Google_Service_CloudRun_Resource_NamespacesConfigurations extends Google_S
    * project ID or number.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string labelSelector Allows to filter resources based on a label.
-   * Supported operations are =, !=, exists, in, and notIn.
    * @opt_param string fieldSelector Allows to filter resources based on a
    * specific value for a field name. Send this in a query string format. i.e.
    * 'metadata.name%3Dlorem'. Not currently used by Cloud Run.
@@ -59,6 +57,8 @@ class Google_Service_CloudRun_Resource_NamespacesConfigurations extends Google_S
    * @opt_param int limit The maximum number of records that should be returned.
    * @opt_param bool watch Flag that indicates that the client expects to watch
    * this resource as well. Not currently used by Cloud Run.
+   * @opt_param string labelSelector Allows to filter resources based on a label.
+   * Supported operations are =, !=, exists, in, and notIn.
    * @return Google_Service_CloudRun_ListConfigurationsResponse
    */
   public function listNamespacesConfigurations($parent, $optParams = array())

@@ -41,6 +41,7 @@ class Google_Service_ShoppingContent extends Google_Service
   public $datafeeds;
   public $datafeedstatuses;
   public $liasettings;
+  public $localinventory;
   public $orderinvoices;
   public $orderreports;
   public $orderreturns;
@@ -48,6 +49,7 @@ class Google_Service_ShoppingContent extends Google_Service
   public $pos;
   public $products;
   public $productstatuses;
+  public $pubsubnotificationsettings;
   public $regionalinventory;
   public $returnaddress;
   public $returnpolicy;
@@ -165,6 +167,29 @@ class Google_Service_ShoppingContent extends Google_Service
               'httpMethod' => 'GET',
               'parameters' => array(
                 'merchantId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'maxResults' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
+            ),'listlinks' => array(
+              'path' => '{merchantId}/accounts/{accountId}/listlinks',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'merchantId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'accountId' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
@@ -648,6 +673,35 @@ class Google_Service_ShoppingContent extends Google_Service
                   'required' => true,
                 ),
                 'accountId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->localinventory = new Google_Service_ShoppingContent_Resource_Localinventory(
+        $this,
+        $this->serviceName,
+        'localinventory',
+        array(
+          'methods' => array(
+            'custombatch' => array(
+              'path' => 'localinventory/batch',
+              'httpMethod' => 'POST',
+              'parameters' => array(),
+            ),'insert' => array(
+              'path' => '{merchantId}/products/{productId}/localinventory',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'merchantId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'productId' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
@@ -1384,6 +1438,36 @@ class Google_Service_ShoppingContent extends Google_Service
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->pubsubnotificationsettings = new Google_Service_ShoppingContent_Resource_Pubsubnotificationsettings(
+        $this,
+        $this->serviceName,
+        'pubsubnotificationsettings',
+        array(
+          'methods' => array(
+            'get' => array(
+              'path' => '{merchantId}/pubsubnotificationsettings',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'merchantId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'update' => array(
+              'path' => '{merchantId}/pubsubnotificationsettings',
+              'httpMethod' => 'PUT',
+              'parameters' => array(
+                'merchantId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ),
               ),
             ),

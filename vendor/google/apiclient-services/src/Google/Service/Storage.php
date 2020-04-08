@@ -65,7 +65,7 @@ class Google_Service_Storage extends Google_Service
   public function __construct(Google_Client $client, $rootUrl = null)
   {
     parent::__construct($client);
-    $this->rootUrl = $rootUrl ?: 'https://www.googleapis.com/';
+    $this->rootUrl = $rootUrl ?: 'https://storage.googleapis.com/';
     $this->servicePath = 'storage/v1/';
     $this->batchPath = 'batch/storage/v1';
     $this->version = 'v1';
@@ -1252,6 +1252,10 @@ class Google_Service_Storage extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'endOffset' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'includeTrailingDelimiter' => array(
                   'location' => 'query',
                   'type' => 'boolean',
@@ -1273,6 +1277,10 @@ class Google_Service_Storage extends Google_Service
                   'type' => 'string',
                 ),
                 'provisionalUserProject' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'startOffset' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1549,6 +1557,10 @@ class Google_Service_Storage extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'endOffset' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'includeTrailingDelimiter' => array(
                   'location' => 'query',
                   'type' => 'boolean',
@@ -1570,6 +1582,10 @@ class Google_Service_Storage extends Google_Service
                   'type' => 'string',
                 ),
                 'provisionalUserProject' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'startOffset' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),

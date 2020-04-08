@@ -36,10 +36,6 @@ class Google_Service_BigQueryDataTransfer_Resource_ProjectsTransferConfigs exten
    * @param Google_Service_BigQueryDataTransfer_TransferConfig $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string serviceAccountName Optional service account name. If this
-   * field is set, transfer config will be created with this service account
-   * credentials. It requires that requesting user calling this API has
-   * permissions to act as this service account.
    * @opt_param string versionInfo Optional version info. If users want to find a
    * very recent access token, that is, immediately after approving access, users
    * have to set the version_info claim in the token request. To obtain the
@@ -61,6 +57,10 @@ class Google_Service_BigQueryDataTransfer_Resource_ProjectsTransferConfigs exten
    * authorization code should be   returned in the title bar of the browser, with
    * the page text prompting   the user to copy the code and paste it in the
    * application.
+   * @opt_param string serviceAccountName Optional service account name. If this
+   * field is set, transfer config will be created with this service account
+   * credentials. It requires that requesting user calling this API has
+   * permissions to act as this service account.
    * @return Google_Service_BigQueryDataTransfer_TransferConfig
    */
   public function create($parent, Google_Service_BigQueryDataTransfer_TransferConfig $postBody, $optParams = array())
@@ -141,8 +141,6 @@ class Google_Service_BigQueryDataTransfer_Resource_ProjectsTransferConfigs exten
    * @param Google_Service_BigQueryDataTransfer_TransferConfig $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string updateMask Required. Required list of fields to be updated
-   * in this request.
    * @opt_param string serviceAccountName Optional service account name. If this
    * field is set and "service_account_name" is set in update_mask, transfer
    * config will be updated to use this service account credentials. It requires
@@ -169,6 +167,8 @@ class Google_Service_BigQueryDataTransfer_Resource_ProjectsTransferConfigs exten
    * authorization code should be   returned in the title bar of the browser, with
    * the page text prompting   the user to copy the code and paste it in the
    * application.
+   * @opt_param string updateMask Required. Required list of fields to be updated
+   * in this request.
    * @return Google_Service_BigQueryDataTransfer_TransferConfig
    */
   public function patch($name, Google_Service_BigQueryDataTransfer_TransferConfig $postBody, $optParams = array())

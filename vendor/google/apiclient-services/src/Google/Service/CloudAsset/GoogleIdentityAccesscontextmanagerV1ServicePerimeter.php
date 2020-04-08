@@ -21,10 +21,13 @@ class Google_Service_CloudAsset_GoogleIdentityAccesscontextmanagerV1ServicePerim
   public $description;
   public $name;
   public $perimeterType;
+  protected $specType = 'Google_Service_CloudAsset_GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig';
+  protected $specDataType = '';
   protected $statusType = 'Google_Service_CloudAsset_GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig';
   protected $statusDataType = '';
   public $title;
   public $updateTime;
+  public $useExplicitDryRunSpec;
 
   public function setCreateTime($createTime)
   {
@@ -61,6 +64,20 @@ class Google_Service_CloudAsset_GoogleIdentityAccesscontextmanagerV1ServicePerim
   /**
    * @param Google_Service_CloudAsset_GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig
    */
+  public function setSpec(Google_Service_CloudAsset_GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig $spec)
+  {
+    $this->spec = $spec;
+  }
+  /**
+   * @return Google_Service_CloudAsset_GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig
+   */
+  public function getSpec()
+  {
+    return $this->spec;
+  }
+  /**
+   * @param Google_Service_CloudAsset_GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig
+   */
   public function setStatus(Google_Service_CloudAsset_GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig $status)
   {
     $this->status = $status;
@@ -87,5 +104,13 @@ class Google_Service_CloudAsset_GoogleIdentityAccesscontextmanagerV1ServicePerim
   public function getUpdateTime()
   {
     return $this->updateTime;
+  }
+  public function setUseExplicitDryRunSpec($useExplicitDryRunSpec)
+  {
+    $this->useExplicitDryRunSpec = $useExplicitDryRunSpec;
+  }
+  public function getUseExplicitDryRunSpec()
+  {
+    return $this->useExplicitDryRunSpec;
   }
 }

@@ -76,11 +76,11 @@ class Google_Service_Apigee_Resource_OrganizationsCompaniesApps extends Google_S
    * `organizations/{org}/companies/{company_name}`
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string count Limits the list to the number you specify. The limit
-   * is 100.
    * @opt_param bool expand Set expand to true to return a full profile
    * @opt_param string startKey Lets you return a list of app starting with a
    * specific app name in the list.
+   * @opt_param string count Limits the list to the number you specify. The limit
+   * is 100.
    * @return Google_Service_Apigee_GoogleCloudApigeeV1ListCompanyAppsResponse
    */
   public function listOrganizationsCompaniesApps($parent, $optParams = array())

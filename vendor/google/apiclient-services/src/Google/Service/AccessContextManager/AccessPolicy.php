@@ -18,6 +18,7 @@
 class Google_Service_AccessContextManager_AccessPolicy extends Google_Model
 {
   public $createTime;
+  public $etag;
   public $name;
   public $parent;
   public $title;
@@ -30,6 +31,14 @@ class Google_Service_AccessContextManager_AccessPolicy extends Google_Model
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  public function setEtag($etag)
+  {
+    $this->etag = $etag;
+  }
+  public function getEtag()
+  {
+    return $this->etag;
   }
   public function setName($name)
   {
