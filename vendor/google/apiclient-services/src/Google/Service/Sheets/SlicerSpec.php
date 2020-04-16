@@ -20,6 +20,8 @@ class Google_Service_Sheets_SlicerSpec extends Google_Model
   public $applyToPivotTables;
   protected $backgroundColorType = 'Google_Service_Sheets_Color';
   protected $backgroundColorDataType = '';
+  protected $backgroundColorStyleType = 'Google_Service_Sheets_ColorStyle';
+  protected $backgroundColorStyleDataType = '';
   public $columnIndex;
   protected $dataRangeType = 'Google_Service_Sheets_GridRange';
   protected $dataRangeDataType = '';
@@ -51,6 +53,20 @@ class Google_Service_Sheets_SlicerSpec extends Google_Model
   public function getBackgroundColor()
   {
     return $this->backgroundColor;
+  }
+  /**
+   * @param Google_Service_Sheets_ColorStyle
+   */
+  public function setBackgroundColorStyle(Google_Service_Sheets_ColorStyle $backgroundColorStyle)
+  {
+    $this->backgroundColorStyle = $backgroundColorStyle;
+  }
+  /**
+   * @return Google_Service_Sheets_ColorStyle
+   */
+  public function getBackgroundColorStyle()
+  {
+    return $this->backgroundColorStyle;
   }
   public function setColumnIndex($columnIndex)
   {

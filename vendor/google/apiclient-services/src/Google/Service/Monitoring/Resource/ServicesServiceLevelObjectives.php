@@ -29,14 +29,14 @@ class Google_Service_Monitoring_Resource_ServicesServiceLevelObjectives extends 
    * Create a ServiceLevelObjective for the given Service.
    * (serviceLevelObjectives.create)
    *
-   * @param string $parent Resource name of the parent Service. Of the form
-   * projects/{project_id}/services/{service_id}.
+   * @param string $parent Required. Resource name of the parent Service. The
+   * format is: projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
    * @param Google_Service_Monitoring_ServiceLevelObjective $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string serviceLevelObjectiveId Optional. The ServiceLevelObjective
    * id to use for this ServiceLevelObjective. If omitted, an id will be generated
-   * instead. Must match the pattern a-z0-9-+
+   * instead. Must match the pattern [a-z0-9\-]+
    * @return Google_Service_Monitoring_ServiceLevelObjective
    */
   public function create($parent, Google_Service_Monitoring_ServiceLevelObjective $postBody, $optParams = array())
@@ -48,9 +48,9 @@ class Google_Service_Monitoring_Resource_ServicesServiceLevelObjectives extends 
   /**
    * Delete the given ServiceLevelObjective. (serviceLevelObjectives.delete)
    *
-   * @param string $name Resource name of the ServiceLevelObjective to delete. Of
-   * the form projects/{project_id}/services/{service_id}/serviceLevelObjectives/{
-   * slo_name}.
+   * @param string $name Required. Resource name of the ServiceLevelObjective to
+   * delete. The format is: projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/
+   * serviceLevelObjectives/[SLO_NAME]
    * @param array $optParams Optional parameters.
    * @return Google_Service_Monitoring_MonitoringEmpty
    */
@@ -63,9 +63,9 @@ class Google_Service_Monitoring_Resource_ServicesServiceLevelObjectives extends 
   /**
    * Get a ServiceLevelObjective by name. (serviceLevelObjectives.get)
    *
-   * @param string $name Resource name of the ServiceLevelObjective to get. Of the
-   * form projects/{project_id}/services/{service_id}/serviceLevelObjectives/{slo_
-   * name}.
+   * @param string $name Required. Resource name of the ServiceLevelObjective to
+   * get. The format is: projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/ser
+   * viceLevelObjectives/[SLO_NAME]
    * @param array $optParams Optional parameters.
    *
    * @opt_param string view View of the ServiceLevelObjective to return. If
@@ -84,12 +84,12 @@ class Google_Service_Monitoring_Resource_ServicesServiceLevelObjectives extends 
    * List the ServiceLevelObjectives for the given Service.
    * (serviceLevelObjectives.listServicesServiceLevelObjectives)
    *
-   * @param string $parent Resource name of the parent Service. Of the form
-   * projects/{project_id}/services/{service_id}.
+   * @param string $parent Required. Resource name of the parent containing the
+   * listed SLOs, either a project or a Monitoring Workspace. The formats are:
+   * projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
+   * workspaces/[HOST_PROJECT_ID_OR_NUMBER]/services/-
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter A filter specifying what ServiceLevelObjectives to
-   * return.
    * @opt_param string pageToken If this field is not empty then it must contain
    * the nextPageToken value returned by a previous call to this method. Using
    * this field causes the method to return additional results from the previous
@@ -100,6 +100,8 @@ class Google_Service_Monitoring_Resource_ServicesServiceLevelObjectives extends 
    * DEFAULT, return each ServiceLevelObjective as originally defined. If EXPLICIT
    * and the ServiceLevelObjective is defined in terms of a BasicSli, replace the
    * BasicSli with a RequestBasedSli spelling out how the SLI is computed.
+   * @opt_param string filter A filter specifying what ServiceLevelObjectives to
+   * return.
    * @return Google_Service_Monitoring_ListServiceLevelObjectivesResponse
    */
   public function listServicesServiceLevelObjectives($parent, $optParams = array())
@@ -111,9 +113,9 @@ class Google_Service_Monitoring_Resource_ServicesServiceLevelObjectives extends 
   /**
    * Update the given ServiceLevelObjective. (serviceLevelObjectives.patch)
    *
-   * @param string $name Resource name for this ServiceLevelObjective. Of the form
-   * projects/{project_id}/services/{service_id}/serviceLevelObjectives/{slo_name}
-   * .
+   * @param string $name Resource name for this ServiceLevelObjective. The format
+   * is: projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjecti
+   * ves/[SLO_NAME]
    * @param Google_Service_Monitoring_ServiceLevelObjective $postBody
    * @param array $optParams Optional parameters.
    *

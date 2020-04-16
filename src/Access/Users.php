@@ -85,7 +85,7 @@ final class Users
         $user->saveAsNew();
 
         foreach ($roles as $role_id) {
-            self::dic()->rbacadmin()->assignUser($role_id, $user->getId());
+            self::dic()->rbac()->admin()->assignUser($role_id, $user->getId());
         }
 
         return $user->getId();

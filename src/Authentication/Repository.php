@@ -18,6 +18,7 @@ final class Repository
 
     use SrGoogleAccountAuthTrait;
     use DICTrait;
+
     const PLUGIN_CLASS_NAME = ilSrGoogleAccountAuthPlugin::class;
     /**
      * @var self|null
@@ -62,6 +63,36 @@ final class Repository
     public function factory() : Factory
     {
         return Factory::getInstance();
+    }
+
+
+    /**
+     * @param bool $target_fallback
+     *
+     * @return string
+     */
+    public function getState(bool $target_fallback = true) : string
+    {
+        $state = strval(filter_input(INPUT_GET, "state"));
+
+        if (!empty($state)) {
+            return base64_decode(strtr($state, "-_,", "+/="));
+        } else {
+            if ($target_fallback) {
+                return $this->getTarget();
+            } else {
+                return "";
+            }
+        }
+    }
+
+
+    /**
+     * @return string
+     */
+    public function getTarget() : string
+    {
+        return strval(filter_input(INPUT_GET, "target"));
     }
 
 

@@ -31,7 +31,7 @@ class Google_Service_Apigee_Resource_OrganizationsApisRevisions extends Google_S
    * before you can delete it. (revisions.delete)
    *
    * @param string $name Required. API proxy revision in the following format:
-   * `organizations/{organization_id}/apis/{api_id}/revisions/{revision_id}`
+   * `organizations/{org}/apis/{api}/revisions/{rev}`
    * @param array $optParams Optional parameters.
    * @return Google_Service_Apigee_GoogleCloudApigeeV1ApiProxyRevision
    */
@@ -57,7 +57,7 @@ class Google_Service_Apigee_Resource_OrganizationsApisRevisions extends Google_S
    * (revisions.get)
    *
    * @param string $name Required. API proxy revision in the following format:
-   * `organizations/{organization_id}/apis/{api_id}/revisions/{revision_id}`
+   * `organizations/{org}/apis/{api}/revisions/{rev}`
    * @param array $optParams Optional parameters.
    *
    * @opt_param string format Format used when downloading the API proxy
@@ -76,7 +76,7 @@ class Google_Service_Apigee_Resource_OrganizationsApisRevisions extends Google_S
    * (revisions.listOrganizationsApisRevisions)
    *
    * @param string $parent Required. Name of the API proxy in the following
-   * format:   `organizations/{organization_id}/apis/{api_id}`
+   * format:   `organizations/{org}/apis/{api}`
    * @param array $optParams Optional parameters.
    * @return Google_Service_Apigee_ListResponse
    */
@@ -98,8 +98,7 @@ class Google_Service_Apigee_Resource_OrganizationsApisRevisions extends Google_S
    * /octet-stream`. (revisions.updateApiProxyRevision)
    *
    * @param string $name Required. API proxy revision to update in the following
-   * format:
-   * `organizations/{organization_id}/apis/{api_id}/revisions/{revision_id}`
+   * format:   `organizations/{org}/apis/{api}/revisions/{rev}`
    * @param Google_Service_Apigee_GoogleApiHttpBody $postBody
    * @param array $optParams Optional parameters.
    *

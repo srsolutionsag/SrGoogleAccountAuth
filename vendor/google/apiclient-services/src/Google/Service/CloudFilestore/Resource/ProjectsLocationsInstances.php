@@ -83,12 +83,12 @@ class Google_Service_CloudFilestore_Resource_ProjectsLocationsInstances extends 
    * value.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter List filter.
    * @opt_param string pageToken The next_page_token value to use if there are
    * additional results to retrieve for this list request.
    * @opt_param string orderBy Sort results. Supported values are "name", "name
    * desc" or "" (unsorted).
    * @opt_param int pageSize The maximum number of items to return.
+   * @opt_param string filter List filter.
    * @return Google_Service_CloudFilestore_ListInstancesResponse
    */
   public function listProjectsLocationsInstances($parent, $optParams = array())
@@ -101,7 +101,7 @@ class Google_Service_CloudFilestore_Resource_ProjectsLocationsInstances extends 
    * Updates the settings of a specific instance. (instances.patch)
    *
    * @param string $name Output only. The resource name of the instance, in the
-   * format projects/{project_id}/locations/{location_id}/instances/{instance_id}.
+   * format projects/{project}/locations/{location}/instances/{instance}.
    * @param Google_Service_CloudFilestore_Instance $postBody
    * @param array $optParams Optional parameters.
    *

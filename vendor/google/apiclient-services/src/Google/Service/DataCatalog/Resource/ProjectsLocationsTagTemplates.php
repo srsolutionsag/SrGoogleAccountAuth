@@ -31,13 +31,13 @@ class Google_Service_DataCatalog_Resource_ProjectsLocationsTagTemplates extends 
    * Project](/data-catalog/docs/concepts/resource-project) for more information).
    * (tagTemplates.create)
    *
-   * @param string $parent Required. The name of the project and the location this
-   * template is in. Example:
+   * @param string $parent Required. The name of the project and the template
+   * location [region](/compute/docs/regions-zones/#available). NOTE: Currently,
+   * only the `us-central1 region` is supported.
    *
-   * * projects/{project_id}/locations/{location}
+   * Example:
    *
-   * TagTemplate and its child resources may not actually be stored in the
-   * location in this name.
+   * * projects/{project_id}/locations/us-central1
    * @param Google_Service_DataCatalog_GoogleCloudDatacatalogV1beta1TagTemplate $postBody
    * @param array $optParams Optional parameters.
    *
@@ -52,9 +52,9 @@ class Google_Service_DataCatalog_Resource_ProjectsLocationsTagTemplates extends 
     return $this->call('create', array($params), "Google_Service_DataCatalog_GoogleCloudDatacatalogV1beta1TagTemplate");
   }
   /**
-   * Deletes a tag template and all tags using the template. The user should
-   * enable the Data Catalog API in the project identified by the `name` parameter
-   * (see [Data Catalog Resource Project] (/data-catalog/docs/concepts/resource-
+   * Deletes a tag template and all tags using the template. Users should enable
+   * the Data Catalog API in the project identified by the `name` parameter (see
+   * [Data Catalog Resource Project] (/data-catalog/docs/concepts/resource-
    * project) for more information). (tagTemplates.delete)
    *
    * @param string $name Required. The name of the tag template to delete.
@@ -95,9 +95,8 @@ class Google_Service_DataCatalog_Resource_ProjectsLocationsTagTemplates extends 
    * resource exists but does not have a policy set on it.
    *
    * Supported resources are:   - Tag templates.   - Entries.   - Entry groups.
-   * Note, this method cannot be used to manage policies for BigQuery, Cloud
-   * Pub/Sub and any external Google Cloud Platform resources synced to Cloud Data
-   * Catalog.
+   * Note, this method cannot be used to manage policies for BigQuery, Pub/Sub and
+   * any external Google Cloud Platform resources synced to Data Catalog.
    *
    * Callers must have following Google IAM permission   -
    * `datacatalog.tagTemplates.getIamPolicy` to get policies on tag     templates.
@@ -121,8 +120,8 @@ class Google_Service_DataCatalog_Resource_ProjectsLocationsTagTemplates extends 
   /**
    * Updates a tag template. This method cannot be used to update the fields of a
    * template. The tag template fields are represented as separate resources and
-   * should be updated using their own create/update/delete methods. The user
-   * should enable the Data Catalog API in the project identified by the
+   * should be updated using their own create/update/delete methods. Users should
+   * enable the Data Catalog API in the project identified by the
    * `tag_template.name` parameter (see [Data Catalog Resource Project] (/data-
    * catalog/docs/concepts/resource-project) for more information).
    * (tagTemplates.patch)
@@ -156,9 +155,8 @@ class Google_Service_DataCatalog_Resource_ProjectsLocationsTagTemplates extends 
   /**
    * Sets the access control policy for a resource. Replaces any existing policy.
    * Supported resources are:   - Tag templates.   - Entries.   - Entry groups.
-   * Note, this method cannot be used to manage policies for BigQuery, Cloud
-   * Pub/Sub and any external Google Cloud Platform resources synced to Cloud Data
-   * Catalog.
+   * Note, this method cannot be used to manage policies for BigQuery, Pub/Sub and
+   * any external Google Cloud Platform resources synced to Data Catalog.
    *
    * Callers must have following Google IAM permission   -
    * `datacatalog.tagTemplates.setIamPolicy` to set policies on tag     templates.
@@ -185,9 +183,8 @@ class Google_Service_DataCatalog_Resource_ProjectsLocationsTagTemplates extends 
    * error).
    *
    * Supported resources are:   - Tag templates.   - Entries.   - Entry groups.
-   * Note, this method cannot be used to manage policies for BigQuery, Cloud
-   * Pub/Sub and any external Google Cloud Platform resources synced to Cloud Data
-   * Catalog.
+   * Note, this method cannot be used to manage policies for BigQuery, Pub/Sub and
+   * any external Google Cloud Platform resources synced to Data Catalog.
    *
    * A caller is not required to have Google IAM permission to make this request.
    * (tagTemplates.testIamPermissions)

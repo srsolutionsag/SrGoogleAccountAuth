@@ -119,6 +119,12 @@ class Google_Service_SecurityCommandCenter_Resource_OrganizationsAssets extends 
    * security_center_properties.resource_owners: `=`, `:`
    *
    * For example, `resource_properties.size = 100` is a valid filter string.
+   *
+   * Use a partial match on the empty string to filter based on a property
+   * existing: "resource_properties.my_property : \"\""
+   *
+   * Use a negated partial match on the empty string to filter based on a property
+   * not existing: "-resource_properties.my_property : \"\""
    * @opt_param string pageToken The value returned by the last
    * `ListAssetsResponse`; indicates that this is a continuation of a prior
    * `ListAssets` call, and that the system should return the next page of data.

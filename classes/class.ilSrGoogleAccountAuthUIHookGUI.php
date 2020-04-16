@@ -13,6 +13,7 @@ class ilSrGoogleAccountAuthUIHookGUI extends ilUIHookPluginGUI
 
     use DICTrait;
     use SrGoogleAccountAuthTrait;
+
     const PLUGIN_CLASS_NAME = ilSrGoogleAccountAuthPlugin::class;
     const LOGIN_TEMPLATE_ID = "Services/Init/tpl.login.html";
     const TEMPLATE_ADD = "template_add";
@@ -51,10 +52,8 @@ class ilSrGoogleAccountAuthUIHookGUI extends ilUIHookPluginGUI
      */
     protected function checkAuthentication()/*: void*/
     {
-        $target = filter_input(INPUT_GET, "target");
-
         $matches = [];
-        preg_match("/^uihk_" . ilSrGoogleAccountAuthPlugin::PLUGIN_ID . "(_(.*))?/uim", $target, $matches);
+        preg_match("/^uihk_" . ilSrGoogleAccountAuthPlugin::PLUGIN_ID . "(_(.*))?/uim", self::srGoogleAccountAuth()->authentication()->getTarget(), $matches);
 
         if (is_array($matches) && count($matches) >= 1) {
 
@@ -72,7 +71,8 @@ class ilSrGoogleAccountAuthUIHookGUI extends ilUIHookPluginGUI
 
             switch ($status->getStatus()) {
                 case ilAuthStatus::STATUS_AUTHENTICATED:
-                    unset($_GET["target"]); // Fix redirecting not user defaults start page
+                    $_GET["target"] = self::srGoogleAccountAuth()->authentication()->getState(false);
+
                     ilInitialisation::redirectToStartingPage();
 
                     return;

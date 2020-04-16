@@ -26,10 +26,13 @@
 class Google_Service_DataCatalog_Resource_ProjectsLocationsEntryGroups extends Google_Service_Resource
 {
   /**
-   * Alpha feature. Creates an EntryGroup. The user should enable the Data Catalog
-   * API in the project identified by the `parent` parameter (see [Data Catalog
-   * Resource Project] (/data-catalog/docs/concepts/resource-project) for more
-   * information). (entryGroups.create)
+   * A maximum of 10,000 entry groups may be created per organization across all
+   * locations.
+   *
+   * Users should enable the Data Catalog API in the project identified by the
+   * `parent` parameter (see [Data Catalog Resource Project] (/data-
+   * catalog/docs/concepts/resource-project) for more information).
+   * (entryGroups.create)
    *
    * @param string $parent Required. The name of the project this entry group is
    * in. Example:
@@ -53,11 +56,11 @@ class Google_Service_DataCatalog_Resource_ProjectsLocationsEntryGroups extends G
     return $this->call('create', array($params), "Google_Service_DataCatalog_GoogleCloudDatacatalogV1beta1EntryGroup");
   }
   /**
-   * Alpha feature. Deletes an EntryGroup. Only entry groups that do not contain
-   * entries can be deleted. The user should enable the Data Catalog API in the
-   * project identified by the `name` parameter (see [Data Catalog Resource
-   * Project] (/data-catalog/docs/concepts/resource-project) for more
-   * information). (entryGroups.delete)
+   * Deletes an EntryGroup. Only entry groups that do not contain entries can be
+   * deleted. Users should enable the Data Catalog API in the project identified
+   * by the `name` parameter (see [Data Catalog Resource Project] (/data-
+   * catalog/docs/concepts/resource-project) for more information).
+   * (entryGroups.delete)
    *
    * @param string $name Required. The name of the entry group. For example,
    * `projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}`.
@@ -74,7 +77,7 @@ class Google_Service_DataCatalog_Resource_ProjectsLocationsEntryGroups extends G
     return $this->call('delete', array($params), "Google_Service_DataCatalog_DatacatalogEmpty");
   }
   /**
-   * Alpha feature. Gets an EntryGroup. (entryGroups.get)
+   * Gets an EntryGroup. (entryGroups.get)
    *
    * @param string $name Required. The name of the entry group. For example,
    * `projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}`.
@@ -96,9 +99,8 @@ class Google_Service_DataCatalog_Resource_ProjectsLocationsEntryGroups extends G
    * resource exists but does not have a policy set on it.
    *
    * Supported resources are:   - Tag templates.   - Entries.   - Entry groups.
-   * Note, this method cannot be used to manage policies for BigQuery, Cloud
-   * Pub/Sub and any external Google Cloud Platform resources synced to Cloud Data
-   * Catalog.
+   * Note, this method cannot be used to manage policies for BigQuery, Pub/Sub and
+   * any external Google Cloud Platform resources synced to Data Catalog.
    *
    * Callers must have following Google IAM permission   -
    * `datacatalog.tagTemplates.getIamPolicy` to get policies on tag     templates.
@@ -120,11 +122,58 @@ class Google_Service_DataCatalog_Resource_ProjectsLocationsEntryGroups extends G
     return $this->call('getIamPolicy', array($params), "Google_Service_DataCatalog_Policy");
   }
   /**
+   * Lists entry groups. (entryGroups.listProjectsLocationsEntryGroups)
+   *
+   * @param string $parent Required. The name of the location that contains the
+   * entry groups, which can be provided in URL format. Example:
+   *
+   * * projects/{project_id}/locations/{location}
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string pageToken Optional. Token that specifies which page is
+   * requested. If empty, the first page is returned.
+   * @opt_param int pageSize Optional. The maximum number of items to return.
+   * Default is 10. Max limit is 1000. Throws an invalid argument for `page_size >
+   * 1000`.
+   * @return Google_Service_DataCatalog_GoogleCloudDatacatalogV1beta1ListEntryGroupsResponse
+   */
+  public function listProjectsLocationsEntryGroups($parent, $optParams = array())
+  {
+    $params = array('parent' => $parent);
+    $params = array_merge($params, $optParams);
+    return $this->call('list', array($params), "Google_Service_DataCatalog_GoogleCloudDatacatalogV1beta1ListEntryGroupsResponse");
+  }
+  /**
+   * Updates an EntryGroup. The user should enable the Data Catalog API in the
+   * project identified by the `entry_group.name` parameter (see [Data Catalog
+   * Resource Project] (/data-catalog/docs/concepts/resource-project) for more
+   * information). (entryGroups.patch)
+   *
+   * @param string $name The resource name of the entry group in URL format.
+   * Example:
+   *
+   * * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id}
+   *
+   * Note that this EntryGroup and its child resources may not actually be stored
+   * in the location in this name.
+   * @param Google_Service_DataCatalog_GoogleCloudDatacatalogV1beta1EntryGroup $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string updateMask The fields to update on the entry group. If
+   * absent or empty, all modifiable fields are updated.
+   * @return Google_Service_DataCatalog_GoogleCloudDatacatalogV1beta1EntryGroup
+   */
+  public function patch($name, Google_Service_DataCatalog_GoogleCloudDatacatalogV1beta1EntryGroup $postBody, $optParams = array())
+  {
+    $params = array('name' => $name, 'postBody' => $postBody);
+    $params = array_merge($params, $optParams);
+    return $this->call('patch', array($params), "Google_Service_DataCatalog_GoogleCloudDatacatalogV1beta1EntryGroup");
+  }
+  /**
    * Sets the access control policy for a resource. Replaces any existing policy.
    * Supported resources are:   - Tag templates.   - Entries.   - Entry groups.
-   * Note, this method cannot be used to manage policies for BigQuery, Cloud
-   * Pub/Sub and any external Google Cloud Platform resources synced to Cloud Data
-   * Catalog.
+   * Note, this method cannot be used to manage policies for BigQuery, Pub/Sub and
+   * any external Google Cloud Platform resources synced to Data Catalog.
    *
    * Callers must have following Google IAM permission   -
    * `datacatalog.tagTemplates.setIamPolicy` to set policies on tag     templates.
@@ -151,9 +200,8 @@ class Google_Service_DataCatalog_Resource_ProjectsLocationsEntryGroups extends G
    * error).
    *
    * Supported resources are:   - Tag templates.   - Entries.   - Entry groups.
-   * Note, this method cannot be used to manage policies for BigQuery, Cloud
-   * Pub/Sub and any external Google Cloud Platform resources synced to Cloud Data
-   * Catalog.
+   * Note, this method cannot be used to manage policies for BigQuery, Pub/Sub and
+   * any external Google Cloud Platform resources synced to Data Catalog.
    *
    * A caller is not required to have Google IAM permission to make this request.
    * (entryGroups.testIamPermissions)

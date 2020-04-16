@@ -427,11 +427,11 @@ class Google_Service_Dataproc extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'requestId' => array(
+                'clusterUuid' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'clusterUuid' => array(
+                'requestId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -500,15 +500,15 @@ class Google_Service_Dataproc extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
                 'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -729,6 +729,21 @@ class Google_Service_Dataproc extends Google_Service
                   'required' => true,
                 ),
               ),
+            ),'submitAsOperation' => array(
+              'path' => 'v1/projects/{projectId}/regions/{region}/jobs:submitAsOperation',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'projectId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'region' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
             ),'testIamPermissions' => array(
               'path' => 'v1/{+resource}:testIamPermissions',
               'httpMethod' => 'POST',
@@ -922,13 +937,13 @@ class Google_Service_Dataproc extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),'setIamPolicy' => array(

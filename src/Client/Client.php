@@ -23,6 +23,7 @@ class Client extends Google_Client
 
     use DICTrait;
     use SrGoogleAccountAuthTrait;
+
     const PLUGIN_CLASS_NAME = ilSrGoogleAccountAuthPlugin::class;
     const REDIRECT_URL = "login.php?target=uihk_" . ilSrGoogleAccountAuthPlugin::PLUGIN_ID;
     const SESSION_KEY = "google_access_token";
@@ -84,5 +85,10 @@ class Client extends Google_Client
             Google_Service_PeopleService::USERINFO_EMAIL,
             Google_Service_PeopleService::USER_EMAILS_READ
         ]);
+
+        $state = self::srGoogleAccountAuth()->authentication()->getState();
+        if (!empty($state)) {
+            $this->setState(strtr(base64_encode($state), "+/=", "-_,"));
+        }
     }
 }
