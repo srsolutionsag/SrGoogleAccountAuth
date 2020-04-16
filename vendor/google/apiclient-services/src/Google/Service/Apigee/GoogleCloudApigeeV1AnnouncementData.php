@@ -15,25 +15,16 @@
  * the License.
  */
 
-class Google_Service_CloudHealthcare_GoogleCloudHealthcareV1beta1FhirRestExportResourcesResponse extends Google_Model
+class Google_Service_Apigee_GoogleCloudApigeeV1AnnouncementData extends Google_Model
 {
-  public $fhirStore;
-  public $resourceCount;
+  public $message;
 
-  public function setFhirStore($fhirStore)
+  public function setMessage($message)
   {
-    $this->fhirStore = $fhirStore;
+    $this->message = $message;
   }
-  public function getFhirStore()
+  public function getMessage()
   {
-    return $this->fhirStore;
-  }
-  public function setResourceCount($resourceCount)
-  {
-    $this->resourceCount = $resourceCount;
-  }
-  public function getResourceCount()
-  {
-    return $this->resourceCount;
+    return $this->message;
   }
 }

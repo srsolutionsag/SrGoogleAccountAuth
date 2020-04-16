@@ -46,12 +46,12 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsDicomStor
    * De-identifies data from the source store and writes it to the destination
    * store. The metadata field type is OperationMetadata. If the request is
    * successful, the response field type is DeidentifyDicomStoreSummary. If errors
-   * occur, error details field type is DeidentifyErrorDetails. The LRO result may
-   * still be successful if de-identification fails for some DICOM instances. The
-   * output DICOM store will not contain these failed resources. Failed resource
-   * totals are tracked in DeidentifySummary.failure_resource_count. Error details
-   * are also logged to Stackdriver (see [Viewing logs](/healthcare/docs/how-tos
-   * /stackdriver-logging)). (dicomStores.deidentify)
+   * occur, error is set. The LRO result may still be successful if de-
+   * identification fails for some DICOM instances. The output DICOM store will
+   * not contain these failed resources. Failed resource totals are tracked in
+   * Operation.metadata. Error details are also logged to Stackdriver (see
+   * [Viewing logs](/healthcare/docs/how-tos/stackdriver-logging)).
+   * (dicomStores.deidentify)
    *
    * @param string $sourceStore Source DICOM store resource name. For example, `pr
    * ojects/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores
@@ -140,11 +140,9 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsDicomStor
   }
   /**
    * Imports data into the DICOM store by copying it from the specified source.
-   * For errors, the Operation is populated with error details (in the form of
-   * ImportDicomDataErrorDetails in error.details), which hold finer-grained error
-   * information. Errors are also logged to Stackdriver Logging. For more
-   * information, see [Viewing logs](/healthcare/docs/how-tos/stackdriver-
-   * logging). The metadata field type is OperationMetadata. (dicomStores.import)
+   * Errors are logged to Stackdriver Logging. For more information, see [Viewing
+   * logs](/healthcare/docs/how-tos/stackdriver-logging). The metadata field type
+   * is OperationMetadata. (dicomStores.import)
    *
    * @param string $name The name of the DICOM store resource into which the data
    * is imported. For example, `projects/{project_id}/locations/{location_id}/data
@@ -166,14 +164,14 @@ class Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsDicomStor
    * @param string $parent Name of the dataset.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize Limit on the number of DICOM stores to return in a
-   * single response. If zero the default page size of 100 is used.
    * @opt_param string filter Restricts stores returned to those matching a
    * filter. Syntax:
    * https://cloud.google.com/appengine/docs/standard/python/search/query_strings
    * Only filtering on labels is supported. For example, `labels.key=value`.
    * @opt_param string pageToken The next_page_token value returned from the
    * previous List request, if any.
+   * @opt_param int pageSize Limit on the number of DICOM stores to return in a
+   * single response. If zero the default page size of 100 is used.
    * @return Google_Service_CloudHealthcare_ListDicomStoresResponse
    */
   public function listProjectsLocationsDatasetsDicomStores($parent, $optParams = array())

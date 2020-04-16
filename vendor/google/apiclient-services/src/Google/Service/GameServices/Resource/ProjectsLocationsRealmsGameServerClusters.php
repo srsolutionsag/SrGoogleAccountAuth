@@ -138,10 +138,10 @@ class Google_Service_GameServices_Resource_ProjectsLocationsRealmsGameServerClus
    * @param Google_Service_GameServices_GameServerCluster $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string gameServerClusterId Required. The ID of the Game Server
-   * Cluster resource to be created.
    * @opt_param string previewTime Optional. The target timestamp to compute the
    * preview.
+   * @opt_param string gameServerClusterId Required. The ID of the Game Server
+   * Cluster resource to be created.
    * @return Google_Service_GameServices_PreviewCreateGameServerClusterResponse
    */
   public function previewCreate($parent, Google_Service_GameServices_GameServerCluster $postBody, $optParams = array())

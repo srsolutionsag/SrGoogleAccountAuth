@@ -29,8 +29,8 @@ class Google_Service_FirebaseHosting_Resource_ProjectsSitesReleases extends Goog
    * Creates a new release which makes the content of the specified version
    * actively display on the appropriate URL(s). (releases.create)
    *
-   * @param string $parent The site that the release belongs to, in the format:
-   * sites/site-name
+   * @param string $parent Required. The site that the release belongs to, in the
+   * format: sites/site-name
    * @param Google_Service_FirebaseHosting_Release $postBody
    * @param array $optParams Optional parameters.
    *
@@ -56,9 +56,9 @@ class Google_Service_FirebaseHosting_Resource_ProjectsSitesReleases extends Goog
    * format: sites/site-name
    * @param array $optParams Optional parameters.
    *
+   * @opt_param int pageSize The page size to return. Defaults to 100.
    * @opt_param string pageToken The next_page_token from a previous request, if
    * provided.
-   * @opt_param int pageSize The page size to return. Defaults to 100.
    * @return Google_Service_FirebaseHosting_ListReleasesResponse
    */
   public function listProjectsSitesReleases($parent, $optParams = array())

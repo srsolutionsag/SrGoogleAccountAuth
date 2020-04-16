@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.4.0]
+- Fix working ILIAS direct/target kinks after login
+
 ## [1.3.0]
 - Change login button
 

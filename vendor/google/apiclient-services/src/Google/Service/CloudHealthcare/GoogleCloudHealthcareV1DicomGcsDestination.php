@@ -15,25 +15,25 @@
  * the License.
  */
 
-class Google_Service_CloudHealthcare_GoogleCloudHealthcareV1beta1DeidentifyDeidentifyDicomStoreSummary extends Google_Model
+class Google_Service_CloudHealthcare_GoogleCloudHealthcareV1DicomGcsDestination extends Google_Model
 {
-  public $failureResourceCount;
-  public $successResourceCount;
+  public $mimeType;
+  public $uriPrefix;
 
-  public function setFailureResourceCount($failureResourceCount)
+  public function setMimeType($mimeType)
   {
-    $this->failureResourceCount = $failureResourceCount;
+    $this->mimeType = $mimeType;
   }
-  public function getFailureResourceCount()
+  public function getMimeType()
   {
-    return $this->failureResourceCount;
+    return $this->mimeType;
   }
-  public function setSuccessResourceCount($successResourceCount)
+  public function setUriPrefix($uriPrefix)
   {
-    $this->successResourceCount = $successResourceCount;
+    $this->uriPrefix = $uriPrefix;
   }
-  public function getSuccessResourceCount()
+  public function getUriPrefix()
   {
-    return $this->successResourceCount;
+    return $this->uriPrefix;
   }
 }

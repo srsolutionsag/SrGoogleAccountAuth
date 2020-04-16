@@ -119,16 +119,16 @@
         },
         {
             "name": "google/apiclient-services",
-            "version": "v0.129",
+            "version": "v0.130",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-api-php-client-services.git",
-                "reference": "1b7d3bcd683603bcd42ea588923775a85a89222e"
+                "reference": "a33503317f78f396b58bc184e4d760f1be47d228"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/1b7d3bcd683603bcd42ea588923775a85a89222e",
-                "reference": "1b7d3bcd683603bcd42ea588923775a85a89222e",
+                "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/a33503317f78f396b58bc184e4d760f1be47d228",
+                "reference": "a33503317f78f396b58bc184e4d760f1be47d228",
                 "shasum": ""
             },
             "require": {
@@ -152,7 +152,7 @@
             "keywords": [
                 "google"
             ],
-            "time": "2020-04-04T00:24:12+00:00"
+            "time": "2020-04-13T00:24:55+00:00"
         },
         {
             "name": "google/auth",
@@ -773,7 +773,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "srag\\ActiveRecordConfig\\": "src/"
+                    "srag\\ActiveRecordConfig\\SrGoogleAccountAuth\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -799,16 +799,16 @@
         },
         {
             "name": "srag/custominputguis",
-            "version": "v0.34.2",
+            "version": "v0.34.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/studer-raimann/CustomInputGUIs.git",
-                "reference": "f5f6bf37bcb8bd6b7ebf0d0cf91d5f730e447a9d"
+                "reference": "31b52172d13eb2a6f470f779aa22784975dcf348"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/studer-raimann/CustomInputGUIs/zipball/f5f6bf37bcb8bd6b7ebf0d0cf91d5f730e447a9d",
-                "reference": "f5f6bf37bcb8bd6b7ebf0d0cf91d5f730e447a9d",
+                "url": "https://api.github.com/repos/studer-raimann/CustomInputGUIs/zipball/31b52172d13eb2a6f470f779aa22784975dcf348",
+                "reference": "31b52172d13eb2a6f470f779aa22784975dcf348",
                 "shasum": ""
             },
             "require": {
@@ -842,7 +842,7 @@
                 "input",
                 "table"
             ],
-            "time": "2020-04-08T05:43:54+00:00"
+            "time": "2020-04-15T09:40:19+00:00"
         },
         {
             "name": "srag/dic",
@@ -864,7 +864,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "srag\\DIC\\": "src/"
+                    "srag\\DIC\\SrGoogleAccountAuth\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",

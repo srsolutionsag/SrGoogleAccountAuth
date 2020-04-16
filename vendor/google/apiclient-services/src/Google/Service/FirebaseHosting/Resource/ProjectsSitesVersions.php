@@ -23,11 +23,11 @@
  *   $versions = $firebasehostingService->versions;
  *  </code>
  */
-class Google_Service_FirebaseHosting_Resource_SitesVersions extends Google_Service_Resource
+class Google_Service_FirebaseHosting_Resource_ProjectsSitesVersions extends Google_Service_Resource
 {
   /**
    * Creates a new version on the target site using the content of the specified
-   * version. (versions.cloneSitesVersions)
+   * version. (versions.cloneProjectsSitesVersions)
    *
    * @param string $parent Required. The target site where the cloned version will
    * reside, in the format: `sites/{site}`
@@ -35,7 +35,7 @@ class Google_Service_FirebaseHosting_Resource_SitesVersions extends Google_Servi
    * @param array $optParams Optional parameters.
    * @return Google_Service_FirebaseHosting_Operation
    */
-  public function cloneSitesVersions($parent, Google_Service_FirebaseHosting_CloneVersionRequest $postBody, $optParams = array())
+  public function cloneProjectsSitesVersions($parent, Google_Service_FirebaseHosting_CloneVersionRequest $postBody, $optParams = array())
   {
     $params = array('parent' => $parent, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
@@ -49,10 +49,10 @@ class Google_Service_FirebaseHosting_Resource_SitesVersions extends Google_Servi
    * @param Google_Service_FirebaseHosting_Version $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string sizeBytes The self-reported size of the version. This value
-   * is used for a pre-emptive quota check for legacy version uploads.
    * @opt_param string versionId A unique id for the new version. This is only
    * specified for legacy version creations.
+   * @opt_param string sizeBytes The self-reported size of the version. This value
+   * is used for a pre-emptive quota check for legacy version uploads.
    * @return Google_Service_FirebaseHosting_Version
    */
   public function create($parent, Google_Service_FirebaseHosting_Version $postBody, $optParams = array())
@@ -77,7 +77,7 @@ class Google_Service_FirebaseHosting_Resource_SitesVersions extends Google_Servi
   }
   /**
    * Lists the versions that have been created on the specified site. Will include
-   * filtering in the future. (versions.listSitesVersions)
+   * filtering in the future. (versions.listProjectsSitesVersions)
    *
    * @param string $parent Required. The parent for which to list files, in the
    * format: sites/site-name
@@ -94,7 +94,7 @@ class Google_Service_FirebaseHosting_Resource_SitesVersions extends Google_Servi
    * provided.
    * @return Google_Service_FirebaseHosting_ListVersionsResponse
    */
-  public function listSitesVersions($parent, $optParams = array())
+  public function listProjectsSitesVersions($parent, $optParams = array())
   {
     $params = array('parent' => $parent);
     $params = array_merge($params, $optParams);

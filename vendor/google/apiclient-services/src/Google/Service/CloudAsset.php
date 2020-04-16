@@ -148,10 +148,6 @@ class Google_Service_CloudAsset extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'readTimeWindow.startTime' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'assetNames' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -162,6 +158,10 @@ class Google_Service_CloudAsset extends Google_Service
                   'type' => 'string',
                 ),
                 'readTimeWindow.endTime' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'readTimeWindow.startTime' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),

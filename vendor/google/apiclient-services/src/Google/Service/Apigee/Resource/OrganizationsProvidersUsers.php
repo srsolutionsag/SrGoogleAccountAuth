@@ -61,12 +61,12 @@ class Google_Service_Apigee_Resource_OrganizationsProvidersUsers extends Google_
    * `organizations/{org}/providers/{provider}`
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter String used to filter the list.
    * @opt_param string startIndex Starting index of the list.
    * @opt_param string count Number of items.
    * @opt_param string sortBy Field on which to sort the list.
    * @opt_param string sortOrder Order in which to sort the list, such as
    * ascending or descending.
+   * @opt_param string filter String used to filter the list.
    * @return Google_Service_Apigee_GoogleCloudApigeeV1ConsumerUserListResponse
    */
   public function listOrganizationsProvidersUsers($parent, $optParams = array())

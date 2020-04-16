@@ -36,6 +36,13 @@ class Google_Service_PeopleService_Resource_PeopleConnections extends Google_Ser
    * for. Only `people/me` is valid.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string sortOrder Optional. The order in which the connections
+   * should be sorted. Defaults to `LAST_MODIFIED_ASCENDING`.
+   * @opt_param bool requestSyncToken Optional. Whether the response should
+   * include `next_sync_token`, which can be used to get all changes since the
+   * last request. For subsequent sync requests use the `sync_token` param
+   * instead. Initial sync requests that specify `request_sync_token` have an
+   * additional rate limit.
    * @opt_param string pageToken Optional. A page token, received from a previous
    * `ListConnections` call. Provide this to retrieve the subsequent page.
    *
@@ -58,19 +65,11 @@ class Google_Service_PeopleService_Resource_PeopleConnections extends Google_Ser
    * fields on each person are returned. Multiple fields can be specified by
    * separating them with commas. Valid values are:
    *
-   * * addresses * ageRanges * biographies * birthdays * braggingRights *
-   * coverPhotos * emailAddresses * events * genders * imClients * interests *
-   * locales * memberships * metadata * names * nicknames * occupations *
-   * organizations * phoneNumbers * photos * relations * relationshipInterests *
-   * relationshipStatuses * residences * sipAddresses * skills * taglines * urls *
-   * userDefined
-   * @opt_param string sortOrder Optional. The order in which the connections
-   * should be sorted. Defaults to `LAST_MODIFIED_ASCENDING`.
-   * @opt_param bool requestSyncToken Optional. Whether the response should
-   * include `next_sync_token`, which can be used to get all changes since the
-   * last request. For subsequent sync requests use the `sync_token` param
-   * instead. Initial sync requests that specify `request_sync_token` have an
-   * additional rate limit.
+   * * addresses * ageRanges * biographies * birthdays * coverPhotos *
+   * emailAddresses * events * genders * imClients * interests * locales *
+   * memberships * metadata * names * nicknames * occupations * organizations *
+   * phoneNumbers * photos * relations * residences * sipAddresses * skills * urls
+   * * userDefined
    * @return Google_Service_PeopleService_ListConnectionsResponse
    */
   public function listPeopleConnections($resourceName, $optParams = array())

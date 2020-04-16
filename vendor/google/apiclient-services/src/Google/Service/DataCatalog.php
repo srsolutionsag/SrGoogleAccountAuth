@@ -85,11 +85,11 @@ class Google_Service_DataCatalog extends Google_Service
               'path' => 'v1beta1/entries:lookup',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'linkedResource' => array(
+                'sqlResource' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'sqlResource' => array(
+                'linkedResource' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),

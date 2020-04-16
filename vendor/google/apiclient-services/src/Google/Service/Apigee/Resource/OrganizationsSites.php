@@ -177,8 +177,8 @@ class Google_Service_Apigee_Resource_OrganizationsSites extends Google_Service_R
    * structure in your request:   `organizations/{org}/sites/{site}`
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string draft
    * @opt_param string pageId
+   * @opt_param string draft
    * @return Google_Service_Apigee_GoogleCloudApigeeV1PageContentResponse
    */
   public function render($parent, $optParams = array())

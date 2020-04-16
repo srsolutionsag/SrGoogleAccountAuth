@@ -15,7 +15,7 @@
  * the License.
  */
 
-class Google_Service_CloudHealthcare_GoogleCloudHealthcareV1beta1FhirBigQueryDestination extends Google_Model
+class Google_Service_CloudHealthcare_GoogleCloudHealthcareV1FhirBigQueryDestination extends Google_Model
 {
   public $datasetUri;
   public $force;

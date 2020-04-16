@@ -3,10 +3,15 @@
 namespace srag\CustomInputGUIs\SrGoogleAccountAuth\FormBuilder;
 
 use Closure;
+use Exception;
 use ilFormPropertyDispatchGUI;
 use ILIAS\UI\Component\Input\Container\Form\Form;
+use ILIAS\UI\Component\Input\Field\DependantGroupProviding;
+use ILIAS\UI\Component\Input\Field\Radio as RadioInterface;
 use ILIAS\UI\Implementation\Component\Input\Field\Group;
+use ILIAS\UI\Implementation\Component\Input\Field\Radio;
 use ilSubmitButton;
+use ilUtil;
 use srag\CustomInputGUIs\SrGoogleAccountAuth\InputGUIWrapperUIInputComponent\InputGUIWrapperUIInputComponent;
 use srag\DIC\SrGoogleAccountAuth\DICTrait;
 use Throwable;
@@ -188,11 +193,64 @@ abstract class AbstractFormBuilder implements FormBuilder
         $inputs = $form->getInputs()["form"]->getInputs();
         foreach ($inputs as $key => $field) {
             if (isset($data[$key])) {
-                try {
-                    $inputs[$key] = $field->withValue($data[$key]);
-                } catch (Throwable $ex) {
+                if ($field instanceof DependantGroupProviding && !empty($field->getDependantGroup())) {
+                    $inputs2 = $field->getDependantGroup()->getInputs();
+                    if (!empty($inputs2)) {
+                        if (isset($data[$key]["value"])) {
+                            try {
+                                $inputs[$key] = $field = $field->withValue($data[$key]["value"]);
+                            } catch (Throwable $ex) {
 
+                            }
+                        }
+                        $data2 = (isset($data[$key]["group_values"]) ? $data[$key]["group_values"] : $data[$key])["dependant_group"];
+                        foreach ($inputs2 as $key2 => $field2) {
+                            if (isset($data2[$key2])) {
+                                try {
+                                    $inputs2[$key2] = $field2 = $field2->withValue($data2[$key2]);
+                                } catch (Throwable $ex) {
+
+                                }
+                            }
+                        }
+                        Closure::bind(function () use ($inputs2): void {
+                            $this->inputs = $inputs2;
+                        }, $field->getDependantGroup(), Group::class)();
+                        continue;
+                    }
+                } else {
+                    if ($field instanceof RadioInterface
+                        && isset($data[$key]["value"])
+                        && !empty($inputs2 = Closure::bind(function () use ($data, $key) : array {
+                            return $this->dependant_fields[$data[$key]["value"]];
+                        }, $field, Radio::class)())
+                    ) {
+                        try {
+                            $inputs[$key] = $field = $field->withValue($data[$key]["value"]);
+                        } catch (Throwable $ex) {
+
+                        }
+                        $data2 = $data[$key]["group_values"];
+                        foreach ($inputs2 as $key2 => $field2) {
+                            if (isset($data2[$key2])) {
+                                try {
+                                    $inputs2[$key2] = $field2 = $field2->withValue($data2[$key2]);
+                                } catch (Throwable $ex) {
+
+                                }
+                            }
+                        }
+                        Closure::bind(function () use ($data, $key, $inputs2): void {
+                            $this->dependant_fields[$data[$key]["value"]] = $inputs2;
+                        }, $field, Radio::class)();
+                        continue;
+                    }
                 }
+            }
+            try {
+                $inputs[$key] = $field = $field->withValue($data[$key]);
+            } catch (Throwable $ex) {
+
             }
         }
         Closure::bind(function () use ($inputs): void {
@@ -212,11 +270,13 @@ abstract class AbstractFormBuilder implements FormBuilder
             $data = $this->form->getData();
 
             if (empty($data)) {
-                return false;
+                throw new Exception();
             }
 
             $this->storeData($data["form"] ?? []);
         } catch (Throwable $ex) {
+            ilUtil::sendFailure(self::dic()->language()->txt("form_input_not_valid"));
+
             return false;
         }
 

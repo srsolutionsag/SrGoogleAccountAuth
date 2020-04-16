@@ -23,7 +23,7 @@
  *   $domains = $firebasehostingService->domains;
  *  </code>
  */
-class Google_Service_FirebaseHosting_Resource_SitesDomains extends Google_Service_Resource
+class Google_Service_FirebaseHosting_Resource_ProjectsSitesDomains extends Google_Service_Resource
 {
   /**
    * Creates a domain mapping on the specified site. (domains.create)
@@ -67,7 +67,7 @@ class Google_Service_FirebaseHosting_Resource_SitesDomains extends Google_Servic
     return $this->call('get', array($params), "Google_Service_FirebaseHosting_Domain");
   }
   /**
-   * Lists the domains for the specified site. (domains.listSitesDomains)
+   * Lists the domains for the specified site. (domains.listProjectsSitesDomains)
    *
    * @param string $parent Required. The parent for which to list domains, in the
    * format: sites/site-name
@@ -78,7 +78,7 @@ class Google_Service_FirebaseHosting_Resource_SitesDomains extends Google_Servic
    * provided.
    * @return Google_Service_FirebaseHosting_ListDomainsResponse
    */
-  public function listSitesDomains($parent, $optParams = array())
+  public function listProjectsSitesDomains($parent, $optParams = array())
   {
     $params = array('parent' => $parent);
     $params = array_merge($params, $optParams);

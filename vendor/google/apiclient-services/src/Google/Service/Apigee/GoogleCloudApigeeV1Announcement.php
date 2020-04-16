@@ -17,7 +17,7 @@
 
 class Google_Service_Apigee_GoogleCloudApigeeV1Announcement extends Google_Model
 {
-  protected $dataType = 'Google_Service_Apigee_GoogleCloudApigeeV1AnnoucementData';
+  protected $dataType = 'Google_Service_Apigee_GoogleCloudApigeeV1AnnouncementData';
   protected $dataDataType = '';
   public $errorCode;
   public $message;
@@ -25,14 +25,14 @@ class Google_Service_Apigee_GoogleCloudApigeeV1Announcement extends Google_Model
   public $status;
 
   /**
-   * @param Google_Service_Apigee_GoogleCloudApigeeV1AnnoucementData
+   * @param Google_Service_Apigee_GoogleCloudApigeeV1AnnouncementData
    */
-  public function setData(Google_Service_Apigee_GoogleCloudApigeeV1AnnoucementData $data)
+  public function setData(Google_Service_Apigee_GoogleCloudApigeeV1AnnouncementData $data)
   {
     $this->data = $data;
   }
   /**
-   * @return Google_Service_Apigee_GoogleCloudApigeeV1AnnoucementData
+   * @return Google_Service_Apigee_GoogleCloudApigeeV1AnnouncementData
    */
   public function getData()
   {

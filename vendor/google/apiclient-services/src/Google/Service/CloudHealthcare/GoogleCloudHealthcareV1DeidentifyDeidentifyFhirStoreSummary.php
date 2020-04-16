@@ -15,16 +15,6 @@
  * the License.
  */
 
-class Google_Service_CloudHealthcare_GoogleCloudHealthcareV1beta1FhirRestGcsDestination extends Google_Model
+class Google_Service_CloudHealthcare_GoogleCloudHealthcareV1DeidentifyDeidentifyFhirStoreSummary extends Google_Model
 {
-  public $uriPrefix;
-
-  public function setUriPrefix($uriPrefix)
-  {
-    $this->uriPrefix = $uriPrefix;
-  }
-  public function getUriPrefix()
-  {
-    return $this->uriPrefix;
-  }
 }

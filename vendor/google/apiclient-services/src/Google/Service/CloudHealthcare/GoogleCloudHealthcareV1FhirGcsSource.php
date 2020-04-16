@@ -15,16 +15,16 @@
  * the License.
  */
 
-class Google_Service_CloudHealthcare_GoogleCloudHealthcareV1beta1DeidentifyDeidentifyFhirStoreSummary extends Google_Model
+class Google_Service_CloudHealthcare_GoogleCloudHealthcareV1FhirGcsSource extends Google_Model
 {
-  public $successResourceCount;
+  public $uri;
 
-  public function setSuccessResourceCount($successResourceCount)
+  public function setUri($uri)
   {
-    $this->successResourceCount = $successResourceCount;
+    $this->uri = $uri;
   }
-  public function getSuccessResourceCount()
+  public function getUri()
   {
-    return $this->successResourceCount;
+    return $this->uri;
   }
 }

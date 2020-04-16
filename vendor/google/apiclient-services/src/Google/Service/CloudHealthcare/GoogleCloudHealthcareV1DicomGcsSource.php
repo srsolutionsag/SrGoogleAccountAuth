@@ -15,25 +15,16 @@
  * the License.
  */
 
-class Google_Service_CloudHealthcare_GoogleCloudHealthcareV1beta1DicomGcsDestination extends Google_Model
+class Google_Service_CloudHealthcare_GoogleCloudHealthcareV1DicomGcsSource extends Google_Model
 {
-  public $mimeType;
-  public $uriPrefix;
+  public $uri;
 
-  public function setMimeType($mimeType)
+  public function setUri($uri)
   {
-    $this->mimeType = $mimeType;
+    $this->uri = $uri;
   }
-  public function getMimeType()
+  public function getUri()
   {
-    return $this->mimeType;
-  }
-  public function setUriPrefix($uriPrefix)
-  {
-    $this->uriPrefix = $uriPrefix;
-  }
-  public function getUriPrefix()
-  {
-    return $this->uriPrefix;
+    return $this->uri;
   }
 }

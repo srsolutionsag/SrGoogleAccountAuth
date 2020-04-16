@@ -15,24 +15,25 @@
  * the License.
  */
 
-class Google_Service_Apigee_GoogleCloudApigeeV1CreateIdentityProviderResponseIdentityProviders extends Google_Collection
+class Google_Service_CloudHealthcare_GoogleCloudHealthcareV1DicomBigQueryDestination extends Google_Model
 {
-  protected $collection_key = 'providers';
-  protected $providersType = 'Google_Service_Apigee_GoogleCloudApigeeV1IdentityProvider';
-  protected $providersDataType = 'array';
+  public $force;
+  public $tableUri;
 
-  /**
-   * @param Google_Service_Apigee_GoogleCloudApigeeV1IdentityProvider
-   */
-  public function setProviders($providers)
+  public function setForce($force)
   {
-    $this->providers = $providers;
+    $this->force = $force;
   }
-  /**
-   * @return Google_Service_Apigee_GoogleCloudApigeeV1IdentityProvider
-   */
-  public function getProviders()
+  public function getForce()
   {
-    return $this->providers;
+    return $this->force;
+  }
+  public function setTableUri($tableUri)
+  {
+    $this->tableUri = $tableUri;
+  }
+  public function getTableUri()
+  {
+    return $this->tableUri;
   }
 }

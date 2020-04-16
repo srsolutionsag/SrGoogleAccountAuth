@@ -17,7 +17,7 @@
 
 class Google_Service_Apigee_GoogleCloudApigeeV1CreateIdentityProviderResponse extends Google_Model
 {
-  protected $dataType = 'Google_Service_Apigee_GoogleCloudApigeeV1CreateIdentityProviderResponseIdentityProviders';
+  protected $dataType = 'Google_Service_Apigee_GoogleCloudApigeeV1IdentityProvider';
   protected $dataDataType = '';
   public $errorCode;
   public $message;
@@ -25,14 +25,14 @@ class Google_Service_Apigee_GoogleCloudApigeeV1CreateIdentityProviderResponse ex
   public $status;
 
   /**
-   * @param Google_Service_Apigee_GoogleCloudApigeeV1CreateIdentityProviderResponseIdentityProviders
+   * @param Google_Service_Apigee_GoogleCloudApigeeV1IdentityProvider
    */
-  public function setData(Google_Service_Apigee_GoogleCloudApigeeV1CreateIdentityProviderResponseIdentityProviders $data)
+  public function setData(Google_Service_Apigee_GoogleCloudApigeeV1IdentityProvider $data)
   {
     $this->data = $data;
   }
   /**
-   * @return Google_Service_Apigee_GoogleCloudApigeeV1CreateIdentityProviderResponseIdentityProviders
+   * @return Google_Service_Apigee_GoogleCloudApigeeV1IdentityProvider
    */
   public function getData()
   {

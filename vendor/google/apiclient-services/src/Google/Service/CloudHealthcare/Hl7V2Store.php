@@ -20,8 +20,6 @@ class Google_Service_CloudHealthcare_Hl7V2Store extends Google_Collection
   protected $collection_key = 'notificationConfigs';
   public $labels;
   public $name;
-  protected $notificationConfigType = 'Google_Service_CloudHealthcare_NotificationConfig';
-  protected $notificationConfigDataType = '';
   protected $notificationConfigsType = 'Google_Service_CloudHealthcare_Hl7V2NotificationConfig';
   protected $notificationConfigsDataType = 'array';
   protected $parserConfigType = 'Google_Service_CloudHealthcare_ParserConfig';
@@ -43,20 +41,6 @@ class Google_Service_CloudHealthcare_Hl7V2Store extends Google_Collection
   public function getName()
   {
     return $this->name;
-  }
-  /**
-   * @param Google_Service_CloudHealthcare_NotificationConfig
-   */
-  public function setNotificationConfig(Google_Service_CloudHealthcare_NotificationConfig $notificationConfig)
-  {
-    $this->notificationConfig = $notificationConfig;
-  }
-  /**
-   * @return Google_Service_CloudHealthcare_NotificationConfig
-   */
-  public function getNotificationConfig()
-  {
-    return $this->notificationConfig;
   }
   /**
    * @param Google_Service_CloudHealthcare_Hl7V2NotificationConfig

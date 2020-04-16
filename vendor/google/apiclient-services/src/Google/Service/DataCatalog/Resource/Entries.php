@@ -32,15 +32,6 @@ class Google_Service_DataCatalog_Resource_Entries extends Google_Service_Resourc
    *
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string linkedResource The full name of the Google Cloud Platform
-   * resource the Data Catalog entry represents. See:
-   * https://cloud.google.com/apis/design/resource_names#full_resource_name. Full
-   * names are case-sensitive.
-   *
-   * Examples:
-   *
-   * //bigquery.googleapis.com/projects/projectId/datasets/datasetId/tables/tableI
-   * d //pubsub.googleapis.com/projects/projectId/topics/topicId
    * @opt_param string sqlResource The SQL name of the entry. SQL names are case-
    * sensitive.
    *
@@ -54,6 +45,15 @@ class Google_Service_DataCatalog_Resource_Entries extends Google_Service_Resourc
    *
    * `*_id`s shoud satisfy the standard SQL rules for identifiers.
    * https://cloud.google.com/bigquery/docs/reference/standard-sql/lexical.
+   * @opt_param string linkedResource The full name of the Google Cloud Platform
+   * resource the Data Catalog entry represents. See:
+   * https://cloud.google.com/apis/design/resource_names#full_resource_name. Full
+   * names are case-sensitive.
+   *
+   * Examples:
+   *
+   * //bigquery.googleapis.com/projects/projectId/datasets/datasetId/tables/tableI
+   * d //pubsub.googleapis.com/projects/projectId/topics/topicId
    * @return Google_Service_DataCatalog_GoogleCloudDatacatalogV1beta1Entry
    */
   public function lookup($optParams = array())

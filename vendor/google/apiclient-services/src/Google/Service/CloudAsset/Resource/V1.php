@@ -39,8 +39,6 @@ class Google_Service_CloudAsset_Resource_V1 extends Google_Service_Resource
    * "projects/12345").
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string readTimeWindow.startTime Start time of the time window
-   * (exclusive).
    * @opt_param string assetNames A list of the full names of the assets. For
    * example: `//compute.googleapis.com/projects/my_project_123/zones/zone1/instan
    * ces/instance1`. See [Resource Names](https://cloud.google.com/apis/design/res
@@ -53,6 +51,8 @@ class Google_Service_CloudAsset_Resource_V1 extends Google_Service_Resource
    * @opt_param string contentType Optional. The content type.
    * @opt_param string readTimeWindow.endTime End time of the time window
    * (inclusive). If not specified, the current timestamp is used instead.
+   * @opt_param string readTimeWindow.startTime Start time of the time window
+   * (exclusive).
    * @return Google_Service_CloudAsset_BatchGetAssetsHistoryResponse
    */
   public function batchGetAssetsHistory($parent, $optParams = array())

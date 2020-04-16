@@ -19,7 +19,7 @@
  * Service definition for SecretManager (v1).
  *
  * <p>
- * Stores API keys, passwords, certificates, and other sensitive data. Provides
+ * Stores sensitive data such as API keys, passwords, and certificates. Provides
  * convenience while improving security.</p>
  *
  * <p>

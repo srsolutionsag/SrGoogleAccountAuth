@@ -128,17 +128,17 @@ class Google_Service_Dialogflow_Resource_ProjectsAgentIntents extends Google_Ser
    * `projects//agent`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string languageCode Optional. The language used to access
-   * language-specific data. If not specified, the agent's default language is
-   * used. For more information, see [Multilingual intent and entity
-   * data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-
-   * entity).
    * @opt_param string pageToken Optional. The next_page_token value returned from
    * a previous list request.
    * @opt_param int pageSize Optional. The maximum number of items to return in a
    * single page. By default 100 and at most 1000.
    * @opt_param string intentView Optional. The resource view to apply to the
    * returned intent.
+   * @opt_param string languageCode Optional. The language used to access
+   * language-specific data. If not specified, the agent's default language is
+   * used. For more information, see [Multilingual intent and entity
+   * data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-
+   * entity).
    * @return Google_Service_Dialogflow_GoogleCloudDialogflowV2ListIntentsResponse
    */
   public function listProjectsAgentIntents($parent, $optParams = array())
@@ -150,12 +150,14 @@ class Google_Service_Dialogflow_Resource_ProjectsAgentIntents extends Google_Ser
   /**
    * Updates the specified intent. (intents.patch)
    *
-   * @param string $name The unique identifier of this intent. Required for
-   * Intents.UpdateIntent and Intents.BatchUpdateIntents methods. Format:
+   * @param string $name Optional. The unique identifier of this intent. Required
+   * for Intents.UpdateIntent and Intents.BatchUpdateIntents methods. Format:
    * `projects//agent/intents/`.
    * @param Google_Service_Dialogflow_GoogleCloudDialogflowV2Intent $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string intentView Optional. The resource view to apply to the
+   * returned intent.
    * @opt_param string languageCode Optional. The language used to access
    * language-specific data. If not specified, the agent's default language is
    * used. For more information, see [Multilingual intent and entity
@@ -163,8 +165,6 @@ class Google_Service_Dialogflow_Resource_ProjectsAgentIntents extends Google_Ser
    * entity).
    * @opt_param string updateMask Optional. The mask to control which fields get
    * updated.
-   * @opt_param string intentView Optional. The resource view to apply to the
-   * returned intent.
    * @return Google_Service_Dialogflow_GoogleCloudDialogflowV2Intent
    */
   public function patch($name, Google_Service_Dialogflow_GoogleCloudDialogflowV2Intent $postBody, $optParams = array())

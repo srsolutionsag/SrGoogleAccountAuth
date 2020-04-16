@@ -23,11 +23,11 @@
  *   $files = $firebasehostingService->files;
  *  </code>
  */
-class Google_Service_FirebaseHosting_Resource_SitesVersionsFiles extends Google_Service_Resource
+class Google_Service_FirebaseHosting_Resource_ProjectsSitesVersionsFiles extends Google_Service_Resource
 {
   /**
    * Lists the remaining files to be uploaded for the specified version.
-   * (files.listSitesVersionsFiles)
+   * (files.listProjectsSitesVersionsFiles)
    *
    * @param string $parent Required. The parent to list files for, in the format:
    * sites/site-name/versions/versionID
@@ -41,7 +41,7 @@ class Google_Service_FirebaseHosting_Resource_SitesVersionsFiles extends Google_
    * firebase.hosting.proto.metadata.ListFilesPageToken.
    * @return Google_Service_FirebaseHosting_ListVersionFilesResponse
    */
-  public function listSitesVersionsFiles($parent, $optParams = array())
+  public function listProjectsSitesVersionsFiles($parent, $optParams = array())
   {
     $params = array('parent' => $parent);
     $params = array_merge($params, $optParams);

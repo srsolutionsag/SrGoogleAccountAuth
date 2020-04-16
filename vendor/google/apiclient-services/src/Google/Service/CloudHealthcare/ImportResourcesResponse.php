@@ -15,16 +15,6 @@
  * the License.
  */
 
-class Google_Service_CloudHealthcare_GoogleCloudHealthcareV1beta1DicomGcsSource extends Google_Model
+class Google_Service_CloudHealthcare_ImportResourcesResponse extends Google_Model
 {
-  public $uri;
-
-  public function setUri($uri)
-  {
-    $this->uri = $uri;
-  }
-  public function getUri()
-  {
-    return $this->uri;
-  }
 }

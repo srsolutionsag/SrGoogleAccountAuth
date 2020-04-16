@@ -103,11 +103,11 @@ class Google_Service_Apigee_Resource_OrganizationsEnvironmentsQueries extends Go
    * names. Must be of the form `organizations/{org}/environments/{env}`.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string submittedBy Filter response list by user who submitted
+   * queries
    * @opt_param string from Filter response list by returning asynchronous queries
    * that created after this date time. Time must be in ISO date-time format like
    * '2011-12-03T10:15:30Z'.
-   * @opt_param string submittedBy Filter response list by user who submitted
-   * queries
    * @opt_param string inclQueriesWithoutReport Flag to include asynchronous
    * queries that don't have a report denifition.
    * @opt_param string to Filter response list by returning asynchronous queries

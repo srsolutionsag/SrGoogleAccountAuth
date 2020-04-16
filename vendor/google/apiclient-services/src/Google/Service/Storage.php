@@ -1015,6 +1015,10 @@ class Google_Service_Storage extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'destinationKmsKeyName' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'destinationPredefinedAcl' => array(
                   'location' => 'query',
                   'type' => 'string',

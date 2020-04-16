@@ -17,7 +17,6 @@
 
 class Google_Service_CloudAsset_GoogleIdentityAccesscontextmanagerV1ServicePerimeter extends Google_Model
 {
-  public $createTime;
   public $description;
   public $name;
   public $perimeterType;
@@ -26,17 +25,8 @@ class Google_Service_CloudAsset_GoogleIdentityAccesscontextmanagerV1ServicePerim
   protected $statusType = 'Google_Service_CloudAsset_GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig';
   protected $statusDataType = '';
   public $title;
-  public $updateTime;
   public $useExplicitDryRunSpec;
 
-  public function setCreateTime($createTime)
-  {
-    $this->createTime = $createTime;
-  }
-  public function getCreateTime()
-  {
-    return $this->createTime;
-  }
   public function setDescription($description)
   {
     $this->description = $description;
@@ -96,14 +86,6 @@ class Google_Service_CloudAsset_GoogleIdentityAccesscontextmanagerV1ServicePerim
   public function getTitle()
   {
     return $this->title;
-  }
-  public function setUpdateTime($updateTime)
-  {
-    $this->updateTime = $updateTime;
-  }
-  public function getUpdateTime()
-  {
-    return $this->updateTime;
   }
   public function setUseExplicitDryRunSpec($useExplicitDryRunSpec)
   {
