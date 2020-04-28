@@ -112,7 +112,7 @@ class FirePHPHandler extends AbstractProcessingHandler
     /**
      * Send header string to the client
      */
-    protected function sendHeader(string $header, string $content): void
+    protected function sendHeader(string $header, string $content)/*: void*/
     {
         if (!headers_sent() && self::$sendHeaders) {
             header(sprintf('%s: %s', $header, $content));
@@ -126,7 +126,7 @@ class FirePHPHandler extends AbstractProcessingHandler
      * @see sendInitHeaders()
      * @param array $record
      */
-    protected function write(array $record): void
+    protected function write(array $record)/*: void*/
     {
         if (!self::$sendHeaders || !$this->isWebRequest()) {
             return;

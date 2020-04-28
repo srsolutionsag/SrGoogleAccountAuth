@@ -22,6 +22,7 @@ final class Repository
 
     use DICTrait;
     use SrGoogleAccountAuthTrait;
+
     const PLUGIN_CLASS_NAME = ilSrGoogleAccountAuthPlugin::class;
     /**
      * @var self|null

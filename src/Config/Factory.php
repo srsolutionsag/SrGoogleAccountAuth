@@ -17,6 +17,7 @@ final class Factory extends AbstractFactory
 {
 
     use SrGoogleAccountAuthTrait;
+
     const PLUGIN_CLASS_NAME = ilSrGoogleAccountAuthPlugin::class;
     /**
      * @var self|null

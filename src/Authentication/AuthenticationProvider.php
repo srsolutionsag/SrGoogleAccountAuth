@@ -30,6 +30,7 @@ class AuthenticationProvider extends ilAuthProvider implements ilAuthProviderInt
 
     use DICTrait;
     use SrGoogleAccountAuthTrait;
+
     const PLUGIN_CLASS_NAME = ilSrGoogleAccountAuthPlugin::class;
 
 

@@ -64,7 +64,7 @@ class CubeHandler extends AbstractProcessingHandler
      * @throws \LogicException           when unable to connect to the socket
      * @throws MissingExtensionException when there is no socket extension
      */
-    protected function connectUdp(): void
+    protected function connectUdp()/*: void*/
     {
         if (!extension_loaded('sockets')) {
             throw new MissingExtensionException('The sockets extension is required to use udp URLs with the CubeHandler');
@@ -86,7 +86,7 @@ class CubeHandler extends AbstractProcessingHandler
      * @throws \LogicException           when unable to connect to the socket
      * @throws MissingExtensionException when no curl extension
      */
-    protected function connectHttp(): void
+    protected function connectHttp()/*: void*/
     {
         if (!extension_loaded('curl')) {
             throw new MissingExtensionException('The curl extension is required to use http URLs with the CubeHandler');
@@ -105,7 +105,7 @@ class CubeHandler extends AbstractProcessingHandler
     /**
      * {@inheritdoc}
      */
-    protected function write(array $record): void
+    protected function write(array $record)/*: void*/
     {
         $date = $record['datetime'];
 
@@ -129,7 +129,7 @@ class CubeHandler extends AbstractProcessingHandler
         }
     }
 
-    private function writeUdp(string $data): void
+    private function writeUdp(string $data)/*: void*/
     {
         if (!$this->udpConnection) {
             $this->connectUdp();
@@ -138,7 +138,7 @@ class CubeHandler extends AbstractProcessingHandler
         socket_send($this->udpConnection, $data, strlen($data), 0);
     }
 
-    private function writeHttp(string $data): void
+    private function writeHttp(string $data)/*: void*/
     {
         if (!$this->httpConnection) {
             $this->connectHttp();

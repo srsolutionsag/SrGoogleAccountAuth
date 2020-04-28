@@ -20,6 +20,7 @@ class ConfigFormGUI extends PropertyFormGUI
 {
 
     use SrGoogleAccountAuthTrait;
+
     const PLUGIN_CLASS_NAME = ilSrGoogleAccountAuthPlugin::class;
     const KEY_CLIENT_ID = "client_id";
     const KEY_CLIENT_SECRET = "client_secret";

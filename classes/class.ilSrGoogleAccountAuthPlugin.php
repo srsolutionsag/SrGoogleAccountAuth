@@ -15,6 +15,7 @@ class ilSrGoogleAccountAuthPlugin extends ilUserInterfaceHookPlugin
 
     use PluginUninstallTrait;
     use SrGoogleAccountAuthTrait;
+
     const PLUGIN_ID = "srgoogacauth";
     const PLUGIN_NAME = "SrGoogleAccountAuth";
     const PLUGIN_CLASS_NAME = self::class;

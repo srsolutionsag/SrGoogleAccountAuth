@@ -19,6 +19,7 @@ class AuthenticationFormGUI extends PropertyFormGUI
 {
 
     use SrGoogleAccountAuthTrait;
+
     const PLUGIN_CLASS_NAME = ilSrGoogleAccountAuthPlugin::class;
     const LANG_MODULE = "";
 
