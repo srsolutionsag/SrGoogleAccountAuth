@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ad4618c9327218f95a18f2b55bf675c0",
+    "content-hash": "d431a3882bfb324f39c5ebf3da94cdc7",
     "packages": [
         {
             "name": "firebase/php-jwt",
@@ -799,16 +799,16 @@
         },
         {
             "name": "srag/custominputguis",
-            "version": "v0.34.4",
+            "version": "v0.34.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/studer-raimann/CustomInputGUIs.git",
-                "reference": "31b52172d13eb2a6f470f779aa22784975dcf348"
+                "reference": "199aac4514002339c545b038e620d75157e881e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/studer-raimann/CustomInputGUIs/zipball/31b52172d13eb2a6f470f779aa22784975dcf348",
-                "reference": "31b52172d13eb2a6f470f779aa22784975dcf348",
+                "url": "https://api.github.com/repos/studer-raimann/CustomInputGUIs/zipball/199aac4514002339c545b038e620d75157e881e0",
+                "reference": "199aac4514002339c545b038e620d75157e881e0",
                 "shasum": ""
             },
             "require": {
@@ -842,7 +842,7 @@
                 "input",
                 "table"
             ],
-            "time": "2020-04-15T09:40:19+00:00"
+            "time": "2020-04-23T12:36:19+00:00"
         },
         {
             "name": "srag/dic",
