@@ -1,20 +1,14 @@
 This is an OpenSource project by studer + raimann ag, CH-Burgdorf (https://studer-raimann.ch)
 
-We have created an UI hook plugin because auth plugins currently not working properly
+## Description
+See in [doc/DESCRIPTION.md](./doc/DESCRIPTION.md)
 
-## Google web client config
-TODO: Link to create google web client
-
-You need to authenticate the follow redirect url
-```
-https://your-domain/login.php?target=uihk_srgoogacauth
-```
-
-For the plugin config you need the client id and the client secret
+## Documentation
+See in [doc/DOCUMENTATION.md](./doc/DOCUMENTATION.md)
 
 ## Installation
 
-### Install SrGoogleAccountAuth-Plugin
+### Install SrGoogleAccountAuth Plugin
 Start at your ILIAS root directory
 ```bash
 mkdir -p Customizing/global/plugins/Services/UIComponent/UserInterfaceHook
@@ -22,10 +16,6 @@ cd Customizing/global/plugins/Services/UIComponent/UserInterfaceHook
 git clone https://github.com/studer-raimann/SrGoogleAccountAuth.git SrGoogleAccountAuth
 ```
 Update and activate the plugin in the ILIAS Plugin Administration
-
-### Some screenshots
-Login screen:
-![Login screen](./doc/screenshots/login_screen.png)
 
 ### Requirements
 * ILIAS 5.3 or ILIAS 5.4
