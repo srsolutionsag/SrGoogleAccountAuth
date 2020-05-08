@@ -1,1 +1,1 @@
-## SrGoogleAccountAuth Documentation
+# SrGoogleAccountAuth ILIAS Plugin Documentation

@@ -1,4 +1,4 @@
-## SrGoogleAccountAuth Description
+# SrGoogleAccountAuth ILIAS Plugin Description
 
 We have created an UI hook plugin because auth plugins currently not working properly
 
