@@ -228,9 +228,7 @@ abstract class AbstractFormBuilder implements FormBuilder
                 }
 
                 if ($field instanceof OptionalGroup) {
-                    $inputs2 = Closure::bind(function () : array {
-                        return $this->inputs;
-                    }, $field, Group::class)();
+                    $inputs2 = $field->getInputs();
                     if (!empty($inputs2)) {
                         if (isset($data[$key]["value"])) {
                             try {
