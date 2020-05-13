@@ -13,4 +13,5 @@ https://your-domain/login.php?target=uihk_srgoogacauth
 For the plugin config you need the client id and the client secret
 
 Login screen:
+
 ![Login screen](./images/login_screen.png)
