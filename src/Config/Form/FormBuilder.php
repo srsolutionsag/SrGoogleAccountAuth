@@ -58,28 +58,17 @@ class FormBuilder extends AbstractFormBuilder
     protected function getData() : array
     {
         $data = [
-            self::KEY_CLIENT_ID     => self::srGoogleAccountAuth()->config()->getValue(self::KEY_CLIENT_ID),
-            self::KEY_CLIENT_SECRET => self::srGoogleAccountAuth()->config()->getValue(self::KEY_CLIENT_SECRET)
-        ];
-
-        if (self::version()->is6()) {
-            $data += [
-                self::KEY_CREATE_NEW_ACCOUNTS => (self::srGoogleAccountAuth()->config()->getValue(self::KEY_CREATE_NEW_ACCOUNTS) ? [
-                    self::KEY_NEW_ACCOUNT_ROLES => self::srGoogleAccountAuth()->config()->getValue(self::KEY_NEW_ACCOUNT_ROLES)
-                ] : null)
-            ];
-        } else {
-            $data += [
-                self::KEY_CREATE_NEW_ACCOUNTS => [
-                    "value"        => self::srGoogleAccountAuth()->config()->getValue(self::KEY_CREATE_NEW_ACCOUNTS),
-                    "group_values" => [
-                        "dependant_group" => [
-                            self::KEY_NEW_ACCOUNT_ROLES => self::srGoogleAccountAuth()->config()->getValue(self::KEY_NEW_ACCOUNT_ROLES)
-                        ]
+            self::KEY_CLIENT_ID           => self::srGoogleAccountAuth()->config()->getValue(self::KEY_CLIENT_ID),
+            self::KEY_CLIENT_SECRET       => self::srGoogleAccountAuth()->config()->getValue(self::KEY_CLIENT_SECRET),
+            self::KEY_CREATE_NEW_ACCOUNTS => [
+                "value"        => self::srGoogleAccountAuth()->config()->getValue(self::KEY_CREATE_NEW_ACCOUNTS),
+                "group_values" => [
+                    "dependant_group" => [
+                        self::KEY_NEW_ACCOUNT_ROLES => self::srGoogleAccountAuth()->config()->getValue(self::KEY_NEW_ACCOUNT_ROLES)
                     ]
                 ]
-            ];
-        }
+            ]
+        ];
 
         return $data;
     }
