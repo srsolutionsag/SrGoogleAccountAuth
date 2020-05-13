@@ -13,7 +13,7 @@ use ilSession;
 use ilSrGoogleAccountAuthPlugin;
 use srag\DIC\SrGoogleAccountAuth\DICTrait;
 use srag\Plugins\SrGoogleAccountAuth\Client\Client;
-use srag\Plugins\SrGoogleAccountAuth\Config\ConfigFormGUI;
+use srag\Plugins\SrGoogleAccountAuth\Config\Form\FormBuilder;
 use srag\Plugins\SrGoogleAccountAuth\Exception\SrGoogleAccountAuthException;
 use srag\Plugins\SrGoogleAccountAuth\Utils\SrGoogleAccountAuthTrait;
 use Throwable;
@@ -90,7 +90,7 @@ class AuthenticationProvider extends ilAuthProvider implements ilAuthProviderInt
 
             if (empty($user_id)) {
 
-                if (!self::srGoogleAccountAuth()->config()->getValue(ConfigFormGUI::KEY_CREATE_NEW_ACCOUNTS)) {
+                if (!self::srGoogleAccountAuth()->config()->getValue(FormBuilder::KEY_CREATE_NEW_ACCOUNTS)) {
                     throw new SrGoogleAccountAuthException("No ILIAS user found for " . $ext_id . "/" . $email . "!");
                 }
 
@@ -119,7 +119,7 @@ class AuthenticationProvider extends ilAuthProvider implements ilAuthProviderInt
                 }
 
                 $user_id = self::srGoogleAccountAuth()->ilias()->users()
-                    ->createNewAccount($login, $email, $gender, $first_name, $last_name, $ext_id, self::srGoogleAccountAuth()->config()->getValue(ConfigFormGUI::KEY_NEW_ACCOUNT_ROLES));
+                    ->createNewAccount($login, $email, $gender, $first_name, $last_name, $ext_id, self::srGoogleAccountAuth()->config()->getValue(FormBuilder::KEY_NEW_ACCOUNT_ROLES));
             } else {
                 self::srGoogleAccountAuth()->ilias()->users()->updateExtId($user_id, $ext_id);
             }

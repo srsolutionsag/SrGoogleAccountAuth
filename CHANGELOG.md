@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.5.0]
+- ILIAS 6 support
+- Remove ILIAS 5.3 support
+
 ## [1.4.0]
 - Fix working ILIAS direct/target kinks after login
 
