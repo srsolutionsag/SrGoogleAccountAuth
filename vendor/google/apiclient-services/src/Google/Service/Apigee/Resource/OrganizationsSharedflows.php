@@ -41,9 +41,9 @@ class Google_Service_Apigee_Resource_OrganizationsSharedflows extends Google_Ser
    * @param Google_Service_Apigee_GoogleApiHttpBody $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string name Required. The name to give the shared flow
    * @opt_param string action Required. Must be set to either `import` or
    * `validate`.
-   * @opt_param string name Required. The name to give the shared flow
    * @return Google_Service_Apigee_GoogleCloudApigeeV1SharedFlowRevision
    */
   public function create($parent, Google_Service_Apigee_GoogleApiHttpBody $postBody, $optParams = array())
@@ -91,10 +91,10 @@ class Google_Service_Apigee_Resource_OrganizationsSharedflows extends Google_Ser
    * `organizations/{organization_id}`
    * @param array $optParams Optional parameters.
    *
-   * @opt_param bool includeRevisions Indicates whether to include a list of
-   * revisions in the response.
    * @opt_param bool includeMetaData Indicates whether to include shared flow
    * metadata in the response.
+   * @opt_param bool includeRevisions Indicates whether to include a list of
+   * revisions in the response.
    * @return Google_Service_Apigee_GoogleCloudApigeeV1ListSharedFlowsResponse
    */
   public function listOrganizationsSharedflows($parent, $optParams = array())

@@ -40,6 +40,9 @@ class Google_Service_Apigee_Resource_OrganizationsEnvironmentsOptimizedStats ext
    * `organizations/{org}/environments/{env}/stats/apiproxy,request_verb`
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string tzo This parameters contains the timezone offset value
+   * @opt_param string sortby Comma separated list of columns to sort the final
+   * result.
    * @opt_param string filter Enables drill-down on specific dimension values
    * @opt_param string aggTable If customers want to query custom aggregate
    * tables, then this parameter can be used to specify the table name. If this
@@ -61,16 +64,13 @@ class Google_Service_Apigee_Resource_OrganizationsEnvironmentsOptimizedStats ext
    * separated list of metrics E.g. sum(message_count),sum(error_count)
    * @opt_param string limit This parameter is used to limit the number of result
    * items. Default and the max value is 14400
-   * @opt_param string accuracy Legacy field. not used anymore
    * @opt_param string offset Use offset with limit to enable pagination of
    * results. For example, to display results 11-20, set limit to '10' and offset
    * to '10'.
+   * @opt_param string accuracy Legacy field. not used anymore
    * @opt_param bool sonar This parameter routes the query to api monitoring
    * service for last hour
    * @opt_param bool realtime Legacy field: not used anymore
-   * @opt_param string tzo This parameters contains the timezone offset value
-   * @opt_param string sortby Comma separated list of columns to sort the final
-   * result.
    * @return Google_Service_Apigee_GoogleCloudApigeeV1OptimizedStats
    */
   public function get($name, $optParams = array())

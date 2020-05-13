@@ -67,7 +67,7 @@ class Google_Service_CloudMemorystoreforMemcached_Resource_ProjectsLocationsInst
   /**
    * Deletes a single Instance. (instances.delete)
    *
-   * @param string $name Memcached instance resource name in the format:
+   * @param string $name Required. Memcached instance resource name in the format:
    * `projects/{project_id}/locations/{location_id}/instances/{instance_id}` where
    * `location_id` refers to a GCP region
    * @param array $optParams Optional parameters.

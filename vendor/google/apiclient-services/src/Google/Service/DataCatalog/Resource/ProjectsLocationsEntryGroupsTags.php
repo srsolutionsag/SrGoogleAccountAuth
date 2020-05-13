@@ -27,9 +27,9 @@ class Google_Service_DataCatalog_Resource_ProjectsLocationsEntryGroupsTags exten
 {
   /**
    * Creates a tag on an Entry. Note: The project identified by the `parent`
-   * parameter for the [tag](/data-catalog/docs/reference/rest/v1beta1/projects.lo
-   * cations.entryGroups.entries.tags/create#path-parameters) and the [tag
-   * template](/data-
+   * parameter for the [tag](https://cloud.google.com/data-catalog/docs/reference/
+   * rest/v1beta1/projects.locations.entryGroups.entries.tags/create#path-
+   * parameters) and the [tag template](https://cloud.google.com/data-
    * catalog/docs/reference/rest/v1beta1/projects.locations.tagTemplates/create
    * #path-parameters) used to create the tag must be from the same organization.
    * (tags.create)
@@ -81,10 +81,10 @@ class Google_Service_DataCatalog_Resource_ProjectsLocationsEntryGroupsTags exten
    * s/{entry_id}
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string pageToken Token that specifies which page is requested. If
-   * empty, the first page is returned.
    * @opt_param int pageSize The maximum number of tags to return. Default is 10.
    * Max limit is 1000.
+   * @opt_param string pageToken Token that specifies which page is requested. If
+   * empty, the first page is returned.
    * @return Google_Service_DataCatalog_GoogleCloudDatacatalogV1beta1ListTagsResponse
    */
   public function listProjectsLocationsEntryGroupsTags($parent, $optParams = array())

@@ -71,10 +71,6 @@ class Google_Service_Monitoring_Resource_ProjectsTimeSeries extends Google_Servi
    * and can additionally specify metric labels and other information. For
    * example: metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND
    * metric.labels.instance_name = "my-instance-name"
-   * @opt_param string pageToken If this field is not empty then it must contain
-   * the nextPageToken value returned by a previous call to this method. Using
-   * this field causes the method to return additional results from the previous
-   * method call.
    * @opt_param string aggregation.perSeriesAligner An Aligner describes how to
    * bring the data points in a single time series into temporal alignment. Except
    * for ALIGN_NONE, all alignments cause all the data points in an
@@ -87,6 +83,10 @@ class Google_Service_Monitoring_Resource_ProjectsTimeSeries extends Google_Servi
    * reduction. If cross_series_reducer is specified, then per_series_aligner must
    * be specified and not equal to ALIGN_NONE and alignment_period must be
    * specified; otherwise, an error is returned.
+   * @opt_param string pageToken If this field is not empty then it must contain
+   * the nextPageToken value returned by a previous call to this method. Using
+   * this field causes the method to return additional results from the previous
+   * method call.
    * @opt_param string interval.startTime Optional. The beginning of the time
    * interval. The default value for the start time is the end time. The start
    * time must not be later than the end time.
