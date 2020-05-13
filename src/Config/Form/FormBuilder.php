@@ -58,17 +58,28 @@ class FormBuilder extends AbstractFormBuilder
     protected function getData() : array
     {
         $data = [
-            self::KEY_CLIENT_ID           => self::srGoogleAccountAuth()->config()->getValue(self::KEY_CLIENT_ID),
-            self::KEY_CLIENT_SECRET       => self::srGoogleAccountAuth()->config()->getValue(self::KEY_CLIENT_SECRET),
-            self::KEY_CREATE_NEW_ACCOUNTS => [
-                "value"        => self::srGoogleAccountAuth()->config()->getValue(self::KEY_CREATE_NEW_ACCOUNTS),
-                "group_values" => [
-                    "dependant_group" => [
-                        self::KEY_NEW_ACCOUNT_ROLES => self::srGoogleAccountAuth()->config()->getValue(self::KEY_NEW_ACCOUNT_ROLES)
+            self::KEY_CLIENT_ID     => self::srGoogleAccountAuth()->config()->getValue(self::KEY_CLIENT_ID),
+            self::KEY_CLIENT_SECRET => self::srGoogleAccountAuth()->config()->getValue(self::KEY_CLIENT_SECRET)
+        ];
+
+        if (self::version()->is6()) {
+            $data += [
+                self::KEY_CREATE_NEW_ACCOUNTS => (self::srGoogleAccountAuth()->config()->getValue(self::KEY_CREATE_NEW_ACCOUNTS) ? [
+                    self::KEY_NEW_ACCOUNT_ROLES => self::srGoogleAccountAuth()->config()->getValue(self::KEY_NEW_ACCOUNT_ROLES)
+                ] : null)
+            ];
+        } else {
+            $data += [
+                self::KEY_CREATE_NEW_ACCOUNTS => [
+                    "value"        => self::srGoogleAccountAuth()->config()->getValue(self::KEY_CREATE_NEW_ACCOUNTS),
+                    "group_values" => [
+                        "dependant_group" => [
+                            self::KEY_NEW_ACCOUNT_ROLES => self::srGoogleAccountAuth()->config()->getValue(self::KEY_NEW_ACCOUNT_ROLES)
+                        ]
                     ]
                 ]
-            ]
-        ];
+            ];
+        }
 
         return $data;
     }
@@ -84,19 +95,35 @@ class FormBuilder extends AbstractFormBuilder
             ->translate(self::KEY_NEW_ACCOUNT_ROLES . "_info", ConfigCtrl::LANG_MODULE))->withRequired(true);
         $roles->getInput()->setOptions(self::srGoogleAccountAuth()->ilias()->roles()->getAllRoles());
 
-        $fields = [
-            self::KEY_CLIENT_ID           => self::dic()->ui()->factory()->input()->field()->password(self::plugin()->translate(self::KEY_CLIENT_ID, ConfigCtrl::LANG_MODULE))->withRequired(true),
-            self::KEY_CLIENT_SECRET       => self::dic()->ui()->factory()->input()->field()->password(self::plugin()->translate(self::KEY_CLIENT_SECRET, ConfigCtrl::LANG_MODULE))->withRequired(true),
-            self::KEY_CREATE_NEW_ACCOUNTS => self::dic()
-                ->ui()
-                ->factory()
-                ->input()
-                ->field()
-                ->checkbox(self::plugin()->translate(self::KEY_CREATE_NEW_ACCOUNTS, ConfigCtrl::LANG_MODULE))
-                ->withDependantGroup(self::dic()->ui()->factory()->input()->field()->dependantGroup([
-                    self::KEY_NEW_ACCOUNT_ROLES => $roles
-                ]))
+        $create_new_accounts_fields = [
+            self::KEY_NEW_ACCOUNT_ROLES => $roles
         ];
+
+        $fields = [
+            self::KEY_CLIENT_ID     => self::dic()->ui()->factory()->input()->field()->password(self::plugin()->translate(self::KEY_CLIENT_ID, ConfigCtrl::LANG_MODULE))->withRequired(true),
+            self::KEY_CLIENT_SECRET => self::dic()->ui()->factory()->input()->field()->password(self::plugin()->translate(self::KEY_CLIENT_SECRET, ConfigCtrl::LANG_MODULE))->withRequired(true)
+        ];
+
+        if (self::version()->is6()) {
+            $fields += [
+                self::KEY_CREATE_NEW_ACCOUNTS => self::dic()
+                    ->ui()
+                    ->factory()
+                    ->input()
+                    ->field()
+                    ->optionalGroup($create_new_accounts_fields, self::plugin()->translate(self::KEY_CREATE_NEW_ACCOUNTS, ConfigCtrl::LANG_MODULE))
+            ];
+        } else {
+            $fields += [
+                self::KEY_CREATE_NEW_ACCOUNTS => self::dic()
+                    ->ui()
+                    ->factory()
+                    ->input()
+                    ->field()
+                    ->checkbox(self::plugin()->translate(self::KEY_CREATE_NEW_ACCOUNTS, ConfigCtrl::LANG_MODULE))
+                    ->withDependantGroup(self::dic()->ui()->factory()->input()->field()->dependantGroup($create_new_accounts_fields))
+            ];
+        }
 
         return $fields;
     }
@@ -118,10 +145,20 @@ class FormBuilder extends AbstractFormBuilder
     {
         self::srGoogleAccountAuth()->config()->setValue(self::KEY_CLIENT_ID, $data[self::KEY_CLIENT_ID]->toString());
         self::srGoogleAccountAuth()->config()->setValue(self::KEY_CLIENT_SECRET, $data[self::KEY_CLIENT_SECRET]->toString());
-        self::srGoogleAccountAuth()->config()->setValue(self::KEY_CREATE_NEW_ACCOUNTS, boolval($data[self::KEY_CREATE_NEW_ACCOUNTS]["value"]));
-        self::srGoogleAccountAuth()
-            ->config()
-            ->setValue(self::KEY_NEW_ACCOUNT_ROLES, (array) (boolval($data[self::KEY_CREATE_NEW_ACCOUNTS]["value"]) ? $data[self::KEY_CREATE_NEW_ACCOUNTS]["group_values"]
-                : $data[self::KEY_CREATE_NEW_ACCOUNTS])["dependant_group"][self::KEY_NEW_ACCOUNT_ROLES]);
+
+        if (self::version()->is6()) {
+            if (!empty($data[self::KEY_CREATE_NEW_ACCOUNTS])) {
+                self::srGoogleAccountAuth()->config()->setValue(self::KEY_CREATE_NEW_ACCOUNTS, true);
+                self::srGoogleAccountAuth()->config()->setValue(self::KEY_NEW_ACCOUNT_ROLES, (array) $data[self::KEY_CREATE_NEW_ACCOUNTS][self::KEY_NEW_ACCOUNT_ROLES]);
+            } else {
+                self::srGoogleAccountAuth()->config()->setValue(self::KEY_CREATE_NEW_ACCOUNTS, false);
+            }
+        } else {
+            self::srGoogleAccountAuth()->config()->setValue(self::KEY_CREATE_NEW_ACCOUNTS, boolval($data[self::KEY_CREATE_NEW_ACCOUNTS]["value"]));
+            self::srGoogleAccountAuth()
+                ->config()
+                ->setValue(self::KEY_NEW_ACCOUNT_ROLES, (array) (boolval($data[self::KEY_CREATE_NEW_ACCOUNTS]["value"]) ? $data[self::KEY_CREATE_NEW_ACCOUNTS]["group_values"]
+                    : $data[self::KEY_CREATE_NEW_ACCOUNTS])["dependant_group"][self::KEY_NEW_ACCOUNT_ROLES]);
+        }
     }
 }
