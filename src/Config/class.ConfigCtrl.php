@@ -91,7 +91,7 @@ class ConfigCtrl
     {
         self::dic()->tabs()->activateTab(self::TAB_CONFIGURATION);
 
-        $form = self::srGoogleAccountAuth()->config()->factory()->newFormInstance($this);
+        $form = self::srGoogleAccountAuth()->config()->factory()->newFormBuilderInstance($this);
 
         self::output()->output($form);
     }
@@ -104,7 +104,7 @@ class ConfigCtrl
     {
         self::dic()->tabs()->activateTab(self::TAB_CONFIGURATION);
 
-        $form = self::srGoogleAccountAuth()->config()->factory()->newFormInstance($this);
+        $form = self::srGoogleAccountAuth()->config()->factory()->newFormBuilderInstance($this);
 
         if (!$form->storeForm()) {
             self::output()->output($form);
