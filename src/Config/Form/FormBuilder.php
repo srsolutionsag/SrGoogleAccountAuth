@@ -79,14 +79,12 @@ class FormBuilder extends AbstractFormBuilder
      */
     protected function getFields() : array
     {
-        $roles = (new InputGUIWrapperUIInputComponent(new MultiSelectSearchNewInputGUI(self::plugin()
-            ->translate(self::KEY_NEW_ACCOUNT_ROLES, ConfigCtrl::LANG_MODULE))))->withByline(self::plugin()
-            ->translate(self::KEY_NEW_ACCOUNT_ROLES . "_info", ConfigCtrl::LANG_MODULE))->withRequired(true);
-        $roles->getInput()->setOptions(self::srGoogleAccountAuth()->ilias()->roles()->getAllRoles());
-
         $create_new_accounts_fields = [
-            self::KEY_NEW_ACCOUNT_ROLES => $roles
+            self::KEY_NEW_ACCOUNT_ROLES => (new InputGUIWrapperUIInputComponent(new MultiSelectSearchNewInputGUI(self::plugin()
+                ->translate(self::KEY_NEW_ACCOUNT_ROLES, ConfigCtrl::LANG_MODULE))))->withByline(self::plugin()
+                ->translate(self::KEY_NEW_ACCOUNT_ROLES . "_info", ConfigCtrl::LANG_MODULE))->withRequired(true)
         ];
+        $create_new_accounts_fields[self::KEY_CREATE_NEW_ACCOUNTS]->getInput()->setOptions(self::srGoogleAccountAuth()->ilias()->roles()->getAllRoles());
 
         $fields = [
             self::KEY_CLIENT_ID     => self::dic()->ui()->factory()->input()->field()->password(self::plugin()->translate(self::KEY_CLIENT_ID, ConfigCtrl::LANG_MODULE))->withRequired(true),
