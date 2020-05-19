@@ -283,6 +283,8 @@ class Google_Service_FirebaseManagement_Resource_Projects extends Google_Service
    * format: projects/projectId
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string pageToken Token returned from a previous call to
+   * `SearchFirebaseApps` indicating where in the set of Apps to resume listing.
    * @opt_param int pageSize The maximum number of Apps to return in the response.
    *
    * The server may return fewer than this value at its discretion. If no value is
@@ -290,8 +292,6 @@ class Google_Service_FirebaseManagement_Resource_Projects extends Google_Service
    * its own limit.
    *
    * This value cannot be negative.
-   * @opt_param string pageToken Token returned from a previous call to
-   * `SearchFirebaseApps` indicating where in the set of Apps to resume listing.
    * @return Google_Service_FirebaseManagement_SearchFirebaseAppsResponse
    */
   public function searchApps($parent, $optParams = array())

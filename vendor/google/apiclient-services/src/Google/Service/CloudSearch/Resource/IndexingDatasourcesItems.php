@@ -36,6 +36,8 @@ class Google_Service_CloudSearch_Resource_IndexingDatasourcesItems extends Googl
    *
    * @opt_param string connectorName Name of connector making this call. Format:
    * datasources/{source_id}/connectors/{ID}
+   * @opt_param bool debugOptions.enableDebugging If you are asked by Google to
+   * help with debugging, set this field. Otherwise, ignore this field.
    * @opt_param string version Required. The incremented version of the item to
    * delete from the index. The indexing system stores the version from the
    * datasource as a byte string and compares the Item version in the index to the
@@ -44,8 +46,6 @@ class Google_Service_CloudSearch_Resource_IndexingDatasourcesItems extends Googl
    * Cloud Search Indexing won't delete any queued item with a version value that
    * is less than or equal to the version of the currently indexed item. The
    * maximum length for this field is 1024 bytes.
-   * @opt_param bool debugOptions.enableDebugging If you are asked by Google to
-   * help with debugging, set this field. Otherwise, ignore this field.
    * @opt_param string mode Required. The RequestMode for this request.
    * @return Google_Service_CloudSearch_Operation
    */
@@ -85,10 +85,10 @@ class Google_Service_CloudSearch_Resource_IndexingDatasourcesItems extends Googl
    * datasources/{source_id}/items/{item_id}
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string connectorName Name of connector making this call. Format:
-   * datasources/{source_id}/connectors/{ID}
    * @opt_param bool debugOptions.enableDebugging If you are asked by Google to
    * help with debugging, set this field. Otherwise, ignore this field.
+   * @opt_param string connectorName Name of connector making this call. Format:
+   * datasources/{source_id}/connectors/{ID}
    * @return Google_Service_CloudSearch_Item
    */
   public function get($name, $optParams = array())
@@ -129,13 +129,6 @@ class Google_Service_CloudSearch_Resource_IndexingDatasourcesItems extends Googl
    * datasources/{source_id}
    * @param array $optParams Optional parameters.
    *
-   * @opt_param bool brief When set to true, the indexing system only populates
-   * the following fields: name, version, queue. metadata.hash, metadata.title,
-   * metadata.sourceRepositoryURL, metadata.objectType, metadata.createTime,
-   * metadata.updateTime, metadata.contentLanguage, metadata.mimeType,
-   * structured_data.hash, content.hash, itemType, itemStatus.code,
-   * itemStatus.processingError.code, itemStatus.repositoryError.type, If this
-   * value is false, then all the fields are populated in Item.
    * @opt_param string pageToken The next_page_token value returned from a
    * previous List request, if any.
    * @opt_param int pageSize Maximum number of items to fetch in a request. The
@@ -145,6 +138,13 @@ class Google_Service_CloudSearch_Resource_IndexingDatasourcesItems extends Googl
    * help with debugging, set this field. Otherwise, ignore this field.
    * @opt_param string connectorName Name of connector making this call. Format:
    * datasources/{source_id}/connectors/{ID}
+   * @opt_param bool brief When set to true, the indexing system only populates
+   * the following fields: name, version, queue. metadata.hash, metadata.title,
+   * metadata.sourceRepositoryURL, metadata.objectType, metadata.createTime,
+   * metadata.updateTime, metadata.contentLanguage, metadata.mimeType,
+   * structured_data.hash, content.hash, itemType, itemStatus.code,
+   * itemStatus.processingError.code, itemStatus.repositoryError.type, If this
+   * value is false, then all the fields are populated in Item.
    * @return Google_Service_CloudSearch_ListItemsResponse
    */
   public function listIndexingDatasourcesItems($name, $optParams = array())
