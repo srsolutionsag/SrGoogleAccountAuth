@@ -116,17 +116,17 @@
     },
     {
         "name": "google/apiclient-services",
-        "version": "v0.136",
-        "version_normalized": "0.136.0.0",
+        "version": "v0.137",
+        "version_normalized": "0.137.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/googleapis/google-api-php-client-services.git",
-            "reference": "e6fcc181136d28f6efa4b41f3434c97819b520e6"
+            "reference": "92ae53e812037230b23d373bac12516f90c330cc"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/e6fcc181136d28f6efa4b41f3434c97819b520e6",
-            "reference": "e6fcc181136d28f6efa4b41f3434c97819b520e6",
+            "url": "https://api.github.com/repos/googleapis/google-api-php-client-services/zipball/92ae53e812037230b23d373bac12516f90c330cc",
+            "reference": "92ae53e812037230b23d373bac12516f90c330cc",
             "shasum": ""
         },
         "require": {
@@ -135,7 +135,7 @@
         "require-dev": {
             "phpunit/phpunit": "^4.8|^5"
         },
-        "time": "2020-05-16T00:25:19+00:00",
+        "time": "2020-05-25T00:24:28+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -404,21 +404,21 @@
     },
     {
         "name": "monolog/monolog",
-        "version": "2.0.2",
-        "version_normalized": "2.0.2.0",
+        "version": "2.1.0",
+        "version_normalized": "2.1.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/Seldaek/monolog.git",
-            "reference": "c861fcba2ca29404dc9e617eedd9eff4616986b8"
+            "reference": "38914429aac460e8e4616c8cb486ecb40ec90bb1"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Seldaek/monolog/zipball/c861fcba2ca29404dc9e617eedd9eff4616986b8",
-            "reference": "c861fcba2ca29404dc9e617eedd9eff4616986b8",
+            "url": "https://api.github.com/repos/Seldaek/monolog/zipball/38914429aac460e8e4616c8cb486ecb40ec90bb1",
+            "reference": "38914429aac460e8e4616c8cb486ecb40ec90bb1",
             "shasum": ""
         },
         "require": {
-            "php": "^7.2",
+            "php": ">=7.2",
             "psr/log": "^1.0.1"
         },
         "provide": {
@@ -429,11 +429,11 @@
             "doctrine/couchdb": "~1.0@dev",
             "elasticsearch/elasticsearch": "^6.0",
             "graylog2/gelf-php": "^1.4.2",
-            "jakub-onderka/php-parallel-lint": "^0.9",
             "php-amqplib/php-amqplib": "~2.4",
             "php-console/php-console": "^3.1.3",
+            "php-parallel-lint/php-parallel-lint": "^1.0",
             "phpspec/prophecy": "^1.6.1",
-            "phpunit/phpunit": "^8.3",
+            "phpunit/phpunit": "^8.5",
             "predis/predis": "^1.1",
             "rollbar/rollbar": "^1.3",
             "ruflin/elastica": ">=0.90 <3.0",
@@ -453,7 +453,7 @@
             "rollbar/rollbar": "Allow sending log messages to Rollbar",
             "ruflin/elastica": "Allow sending log messages to an Elastic Search server"
         },
-        "time": "2019-12-20T14:22:59+00:00",
+        "time": "2020-05-22T08:12:19+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -820,24 +820,24 @@
     },
     {
         "name": "srag/custominputguis",
-        "version": "v0.34.15",
-        "version_normalized": "0.34.15.0",
+        "version": "v0.34.16",
+        "version_normalized": "0.34.16.0",
         "source": {
             "type": "git",
             "url": "https://github.com/studer-raimann/CustomInputGUIs.git",
-            "reference": "a745b4c4f34c180fbca38966fc01284d69fe054f"
+            "reference": "4d055034a9e55ba3e5968afcdf415201f8f07f5f"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/studer-raimann/CustomInputGUIs/zipball/a745b4c4f34c180fbca38966fc01284d69fe054f",
-            "reference": "a745b4c4f34c180fbca38966fc01284d69fe054f",
+            "url": "https://api.github.com/repos/studer-raimann/CustomInputGUIs/zipball/4d055034a9e55ba3e5968afcdf415201f8f07f5f",
+            "reference": "4d055034a9e55ba3e5968afcdf415201f8f07f5f",
             "shasum": ""
         },
         "require": {
             "php": ">=7.0",
             "srag/dic": ">=0.1.0"
         },
-        "time": "2020-05-19T12:58:10+00:00",
+        "time": "2020-05-25T05:57:02+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {

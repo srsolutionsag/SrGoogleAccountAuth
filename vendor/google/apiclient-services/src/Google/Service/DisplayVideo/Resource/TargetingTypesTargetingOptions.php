@@ -52,6 +52,8 @@ class Google_Service_DisplayVideo_Resource_TargetingTypesTargetingOptions extend
    * listed.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string advertiserId Required. The Advertiser this request is being
+   * made in the context of.
    * @opt_param string orderBy Field by which to sort the list. Acceptable values
    * are:
    *
@@ -77,8 +79,6 @@ class Google_Service_DisplayVideo_Resource_TargetingTypesTargetingOptions extend
    * @opt_param int pageSize Requested page size. Must be between `1` and `100`.
    * If unspecified will default to `100`. Returns error code `INVALID_ARGUMENT`
    * if an invalid value is specified.
-   * @opt_param string advertiserId Required. The Advertiser this request is being
-   * made in the context of.
    * @return Google_Service_DisplayVideo_ListTargetingOptionsResponse
    */
   public function listTargetingTypesTargetingOptions($targetingType, $optParams = array())

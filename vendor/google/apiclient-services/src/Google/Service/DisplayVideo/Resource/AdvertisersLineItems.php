@@ -158,6 +158,10 @@ class Google_Service_DisplayVideo_Resource_AdvertisersLineItems extends Google_S
    * items for.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string pageToken A token identifying a page of results the server
+   * should return. Typically, this is the value of next_page_token returned from
+   * the previous call to `ListLineItems` method. If not specified, the first page
+   * of results will be returned.
    * @opt_param string orderBy Field by which to sort the list. Acceptable values
    * are:
    *
@@ -166,10 +170,6 @@ class Google_Service_DisplayVideo_Resource_AdvertisersLineItems extends Google_S
    * The default sorting order is ascending. To specify descending order for a
    * field, a suffix "desc" should be added to the field name. Example:
    * `displayName desc`.
-   * @opt_param string pageToken A token identifying a page of results the server
-   * should return. Typically, this is the value of next_page_token returned from
-   * the previous call to `ListLineItems` method. If not specified, the first page
-   * of results will be returned.
    * @opt_param int pageSize Requested page size. Must be between `1` and `100`.
    * If unspecified will default to `100`. Returns error code `INVALID_ARGUMENT`
    * if an invalid value is specified.

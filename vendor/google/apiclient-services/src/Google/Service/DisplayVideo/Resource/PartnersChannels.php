@@ -48,14 +48,6 @@ class Google_Service_DisplayVideo_Resource_PartnersChannels extends Google_Servi
    * @param string $partnerId The ID of the partner that owns the channels.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string orderBy Field by which to sort the list. Acceptable values
-   * are:
-   *
-   * * `displayName` (default) * `channelId`
-   *
-   * The default sorting order is ascending. To specify descending order for a
-   * field, a suffix " desc" should be added to the field name. Example:
-   * `displayName desc`.
    * @opt_param string filter Allows filtering by channel fields.
    *
    * Supported syntax:
@@ -79,6 +71,14 @@ class Google_Service_DisplayVideo_Resource_PartnersChannels extends Google_Servi
    * if an invalid value is specified.
    * @opt_param string advertiserId The ID of the advertiser that owns the
    * channels.
+   * @opt_param string orderBy Field by which to sort the list. Acceptable values
+   * are:
+   *
+   * * `displayName` (default) * `channelId`
+   *
+   * The default sorting order is ascending. To specify descending order for a
+   * field, a suffix " desc" should be added to the field name. Example:
+   * `displayName desc`.
    * @return Google_Service_DisplayVideo_ListChannelsResponse
    */
   public function listPartnersChannels($partnerId, $optParams = array())

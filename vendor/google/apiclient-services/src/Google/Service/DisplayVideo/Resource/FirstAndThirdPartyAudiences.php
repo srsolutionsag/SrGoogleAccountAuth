@@ -32,10 +32,10 @@ class Google_Service_DisplayVideo_Resource_FirstAndThirdPartyAudiences extends G
    * third party audience to fetch.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string advertiserId The ID of the advertiser that has access to
-   * the fetched first and third party audience.
    * @opt_param string partnerId The ID of the partner that has access to the
    * fetched first and third party audience.
+   * @opt_param string advertiserId The ID of the advertiser that has access to
+   * the fetched first and third party audience.
    * @return Google_Service_DisplayVideo_FirstAndThirdPartyAudience
    */
   public function get($firstAndThirdPartyAudienceId, $optParams = array())
