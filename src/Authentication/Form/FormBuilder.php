@@ -92,21 +92,20 @@ class FormBuilder extends AbstractFormBuilder
     {
         $first = true;
 
-        $html = preg_replace_callback('/(<button\s+class\s*=\s*"btn btn-default"\s+data-action\s*=\s*"#"\s+id\s*=\s*"[a-z0-9_]+"\s*>)(.+)(<\/button\s*>)/',
-            function (array $matches) use (&$first) : string {
-                if ($first) {
-                    $first = false;
+        $html = preg_replace_callback(self::REPLACE_BUTTONS_REG_EXP, function (array $matches) use (&$first) : string {
+            if ($first) {
+                $first = false;
 
-                    $authentication_button_tpl = self::plugin()->template("authentication_button.html");
-                    $authentication_button_tpl->setVariable("LINK", self::srGoogleAccountAuth()->client()->createAuthUrl());
-                    $authentication_button_tpl->setVariable("IMG", self::output()->getHTML(self::dic()->ui()->factory()->image()->standard(Client::ICON_URL, Client::GOOGLE)));
-                    $authentication_button_tpl->setVariableEscaped("TXT", self::dic()->language()->txt("log_in"));
+                $authentication_button_tpl = self::plugin()->template("authentication_button.html");
+                $authentication_button_tpl->setVariable("LINK", self::srGoogleAccountAuth()->client()->createAuthUrl());
+                $authentication_button_tpl->setVariable("IMG", self::output()->getHTML(self::dic()->ui()->factory()->image()->standard(Client::ICON_URL, Client::GOOGLE)));
+                $authentication_button_tpl->setVariableEscaped("TXT", self::dic()->language()->txt("log_in"));
 
-                    return self::output()->getHTML($authentication_button_tpl);
-                } else {
-                    return "";
-                }
-            }, $html);
+                return self::output()->getHTML($authentication_button_tpl);
+            } else {
+                return "";
+            }
+        }, $html);
 
         return $html;
     }
