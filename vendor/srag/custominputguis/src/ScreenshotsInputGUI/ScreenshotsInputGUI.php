@@ -23,6 +23,7 @@ class ScreenshotsInputGUI extends ilFormPropertyGUI implements Pluginable
 {
 
     use DICTrait;
+
     const LANG_MODULE = "screenshotsinputgui";
     /**
      * @var bool
@@ -111,6 +112,8 @@ class ScreenshotsInputGUI extends ilFormPropertyGUI implements Pluginable
      */
     public function getValue() : array
     {
+        $this->processScreenshots();
+
         return $this->screenshots;
     }
 

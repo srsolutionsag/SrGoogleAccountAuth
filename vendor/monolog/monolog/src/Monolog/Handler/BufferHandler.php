@@ -83,7 +83,7 @@ class BufferHandler extends AbstractHandler implements ProcessableHandlerInterfa
         return false === $this->bubble;
     }
 
-    public function flush(): void
+    public function flush()/*: void*/
     {
         if ($this->bufferSize === 0) {
             return;
@@ -103,7 +103,7 @@ class BufferHandler extends AbstractHandler implements ProcessableHandlerInterfa
     /**
      * {@inheritdoc}
      */
-    public function close(): void
+    public function close()/*: void*/
     {
         $this->flush();
 
@@ -113,7 +113,7 @@ class BufferHandler extends AbstractHandler implements ProcessableHandlerInterfa
     /**
      * Clears the buffer without flushing any messages down to the wrapped handler.
      */
-    public function clear(): void
+    public function clear()/*: void*/
     {
         $this->bufferSize = 0;
         $this->buffer = [];

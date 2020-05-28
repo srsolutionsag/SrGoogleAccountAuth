@@ -13,6 +13,7 @@ namespace Monolog\Handler;
 
 use InvalidArgumentException;
 use Monolog\Logger;
+use Monolog\Utils;
 
 /**
  * Stores logs to files that are rotated every day and a limited number of files are kept.
@@ -44,9 +45,9 @@ class RotatingFileHandler extends StreamHandler
      * @param int|null   $filePermission Optional file permissions (default (0644) are only for owner read/write)
      * @param bool       $useLocking     Try to lock log file before doing any writes
      */
-    public function __construct(string $filename, int $maxFiles = 0, $level = Logger::DEBUG, bool $bubble = true, ?int $filePermission = null, bool $useLocking = false)
+    public function __construct(string $filename, int $maxFiles = 0, $level = Logger::DEBUG, bool $bubble = true, /*?int*/ $filePermission = null, bool $useLocking = false)
     {
-        $this->filename = $filename;
+        $this->filename = Utils::canonicalizePath($filename);
         $this->maxFiles = $maxFiles;
         $this->nextRotation = new \DateTimeImmutable('tomorrow');
         $this->filenameFormat = '{filename}-{date}';
@@ -58,7 +59,7 @@ class RotatingFileHandler extends StreamHandler
     /**
      * {@inheritdoc}
      */
-    public function close(): void
+    public function close()/*: void*/
     {
         parent::close();
 
@@ -105,7 +106,7 @@ class RotatingFileHandler extends StreamHandler
     /**
      * {@inheritdoc}
      */
-    protected function write(array $record): void
+    protected function write(array $record)/*: void*/
     {
         // on the first record written, if the log is new, we should rotate (once per day)
         if (null === $this->mustRotate) {
@@ -123,7 +124,7 @@ class RotatingFileHandler extends StreamHandler
     /**
      * Rotates the files.
      */
-    protected function rotate(): void
+    protected function rotate()/*: void*/
     {
         // update filename
         $this->url = $this->getTimedFilename();

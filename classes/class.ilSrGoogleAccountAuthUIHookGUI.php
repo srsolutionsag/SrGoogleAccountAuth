@@ -38,7 +38,7 @@ class ilSrGoogleAccountAuthUIHookGUI extends ilUIHookPluginGUI
             self::dic()->ui()->mainTemplate()->addCss(self::plugin()->directory() . "/css/srgoogacauth.css");
 
             $html = str_replace('<div class="ilStartupSection">',
-                '<div class="ilStartupSection">' . self::output()->getHTML(self::srGoogleAccountAuth()->authentication()->factory()->newFormInstance($this)), $html);
+                '<div class="ilStartupSection">' . self::output()->getHTML(self::srGoogleAccountAuth()->authentication()->factory()->newFormBuilderInstance($this)), $html);
 
             return ["mode" => self::REPLACE, "html" => $html];
         }

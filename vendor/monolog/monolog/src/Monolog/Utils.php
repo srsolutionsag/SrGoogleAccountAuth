@@ -13,7 +13,7 @@ namespace Monolog;
 
 final class Utils
 {
-    const DEFAULT_JSON_FLAGS = JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRESERVE_ZERO_FRACTION;
+    const DEFAULT_JSON_FLAGS = JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRESERVE_ZERO_FRACTION | JSON_INVALID_UTF8_SUBSTITUTE;
 
     /**
      * @internal
@@ -25,7 +25,7 @@ final class Utils
         return 'c' === $class[0] && 0 === strpos($class, "class@anonymous\0") ? get_parent_class($class).'@anonymous' : $class;
     }
 
-    public static function substr(string $string, int $start, ?int $length = null)
+    public static function substr(string $string, int $start, /*?int*/ $length = null)
     {
         if (extension_loaded('mbstring')) {
             return mb_strcut($string, $start, $length);
@@ -35,15 +35,43 @@ final class Utils
     }
 
     /**
+     * Makes sure if a relative path is passed in it is turned into an absolute path
+     *
+     * @param string $streamUrl stream URL or path without protocol
+     */
+    public static function canonicalizePath(string $streamUrl): string
+    {
+        $prefix = '';
+        if ('file://' === substr($streamUrl, 0, 7)) {
+            $streamUrl = substr($streamUrl, 7);
+            $prefix = 'file://';
+        }
+
+        // other type of stream, not supported
+        if (false !== strpos($streamUrl, '://')) {
+            return $streamUrl;
+        }
+
+        // already absolute
+        if (substr($streamUrl, 0, 1) === '/' || substr($streamUrl, 1, 1) === ':' || substr($streamUrl, 0, 2) === '\\\\') {
+            return $prefix.$streamUrl;
+        }
+
+        $streamUrl = getcwd() . '/' . $streamUrl;
+
+        return $prefix.$streamUrl;
+    }
+
+    /**
      * Return the JSON representation of a value
      *
      * @param  mixed             $data
-     * @param  int               $encodeFlags flags to pass to json encode, defaults to JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE
+     * @param  int               $encodeFlags  flags to pass to json encode, defaults to JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE
      * @param  bool              $ignoreErrors whether to ignore encoding errors or to throw on error, when ignored and the encoding fails, "null" is returned which is valid json for null
      * @throws \RuntimeException if encoding fails and errors are not ignored
-     * @return string when errors are ignored and the encoding fails, "null" is returned which is valid json for null
+     * @return string            when errors are ignored and the encoding fails, "null" is returned which is valid json for null
      */
-    public static function jsonEncode($data, ?int $encodeFlags = null, bool $ignoreErrors = false): string
+    public static function jsonEncode($data, /*?int*/ $encodeFlags = null, bool $ignoreErrors = false): string
     {
         if (null === $encodeFlags) {
             $encodeFlags = self::DEFAULT_JSON_FLAGS;
@@ -71,16 +99,16 @@ final class Utils
      *
      * If the failure is due to invalid string encoding, try to clean the
      * input and encode again. If the second encoding attempt fails, the
-     * inital error is not encoding related or the input can't be cleaned then
+     * initial error is not encoding related or the input can't be cleaned then
      * raise a descriptive exception.
      *
-     * @param  int               $code return code of json_last_error function
-     * @param  mixed             $data data that was meant to be encoded
+     * @param  int               $code        return code of json_last_error function
+     * @param  mixed             $data        data that was meant to be encoded
      * @param  int               $encodeFlags flags to pass to json encode, defaults to JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRESERVE_ZERO_FRACTION
      * @throws \RuntimeException if failure can't be corrected
      * @return string            JSON encoded data after error correction
      */
-    public static function handleJsonError(int $code, $data, ?int $encodeFlags = null): string
+    public static function handleJsonError(int $code, $data, /*?int*/ $encodeFlags = null): string
     {
         if ($code !== JSON_ERROR_UTF8) {
             self::throwEncodeError($code, $data);

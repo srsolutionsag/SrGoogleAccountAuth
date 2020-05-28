@@ -4,6 +4,7 @@ namespace srag\Plugins\SrGoogleAccountAuth\Config;
 
 use ilSrGoogleAccountAuthPlugin;
 use srag\ActiveRecordConfig\SrGoogleAccountAuth\Config\AbstractFactory;
+use srag\Plugins\SrGoogleAccountAuth\Config\Form\FormBuilder;
 use srag\Plugins\SrGoogleAccountAuth\Utils\SrGoogleAccountAuthTrait;
 
 /**
@@ -17,6 +18,7 @@ final class Factory extends AbstractFactory
 {
 
     use SrGoogleAccountAuthTrait;
+
     const PLUGIN_CLASS_NAME = ilSrGoogleAccountAuthPlugin::class;
     /**
      * @var self|null
@@ -49,11 +51,11 @@ final class Factory extends AbstractFactory
     /**
      * @param ConfigCtrl $parent
      *
-     * @return ConfigFormGUI
+     * @return FormBuilder
      */
-    public function newFormInstance(ConfigCtrl $parent) : ConfigFormGUI
+    public function newFormBuilderInstance(ConfigCtrl $parent) : FormBuilder
     {
-        $form = new ConfigFormGUI($parent);
+        $form = new FormBuilder($parent);
 
         return $form;
     }

@@ -76,7 +76,7 @@ class ChromePHPHandler extends AbstractProcessingHandler
     /**
      * {@inheritdoc}
      */
-    public function handleBatch(array $records): void
+    public function handleBatch(array $records)/*: void*/
     {
         if (!$this->isWebRequest()) {
             return;
@@ -112,7 +112,7 @@ class ChromePHPHandler extends AbstractProcessingHandler
      * @see sendHeader()
      * @see send()
      */
-    protected function write(array $record): void
+    protected function write(array $record)/*: void*/
     {
         if (!$this->isWebRequest()) {
             return;
@@ -128,7 +128,7 @@ class ChromePHPHandler extends AbstractProcessingHandler
      *
      * @see sendHeader()
      */
-    protected function send(): void
+    protected function send()/*: void*/
     {
         if (self::$overflowed || !self::$sendHeaders) {
             return;
@@ -172,7 +172,7 @@ class ChromePHPHandler extends AbstractProcessingHandler
     /**
      * Send header string to the client
      */
-    protected function sendHeader(string $header, string $content): void
+    protected function sendHeader(string $header, string $content)/*: void*/
     {
         if (!headers_sent() && self::$sendHeaders) {
             header(sprintf('%s: %s', $header, $content));

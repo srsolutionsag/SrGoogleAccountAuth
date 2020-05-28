@@ -12,6 +12,7 @@
 namespace Monolog\Handler;
 
 use Monolog\Logger;
+use Monolog\Utils;
 
 /**
  * Stores to any stream resource
@@ -40,13 +41,13 @@ class StreamHandler extends AbstractProcessingHandler
      *
      * @throws \InvalidArgumentException If stream is not a resource or string
      */
-    public function __construct($stream, $level = Logger::DEBUG, bool $bubble = true, ?int $filePermission = null, bool $useLocking = false)
+    public function __construct($stream, $level = Logger::DEBUG, bool $bubble = true, /*?int*/ $filePermission = null, bool $useLocking = false)
     {
         parent::__construct($level, $bubble);
         if (is_resource($stream)) {
             $this->stream = $stream;
         } elseif (is_string($stream)) {
-            $this->url = $stream;
+            $this->url = Utils::canonicalizePath($stream);
         } else {
             throw new \InvalidArgumentException('A stream must either be a resource or a string.');
         }
@@ -58,7 +59,7 @@ class StreamHandler extends AbstractProcessingHandler
     /**
      * {@inheritdoc}
      */
-    public function close(): void
+    public function close()/*: void*/
     {
         if ($this->url && is_resource($this->stream)) {
             fclose($this->stream);
@@ -82,7 +83,7 @@ class StreamHandler extends AbstractProcessingHandler
      *
      * @return string|null
      */
-    public function getUrl(): ?string
+    public function getUrl()/*: ?string*/
     {
         return $this->url;
     }
@@ -90,7 +91,7 @@ class StreamHandler extends AbstractProcessingHandler
     /**
      * {@inheritdoc}
      */
-    protected function write(array $record): void
+    protected function write(array $record)/*: void*/
     {
         if (!is_resource($this->stream)) {
             if (null === $this->url || '' === $this->url) {
@@ -128,7 +129,7 @@ class StreamHandler extends AbstractProcessingHandler
      * @param resource $stream
      * @param array    $record
      */
-    protected function streamWrite($stream, array $record): void
+    protected function streamWrite($stream, array $record)/*: void*/
     {
         fwrite($stream, (string) $record['formatted']);
     }
@@ -140,7 +141,7 @@ class StreamHandler extends AbstractProcessingHandler
         return true;
     }
 
-    private function getDirFromStream(string $stream): ?string
+    private function getDirFromStream(string $stream)/*: ?string*/
     {
         $pos = strpos($stream, '://');
         if ($pos === false) {
@@ -154,7 +155,7 @@ class StreamHandler extends AbstractProcessingHandler
         return null;
     }
 
-    private function createDir(): void
+    private function createDir()/*: void*/
     {
         // Do not try to create dir if it has already been tried.
         if ($this->dirCreated) {

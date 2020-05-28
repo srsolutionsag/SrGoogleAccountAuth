@@ -70,7 +70,7 @@ class ErrorLogHandler extends AbstractProcessingHandler
     /**
      * {@inheritdoc}
      */
-    protected function write(array $record): void
+    protected function write(array $record)/*: void*/
     {
         if (!$this->expandNewlines) {
             error_log((string) $record['formatted'], $this->messageType);

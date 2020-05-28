@@ -6,6 +6,7 @@ use ilSrGoogleAccountAuthPlugin;
 use srag\ActiveRecordConfig\SrGoogleAccountAuth\Config\AbstractFactory;
 use srag\ActiveRecordConfig\SrGoogleAccountAuth\Config\AbstractRepository;
 use srag\ActiveRecordConfig\SrGoogleAccountAuth\Config\Config;
+use srag\Plugins\SrGoogleAccountAuth\Config\Form\FormBuilder;
 use srag\Plugins\SrGoogleAccountAuth\Utils\SrGoogleAccountAuthTrait;
 
 /**
@@ -19,6 +20,7 @@ final class Repository extends AbstractRepository
 {
 
     use SrGoogleAccountAuthTrait;
+
     const PLUGIN_CLASS_NAME = ilSrGoogleAccountAuthPlugin::class;
     /**
      * @var self|null
@@ -74,10 +76,10 @@ final class Repository extends AbstractRepository
     protected function getFields() : array
     {
         return [
-            ConfigFormGUI::KEY_CLIENT_ID           => Config::TYPE_STRING,
-            ConfigFormGUI::KEY_CLIENT_SECRET       => Config::TYPE_STRING,
-            ConfigFormGUI::KEY_CREATE_NEW_ACCOUNTS => Config::TYPE_BOOLEAN,
-            ConfigFormGUI::KEY_NEW_ACCOUNT_ROLES   => [Config::TYPE_JSON, []]
+            FormBuilder::KEY_CLIENT_ID           => Config::TYPE_STRING,
+            FormBuilder::KEY_CLIENT_SECRET       => Config::TYPE_STRING,
+            FormBuilder::KEY_CREATE_NEW_ACCOUNTS => Config::TYPE_BOOLEAN,
+            FormBuilder::KEY_NEW_ACCOUNT_ROLES   => [Config::TYPE_JSON, []]
         ];
     }
 }

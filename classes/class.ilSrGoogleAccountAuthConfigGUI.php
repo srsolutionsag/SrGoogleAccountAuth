@@ -16,6 +16,7 @@ class ilSrGoogleAccountAuthConfigGUI extends ilPluginConfigGUI
 
     use DICTrait;
     use SrGoogleAccountAuthTrait;
+
     const PLUGIN_CLASS_NAME = ilSrGoogleAccountAuthPlugin::class;
     const CMD_CONFIGURE = "configure";
 

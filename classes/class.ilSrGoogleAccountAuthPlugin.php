@@ -2,6 +2,8 @@
 
 require_once __DIR__ . "/../vendor/autoload.php";
 
+use ILIAS\DI\Container;
+use srag\CustomInputGUIs\SrGoogleAccountAuth\Loader\CustomInputGUIsLoaderDetector;
 use srag\Plugins\SrGoogleAccountAuth\Utils\SrGoogleAccountAuthTrait;
 use srag\RemovePluginDataConfirm\SrGoogleAccountAuth\PluginUninstallTrait;
 
@@ -15,6 +17,7 @@ class ilSrGoogleAccountAuthPlugin extends ilUserInterfaceHookPlugin
 
     use PluginUninstallTrait;
     use SrGoogleAccountAuthTrait;
+
     const PLUGIN_ID = "srgoogacauth";
     const PLUGIN_NAME = "SrGoogleAccountAuth";
     const PLUGIN_CLASS_NAME = self::class;
@@ -72,5 +75,14 @@ class ilSrGoogleAccountAuthPlugin extends ilUserInterfaceHookPlugin
     protected function deleteData()/*: void*/
     {
         self::srGoogleAccountAuth()->dropTables();
+    }
+
+
+    /**
+     * @inheritDoc
+     */
+    public function exchangeUIRendererAfterInitialization(Container $dic) : Closure
+    {
+        return CustomInputGUIsLoaderDetector::exchangeUIRendererAfterInitialization();
     }
 }

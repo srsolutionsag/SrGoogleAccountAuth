@@ -69,7 +69,7 @@ class DynamoDbHandler extends AbstractProcessingHandler
     /**
      * {@inheritdoc}
      */
-    protected function write(array $record): void
+    protected function write(array $record)/*: void*/
     {
         $filtered = $this->filterEmptyFields($record['formatted']);
         if ($this->version === 3) {

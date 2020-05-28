@@ -6,6 +6,7 @@ use ilAuthCredentials;
 use ilSrGoogleAccountAuthPlugin;
 use ilSrGoogleAccountAuthUIHookGUI;
 use srag\DIC\SrGoogleAccountAuth\DICTrait;
+use srag\Plugins\SrGoogleAccountAuth\Authentication\Form\FormBuilder;
 use srag\Plugins\SrGoogleAccountAuth\Utils\SrGoogleAccountAuthTrait;
 
 /**
@@ -20,6 +21,7 @@ final class Factory
 
     use DICTrait;
     use SrGoogleAccountAuthTrait;
+
     const PLUGIN_CLASS_NAME = ilSrGoogleAccountAuthPlugin::class;
     /**
      * @var self|null
@@ -52,11 +54,11 @@ final class Factory
     /**
      * @param ilSrGoogleAccountAuthUIHookGUI $parent
      *
-     * @return AuthenticationFormGUI
+     * @return FormBuilder
      */
-    public function newFormInstance(ilSrGoogleAccountAuthUIHookGUI $parent) : AuthenticationFormGUI
+    public function newFormBuilderInstance(ilSrGoogleAccountAuthUIHookGUI $parent) : FormBuilder
     {
-        $form = new AuthenticationFormGUI($parent);
+        $form = new FormBuilder($parent);
 
         return $form;
     }

@@ -31,13 +31,14 @@ class FallbackGroupHandler extends GroupHandler
                 // What throwable?
             }
         }
+
         return false === $this->bubble;
     }
 
     /**
      * {@inheritdoc}
      */
-    public function handleBatch(array $records): void
+    public function handleBatch(array $records)/*: void*/
     {
         if ($this->processors) {
             $processed = [];

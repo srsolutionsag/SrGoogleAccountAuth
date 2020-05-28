@@ -72,7 +72,7 @@ class FleepHookHandler extends SocketHandler
     /**
      * Handles a log record
      */
-    public function write(array $record): void
+    public function write(array $record)/*: void*/
     {
         parent::write($record);
         $this->closeSocket();
