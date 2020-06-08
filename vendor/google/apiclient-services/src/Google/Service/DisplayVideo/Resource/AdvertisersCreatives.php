@@ -88,15 +88,6 @@ class Google_Service_DisplayVideo_Resource_AdvertisersCreatives extends Google_S
    * should return. Typically, this is the value of next_page_token returned from
    * the previous call to `ListCreatives` method. If not specified, the first page
    * of results will be returned.
-   * @opt_param string orderBy Field by which to sort the list. Acceptable values
-   * are:
-   *
-   * * `creativeId` (default) * `createTime` * `mediaDuration` * `dimensions`
-   * (sorts by width first, then by height)
-   *
-   * The default sorting order is ascending. To specify descending order for a
-   * field, a suffix "desc" should be added to the field name. Example:
-   * `createTime desc`.
    * @opt_param int pageSize Requested page size. Must be between `1` and `100`.
    * If unspecified will default to `100`. Returns error code `INVALID_ARGUMENT`
    * if an invalid value is specified.
@@ -135,6 +126,15 @@ class Google_Service_DisplayVideo_Resource_AdvertisersCreatives extends Google_S
    * lineItemIds:2)
    *
    * The length of this field should be no more than 500 characters.
+   * @opt_param string orderBy Field by which to sort the list. Acceptable values
+   * are:
+   *
+   * * `creativeId` (default) * `createTime` * `mediaDuration` * `dimensions`
+   * (sorts by width first, then by height)
+   *
+   * The default sorting order is ascending. To specify descending order for a
+   * field, a suffix "desc" should be added to the field name. Example:
+   * `createTime desc`.
    * @return Google_Service_DisplayVideo_ListCreativesResponse
    */
   public function listAdvertisersCreatives($advertiserId, $optParams = array())

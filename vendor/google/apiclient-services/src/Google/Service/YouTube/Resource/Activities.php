@@ -26,22 +26,6 @@
 class Google_Service_YouTube_Resource_Activities extends Google_Service_Resource
 {
   /**
-   * Inserts a new resource into this collection. (activities.insert)
-   *
-   * @param string|array $part The part parameter serves two purposes in this
-   * operation. It identifies the properties that the write operation will set as
-   * well as the properties that the API response will include.
-   * @param Google_Service_YouTube_Activity $postBody
-   * @param array $optParams Optional parameters.
-   * @return Google_Service_YouTube_Activity
-   */
-  public function insert($part, Google_Service_YouTube_Activity $postBody, $optParams = array())
-  {
-    $params = array('part' => $part, 'postBody' => $postBody);
-    $params = array_merge($params, $optParams);
-    return $this->call('insert', array($params), "Google_Service_YouTube_Activity");
-  }
-  /**
    * Retrieves a list of resources, possibly filtered. (activities.listActivities)
    *
    * @param string|array $part The part parameter specifies a comma-separated list
@@ -54,17 +38,17 @@ class Google_Service_YouTube_Resource_Activities extends Google_Service_Resource
    * contain all of those nested properties.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param bool home
    * @opt_param string regionCode
    * @opt_param string channelId
-   * @opt_param string publishedBefore
    * @opt_param bool mine
-   * @opt_param string maxResults The maxResults parameter specifies the maximum
-   * number of items that should be returned in the result set.
+   * @opt_param string publishedBefore
    * @opt_param string pageToken The pageToken parameter identifies a specific
    * page in the result set that should be returned. In an API response, the
    * nextPageToken and prevPageToken properties identify other pages that could be
    * retrieved.
+   * @opt_param bool home
+   * @opt_param string maxResults The maxResults parameter specifies the maximum
+   * number of items that should be returned in the result set.
    * @opt_param string publishedAfter
    * @return Google_Service_YouTube_ActivityListResponse
    */
