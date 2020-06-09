@@ -12089,6 +12089,7 @@ class ComposerStaticInitcad4c6204bf143a143bbee0ca440b4fa
         'srag\\LibrariesNamespaceChanger\\PHP72Backport' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/PHP72Backport.php',
         'srag\\LibrariesNamespaceChanger\\PHP7Backport' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/PHP7Backport.php',
         'srag\\LibrariesNamespaceChanger\\RemovePHP72Backport' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/RemovePHP72Backport.php',
+        'srag\\LibrariesNamespaceChanger\\UpdatePluginReadme' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/UpdatePluginReadme.php',
         'srag\\Plugins\\SrGoogleAccountAuth\\Access\\Ilias' => __DIR__ . '/../..' . '/src/Access/Ilias.php',
         'srag\\Plugins\\SrGoogleAccountAuth\\Access\\Roles' => __DIR__ . '/../..' . '/src/Access/Roles.php',
         'srag\\Plugins\\SrGoogleAccountAuth\\Access\\Users' => __DIR__ . '/../..' . '/src/Access/Users.php',

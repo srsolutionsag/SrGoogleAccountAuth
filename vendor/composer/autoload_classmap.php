@@ -11940,6 +11940,7 @@ return array(
     'srag\\LibrariesNamespaceChanger\\PHP72Backport' => $vendorDir . '/srag/librariesnamespacechanger/src/PHP72Backport.php',
     'srag\\LibrariesNamespaceChanger\\PHP7Backport' => $vendorDir . '/srag/librariesnamespacechanger/src/PHP7Backport.php',
     'srag\\LibrariesNamespaceChanger\\RemovePHP72Backport' => $vendorDir . '/srag/librariesnamespacechanger/src/RemovePHP72Backport.php',
+    'srag\\LibrariesNamespaceChanger\\UpdatePluginReadme' => $vendorDir . '/srag/librariesnamespacechanger/src/UpdatePluginReadme.php',
     'srag\\Plugins\\SrGoogleAccountAuth\\Access\\Ilias' => $baseDir . '/src/Access/Ilias.php',
     'srag\\Plugins\\SrGoogleAccountAuth\\Access\\Roles' => $baseDir . '/src/Access/Roles.php',
     'srag\\Plugins\\SrGoogleAccountAuth\\Access\\Users' => $baseDir . '/src/Access/Users.php',
