@@ -24,15 +24,26 @@ class Client extends Google_Client
     use DICTrait;
     use SrGoogleAccountAuthTrait;
 
+    const GOOGLE = "Google";
+    const ICON_URL = "https://developers.google.com/identity/images/g-logo.png";
     const PLUGIN_CLASS_NAME = ilSrGoogleAccountAuthPlugin::class;
     const REDIRECT_URL = "login.php?target=uihk_" . ilSrGoogleAccountAuthPlugin::PLUGIN_ID;
     const SESSION_KEY = "google_access_token";
-    const ICON_URL = "https://developers.google.com/identity/images/g-logo.png";
-    const GOOGLE = "Google";
     /**
      * @var self|null
      */
     protected static $instance = null;
+
+
+    /**
+     * Client constructor
+     */
+    public function __construct()
+    {
+        parent::__construct();
+
+        $this->init();
+    }
 
 
     /**
@@ -45,17 +56,6 @@ class Client extends Google_Client
         }
 
         return self::$instance;
-    }
-
-
-    /**
-     * Client constructor
-     */
-    public function __construct()
-    {
-        parent::__construct();
-
-        $this->init();
     }
 
 

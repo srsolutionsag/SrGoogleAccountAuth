@@ -21,11 +21,11 @@ class FormBuilder extends AbstractFormBuilder
 
     use SrGoogleAccountAuthTrait;
 
-    const PLUGIN_CLASS_NAME = ilSrGoogleAccountAuthPlugin::class;
     const KEY_CLIENT_ID = "client_id";
     const KEY_CLIENT_SECRET = "client_secret";
     const KEY_CREATE_NEW_ACCOUNTS = "create_new_accounts";
     const KEY_NEW_ACCOUNT_ROLES = "new_account_roles";
+    const PLUGIN_CLASS_NAME = ilSrGoogleAccountAuthPlugin::class;
 
 
     /**
