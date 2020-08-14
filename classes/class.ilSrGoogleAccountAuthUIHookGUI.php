@@ -14,8 +14,8 @@ class ilSrGoogleAccountAuthUIHookGUI extends ilUIHookPluginGUI
     use DICTrait;
     use SrGoogleAccountAuthTrait;
 
-    const PLUGIN_CLASS_NAME = ilSrGoogleAccountAuthPlugin::class;
     const LOGIN_TEMPLATE_ID = "Services/Init/tpl.login.html";
+    const PLUGIN_CLASS_NAME = ilSrGoogleAccountAuthPlugin::class;
     const TEMPLATE_ADD = "template_add";
     /**
      * @var bool

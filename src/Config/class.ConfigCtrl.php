@@ -22,10 +22,10 @@ class ConfigCtrl
     use DICTrait;
     use SrGoogleAccountAuthTrait;
 
-    const PLUGIN_CLASS_NAME = ilSrGoogleAccountAuthPlugin::class;
     const CMD_CONFIGURE = "configure";
     const CMD_UPDATE_CONFIGURE = "updateConfigure";
     const LANG_MODULE = "config";
+    const PLUGIN_CLASS_NAME = ilSrGoogleAccountAuthPlugin::class;
     const TAB_CONFIGURATION = "configuration";
 
 
@@ -35,6 +35,16 @@ class ConfigCtrl
     public function __construct()
     {
 
+    }
+
+
+    /**
+     *
+     */
+    public static function addTabs()/*: void*/
+    {
+        self::dic()->tabs()->addTab(self::TAB_CONFIGURATION, self::plugin()->translate("configuration", self::LANG_MODULE), self::dic()->ctrl()
+            ->getLinkTargetByClass(self::class, self::CMD_CONFIGURE));
     }
 
 
@@ -68,10 +78,13 @@ class ConfigCtrl
     /**
      *
      */
-    public static function addTabs()/*: void*/
+    protected function configure()/*: void*/
     {
-        self::dic()->tabs()->addTab(self::TAB_CONFIGURATION, self::plugin()->translate("configuration", self::LANG_MODULE), self::dic()->ctrl()
-            ->getLinkTargetByClass(self::class, self::CMD_CONFIGURE));
+        self::dic()->tabs()->activateTab(self::TAB_CONFIGURATION);
+
+        $form = self::srGoogleAccountAuth()->config()->factory()->newFormBuilderInstance($this);
+
+        self::output()->output($form);
     }
 
 
@@ -81,19 +94,6 @@ class ConfigCtrl
     protected function setTabs()/*: void*/
     {
 
-    }
-
-
-    /**
-     *
-     */
-    protected function configure()/*: void*/
-    {
-        self::dic()->tabs()->activateTab(self::TAB_CONFIGURATION);
-
-        $form = self::srGoogleAccountAuth()->config()->factory()->newFormBuilderInstance($this);
-
-        self::output()->output($form);
     }
 
 

@@ -39,6 +39,7 @@ class Google_Service_SASPortalTesting extends Google_Service
   public $customers_nodes;
   public $customers_nodes_nodes;
   public $installer;
+  public $nodes;
   public $nodes_devices;
   public $nodes_nodes;
   public $nodes_nodes_devices;
@@ -80,13 +81,13 @@ class Google_Service_SASPortalTesting extends Google_Service
               'path' => 'v1alpha1/customers',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),'patch' => array(
@@ -340,13 +341,13 @@ class Google_Service_SASPortalTesting extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),
@@ -367,6 +368,26 @@ class Google_Service_SASPortalTesting extends Google_Service
               'path' => 'v1alpha1/installer:validate',
               'httpMethod' => 'POST',
               'parameters' => array(),
+            ),
+          )
+        )
+    );
+    $this->nodes = new Google_Service_SASPortalTesting_Resource_Nodes(
+        $this,
+        $this->serviceName,
+        'nodes',
+        array(
+          'methods' => array(
+            'get' => array(
+              'path' => 'v1alpha1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'name' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
             ),
           )
         )
@@ -436,11 +457,11 @@ class Google_Service_SASPortalTesting extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'filter' => array(
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'pageToken' => array(
+                'filter' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -542,13 +563,13 @@ class Google_Service_SASPortalTesting extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),'move' => array(
@@ -666,13 +687,13 @@ class Google_Service_SASPortalTesting extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),

@@ -18,13 +18,22 @@ class ilSrGoogleAccountAuthPlugin extends ilUserInterfaceHookPlugin
     use PluginUninstallTrait;
     use SrGoogleAccountAuthTrait;
 
+    const PLUGIN_CLASS_NAME = self::class;
     const PLUGIN_ID = "srgoogacauth";
     const PLUGIN_NAME = "SrGoogleAccountAuth";
-    const PLUGIN_CLASS_NAME = self::class;
     /**
      * @var self|null
      */
     protected static $instance = null;
+
+
+    /**
+     * ilSrGoogleAccountAuthPlugin constructor
+     */
+    public function __construct()
+    {
+        parent::__construct();
+    }
 
 
     /**
@@ -41,11 +50,11 @@ class ilSrGoogleAccountAuthPlugin extends ilUserInterfaceHookPlugin
 
 
     /**
-     * ilSrGoogleAccountAuthPlugin constructor
+     * @inheritDoc
      */
-    public function __construct()
+    public function exchangeUIRendererAfterInitialization(Container $dic) : Closure
     {
-        parent::__construct();
+        return CustomInputGUIsLoaderDetector::exchangeUIRendererAfterInitialization();
     }
 
 
@@ -81,8 +90,8 @@ class ilSrGoogleAccountAuthPlugin extends ilUserInterfaceHookPlugin
     /**
      * @inheritDoc
      */
-    public function exchangeUIRendererAfterInitialization(Container $dic) : Closure
+    protected function shouldUseOneUpdateStepOnly() : bool
     {
-        return CustomInputGUIsLoaderDetector::exchangeUIRendererAfterInitialization();
+        return true;
     }
 }

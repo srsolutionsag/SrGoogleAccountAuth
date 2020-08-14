@@ -65,9 +65,6 @@ class Google_Service_Dataproc_Resource_ProjectsRegionsClusters extends Google_Se
    * @param string $clusterName Required. The cluster name.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string clusterUuid Optional. Specifying the cluster_uuid means the
-   * RPC should fail (with error NOT_FOUND) if cluster with specified UUID does
-   * not exist.
    * @opt_param string requestId Optional. A unique id used to identify the
    * request. If the server receives two DeleteClusterRequest requests with the
    * same id, then the second request will be ignored and the first
@@ -76,6 +73,9 @@ class Google_Service_Dataproc_Resource_ProjectsRegionsClusters extends Google_Se
    * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The id must
    * contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens
    * (-). The maximum length is 40 characters.
+   * @opt_param string clusterUuid Optional. Specifying the cluster_uuid means the
+   * RPC should fail (with error NOT_FOUND) if cluster with specified UUID does
+   * not exist.
    * @return Google_Service_Dataproc_Operation
    */
   public function delete($projectId, $region, $clusterName, $optParams = array())
@@ -185,14 +185,6 @@ class Google_Service_Dataproc_Resource_ProjectsRegionsClusters extends Google_Se
    * @param Google_Service_Dataproc_Cluster $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string requestId Optional. A unique id used to identify the
-   * request. If the server receives two UpdateClusterRequest requests with the
-   * same id, then the second request will be ignored and the first
-   * google.longrunning.Operation created and stored in the backend is returned.It
-   * is recommended to always set this value to a UUID
-   * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The id must
-   * contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens
-   * (-). The maximum length is 40 characters.
    * @opt_param string updateMask Required. Specifies the path, relative to
    * Cluster, of the field to update. For example, to change the number of workers
    * in a cluster to 5, the update_mask parameter would be specified as
@@ -208,6 +200,14 @@ class Google_Service_Dataproc_Resource_ProjectsRegionsClusters extends Google_Se
    * config.secondary_worker_config.num_instances  Resize secondary worker group
    * config.autoscaling_config.policy_uriUse, stop using, or  change autoscaling
    * policies
+   * @opt_param string requestId Optional. A unique id used to identify the
+   * request. If the server receives two UpdateClusterRequest requests with the
+   * same id, then the second request will be ignored and the first
+   * google.longrunning.Operation created and stored in the backend is returned.It
+   * is recommended to always set this value to a UUID
+   * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The id must
+   * contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens
+   * (-). The maximum length is 40 characters.
    * @opt_param string gracefulDecommissionTimeout Optional. Timeout for graceful
    * YARN decomissioning. Graceful decommissioning allows removing nodes from the
    * cluster without interrupting jobs in progress. Timeout specifies how long to

@@ -31,13 +31,13 @@ class Google_Service_Recommender_Resource_ProjectsLocationsInsightTypesInsights 
    *
    * @param string $name Required. Name of the insight.
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Recommender_GoogleCloudRecommenderV1beta1Insight
+   * @return Google_Service_Recommender_GoogleCloudRecommenderV1Insight
    */
   public function get($name, $optParams = array())
   {
     $params = array('name' => $name);
     $params = array_merge($params, $optParams);
-    return $this->call('get', array($params), "Google_Service_Recommender_GoogleCloudRecommenderV1beta1Insight");
+    return $this->call('get', array($params), "Google_Service_Recommender_GoogleCloudRecommenderV1Insight");
   }
   /**
    * Lists insights for a Cloud project. Requires the recommender.*.list IAM
@@ -54,9 +54,6 @@ class Google_Service_Recommender_Resource_ProjectsLocationsInsightTypesInsights 
    * https://cloud.google.com/about/locations/
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Optional. Filter expression to restrict the insights
-   * returned. Supported filter fields: state Eg: `state:"DISMISSED" or
-   * state:"ACTIVE"
    * @opt_param string pageToken Optional. If present, retrieves the next batch of
    * results from the preceding call to this method. `page_token` must be the
    * value of `next_page_token` from the previous response. The values of other
@@ -64,13 +61,16 @@ class Google_Service_Recommender_Resource_ProjectsLocationsInsightTypesInsights 
    * @opt_param int pageSize Optional. The maximum number of results to return
    * from this request.  Non-positive values are ignored. If not specified, the
    * server will determine the number of results to return.
-   * @return Google_Service_Recommender_GoogleCloudRecommenderV1beta1ListInsightsResponse
+   * @opt_param string filter Optional. Filter expression to restrict the insights
+   * returned. Supported filter fields: state Eg: `state:"DISMISSED" or
+   * state:"ACTIVE"
+   * @return Google_Service_Recommender_GoogleCloudRecommenderV1ListInsightsResponse
    */
   public function listProjectsLocationsInsightTypesInsights($parent, $optParams = array())
   {
     $params = array('parent' => $parent);
     $params = array_merge($params, $optParams);
-    return $this->call('list', array($params), "Google_Service_Recommender_GoogleCloudRecommenderV1beta1ListInsightsResponse");
+    return $this->call('list', array($params), "Google_Service_Recommender_GoogleCloudRecommenderV1ListInsightsResponse");
   }
   /**
    * Marks the Insight State as Accepted. Users can use this method to indicate to
@@ -82,14 +82,14 @@ class Google_Service_Recommender_Resource_ProjectsLocationsInsightTypesInsights 
    * (insights.markAccepted)
    *
    * @param string $name Required. Name of the insight.
-   * @param Google_Service_Recommender_GoogleCloudRecommenderV1beta1MarkInsightAcceptedRequest $postBody
+   * @param Google_Service_Recommender_GoogleCloudRecommenderV1MarkInsightAcceptedRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return Google_Service_Recommender_GoogleCloudRecommenderV1beta1Insight
+   * @return Google_Service_Recommender_GoogleCloudRecommenderV1Insight
    */
-  public function markAccepted($name, Google_Service_Recommender_GoogleCloudRecommenderV1beta1MarkInsightAcceptedRequest $postBody, $optParams = array())
+  public function markAccepted($name, Google_Service_Recommender_GoogleCloudRecommenderV1MarkInsightAcceptedRequest $postBody, $optParams = array())
   {
     $params = array('name' => $name, 'postBody' => $postBody);
     $params = array_merge($params, $optParams);
-    return $this->call('markAccepted', array($params), "Google_Service_Recommender_GoogleCloudRecommenderV1beta1Insight");
+    return $this->call('markAccepted', array($params), "Google_Service_Recommender_GoogleCloudRecommenderV1Insight");
   }
 }

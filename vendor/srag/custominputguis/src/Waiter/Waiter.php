@@ -19,11 +19,11 @@ final class Waiter
     /**
      * @var string
      */
-    const TYPE_WAITER = "waiter";
+    const TYPE_PERCENTAGE = "percentage";
     /**
      * @var string
      */
-    const TYPE_PERCENTAGE = "percentage";
+    const TYPE_WAITER = "waiter";
     /**
      * @var bool
      */
@@ -31,9 +31,18 @@ final class Waiter
 
 
     /**
+     * Waiter constructor
+     */
+    private function __construct()
+    {
+
+    }
+
+
+    /**
      * @param string $type
      */
-    public static final function init(/*string*/ $type)/*: void*/
+    public static final function init(string $type)/*: void*/
     {
         if (self::$init === false) {
             self::$init = true;
@@ -47,14 +56,5 @@ final class Waiter
         }
 
         self::dic()->ui()->mainTemplate()->addOnLoadCode('il.waiter.init("' . $type . '");');
-    }
-
-
-    /**
-     * Waiter constructor
-     */
-    private function __construct()
-    {
-
     }
 }

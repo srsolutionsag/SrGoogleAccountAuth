@@ -86,12 +86,12 @@ class Google_Service_Monitoring_Resource_ProjectsMetricDescriptors extends Googl
    * The format is: projects/[PROJECT_ID_OR_NUMBER]
    * @param array $optParams Optional parameters.
    *
+   * @opt_param int pageSize A positive number that is the maximum number of
+   * results to return.
    * @opt_param string pageToken If this field is not empty then it must contain
    * the nextPageToken value returned by a previous call to this method. Using
    * this field causes the method to return additional results from the previous
    * method call.
-   * @opt_param int pageSize A positive number that is the maximum number of
-   * results to return.
    * @opt_param string filter If this field is empty, all custom and system-
    * defined metric descriptors are returned. Otherwise, the filter
    * (https://cloud.google.com/monitoring/api/v3/filters) specifies which metric

@@ -29,6 +29,15 @@ final class Users
 
 
     /**
+     * Users constructor
+     */
+    private function __construct()
+    {
+
+    }
+
+
+    /**
      * @return self
      */
     public static function getInstance() : self
@@ -38,15 +47,6 @@ final class Users
         }
 
         return self::$instance;
-    }
-
-
-    /**
-     * Users constructor
-     */
-    private function __construct()
-    {
-
     }
 
 
@@ -81,6 +81,8 @@ final class Users
 
         $user->setTimeLimitUnlimited(true);
 
+        $user->setTitle($user->getFullname());
+
         $user->create();
 
         $user->saveAsNew();
@@ -90,6 +92,17 @@ final class Users
         }
 
         return $user->getId();
+    }
+
+
+    /**
+     * @param string $email
+     *
+     * @return int|null
+     */
+    public function getUserIdByEmail(string $email)/*:?int*/
+    {
+        return ilObjUser::_lookupId(current(ilObjUser::getUserLoginsByEmail($email)));
     }
 
 
@@ -108,17 +121,6 @@ final class Users
         } else {
             return null;
         }
-    }
-
-
-    /**
-     * @param string $email
-     *
-     * @return int|null
-     */
-    public function getUserIdByEmail(string $email)/*:?int*/
-    {
-        return ilObjUser::_lookupId(current(ilObjUser::getUserLoginsByEmail($email)));
     }
 
 

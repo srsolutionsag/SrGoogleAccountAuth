@@ -16,7 +16,7 @@
  */
 
 /**
- * Service definition for Recommender (v1beta1).
+ * Service definition for Recommender (v1).
  *
  * <p>
 </p>
@@ -49,7 +49,7 @@ class Google_Service_Recommender extends Google_Service
     $this->rootUrl = $rootUrl ?: 'https://recommender.googleapis.com/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
-    $this->version = 'v1beta1';
+    $this->version = 'v1';
     $this->serviceName = 'recommender';
 
     $this->projects_locations_insightTypes_insights = new Google_Service_Recommender_Resource_ProjectsLocationsInsightTypesInsights(
@@ -59,7 +59,7 @@ class Google_Service_Recommender extends Google_Service
         array(
           'methods' => array(
             'get' => array(
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -69,17 +69,13 @@ class Google_Service_Recommender extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v1beta1/{+parent}/insights',
+              'path' => 'v1/{+parent}/insights',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ),
-                'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
                 'pageToken' => array(
                   'location' => 'query',
@@ -89,9 +85,13 @@ class Google_Service_Recommender extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
               ),
             ),'markAccepted' => array(
-              'path' => 'v1beta1/{+name}:markAccepted',
+              'path' => 'v1/{+name}:markAccepted',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'name' => array(
@@ -111,7 +111,7 @@ class Google_Service_Recommender extends Google_Service
         array(
           'methods' => array(
             'get' => array(
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -121,7 +121,7 @@ class Google_Service_Recommender extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v1beta1/{+parent}/recommendations',
+              'path' => 'v1/{+parent}/recommendations',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -129,13 +129,13 @@ class Google_Service_Recommender extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
                 'filter' => array(
                   'location' => 'query',
@@ -143,7 +143,7 @@ class Google_Service_Recommender extends Google_Service
                 ),
               ),
             ),'markClaimed' => array(
-              'path' => 'v1beta1/{+name}:markClaimed',
+              'path' => 'v1/{+name}:markClaimed',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'name' => array(
@@ -153,7 +153,7 @@ class Google_Service_Recommender extends Google_Service
                 ),
               ),
             ),'markFailed' => array(
-              'path' => 'v1beta1/{+name}:markFailed',
+              'path' => 'v1/{+name}:markFailed',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'name' => array(
@@ -163,7 +163,7 @@ class Google_Service_Recommender extends Google_Service
                 ),
               ),
             ),'markSucceeded' => array(
-              'path' => 'v1beta1/{+name}:markSucceeded',
+              'path' => 'v1/{+name}:markSucceeded',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'name' => array(

@@ -31,6 +31,8 @@ class Google_Service_YouTube_Resource_Captions extends Google_Service_Resource
    * @param string $id
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string onBehalfOf ID of the Google+ Page for the channel that the
+   * request is be on behalf of
    * @opt_param string onBehalfOfContentOwner Note: This parameter is intended
    * exclusively for YouTube content partners.The onBehalfOfContentOwner parameter
    * indicates that the request's authorization credentials identify a YouTube CMS
@@ -41,8 +43,6 @@ class Google_Service_YouTube_Resource_Captions extends Google_Service_Resource
    * having to provide authentication credentials for each individual channel. The
    * actual CMS account that the user authenticates with must be linked to the
    * specified YouTube content owner.
-   * @opt_param string onBehalfOf ID of the Google+ Page for the channel that the
-   * request is be on behalf of
    */
   public function delete($id, $optParams = array())
   {
@@ -57,10 +57,6 @@ class Google_Service_YouTube_Resource_Captions extends Google_Service_Resource
    * Platform.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string tfmt Convert the captions into this format. Supported
-   * options are sbv, srt, and vtt.
-   * @opt_param string tlang tlang is the language code; machine translate the
-   * captions into this language.
    * @opt_param string onBehalfOfContentOwner Note: This parameter is intended
    * exclusively for YouTube content partners.The onBehalfOfContentOwner parameter
    * indicates that the request's authorization credentials identify a YouTube CMS
@@ -71,6 +67,10 @@ class Google_Service_YouTube_Resource_Captions extends Google_Service_Resource
    * having to provide authentication credentials for each individual channel. The
    * actual CMS account that the user authenticates with must be linked to the
    * specified YouTube content owner.
+   * @opt_param string tlang tlang is the language code; machine translate the
+   * captions into this language.
+   * @opt_param string tfmt Convert the captions into this format. Supported
+   * options are sbv, srt, and vtt.
    * @opt_param string onBehalfOf ID of the Google+ Page for the channel that the
    * request is be on behalf of
    */
@@ -88,10 +88,10 @@ class Google_Service_YouTube_Resource_Captions extends Google_Service_Resource
    * @param Google_Service_YouTube_Caption $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param bool sync Extra parameter to allow automatically syncing the
-   * uploaded caption/transcript with the audio.
    * @opt_param string onBehalfOf ID of the Google+ Page for the channel that the
    * request is be on behalf of
+   * @opt_param bool sync Extra parameter to allow automatically syncing the
+   * uploaded caption/transcript with the audio.
    * @opt_param string onBehalfOfContentOwner Note: This parameter is intended
    * exclusively for YouTube content partners.The onBehalfOfContentOwner parameter
    * indicates that the request's authorization credentials identify a YouTube CMS
@@ -150,8 +150,6 @@ class Google_Service_YouTube_Resource_Captions extends Google_Service_Resource
    * @param Google_Service_YouTube_Caption $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string onBehalfOf ID of the Google+ Page for the channel that the
-   * request is on behalf of.
    * @opt_param bool sync Extra parameter to allow automatically syncing the
    * uploaded caption/transcript with the audio.
    * @opt_param string onBehalfOfContentOwner Note: This parameter is intended
@@ -164,6 +162,8 @@ class Google_Service_YouTube_Resource_Captions extends Google_Service_Resource
    * having to provide authentication credentials for each individual channel. The
    * actual CMS account that the user authenticates with must be linked to the
    * specified YouTube content owner.
+   * @opt_param string onBehalfOf ID of the Google+ Page for the channel that the
+   * request is on behalf of.
    * @return Google_Service_YouTube_Caption
    */
   public function update($part, Google_Service_YouTube_Caption $postBody, $optParams = array())
