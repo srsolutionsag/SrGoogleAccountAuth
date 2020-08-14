@@ -81,6 +81,8 @@ final class Users
 
         $user->setTimeLimitUnlimited(true);
 
+        $user->setTitle($user->getFullname());
+
         $user->create();
 
         $user->saveAsNew();

@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.5.1]
+- Fix set user object title
+
 ## [1.5.0]
 - Login form change (One line)
 - ILIAS 6 support
