@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.5.2]
+- Fix login again in ILIAS 6
+
 ## [1.5.1]
 - Fix set user object title
 

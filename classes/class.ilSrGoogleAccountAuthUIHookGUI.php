@@ -21,6 +21,10 @@ class ilSrGoogleAccountAuthUIHookGUI extends ilUIHookPluginGUI
      * @var bool
      */
     protected static $auth_check = false;
+    /**
+     * @var bool
+     */
+    protected static $render_auth_form = false;
 
 
     /**
@@ -28,10 +32,14 @@ class ilSrGoogleAccountAuthUIHookGUI extends ilUIHookPluginGUI
      */
     public function getHTML(/*string*/ $a_comp, /*string*/ $a_part, /*array*/ $a_par = []) : array
     {
-        if (!self::$auth_check && $a_par["tpl_id"] === self::LOGIN_TEMPLATE_ID && $a_part === self::TEMPLATE_ADD) {
+        if (!self::$auth_check) {
             self::$auth_check = true;
 
             $this->checkAuthentication();
+        }
+
+        if (!self::$render_auth_form && $a_par["tpl_id"] === self::LOGIN_TEMPLATE_ID && $a_part === self::TEMPLATE_ADD) {
+            self::$render_auth_form = true;
 
             $html = $a_par["html"];
 
@@ -52,34 +60,36 @@ class ilSrGoogleAccountAuthUIHookGUI extends ilUIHookPluginGUI
      */
     protected function checkAuthentication()/*: void*/
     {
-        $matches = [];
-        preg_match("/^uihk_" . ilSrGoogleAccountAuthPlugin::PLUGIN_ID . "(_(.*))?/uim", self::srGoogleAccountAuth()->authentication()->getTarget(), $matches);
+        if (basename(filter_input(INPUT_SERVER, "SCRIPT_NAME")) === "login.php") {
+            $matches = [];
+            preg_match("/^uihk_" . ilSrGoogleAccountAuthPlugin::PLUGIN_ID . "(_(.*))?/uim", self::srGoogleAccountAuth()->authentication()->getTarget(), $matches);
 
-        if (is_array($matches) && count($matches) >= 1) {
+            if (is_array($matches) && count($matches) >= 1) {
 
-            $status = ilAuthStatus::getInstance();
+                $status = ilAuthStatus::getInstance();
 
-            $credentials = new ilAuthFrontendCredentials();
+                $credentials = new ilAuthFrontendCredentials();
 
-            $provider = self::srGoogleAccountAuth()->authentication()->factory()->newProviderInstance($credentials);
+                $provider = self::srGoogleAccountAuth()->authentication()->factory()->newProviderInstance($credentials);
 
-            $frontend = new ilAuthFrontend(self::dic()->authSession(), $status, $credentials, [
-                $provider
-            ]);
+                $frontend = new ilAuthFrontend(self::dic()->authSession(), $status, $credentials, [
+                    $provider
+                ]);
 
-            $frontend->authenticate();
+                $frontend->authenticate();
 
-            switch ($status->getStatus()) {
-                case ilAuthStatus::STATUS_AUTHENTICATED:
-                    $_GET["target"] = self::srGoogleAccountAuth()->authentication()->getState(false);
+                switch ($status->getStatus()) {
+                    case ilAuthStatus::STATUS_AUTHENTICATED:
+                        $_GET["target"] = self::srGoogleAccountAuth()->authentication()->getState(false);
 
-                    ilInitialisation::redirectToStartingPage();
+                        ilInitialisation::redirectToStartingPage();
 
-                    return;
+                        return;
 
-                default:
-                    ilUtil::sendFailure($status->getReason());
-                    break;
+                    default:
+                        ilUtil::sendFailure($status->getReason());
+                        break;
+                }
             }
         }
     }
