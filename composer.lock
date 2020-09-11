@@ -887,7 +887,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "srag\\CustomInputGUIs\\": "src/"
+                    "srag\\CustomInputGUIs\\SrGoogleAccountAuth\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -933,7 +933,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "srag\\DIC\\": "src/"
+                    "srag\\DIC\\SrGoogleAccountAuth\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1022,7 +1022,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "srag\\RemovePluginDataConfirm\\": "src/"
+                    "srag\\RemovePluginDataConfirm\\SrGoogleAccountAuth\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",

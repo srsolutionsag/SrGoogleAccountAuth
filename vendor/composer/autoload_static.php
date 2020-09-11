@@ -22,11 +22,11 @@ class ComposerStaticInitcad4c6204bf143a143bbee0ca440b4fa
     public static $prefixLengthsPsr4 = array (
         's' => 
         array (
-            'srag\\RemovePluginDataConfirm\\' => 29,
+            'srag\\RemovePluginDataConfirm\\SrGoogleAccountAuth\\' => 49,
             'srag\\Plugins\\SrGoogleAccountAuth\\' => 33,
             'srag\\LibrariesNamespaceChanger\\' => 31,
-            'srag\\DIC\\' => 9,
-            'srag\\CustomInputGUIs\\' => 21,
+            'srag\\DIC\\SrGoogleAccountAuth\\' => 29,
+            'srag\\CustomInputGUIs\\SrGoogleAccountAuth\\' => 41,
             'srag\\ActiveRecordConfig\\SrGoogleAccountAuth\\' => 44,
         ),
         'p' => 
@@ -64,7 +64,7 @@ class ComposerStaticInitcad4c6204bf143a143bbee0ca440b4fa
     );
 
     public static $prefixDirsPsr4 = array (
-        'srag\\RemovePluginDataConfirm\\' => 
+        'srag\\RemovePluginDataConfirm\\SrGoogleAccountAuth\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/removeplugindataconfirm/src',
         ),
@@ -76,11 +76,11 @@ class ComposerStaticInitcad4c6204bf143a143bbee0ca440b4fa
         array (
             0 => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src',
         ),
-        'srag\\DIC\\' => 
+        'srag\\DIC\\SrGoogleAccountAuth\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/dic/src',
         ),
-        'srag\\CustomInputGUIs\\' => 
+        'srag\\CustomInputGUIs\\SrGoogleAccountAuth\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/custominputguis/src',
         ),
