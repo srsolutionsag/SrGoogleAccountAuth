@@ -4,6 +4,7 @@ require_once __DIR__ . "/../vendor/autoload.php";
 
 use ILIAS\DI\Container;
 use srag\CustomInputGUIs\SrGoogleAccountAuth\Loader\CustomInputGUIsLoaderDetector;
+use srag\DIC\SrGoogleAccountAuth\DevTools\DevToolsCtrl;
 use srag\Plugins\SrGoogleAccountAuth\Utils\SrGoogleAccountAuthTrait;
 use srag\RemovePluginDataConfirm\SrGoogleAccountAuth\PluginUninstallTrait;
 
@@ -75,6 +76,8 @@ class ilSrGoogleAccountAuthPlugin extends ilUserInterfaceHookPlugin
         parent::updateLanguages($a_lang_keys);
 
         $this->installRemovePluginDataConfirmLanguages();
+
+        DevToolsCtrl::installLanguages(self::plugin());
     }
 
 
