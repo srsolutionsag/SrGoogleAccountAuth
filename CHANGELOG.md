@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.5.3]
+- Dev tools
+
 ## [1.5.2]
 - Fix login again in ILIAS 6
 
