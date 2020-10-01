@@ -136,7 +136,9 @@ class FormBuilder extends AbstractFormBuilder
         if (self::version()->is6()) {
             if (!empty($data[self::KEY_CREATE_NEW_ACCOUNTS])) {
                 self::srGoogleAccountAuth()->config()->setValue(self::KEY_CREATE_NEW_ACCOUNTS, true);
-                self::srGoogleAccountAuth()->config()->setValue(self::KEY_NEW_ACCOUNT_ROLES, (array) $data[self::KEY_CREATE_NEW_ACCOUNTS][self::KEY_NEW_ACCOUNT_ROLES]);
+                self::srGoogleAccountAuth()
+                    ->config()
+                    ->setValue(self::KEY_NEW_ACCOUNT_ROLES, MultiSelectSearchNewInputGUI::cleanValues((array) $data[self::KEY_CREATE_NEW_ACCOUNTS][self::KEY_NEW_ACCOUNT_ROLES]));
             } else {
                 self::srGoogleAccountAuth()->config()->setValue(self::KEY_CREATE_NEW_ACCOUNTS, false);
             }
@@ -144,8 +146,9 @@ class FormBuilder extends AbstractFormBuilder
             self::srGoogleAccountAuth()->config()->setValue(self::KEY_CREATE_NEW_ACCOUNTS, boolval($data[self::KEY_CREATE_NEW_ACCOUNTS]["value"]));
             self::srGoogleAccountAuth()
                 ->config()
-                ->setValue(self::KEY_NEW_ACCOUNT_ROLES, (array) (boolval($data[self::KEY_CREATE_NEW_ACCOUNTS]["value"]) ? $data[self::KEY_CREATE_NEW_ACCOUNTS]["group_values"]
-                    : $data[self::KEY_CREATE_NEW_ACCOUNTS])["dependant_group"][self::KEY_NEW_ACCOUNT_ROLES]);
+                ->setValue(self::KEY_NEW_ACCOUNT_ROLES,
+                    MultiSelectSearchNewInputGUI::cleanValues((array) (boolval($data[self::KEY_CREATE_NEW_ACCOUNTS]["value"]) ? $data[self::KEY_CREATE_NEW_ACCOUNTS]["group_values"]
+                        : $data[self::KEY_CREATE_NEW_ACCOUNTS])["dependant_group"][self::KEY_NEW_ACCOUNT_ROLES]));
         }
     }
 }

@@ -12247,7 +12247,7 @@ return array(
     'srag\\CustomInputGUIs\\SrGoogleAccountAuth\\TextInputGUI\\TextInputGUIWithModernAutoComplete' => $vendorDir . '/srag/custominputguis/src/TextInputGUI/TextInputGUIWithModernAutoComplete.php',
     'srag\\CustomInputGUIs\\SrGoogleAccountAuth\\UIInputComponentWrapperInputGUI\\UIInputComponentWrapperInputGUI' => $vendorDir . '/srag/custominputguis/src/UIInputComponentWrapperInputGUI/UIInputComponentWrapperInputGUI.php',
     'srag\\CustomInputGUIs\\SrGoogleAccountAuth\\UIInputComponentWrapperInputGUI\\UIInputComponentWrapperNameSource' => $vendorDir . '/srag/custominputguis/src/UIInputComponentWrapperInputGUI/UIInputComponentWrapperNameSource.php',
-    'srag\\CustomInputGUIs\\SrGoogleAccountAuth\\ViewControlModeUI\\ViewControlModeUI' => $vendorDir . '/srag/custominputguis/src/ViewControlModeGUI/ViewControlModeUI.php',
+    'srag\\CustomInputGUIs\\SrGoogleAccountAuth\\ViewControlModeUI\\ViewControlModeUI' => $vendorDir . '/srag/custominputguis/src/ViewControlModeUI/ViewControlModeUI.php',
     'srag\\CustomInputGUIs\\SrGoogleAccountAuth\\Waiter\\Waiter' => $vendorDir . '/srag/custominputguis/src/Waiter/Waiter.php',
     'srag\\CustomInputGUIs\\SrGoogleAccountAuth\\WeekdayInputGUI\\WeekdayInputGUI' => $vendorDir . '/srag/custominputguis/src/WeekdayInputGUI/WeekdayInputGUI.php',
     'srag\\DIC\\SrGoogleAccountAuth\\DICStatic' => $vendorDir . '/srag/dic/src/DICStatic.php',
