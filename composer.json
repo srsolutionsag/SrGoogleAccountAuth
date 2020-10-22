@@ -2,12 +2,14 @@
   "name": "srag/plugins/srgoogleaccountauth",
   "description": "",
   "version": "1.5.4",
-  "ilias_plugin": {
-    "id": "srgoogacauth",
-    "name": "SrGoogleAccountAuth",
-    "ilias_min_version": "5.4.0",
-    "ilias_max_version": "6.999",
-    "slot": "Services/UIComponent/UserInterfaceHook"
+  "extra": {
+    "ilias_plugin": {
+      "id": "srgoogacauth",
+      "name": "SrGoogleAccountAuth",
+      "ilias_min_version": "5.4.0",
+      "ilias_max_version": "6.999",
+      "slot": "Services/UIComponent/UserInterfaceHook"
+    }
   },
   "type": "project",
   "keywords": [
@@ -58,7 +60,7 @@
       "srag\\LibrariesNamespaceChanger\\LibrariesNamespaceChanger::rewriteLibrariesNamespaces",
       "srag\\LibrariesNamespaceChanger\\PHP72Backport::PHP72Backport",
       "srag\\LibrariesNamespaceChanger\\GeneratePluginPhpAndXml::generatePluginPhpAndXml",
-      "srag\\LibrariesNamespaceChanger\\UpdatePluginReadme::updatePluginReadme"
+      "srag\\LibrariesNamespaceChanger\\GeneratePluginReadme::generatePluginReadme"
     ]
   }
 }
