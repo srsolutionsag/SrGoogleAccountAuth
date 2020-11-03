@@ -34,6 +34,7 @@
     "google/apiclient": "2.4.1",
     "srag/activerecordconfig": ">=0.1.0",
     "srag/custominputguis": ">=0.1.0",
+    "srag/devtools": ">=0.1.0",
     "srag/dic": ">=0.1.0",
     "srag/librariesnamespacechanger": ">=0.1.0",
     "srag/removeplugindataconfirm": ">=0.1.0"
