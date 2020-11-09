@@ -9,7 +9,7 @@ use ilPluginConfigGUI;
 use ilUtil;
 use srag\DIC\SrGoogleAccountAuth\DICTrait;
 use srag\DIC\SrGoogleAccountAuth\Plugin\PluginInterface;
-use srag\DIC\SrGoogleAccountAuth\Util\LibraryLanguageInstaller;
+use srag\LibraryLanguageInstaller\SrGoogleAccountAuth\LibraryLanguageInstaller;
 
 /**
  * Class DevToolsCtrl

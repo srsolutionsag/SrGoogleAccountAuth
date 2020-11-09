@@ -25,10 +25,11 @@ class ComposerStaticInitcad4c6204bf143a143bbee0ca440b4fa
         array (
             'srag\\RemovePluginDataConfirm\\SrGoogleAccountAuth\\' => 49,
             'srag\\Plugins\\SrGoogleAccountAuth\\' => 33,
+            'srag\\LibraryLanguageInstaller\\SrGoogleAccountAuth\\' => 50,
             'srag\\LibrariesNamespaceChanger\\' => 31,
             'srag\\GeneratePluginInfosHelper\\SrGoogleAccountAuth\\' => 51,
             'srag\\DevTools\\SrGoogleAccountAuth\\' => 34,
-            'srag\\DIC\\SrGoogleAccountAuth\\' => 29,
+            'srag\\DIC\\' => 9,
             'srag\\CustomInputGUIs\\SrGoogleAccountAuth\\' => 41,
             'srag\\ActiveRecordConfig\\SrGoogleAccountAuth\\' => 44,
         ),
@@ -75,6 +76,10 @@ class ComposerStaticInitcad4c6204bf143a143bbee0ca440b4fa
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),
+        'srag\\LibraryLanguageInstaller\\SrGoogleAccountAuth\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/srag/librarylanguageinstaller/src',
+        ),
         'srag\\LibrariesNamespaceChanger\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src',
@@ -87,7 +92,7 @@ class ComposerStaticInitcad4c6204bf143a143bbee0ca440b4fa
         array (
             0 => __DIR__ . '/..' . '/srag/devtools/src',
         ),
-        'srag\\DIC\\SrGoogleAccountAuth\\' => 
+        'srag\\DIC\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/dic/src',
         ),
@@ -12428,7 +12433,6 @@ class ComposerStaticInitcad4c6204bf143a143bbee0ca440b4fa
         'srag\\DIC\\SrGoogleAccountAuth\\Database\\DatabaseInterface' => __DIR__ . '/..' . '/srag/dic/src/Database/DatabaseInterface.php',
         'srag\\DIC\\SrGoogleAccountAuth\\Database\\PdoContextHelper' => __DIR__ . '/..' . '/srag/dic/src/Database/PdoContextHelper.php',
         'srag\\DIC\\SrGoogleAccountAuth\\Database\\PdoStatementContextHelper' => __DIR__ . '/..' . '/srag/dic/src/Database/PdoStatementContextHelper.php',
-        'srag\\DIC\\SrGoogleAccountAuth\\DevTools\\DevToolsCtrl' => __DIR__ . '/..' . '/srag/dic/src/DevTools/class.DevToolsCtrl.php',
         'srag\\DIC\\SrGoogleAccountAuth\\Exception\\DICException' => __DIR__ . '/..' . '/srag/dic/src/Exception/DICException.php',
         'srag\\DIC\\SrGoogleAccountAuth\\Ilias7PreWarn' => __DIR__ . '/..' . '/srag/dic/src/Ilias7PreWarn.php',
         'srag\\DIC\\SrGoogleAccountAuth\\Loader\\AbstractLoaderDetector' => __DIR__ . '/..' . '/srag/dic/src/Loader/AbstractLoaderDetector.php',
@@ -12438,20 +12442,16 @@ class ComposerStaticInitcad4c6204bf143a143bbee0ca440b4fa
         'srag\\DIC\\SrGoogleAccountAuth\\Plugin\\Plugin' => __DIR__ . '/..' . '/srag/dic/src/Plugin/Plugin.php',
         'srag\\DIC\\SrGoogleAccountAuth\\Plugin\\PluginInterface' => __DIR__ . '/..' . '/srag/dic/src/Plugin/PluginInterface.php',
         'srag\\DIC\\SrGoogleAccountAuth\\Plugin\\Pluginable' => __DIR__ . '/..' . '/srag/dic/src/Plugin/Pluginable.php',
-        'srag\\DIC\\SrGoogleAccountAuth\\Util\\LibraryLanguageInstaller' => __DIR__ . '/..' . '/srag/dic/src/Util/LibraryLanguageInstaller.php',
         'srag\\DIC\\SrGoogleAccountAuth\\Version\\Version' => __DIR__ . '/..' . '/srag/dic/src/Version/Version.php',
         'srag\\DIC\\SrGoogleAccountAuth\\Version\\VersionInterface' => __DIR__ . '/..' . '/srag/dic/src/Version/VersionInterface.php',
         'srag\\DevTools\\SrGoogleAccountAuth\\DevToolsCtrl' => __DIR__ . '/..' . '/srag/devtools/src/class.DevToolsCtrl.php',
         'srag\\GeneratePluginInfosHelper\\SrGoogleAccountAuth\\GeneratePluginPhpAndXml' => __DIR__ . '/..' . '/srag/generateplugininfoshelper/src/GeneratePluginPhpAndXml.php',
         'srag\\GeneratePluginInfosHelper\\SrGoogleAccountAuth\\GeneratePluginReadme' => __DIR__ . '/..' . '/srag/generateplugininfoshelper/src/GeneratePluginReadme.php',
-        'srag\\GeneratePluginInfosHelper\\SrGoogleAccountAuth\\UpdatePluginReadme' => __DIR__ . '/..' . '/srag/generateplugininfoshelper/src/UpdatePluginReadme.php',
-        'srag\\LibrariesNamespaceChanger\\GeneratePluginPhpAndXml' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/GeneratePluginPhpAndXml.php',
-        'srag\\LibrariesNamespaceChanger\\GeneratePluginReadme' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/GeneratePluginReadme.php',
         'srag\\LibrariesNamespaceChanger\\LibrariesNamespaceChanger' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/LibrariesNamespaceChanger.php',
         'srag\\LibrariesNamespaceChanger\\PHP72Backport' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/PHP72Backport.php',
         'srag\\LibrariesNamespaceChanger\\PHP7Backport' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/PHP7Backport.php',
         'srag\\LibrariesNamespaceChanger\\RemovePHP72Backport' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/RemovePHP72Backport.php',
-        'srag\\LibrariesNamespaceChanger\\UpdatePluginReadme' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/UpdatePluginReadme.php',
+        'srag\\LibraryLanguageInstaller\\SrGoogleAccountAuth\\LibraryLanguageInstaller' => __DIR__ . '/..' . '/srag/librarylanguageinstaller/src/LibraryLanguageInstaller.php',
         'srag\\Plugins\\SrGoogleAccountAuth\\Access\\Ilias' => __DIR__ . '/../..' . '/src/Access/Ilias.php',
         'srag\\Plugins\\SrGoogleAccountAuth\\Access\\Roles' => __DIR__ . '/../..' . '/src/Access/Roles.php',
         'srag\\Plugins\\SrGoogleAccountAuth\\Access\\Users' => __DIR__ . '/../..' . '/src/Access/Users.php',

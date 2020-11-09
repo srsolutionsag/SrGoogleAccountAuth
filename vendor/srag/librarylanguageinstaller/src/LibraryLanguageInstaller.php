@@ -1,6 +1,6 @@
 <?php
 
-namespace srag\DIC\SrGoogleAccountAuth\Util;
+namespace srag\LibraryLanguageInstaller\SrGoogleAccountAuth;
 
 use ilDBConstants;
 use ilGlobalCache;
@@ -12,7 +12,7 @@ use srag\DIC\SrGoogleAccountAuth\Plugin\PluginInterface;
 /**
  * Class LibraryLanguageInstaller
  *
- * @package srag\DIC\SrGoogleAccountAuth\Util
+ * @package srag\LibraryLanguageInstaller\SrGoogleAccountAuth
  *
  * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
