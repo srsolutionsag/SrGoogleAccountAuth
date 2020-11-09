@@ -12,7 +12,7 @@ return array(
     'srag\\LibrariesNamespaceChanger\\' => array($vendorDir . '/srag/librariesnamespacechanger/src'),
     'srag\\GeneratePluginInfosHelper\\SrGoogleAccountAuth\\' => array($vendorDir . '/srag/generateplugininfoshelper/src'),
     'srag\\DevTools\\SrGoogleAccountAuth\\' => array($vendorDir . '/srag/devtools/src'),
-    'srag\\DIC\\' => array($vendorDir . '/srag/dic/src'),
+    'srag\\DIC\\SrGoogleAccountAuth\\' => array($vendorDir . '/srag/dic/src'),
     'srag\\CustomInputGUIs\\SrGoogleAccountAuth\\' => array($vendorDir . '/srag/custominputguis/src'),
     'srag\\ActiveRecordConfig\\SrGoogleAccountAuth\\' => array($vendorDir . '/srag/activerecordconfig/src'),
     'phpseclib\\' => array($vendorDir . '/phpseclib/phpseclib/phpseclib'),

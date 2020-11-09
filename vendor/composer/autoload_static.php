@@ -29,7 +29,7 @@ class ComposerStaticInitcad4c6204bf143a143bbee0ca440b4fa
             'srag\\LibrariesNamespaceChanger\\' => 31,
             'srag\\GeneratePluginInfosHelper\\SrGoogleAccountAuth\\' => 51,
             'srag\\DevTools\\SrGoogleAccountAuth\\' => 34,
-            'srag\\DIC\\' => 9,
+            'srag\\DIC\\SrGoogleAccountAuth\\' => 29,
             'srag\\CustomInputGUIs\\SrGoogleAccountAuth\\' => 41,
             'srag\\ActiveRecordConfig\\SrGoogleAccountAuth\\' => 44,
         ),
@@ -92,7 +92,7 @@ class ComposerStaticInitcad4c6204bf143a143bbee0ca440b4fa
         array (
             0 => __DIR__ . '/..' . '/srag/devtools/src',
         ),
-        'srag\\DIC\\' => 
+        'srag\\DIC\\SrGoogleAccountAuth\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/dic/src',
         ),
