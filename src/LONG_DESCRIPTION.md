@@ -12,4 +12,4 @@ For the plugin config you need the client id and the client secret
 
 Login screen:
 
-![Login screen](./images/login_screen.png)
+![Login screen](../doc/images/login_screen.png)
