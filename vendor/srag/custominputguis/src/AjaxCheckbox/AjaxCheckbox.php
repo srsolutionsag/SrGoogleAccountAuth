@@ -1,6 +1,6 @@
 <?php
 
-namespace srag\CustomInputGUIs\SrGoogleAccountAuth\CheckboxInputGUI;
+namespace srag\CustomInputGUIs\SrGoogleAccountAuth\AjaxCheckbox;
 
 use srag\CustomInputGUIs\SrGoogleAccountAuth\Template\Template;
 use srag\CustomInputGUIs\SrGoogleAccountAuth\Waiter\Waiter;
@@ -9,7 +9,7 @@ use srag\DIC\SrGoogleAccountAuth\DICTrait;
 /**
  * Class AjaxCheckbox
  *
- * @package srag\CustomInputGUIs\SrGoogleAccountAuth\CheckboxInputGUI
+ * @package srag\CustomInputGUIs\SrGoogleAccountAuth\AjaxCheckbox
  *
  * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */

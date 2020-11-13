@@ -1,5 +1,5 @@
 {
-  "name": "srag/plugins/srgoogleaccountauth",
+  "name": "srag/srgoogleaccountauth",
   "description": "",
   "version": "1.5.4",
   "extra": {
@@ -46,7 +46,8 @@
       "srag\\Plugins\\SrGoogleAccountAuth\\": "src/"
     },
     "classmap": [
-      "classes/"
+      "classes/",
+      "src/Config/class.ConfigCtrl.php"
     ],
     "files": [
       "vendor/srag/dic/src/PHPVersionChecker.php",
