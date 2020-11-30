@@ -12250,6 +12250,7 @@ return array(
     'srag\\CustomInputGUIs\\SrGoogleAccountAuth\\ViewControlModeUI\\ViewControlModeUI' => $vendorDir . '/srag/custominputguis/src/ViewControlModeUI/ViewControlModeUI.php',
     'srag\\CustomInputGUIs\\SrGoogleAccountAuth\\Waiter\\Waiter' => $vendorDir . '/srag/custominputguis/src/Waiter/Waiter.php',
     'srag\\CustomInputGUIs\\SrGoogleAccountAuth\\WeekdayInputGUI\\WeekdayInputGUI' => $vendorDir . '/srag/custominputguis/src/WeekdayInputGUI/WeekdayInputGUI.php',
+    'srag\\DIC\\SrGoogleAccountAuth\\Cron\\FixUITemplateInCronContext' => $vendorDir . '/srag/dic/src/Cron/FixUITemplateInCronContext.php',
     'srag\\DIC\\SrGoogleAccountAuth\\DICStatic' => $vendorDir . '/srag/dic/src/DICStatic.php',
     'srag\\DIC\\SrGoogleAccountAuth\\DICStaticInterface' => $vendorDir . '/srag/dic/src/DICStaticInterface.php',
     'srag\\DIC\\SrGoogleAccountAuth\\DICTrait' => $vendorDir . '/srag/dic/src/DICTrait.php',
