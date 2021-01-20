@@ -1,18 +1,26 @@
 {
-  "name": "srag/plugins/srgoogleaccountauth",
-  "description": "",
-  "version": "1.5.4",
-  "ilias_plugin": {
-    "id": "srgoogacauth",
-    "name": "SrGoogleAccountAuth",
-    "ilias_min_version": "5.4.0",
-    "ilias_max_version": "6.999",
-    "slot": "Services/UIComponent/UserInterfaceHook"
+  "name": "srag/srgoogleaccountauth",
+  "description": "Authenticate with Google accounts in ILIAS",
+  "version": "1.5.5",
+  "extra": {
+    "ilias_plugin": {
+      "id": "srgoogacauth",
+      "name": "SrGoogleAccountAuth",
+      "ilias_min_version": "5.4.0",
+      "ilias_max_version": "6.999",
+      "slot": "Services/UIComponent/UserInterfaceHook"
+    },
+    "generate_plugin_readme_template": "SRAG_ILIAS_PLUGIN",
+    "long_description_template": "src/LONG_DESCRIPTION.md"
   },
   "type": "project",
   "keywords": [
-    "ILIAS",
-    "Plugin"
+    "authentication",
+    "google",
+    "ilias",
+    "interface",
+    "plugin",
+    "user"
   ],
   "homepage": "https://github.com/studer-raimann/SrGoogleAccountAuth",
   "license": "GPL-3.0-only",
@@ -32,7 +40,9 @@
     "google/apiclient": "2.4.1",
     "srag/activerecordconfig": ">=0.1.0",
     "srag/custominputguis": ">=0.1.0",
+    "srag/devtools": ">=0.1.0",
     "srag/dic": ">=0.1.0",
+    "srag/generateplugininfoshelper": ">=0.1.0",
     "srag/librariesnamespacechanger": ">=0.1.0",
     "srag/removeplugindataconfirm": ">=0.1.0"
   },
@@ -41,7 +51,8 @@
       "srag\\Plugins\\SrGoogleAccountAuth\\": "src/"
     },
     "classmap": [
-      "classes/"
+      "classes/",
+      "src/Config/class.ConfigCtrl.php"
     ],
     "files": [
       "vendor/srag/dic/src/PHPVersionChecker.php",
@@ -57,8 +68,8 @@
     "pre-autoload-dump": [
       "srag\\LibrariesNamespaceChanger\\LibrariesNamespaceChanger::rewriteLibrariesNamespaces",
       "srag\\LibrariesNamespaceChanger\\PHP72Backport::PHP72Backport",
-      "srag\\LibrariesNamespaceChanger\\GeneratePluginPhpAndXml::generatePluginPhpAndXml",
-      "srag\\LibrariesNamespaceChanger\\UpdatePluginReadme::updatePluginReadme"
+      "srag\\GeneratePluginInfosHelper\\SrGoogleAccountAuth\\GeneratePluginPhpAndXml::generatePluginPhpAndXml",
+      "srag\\GeneratePluginInfosHelper\\SrGoogleAccountAuth\\GeneratePluginReadme::generatePluginReadme"
     ]
   }
 }

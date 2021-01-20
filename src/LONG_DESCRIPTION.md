@@ -1,5 +1,3 @@
-# SrGoogleAccountAuth ILIAS Plugin Description
-
 We have created an UI hook plugin because auth plugins currently not working properly
 
 ## Google web client config
@@ -14,4 +12,4 @@ For the plugin config you need the client id and the client secret
 
 Login screen:
 
-![Login screen](./images/login_screen.png)
+![Login screen](../doc/images/login_screen.png)

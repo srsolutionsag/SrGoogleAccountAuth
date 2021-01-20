@@ -4,7 +4,7 @@ namespace srag\RemovePluginDataConfirm\SrGoogleAccountAuth;
 
 use ilUIPluginRouterGUI;
 use srag\DIC\SrGoogleAccountAuth\DICTrait;
-use srag\DIC\SrGoogleAccountAuth\Util\LibraryLanguageInstaller;
+use srag\LibraryLanguageInstaller\SrGoogleAccountAuth\LibraryLanguageInstaller;
 
 /**
  * Trait BasePluginUninstallTrait

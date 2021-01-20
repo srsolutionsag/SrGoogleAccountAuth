@@ -2,7 +2,7 @@
 
 require_once __DIR__ . "/../vendor/autoload.php";
 
-use srag\DIC\SrGoogleAccountAuth\DevTools\DevToolsCtrl;
+use srag\DevTools\SrGoogleAccountAuth\DevToolsCtrl;
 use srag\DIC\SrGoogleAccountAuth\DICTrait;
 use srag\Plugins\SrGoogleAccountAuth\Config\ConfigCtrl;
 use srag\Plugins\SrGoogleAccountAuth\Utils\SrGoogleAccountAuthTrait;
@@ -12,7 +12,7 @@ use srag\Plugins\SrGoogleAccountAuth\Utils\SrGoogleAccountAuthTrait;
  *
  * @author            studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  *
- * @ilCtrl_isCalledBy srag\DIC\SrGoogleAccountAuth\DevTools\DevToolsCtrl: ilSrGoogleAccountAuthConfigGUI
+ * @ilCtrl_isCalledBy srag\DevTools\SrGoogleAccountAuth\DevToolsCtrl: ilSrGoogleAccountAuthConfigGUI
  */
 class ilSrGoogleAccountAuthConfigGUI extends ilPluginConfigGUI
 {

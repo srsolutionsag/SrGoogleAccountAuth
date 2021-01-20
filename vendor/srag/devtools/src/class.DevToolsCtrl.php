@@ -1,6 +1,6 @@
 <?php
 
-namespace srag\DIC\SrGoogleAccountAuth\DevTools;
+namespace srag\DevTools\SrGoogleAccountAuth;
 
 use ilAdministrationGUI;
 use ilDBConstants;
@@ -9,12 +9,12 @@ use ilPluginConfigGUI;
 use ilUtil;
 use srag\DIC\SrGoogleAccountAuth\DICTrait;
 use srag\DIC\SrGoogleAccountAuth\Plugin\PluginInterface;
-use srag\DIC\SrGoogleAccountAuth\Util\LibraryLanguageInstaller;
+use srag\LibraryLanguageInstaller\SrGoogleAccountAuth\LibraryLanguageInstaller;
 
 /**
  * Class DevToolsCtrl
  *
- * @package srag\DIC\SrGoogleAccountAuth\DevTools
+ * @package srag\DevTools\SrGoogleAccountAuth
  *
  * @author  studer + raimann ag - Team Custom 1 <support-custom1@studer-raimann.ch>
  */
@@ -69,7 +69,7 @@ class DevToolsCtrl
      */
     public static function installLanguages(PluginInterface $plugin)/*:void*/
     {
-        LibraryLanguageInstaller::getInstance()->withPlugin($plugin)->withLibraryLanguageDirectory(__DIR__ . "/lang")->updateLanguages();
+        LibraryLanguageInstaller::getInstance()->withPlugin($plugin)->withLibraryLanguageDirectory(__DIR__ . "/../lang")->updateLanguages();
     }
 
 
