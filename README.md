@@ -2,7 +2,7 @@
 
 # SrGoogleAccountAuth ILIAS Plugin
 
-
+Authenticate with Google accounts in ILIAS
 
 This is an OpenSource project by studer + raimann ag, CH-Burgdorf (https://studer-raimann.ch)
 

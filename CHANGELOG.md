@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.5.5]
+- Fix storage password fields
+
 ## [1.5.4]
 - `Ilias7PreWarn`
 

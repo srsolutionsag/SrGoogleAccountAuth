@@ -2,6 +2,7 @@
 
 namespace srag\Plugins\SrGoogleAccountAuth\Config\Form;
 
+use ILIAS\Data\Password;
 use ilSrGoogleAccountAuthPlugin;
 use srag\CustomInputGUIs\SrGoogleAccountAuth\FormBuilder\AbstractFormBuilder;
 use srag\CustomInputGUIs\SrGoogleAccountAuth\InputGUIWrapperUIInputComponent\InputGUIWrapperUIInputComponent;
@@ -130,8 +131,8 @@ class FormBuilder extends AbstractFormBuilder
      */
     protected function storeData(array $data)/* : void*/
     {
-        self::srGoogleAccountAuth()->config()->setValue(self::KEY_CLIENT_ID, $data[self::KEY_CLIENT_ID]->toString());
-        self::srGoogleAccountAuth()->config()->setValue(self::KEY_CLIENT_SECRET, $data[self::KEY_CLIENT_SECRET]->toString());
+        self::srGoogleAccountAuth()->config()->setValue(self::KEY_CLIENT_ID, $this->fixPassword($data[self::KEY_CLIENT_ID]));
+        self::srGoogleAccountAuth()->config()->setValue(self::KEY_CLIENT_SECRET, $this->fixPassword($data[self::KEY_CLIENT_SECRET]));
 
         if (self::version()->is6()) {
             if (!empty($data[self::KEY_CREATE_NEW_ACCOUNTS])) {
@@ -150,5 +151,20 @@ class FormBuilder extends AbstractFormBuilder
                     MultiSelectSearchNewInputGUI::cleanValues((array) (boolval($data[self::KEY_CREATE_NEW_ACCOUNTS]["value"]) ? $data[self::KEY_CREATE_NEW_ACCOUNTS]["group_values"]
                         : $data[self::KEY_CREATE_NEW_ACCOUNTS])["dependant_group"][self::KEY_NEW_ACCOUNT_ROLES]));
         }
+    }
+
+
+    /**
+     * @param string|Password $password
+     *
+     * @return string
+     */
+    protected function fixPassword($password) : string
+    {
+        if ($password instanceof Password) {
+            $password = $password->toString();
+        }
+
+        return strval($password);
     }
 }
