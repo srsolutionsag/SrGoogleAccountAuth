@@ -41,6 +41,21 @@ class FormBuilder extends AbstractFormBuilder
 
 
     /**
+     * @param string|Password $password
+     *
+     * @return string
+     */
+    protected function fixPassword($password) : string
+    {
+        if ($password instanceof Password) {
+            $password = $password->toString();
+        }
+
+        return strval($password);
+    }
+
+
+    /**
      * @inheritDoc
      */
     protected function getButtons() : array
@@ -151,20 +166,5 @@ class FormBuilder extends AbstractFormBuilder
                     MultiSelectSearchNewInputGUI::cleanValues((array) (boolval($data[self::KEY_CREATE_NEW_ACCOUNTS]["value"]) ? $data[self::KEY_CREATE_NEW_ACCOUNTS]["group_values"]
                         : $data[self::KEY_CREATE_NEW_ACCOUNTS])["dependant_group"][self::KEY_NEW_ACCOUNT_ROLES]));
         }
-    }
-
-
-    /**
-     * @param string|Password $password
-     *
-     * @return string
-     */
-    protected function fixPassword($password) : string
-    {
-        if ($password instanceof Password) {
-            $password = $password->toString();
-        }
-
-        return strval($password);
     }
 }
