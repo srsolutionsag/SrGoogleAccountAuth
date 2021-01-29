@@ -12264,7 +12264,6 @@ return array(
     'srag\\DIC\\SrGoogleAccountAuth\\Database\\PdoContextHelper' => $vendorDir . '/srag/dic/src/Database/PdoContextHelper.php',
     'srag\\DIC\\SrGoogleAccountAuth\\Database\\PdoStatementContextHelper' => $vendorDir . '/srag/dic/src/Database/PdoStatementContextHelper.php',
     'srag\\DIC\\SrGoogleAccountAuth\\Exception\\DICException' => $vendorDir . '/srag/dic/src/Exception/DICException.php',
-    'srag\\DIC\\SrGoogleAccountAuth\\Ilias7PreWarn' => $vendorDir . '/srag/dic/src/Ilias7PreWarn.php',
     'srag\\DIC\\SrGoogleAccountAuth\\Loader\\AbstractLoaderDetector' => $vendorDir . '/srag/dic/src/Loader/AbstractLoaderDetector.php',
     'srag\\DIC\\SrGoogleAccountAuth\\Output\\Output' => $vendorDir . '/srag/dic/src/Output/Output.php',
     'srag\\DIC\\SrGoogleAccountAuth\\Output\\OutputInterface' => $vendorDir . '/srag/dic/src/Output/OutputInterface.php',
