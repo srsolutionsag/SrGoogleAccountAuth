@@ -2,6 +2,8 @@
 
 namespace srag\DevTools\SrGoogleAccountAuth;
 
+require_once __DIR__ . "/../../../autoload.php";
+
 use Closure;
 use ilAdministrationGUI;
 use ilDBConstants;

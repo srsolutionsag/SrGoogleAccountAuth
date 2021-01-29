@@ -2,6 +2,8 @@
 
 namespace srag\Plugins\SrGoogleAccountAuth\Config;
 
+require_once __DIR__ . "/../../vendor/autoload.php";
+
 use ilSrGoogleAccountAuthPlugin;
 use ilUtil;
 use srag\DIC\SrGoogleAccountAuth\DICTrait;

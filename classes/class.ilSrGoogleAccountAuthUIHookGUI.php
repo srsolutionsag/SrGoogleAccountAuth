@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . "/../vendor/autoload.php";
+
 use srag\DIC\SrGoogleAccountAuth\DICTrait;
 use srag\Plugins\SrGoogleAccountAuth\Utils\SrGoogleAccountAuthTrait;
 

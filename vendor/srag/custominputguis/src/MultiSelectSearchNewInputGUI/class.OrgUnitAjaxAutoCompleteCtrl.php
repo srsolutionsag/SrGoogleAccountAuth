@@ -2,6 +2,8 @@
 
 namespace srag\CustomInputGUIs\SrGoogleAccountAuth\MultiSelectSearchNewInputGUI;
 
+require_once __DIR__ . "/../../../../autoload.php";
+
 use ilOrgUnitPathStorage;
 
 /**
