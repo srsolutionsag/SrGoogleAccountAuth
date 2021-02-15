@@ -10,7 +10,6 @@ return array(
     'srag\\Plugins\\SrGoogleAccountAuth\\' => array($baseDir . '/src'),
     'srag\\LibraryLanguageInstaller\\SrGoogleAccountAuth\\' => array($vendorDir . '/srag/librarylanguageinstaller/src'),
     'srag\\LibrariesNamespaceChanger\\' => array($vendorDir . '/srag/librariesnamespacechanger/src'),
-    'srag\\GeneratePluginInfosHelper\\SrGoogleAccountAuth\\' => array($vendorDir . '/srag/generateplugininfoshelper/src'),
     'srag\\DevTools\\SrGoogleAccountAuth\\' => array($vendorDir . '/srag/devtools/src'),
     'srag\\DIC\\SrGoogleAccountAuth\\' => array($vendorDir . '/srag/dic/src'),
     'srag\\CustomInputGUIs\\SrGoogleAccountAuth\\' => array($vendorDir . '/srag/custominputguis/src'),
