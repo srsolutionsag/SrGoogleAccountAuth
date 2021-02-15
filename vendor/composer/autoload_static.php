@@ -26,7 +26,6 @@ class ComposerStaticInitcad4c6204bf143a143bbee0ca440b4fa
             'srag\\Plugins\\SrGoogleAccountAuth\\' => 33,
             'srag\\LibraryLanguageInstaller\\SrGoogleAccountAuth\\' => 50,
             'srag\\LibrariesNamespaceChanger\\' => 31,
-            'srag\\GeneratePluginInfosHelper\\SrGoogleAccountAuth\\' => 51,
             'srag\\DevTools\\SrGoogleAccountAuth\\' => 34,
             'srag\\DIC\\SrGoogleAccountAuth\\' => 29,
             'srag\\CustomInputGUIs\\SrGoogleAccountAuth\\' => 41,
@@ -82,10 +81,6 @@ class ComposerStaticInitcad4c6204bf143a143bbee0ca440b4fa
         'srag\\LibrariesNamespaceChanger\\' => 
         array (
             0 => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src',
-        ),
-        'srag\\GeneratePluginInfosHelper\\SrGoogleAccountAuth\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/srag/generateplugininfoshelper/src',
         ),
         'srag\\DevTools\\SrGoogleAccountAuth\\' => 
         array (
@@ -12444,8 +12439,6 @@ class ComposerStaticInitcad4c6204bf143a143bbee0ca440b4fa
         'srag\\DIC\\SrGoogleAccountAuth\\Version\\Version' => __DIR__ . '/..' . '/srag/dic/src/Version/Version.php',
         'srag\\DIC\\SrGoogleAccountAuth\\Version\\VersionInterface' => __DIR__ . '/..' . '/srag/dic/src/Version/VersionInterface.php',
         'srag\\DevTools\\SrGoogleAccountAuth\\DevToolsCtrl' => __DIR__ . '/..' . '/srag/devtools/src/class.DevToolsCtrl.php',
-        'srag\\GeneratePluginInfosHelper\\SrGoogleAccountAuth\\GeneratePluginPhpAndXml' => __DIR__ . '/..' . '/srag/generateplugininfoshelper/src/GeneratePluginPhpAndXml.php',
-        'srag\\GeneratePluginInfosHelper\\SrGoogleAccountAuth\\GeneratePluginReadme' => __DIR__ . '/..' . '/srag/generateplugininfoshelper/src/GeneratePluginReadme.php',
         'srag\\LibrariesNamespaceChanger\\LibrariesNamespaceChanger' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/LibrariesNamespaceChanger.php',
         'srag\\LibrariesNamespaceChanger\\PHP72Backport' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/PHP72Backport.php',
         'srag\\LibrariesNamespaceChanger\\PHP7Backport' => __DIR__ . '/..' . '/srag/librariesnamespacechanger/src/PHP7Backport.php',
