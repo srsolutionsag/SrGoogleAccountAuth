@@ -242,12 +242,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\": "src/"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -300,12 +300,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\Promise\\": "src/"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\Promise\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -326,16 +326,16 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.6.1",
+            "version": "1.8.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "239400de7a173fe9901b9ac7c06497751f00727a"
+                "reference": "337e3ad8e5716c15f9657bd214d16cc5e69df268"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/239400de7a173fe9901b9ac7c06497751f00727a",
-                "reference": "239400de7a173fe9901b9ac7c06497751f00727a",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/337e3ad8e5716c15f9657bd214d16cc5e69df268",
+                "reference": "337e3ad8e5716c15f9657bd214d16cc5e69df268",
                 "shasum": ""
             },
             "require": {
@@ -348,24 +348,24 @@
             },
             "require-dev": {
                 "ext-zlib": "*",
-                "phpunit/phpunit": "~4.8.36 || ^5.7.27 || ^6.5.8"
+                "phpunit/phpunit": "~4.8.36 || ^5.7.27 || ^6.5.14 || ^7.5.20 || ^8.5.8 || ^9.3.10"
             },
             "suggest": {
-                "zendframework/zend-httphandlerrunner": "Emit PSR-7 responses"
+                "laminas/laminas-httphandlerrunner": "Emit PSR-7 responses"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.6-dev"
+                    "dev-master": "1.7-dev"
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\Psr7\\": "src/"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\Psr7\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -373,12 +373,33 @@
             ],
             "authors": [
                 {
+                    "name": "Graham Campbell",
+                    "email": "hello@gjcampbell.co.uk",
+                    "homepage": "https://github.com/GrahamCampbell"
+                },
+                {
                     "name": "Michael Dowling",
                     "email": "mtdowling@gmail.com",
                     "homepage": "https://github.com/mtdowling"
                 },
                 {
+                    "name": "George Mponos",
+                    "email": "gmponos@gmail.com",
+                    "homepage": "https://github.com/gmponos"
+                },
+                {
+                    "name": "Tobias Nyholm",
+                    "email": "tobias.nyholm@gmail.com",
+                    "homepage": "https://github.com/Nyholm"
+                },
+                {
+                    "name": "Márk Sági-Kazár",
+                    "email": "mark.sagikazar@gmail.com",
+                    "homepage": "https://github.com/sagikazarmark"
+                },
+                {
                     "name": "Tobias Schultze",
+                    "email": "webmaster@tubo-world.de",
                     "homepage": "https://github.com/Tobion"
                 }
             ],
@@ -393,7 +414,21 @@
                 "uri",
                 "url"
             ],
-            "time": "2019-07-01T23:21:34+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/GrahamCampbell",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/Nyholm",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/guzzlehttp/psr7",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-03-20T21:51:18+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -825,12 +860,12 @@
             "version": "0.20.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/studer-raimann/ActiveRecordConfig.git",
+                "url": "https://github.com/fluxapps/ActiveRecordConfig.git",
                 "reference": "e182738290d2819c4e9d4a997bfd2ca2362ba9b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/studer-raimann/ActiveRecordConfig/zipball/e182738290d2819c4e9d4a997bfd2ca2362ba9b6",
+                "url": "https://api.github.com/repos/fluxapps/ActiveRecordConfig/zipball/e182738290d2819c4e9d4a997bfd2ca2362ba9b6",
                 "reference": "e182738290d2819c4e9d4a997bfd2ca2362ba9b6",
                 "shasum": ""
             },
@@ -852,7 +887,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "srag\\ActiveRecordConfig\\SrGoogleAccountAuth\\": "src/"
+                    "srag\\ActiveRecordConfig\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -881,12 +916,12 @@
             "version": "0.41.4",
             "source": {
                 "type": "git",
-                "url": "https://github.com/studer-raimann/CustomInputGUIs.git",
+                "url": "https://github.com/fluxapps/CustomInputGUIs.git",
                 "reference": "b0c186f51a65bbd1b59ac14acb349c2a5e477ae7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/studer-raimann/CustomInputGUIs/zipball/b0c186f51a65bbd1b59ac14acb349c2a5e477ae7",
+                "url": "https://api.github.com/repos/fluxapps/CustomInputGUIs/zipball/b0c186f51a65bbd1b59ac14acb349c2a5e477ae7",
                 "reference": "b0c186f51a65bbd1b59ac14acb349c2a5e477ae7",
                 "shasum": ""
             },
@@ -908,7 +943,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "srag\\CustomInputGUIs\\SrGoogleAccountAuth\\": "src/"
+                    "srag\\CustomInputGUIs\\": "src/"
                 },
                 "classmap": [
                     "src/MultiSelectSearchNewInputGUI/class.ObjectChildrenAjaxAutoCompleteCtrl.php",
@@ -945,12 +980,12 @@
             "version": "1.2.5",
             "source": {
                 "type": "git",
-                "url": "https://github.com/studer-raimann/DevTools.git",
+                "url": "https://github.com/fluxapps/DevTools.git",
                 "reference": "c053a7772c5a591127610158c0b3ad8c355485f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/studer-raimann/DevTools/zipball/c053a7772c5a591127610158c0b3ad8c355485f7",
+                "url": "https://api.github.com/repos/fluxapps/DevTools/zipball/c053a7772c5a591127610158c0b3ad8c355485f7",
                 "reference": "c053a7772c5a591127610158c0b3ad8c355485f7",
                 "shasum": ""
             },
@@ -973,7 +1008,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "srag\\DevTools\\SrGoogleAccountAuth\\": "src/"
+                    "srag\\DevTools\\": "src/"
                 },
                 "classmap": [
                     "src/class.DevToolsCtrl.php"
@@ -1006,12 +1041,12 @@
             "version": "0.31.4",
             "source": {
                 "type": "git",
-                "url": "https://github.com/studer-raimann/DIC.git",
+                "url": "https://github.com/fluxapps/DIC.git",
                 "reference": "615326c06d6f9e27805907c1b92ac19c7f116178"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/studer-raimann/DIC/zipball/615326c06d6f9e27805907c1b92ac19c7f116178",
+                "url": "https://api.github.com/repos/fluxapps/DIC/zipball/615326c06d6f9e27805907c1b92ac19c7f116178",
                 "reference": "615326c06d6f9e27805907c1b92ac19c7f116178",
                 "shasum": ""
             },
@@ -1032,7 +1067,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "srag\\DIC\\SrGoogleAccountAuth\\": "src/"
+                    "srag\\DIC\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1062,12 +1097,12 @@
             "version": "0.15.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/studer-raimann/LibrariesNamespaceChanger.git",
+                "url": "https://github.com/fluxapps/LibrariesNamespaceChanger.git",
                 "reference": "37b73f814b319a9a05664df994423c412e2b52f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/studer-raimann/LibrariesNamespaceChanger/zipball/37b73f814b319a9a05664df994423c412e2b52f3",
+                "url": "https://api.github.com/repos/fluxapps/LibrariesNamespaceChanger/zipball/37b73f814b319a9a05664df994423c412e2b52f3",
                 "reference": "37b73f814b319a9a05664df994423c412e2b52f3",
                 "shasum": ""
             },
@@ -1106,6 +1141,7 @@
                 "libraries",
                 "namespace"
             ],
+            "abandoned": "https://github.com/flux-eco/flux-namespace-changer",
             "time": "2021-01-25T06:48:05+00:00"
         },
         {
@@ -1113,12 +1149,12 @@
             "version": "1.1.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/studer-raimann/LibraryLanguageInstaller.git",
+                "url": "https://github.com/fluxapps/LibraryLanguageInstaller.git",
                 "reference": "8f484ac9bbeb0aea0157d1dc93283f75922a373f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/studer-raimann/LibraryLanguageInstaller/zipball/8f484ac9bbeb0aea0157d1dc93283f75922a373f",
+                "url": "https://api.github.com/repos/fluxapps/LibraryLanguageInstaller/zipball/8f484ac9bbeb0aea0157d1dc93283f75922a373f",
                 "reference": "8f484ac9bbeb0aea0157d1dc93283f75922a373f",
                 "shasum": ""
             },
@@ -1139,7 +1175,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "srag\\LibraryLanguageInstaller\\SrGoogleAccountAuth\\": "src/"
+                    "srag\\LibraryLanguageInstaller\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1169,12 +1205,12 @@
             "version": "0.7.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/studer-raimann/RemovePluginDataConfirm.git",
+                "url": "https://github.com/fluxapps/RemovePluginDataConfirm.git",
                 "reference": "be5e7b4e3fdff8bd2a32151f116020f135886e79"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/studer-raimann/RemovePluginDataConfirm/zipball/be5e7b4e3fdff8bd2a32151f116020f135886e79",
+                "url": "https://api.github.com/repos/fluxapps/RemovePluginDataConfirm/zipball/be5e7b4e3fdff8bd2a32151f116020f135886e79",
                 "reference": "be5e7b4e3fdff8bd2a32151f116020f135886e79",
                 "shasum": ""
             },
@@ -1196,7 +1232,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "srag\\RemovePluginDataConfirm\\SrGoogleAccountAuth\\": "src/"
+                    "srag\\RemovePluginDataConfirm\\": "src/"
                 },
                 "classmap": [
                     "src/class.RemovePluginDataConfirmCtrl.php"
@@ -1259,12 +1295,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Intl\\Idn\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Intl\\Idn\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1341,12 +1377,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Intl\\Normalizer\\": ""
-                },
                 "files": [
                     "bootstrap.php"
                 ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Intl\\Normalizer\\": ""
+                },
                 "classmap": [
                     "Resources/stubs"
                 ]
@@ -1420,12 +1456,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php70\\": ""
-                },
                 "files": [
                     "bootstrap.php"
                 ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php70\\": ""
+                },
                 "classmap": [
                     "Resources/stubs"
                 ]
@@ -1496,12 +1532,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php72\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php72\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
