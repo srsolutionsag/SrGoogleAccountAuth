@@ -2,8 +2,9 @@
 require_once __DIR__ . "/vendor/autoload.php";
 
 $id = "srgoogacauth";
-$version = "1.5.6";
-$ilias_min_version = "5.4.0";
-$ilias_max_version = "6.999";
-$responsible = "studer + raimann ag - Team Custom 1";
-$responsible_mail = "support-custom1@studer-raimann.ch";
+$version = "1.6.0";
+$ilias_min_version = "6.0";
+$ilias_max_version = "7.999";
+$responsible = "sr.solutions";
+$responsible_mail = "support@sr.solutions";
+$supports_cli_setup = false;
